@@ -1,0 +1,4 @@
+resources;C:\Users\sanja\RiderProjects\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\110\lp\0\jl\res\values\values.xml
+resources;C:\Users\sanja\RiderProjects\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\110\lp\2\jl\res\values\strings.xml
+string;C:\Users\sanja\RiderProjects\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\110\lp\0\jl\res\values\values.xml
+string;C:\Users\sanja\RiderProjects\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\110\lp\2\jl\res\values\strings.xml
