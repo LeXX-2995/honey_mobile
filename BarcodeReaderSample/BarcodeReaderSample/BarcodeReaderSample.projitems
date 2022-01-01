@@ -9,11 +9,58 @@
     <Import_RootNamespace>BarcodeReaderSample</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)API\RestContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\EnumExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HoneywellBarcodeReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ApproveModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ArrivalModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Barcode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DocumentsModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\InterfaceTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\OperationResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ProductModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ReportArrivalModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ReportInventoryModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ReportShipmentModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ShipmentModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Status.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\StatusEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\StatusType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UnitOfMeasurements.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UpdateCodeModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\DisaggregationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\DocumentsListModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\LoginViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\MainPageModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\ProductDetailsModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\ProductListModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DisaggregationView.xaml.cs">
+      <DependentUpon>DisaggregationView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DocumentsListView.xaml.cs">
+      <DependentUpon>DocumentsListView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProductDetailsView.xaml.cs">
+      <DependentUpon>ProductDetailsView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProductListView.xaml.cs">
+      <DependentUpon>ProductListView.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -23,6 +70,31 @@
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DisaggregationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DocumentsListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProductDetailsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProductListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
