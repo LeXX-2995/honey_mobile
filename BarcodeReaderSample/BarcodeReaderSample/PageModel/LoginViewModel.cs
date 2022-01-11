@@ -56,9 +56,9 @@ namespace NobelXamarin.PageModel
             LoginCommand = new Command(LoginToSystem);
 
 #if DEBUG
-            Login = "Sanj1177";
-            Password = "sanjusa1177";
-            Port = "1686";
+            Login = "Admin";
+            Password = "123";
+            Port = "8800";
 #endif
         }
 

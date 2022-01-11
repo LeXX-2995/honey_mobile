@@ -35,6 +35,8 @@ namespace NobelXamarin.PageModel
             }
         }
         private readonly string[] _unicodeCharacters = { "\u0002", "\u0018", "\r", "\n" };
+        private readonly string _specialCharacter = "\u001D";
+        private readonly string dataMatrixName = "DATAMATRIX";
         public Command CompleteCommand { get;  }
 
         public InterfaceTypes InterfaceTypes { get; set; }
@@ -203,7 +205,18 @@ namespace NobelXamarin.PageModel
             };
             
           barcode.Data = RemoveUnicodeCharacters(barcode.Data);
-            
+
+          if (e.SymbologyName == dataMatrixName)
+              barcode.Data = barcode.Data.Remove(barcode.Data.Length - 7, 1)
+                  .Insert(barcode.Data.Length - 7, _specialCharacter);
+          
+          var model = new
+          {
+              SelectedDocument.Id,
+              Code = barcode.Data,
+              RestContext.UserModel.WarehouseId
+          };
+          
             if (string.IsNullOrWhiteSpace(barcode.Data)) 
                 return;
             
@@ -211,10 +224,13 @@ namespace NobelXamarin.PageModel
             
             if (InterfaceTypes == InterfaceTypes.Arrival)
             {
-                var getArrivalProduct = RestContext.ExecuteScalar<UpdateCodeModel>($"ArrivalApi/GetArrivalByCode/{SelectedDocument.Id}/{barcode.Data}", null, Method.GET);
+                var getArrivalProduct = RestContext.ExecuteScalar<UpdateCodeModel>($"ArrivalApi/GetArrivalByCode", null, Method.POST, model);
                 if (getArrivalProduct.Result != OperationStatus.Success)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", getArrivalProduct.Value.ErrorMessage, "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", getArrivalProduct.Value.ErrorMessage, "ОК");
+                    }, null);
                     return;
                 }
             
@@ -222,22 +238,32 @@ namespace NobelXamarin.PageModel
             
                 if (!updateCodeModel.IsSuccess)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    }, null);
                     return;
                 }
             
                 if (Products.All(s => s.ProductId != updateCodeModel.ProductId))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Товар в списке не найден", "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", "Товар в списке не найден", "ОК");
+                    }, null);
                     return;
                 }
                 
             } else if (InterfaceTypes == InterfaceTypes.Shipment)
             {
-                var getShipmentProduct = RestContext.ExecuteScalar<UpdateCodeModel>($"ShipmentApi/GetShipmentByCode/{SelectedDocument.Id}/{barcode.Data}", null, Method.GET);
+                var getShipmentProduct = 
+                    RestContext.ExecuteScalar<UpdateCodeModel>($"ShipmentApi/GetShipmentByCode", null, Method.POST, model);
                 if (getShipmentProduct.Result != OperationStatus.Success)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", getShipmentProduct.Value.ErrorMessage, "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", getShipmentProduct.Value.ErrorMessage, "ОК");
+                    }, null);
                     return;
                 }
             
@@ -245,23 +271,32 @@ namespace NobelXamarin.PageModel
             
                 if (!updateCodeModel.IsSuccess)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    }, null);
                     return;
                 }
             
                 if (Products.All(s => s.ProductId != updateCodeModel.ProductId))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Товар в списке не найден", "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", "Товар в списке не найден", "ОК");
+                    }, null);
                     return;
                 }
             }
             else if (InterfaceTypes == InterfaceTypes.WriteOff)
             {
                 var getWriteOffProduct = 
-                    RestContext.ExecuteScalar<UpdateCodeModel>($"WriteOffApi/GetWriteOffByCode/{SelectedDocument.Id}/{barcode.Data}", null, Method.GET);
+                    RestContext.ExecuteScalar<UpdateCodeModel>($"WriteOffApi/GetWriteOffByCode", null, Method.POST, model);
                 if (getWriteOffProduct.Result != OperationStatus.Success)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", getWriteOffProduct.Value.ErrorMessage, "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", getWriteOffProduct.Value.ErrorMessage, "ОК");
+                    }, null);
                     return;
                 }
             
@@ -269,17 +304,23 @@ namespace NobelXamarin.PageModel
             
                 if (!updateCodeModel.IsSuccess)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    }, null);
                     return;
                 }
             }
             else
             {
                 var getInventoryProduct = 
-                    RestContext.ExecuteScalar<UpdateCodeModel>($"InventoryApi/GetInventoryByCode/{SelectedDocument.Id}/{RestContext.UserModel.WarehouseId}/{barcode.Data}", null, Method.GET);
+                    RestContext.ExecuteScalar<UpdateCodeModel>($"InventoryApi/GetInventoryByCode", null, Method.POST, model); 
                 if (getInventoryProduct.Result != OperationStatus.Success)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", getInventoryProduct.Value.ErrorMessage, "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", getInventoryProduct.Value.ErrorMessage, "ОК");
+                    }, null);
                     return;
                 }
             
@@ -287,13 +328,19 @@ namespace NobelXamarin.PageModel
             
                 if (!updateCodeModel.IsSuccess)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    }, null);
                     return;
                 }
             
                 if (Products.All(s => s.ProductId != updateCodeModel.ProductId))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Товар в списке не найден", "ОК");
+                    mUIContext.Post(_ =>
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", "Товар в списке не найден", "ОК");
+                    }, null);
                     return;
                 }
             }
