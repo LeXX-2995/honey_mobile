@@ -12,7 +12,7 @@ using Application = Android.App.Application;
 
 namespace BarcodeReaderSample.Droid
 {
-    [Activity(Label = "TraceIQ Mobile", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "TraceIQ Mobile", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
 
