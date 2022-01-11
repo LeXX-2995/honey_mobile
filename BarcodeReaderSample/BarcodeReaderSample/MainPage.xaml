@@ -31,13 +31,13 @@
                     Command="{Binding OpenShipmentCommand}"
                     CommandParameter="{x:Static enums:InterfaceTypes.Shipment}"/>
 
-            <!--<Button Grid.Row="2" Text="Инвентаризация"
+            <Button Grid.Row="2" Text="Инвентаризация"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
                     WidthRequest="250"
                     FontSize="20"
                     Command="{Binding OpenInventoryCommand}"
-                    CommandParameter="{x:Static enums:InterfaceTypes.Inventory}"/>-->
+                    CommandParameter="{x:Static enums:InterfaceTypes.Inventory}"/>
 
             <Button Grid.Row="3" Text="Разагрегация"
                     VerticalOptions="CenterAndExpand"
@@ -45,6 +45,14 @@
                     WidthRequest="250"
                     FontSize="20"
                     Command="{Binding OpenDisaggregationCommand}"/>
+            
+            <Button Grid.Row="4" Text="Списание"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    WidthRequest="250"
+                    FontSize="20"
+                    Command="{Binding OpenWriteOffCommand}"
+                    CommandParameter="{x:Static enums:InterfaceTypes.WriteOff}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

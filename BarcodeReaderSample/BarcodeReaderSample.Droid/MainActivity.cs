@@ -12,7 +12,7 @@ using Application = Android.App.Application;
 
 namespace BarcodeReaderSample.Droid
 {
-    [Activity(Label = "BarcodeReaderSample", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "TraceIQ Mobile", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
 
@@ -45,24 +45,6 @@ namespace BarcodeReaderSample.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-        /// <summary>
-        /// When the ScanPage is about to go to the background, release the
-        /// scanner.
-        /// </summary>
-        protected override void OnPause()
-        {
-            base.OnPause();
-        }
-
-        /// <summary>
-        /// When the ScanPage is about to go to the foreground, claim the
-        /// scanner.
-        /// </summary>
-        protected override void OnResume()
-        {
-            base.OnResume();
         }
     }
 }

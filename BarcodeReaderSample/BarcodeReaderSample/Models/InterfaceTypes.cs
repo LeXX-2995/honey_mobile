@@ -7,6 +7,7 @@ namespace NobelXamarin.Models
     {
         Arrival = 1,
         Shipment,
-        Inventory
+        Inventory,
+        WriteOff
     }
 }

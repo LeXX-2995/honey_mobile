@@ -97,6 +97,27 @@ namespace NobelXamarin.PageModel
                     break;
                 case InterfaceTypes.Inventory:
                     break;
+                case InterfaceTypes.WriteOff:
+                    var reportWriteOff =
+                        RestContext.ExecuteScalar<List<ReportModel>>($"WriteOffApi/GetReportWriteOffs/{RestContext.UserModel.WarehouseId}", null,
+                            Method.GET);
+
+                    if (reportWriteOff.Result != OperationStatus.Success)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Ошибка", reportWriteOff.ErrorMessage, "ОК");
+                        return;
+                    }
+
+                    items = reportWriteOff.Value.Select(s => new DocumentsModel
+                    {
+                        Id = s.Id,
+                        Number = s.ReportNumber
+                    }).ToList();
+
+                    items.ForEach(s => Documents.Add(s));
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -114,7 +135,7 @@ namespace NobelXamarin.PageModel
             }            
             
             var viewModel = new ProductListView(Navigation, SelectedDocument, _interfaceTypes, HoneywellBarcodeReader);
-            // viewModel.Model.OnComplete += OnComplete;
+            viewModel.Model.OnComplete += OnComplete;
             await Navigation.PushAsync(viewModel);
         }
     }

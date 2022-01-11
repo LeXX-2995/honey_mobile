@@ -19,6 +19,7 @@ namespace NobelXamarin.PageModel
         public Command OpenArrivalCommand { get; set; }
         public Command OpenShipmentCommand { get; set; }
         public Command OpenInventoryCommand { get; set; }
+        public Command OpenWriteOffCommand { get; set; }
         public Command OpenDisaggregationCommand { get; set; }
         private readonly INavigation _navigation;
         public HoneywellBarcodeReader HoneywellBarcodeReader { get; }
@@ -27,6 +28,7 @@ namespace NobelXamarin.PageModel
             _navigation = navigation;
             OpenArrivalCommand = new Command<InterfaceTypes>(OpenDocumentsList);
             OpenShipmentCommand = new Command<InterfaceTypes>(OpenDocumentsList);
+            OpenWriteOffCommand = new Command<InterfaceTypes>(OpenDocumentsList);
             OpenInventoryCommand = new Command<InterfaceTypes>(OpenInventory);
             OpenDisaggregationCommand = new Command(OpenDisaggregation);
 
@@ -59,7 +61,7 @@ namespace NobelXamarin.PageModel
                 return;
             }
             
-            var inventory = RestContext.ExecuteScalar<ReportInventoryModel>("getInventories", null, Method.GET);
+            var inventory = RestContext.ExecuteScalar<ReportInventoryModel>($"InventoryApi/GetReportInventory/{RestContext.UserModel.WarehouseId}", null, Method.GET);
 
             if (inventory.Result != OperationStatus.Success)
             {

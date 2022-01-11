@@ -150,16 +150,42 @@ namespace NobelXamarin.PageModel
                         UpdateCodeModel.AssembledAmount = sendShipment.Value.Value;
                         break;
                     case InterfaceTypes.Inventory:
-                        //var sendInventory =
-                        //    RestContext.ExecuteScalar<int>($"InventoryApi/ApproveInventory/{SerialShippingContainerCode}/{UpdateCodeModel.ReportId}/{UpdateCodeModel.ProductId}/{UpdateCodeModel.UnitOfMeasurement}",
-                        //        null, Method.GET);
-                        //if (sendInventory.Result != OperationStatus.Success)
-                        //{
-                        //    await Application.Current.MainPage.DisplayAlert("Ошибка", sendInventory.ErrorMessage, "ОК");
-                        //    return;
-                        //}
+                        var inventoryId = UpdateCodeModel.InventoryId ?? Guid.Empty;
+                        var sendInventory =
+                            RestContext.ExecuteScalar<OperationResult<int>>($"InventoryApi/ApproveInventory/{UpdateCodeModel.ItemId}/{UpdateCodeModel.ReportId}/{inventoryId}/{UpdateCodeModel.UnitOfMeasurement}/{UpdateCodeModel.IsItemChecked}",
+                                null, Method.GET);
+                        if (sendInventory.Result != OperationStatus.Success)
+                        {
+                            await Application.Current.MainPage.DisplayAlert("Ошибка", sendInventory.ErrorMessage, "ОК");
+                            return;
+                        }
 
-                        //UpdateCodeModel.AssembledAmount = sendInventory.Value;
+                        if (sendInventory.Value.Result != OperationStatus.Success)
+                        {
+                            await Application.Current.MainPage.DisplayAlert("Ошибка", sendInventory.Value.ErrorMessage, "ОК");
+                            return;
+                        }
+                        
+                        UpdateCodeModel.AssembledAmount = sendInventory.Value.Value;
+                        break;
+                    case InterfaceTypes.WriteOff:
+                        var writeOffId = UpdateCodeModel.WriteOffId ?? Guid.Empty;
+                        var sendWriteOff =
+                            RestContext.ExecuteScalar<OperationResult<int>>($"WriteOffApi/ApproveWriteOff/{UpdateCodeModel.ItemId}/{UpdateCodeModel.UnitOfMeasurement}/{UpdateCodeModel.ReportId}/{writeOffId}",
+                                null, Method.GET);
+                        if (sendWriteOff.Result != OperationStatus.Success)
+                        {
+                            await Application.Current.MainPage.DisplayAlert("Ошибка", sendWriteOff.ErrorMessage, "ОК");
+                            return;
+                        }
+
+                        if (sendWriteOff.Value.Result != OperationStatus.Success)
+                        {
+                            await Application.Current.MainPage.DisplayAlert("Ошибка", sendWriteOff.Value.ErrorMessage, "ОК");
+                            return;
+                        }
+                        
+                        UpdateCodeModel.AssembledAmount = sendWriteOff.Value.Value;
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

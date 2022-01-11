@@ -62,7 +62,7 @@ namespace NobelXamarin.PageModel
 
         private async void GetData()
         {
-            Products.Clear();
+           Products.Clear();
             
             switch (InterfaceTypes)
             {
@@ -101,18 +101,33 @@ namespace NobelXamarin.PageModel
                 case InterfaceTypes.Inventory:
                     var inventory =
                         RestContext.ExecuteScalar<List<ProductsModel>>($"InventoryApi/GetInventories/{SelectedDocument.Id}", null, Method.GET);
-
+                    
                     if (inventory.Result != OperationStatus.Success)
                     {
                         await Application.Current.MainPage.DisplayAlert("Ошибка", inventory.ErrorMessage, "ОК");
                         return;
                     }
-
+                    
                     inventory.Value.ForEach(s =>
                     {
                         Products.Add(s);
                     });
 
+                    break;
+                case InterfaceTypes.WriteOff:
+                    var writeOff =
+                        RestContext.ExecuteScalar<List<ProductsModel>>($"WriteOffApi/GetWriteOffs/{SelectedDocument.Id}", null, Method.GET);
+
+                    if (writeOff.Result != OperationStatus.Success)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Ошибка", writeOff.ErrorMessage, "ОК");
+                        return;
+                    }
+
+                    writeOff.Value.ForEach(s =>
+                    {
+                        Products.Add(s);
+                    });
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -154,25 +169,28 @@ namespace NobelXamarin.PageModel
                     }
                     break;
                 case InterfaceTypes.Inventory:
-                    //var updateInventory = RestContext.ExecuteScalar<OperationResult>($"completeInventory/{SelectedDocument.Id}", null, Method.GET);
+                    break;
+                case InterfaceTypes.WriteOff:
+                    var updateWriteOff = RestContext.ExecuteScalar<OperationResult>($"WriteOffApi/СompleteWriteOff/{SelectedDocument.Id}", null, Method.GET);
 
-                    //if (updateInventory.Result != OperationStatus.Success)
-                    //{
-                    //    await Application.Current.MainPage.DisplayAlert("Ошибка", updateInventory.ErrorMessage, "ОК");
-                    //    return;
-                    //}
+                    if (updateWriteOff.Result != OperationStatus.Success)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Ошибка", updateWriteOff.ErrorMessage, "ОК");
+                        return;
+                    }
 
-                    //if (updateInventory.Value.Result != OperationStatus.Success)
-                    //{
-                    //    await Application.Current.MainPage.DisplayAlert("Ошибка", updateInventory.Value.ErrorMessage, "ОК");
-                    //    return;
-                    //}
+                    if (updateWriteOff.Value.Result != OperationStatus.Success)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Ошибка", updateWriteOff.Value.ErrorMessage, "ОК");
+                        return;
+                    }
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
 
-            OnComplete?.Invoke(SelectedDocument);
+            if(InterfaceTypes != InterfaceTypes.Inventory)
+                OnComplete?.Invoke(SelectedDocument);
 
             await Navigation.PopAsync();
         }
@@ -184,7 +202,7 @@ namespace NobelXamarin.PageModel
                 Data = e.Data,
             };
             
-            barcode.Data = RemoveUnicodeCharacters(barcode.Data);
+          barcode.Data = RemoveUnicodeCharacters(barcode.Data);
             
             if (string.IsNullOrWhiteSpace(barcode.Data)) 
                 return;
@@ -237,12 +255,52 @@ namespace NobelXamarin.PageModel
                     return;
                 }
             }
+            else if (InterfaceTypes == InterfaceTypes.WriteOff)
+            {
+                var getWriteOffProduct = 
+                    RestContext.ExecuteScalar<UpdateCodeModel>($"WriteOffApi/GetWriteOffByCode/{SelectedDocument.Id}/{barcode.Data}", null, Method.GET);
+                if (getWriteOffProduct.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", getWriteOffProduct.Value.ErrorMessage, "ОК");
+                    return;
+                }
+            
+                updateCodeModel = getWriteOffProduct.Value;
+            
+                if (!updateCodeModel.IsSuccess)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    return;
+                }
+            }
             else
             {
+                var getInventoryProduct = 
+                    RestContext.ExecuteScalar<UpdateCodeModel>($"InventoryApi/GetInventoryByCode/{SelectedDocument.Id}/{RestContext.UserModel.WarehouseId}/{barcode.Data}", null, Method.GET);
+                if (getInventoryProduct.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", getInventoryProduct.Value.ErrorMessage, "ОК");
+                    return;
+                }
             
+                updateCodeModel = getInventoryProduct.Value;
+            
+                if (!updateCodeModel.IsSuccess)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateCodeModel.ErrorMessage, "ОК");
+                    return;
+                }
+            
+                if (Products.All(s => s.ProductId != updateCodeModel.ProductId))
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Товар в списке не найден", "ОК");
+                    return;
+                }
             }
             
-            updateCodeModel.ProductName = Products.First(s => s.ProductId == updateCodeModel.ProductId).ProductName;
+            updateCodeModel.ProductName =
+                InterfaceTypes == InterfaceTypes.WriteOff ? updateCodeModel.ProductName :
+                Products.First(s => s.ProductId == updateCodeModel.ProductId).ProductName;
             updateCodeModel.Sscc = barcode.Data;
             updateCodeModel.ReportId = SelectedDocument.Id;
             
