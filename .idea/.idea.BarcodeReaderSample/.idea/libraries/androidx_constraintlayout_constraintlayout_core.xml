@@ -1,0 +1,9 @@
+﻿<component name="libraryTable">
+  <library name="androidx.constraintlayout.constraintlayout-core">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/packages/Xamarin.AndroidX.ConstraintLayout.Core.1.0.1.2/jar/androidx.constraintlayout.constraintlayout-core.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

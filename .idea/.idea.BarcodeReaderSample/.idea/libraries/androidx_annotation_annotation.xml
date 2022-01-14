@@ -1,0 +1,9 @@
+﻿<component name="libraryTable">
+  <library name="androidx.annotation.annotation">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/packages/Xamarin.AndroidX.Annotation.1.2.0.3/jar/androidx.annotation.annotation.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
