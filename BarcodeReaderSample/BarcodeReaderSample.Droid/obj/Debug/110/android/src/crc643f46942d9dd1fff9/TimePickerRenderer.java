@@ -2,34 +2,16 @@ package crc643f46942d9dd1fff9;
 
 
 public class TimePickerRenderer
-	extends crc643f46942d9dd1fff9.ViewRenderer_2
+	extends crc643f46942d9dd1fff9.TimePickerRendererBase_1
 	implements
-		mono.android.IGCUserPeer,
-		android.app.TimePickerDialog.OnTimeSetListener
+		mono.android.IGCUserPeer
 {
 /** @hide */
 	public static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onTimeSet:(Landroid/widget/TimePicker;II)V:GetOnTimeSet_Landroid_widget_TimePicker_IIHandler:Android.App.TimePickerDialog/IOnTimeSetListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.TimePickerRenderer, Xamarin.Forms.Platform.Android", TimePickerRenderer.class, __md_methods);
-	}
-
-
-	public TimePickerRenderer (android.content.Context p0, android.util.AttributeSet p1, int p2)
-	{
-		super (p0, p1, p2);
-		if (getClass () == TimePickerRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.TimePickerRenderer, Xamarin.Forms.Platform.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2 });
-	}
-
-
-	public TimePickerRenderer (android.content.Context p0, android.util.AttributeSet p1)
-	{
-		super (p0, p1);
-		if (getClass () == TimePickerRenderer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.TimePickerRenderer, Xamarin.Forms.Platform.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
 	}
 
 
@@ -41,12 +23,20 @@ public class TimePickerRenderer
 	}
 
 
-	public void onTimeSet (android.widget.TimePicker p0, int p1, int p2)
+	public TimePickerRenderer (android.content.Context p0, android.util.AttributeSet p1)
 	{
-		n_onTimeSet (p0, p1, p2);
+		super (p0, p1);
+		if (getClass () == TimePickerRenderer.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.TimePickerRenderer, Xamarin.Forms.Platform.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
 	}
 
-	private native void n_onTimeSet (android.widget.TimePicker p0, int p1, int p2);
+
+	public TimePickerRenderer (android.content.Context p0, android.util.AttributeSet p1, int p2)
+	{
+		super (p0, p1, p2);
+		if (getClass () == TimePickerRenderer.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.TimePickerRenderer, Xamarin.Forms.Platform.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2 });
+	}
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
