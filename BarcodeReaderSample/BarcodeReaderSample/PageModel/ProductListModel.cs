@@ -206,9 +206,11 @@ namespace NobelXamarin.PageModel
             
           barcode.Data = RemoveUnicodeCharacters(barcode.Data);
 
-          if (e.SymbologyName == dataMatrixName)
+          if (e.SymbologyName == dataMatrixName && !barcode.Data.All(c => c >= '0' && c <= '9'))
+          {
               barcode.Data = barcode.Data.Remove(barcode.Data.Length - 7, 1)
                   .Insert(barcode.Data.Length - 7, _specialCharacter);
+          }
           
           var model = new
           {
