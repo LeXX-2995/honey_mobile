@@ -1,0 +1,2 @@
+C:\Users\sanja\RiderProjects\BarcodeReaderSample\ShredData\obj\Debug\ShredData.csproj.AssemblyReference.cache
+C:\Users\sanja\RiderProjects\BarcodeReaderSample\ShredData\obj\Debug\ShredData.csproj.CoreCompileInputs.cache
