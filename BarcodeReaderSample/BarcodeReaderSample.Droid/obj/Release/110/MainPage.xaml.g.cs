@@ -13,8 +13,8 @@
 namespace BarcodeReaderSample {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\timur\\Source\\Repos\\Sanjar1177\\Honey\\BarcodeReaderSample\\BarcodeReaderSam" +
-        "ple\\MainPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\sanja\\Source\\Repos\\Sanjar1177\\BarcodeReaderSample\\BarcodeReaderSample\\Ba" +
+        "rcodeReaderSample\\MainPage.xaml")]
     public partial class MainPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

@@ -14,7 +14,7 @@ namespace BarcodeReaderSample.API
     {
         public static string Port = string.Empty;
         public static string ApiResource = "/api/";
-        public static string Ip = "https://traceapp.uz:";
+        public static string Ip = "https://dtrack.uz:";
         public static UserModel UserModel;
         public static string Url = Ip + Port + ApiResource;
         public static RestClient Client => new RestClient(Url);

@@ -1,6 +1,6 @@
 	.type	compressed_assembly_data_0, %object
 	.local	compressed_assembly_data_0
-	.comm	compressed_assembly_data_0,539136,16
+	.comm	compressed_assembly_data_0,539648,16
 
 	.type	compressed_assembly_data_1, %object
 	.local	compressed_assembly_data_1
@@ -28,7 +28,7 @@
 
 	.type	compressed_assembly_data_7, %object
 	.local	compressed_assembly_data_7
-	.comm	compressed_assembly_data_7,2232320,16
+	.comm	compressed_assembly_data_7,2234368,16
 
 	.type	compressed_assembly_data_8, %object
 	.local	compressed_assembly_data_8
@@ -100,7 +100,7 @@
 
 	.type	compressed_assembly_data_25, %object
 	.local	compressed_assembly_data_25
-	.comm	compressed_assembly_data_25,16896,16
+	.comm	compressed_assembly_data_25,17408,16
 
 	.type	compressed_assembly_data_26, %object
 	.local	compressed_assembly_data_26
@@ -208,5 +208,5 @@
 
 	.type	compressed_assembly_data_52, %object
 	.local	compressed_assembly_data_52
-	.comm	compressed_assembly_data_52,2099712,16
+	.comm	compressed_assembly_data_52,2100224,16
 

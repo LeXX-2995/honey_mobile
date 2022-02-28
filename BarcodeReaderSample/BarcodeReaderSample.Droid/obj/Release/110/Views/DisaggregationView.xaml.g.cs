@@ -13,8 +13,8 @@
 namespace BarcodeReaderSample.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\timur\\Source\\Repos\\Sanjar1177\\Honey\\BarcodeReaderSample\\BarcodeReaderSam" +
-        "ple\\Views\\DisaggregationView.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\sanja\\Source\\Repos\\Sanjar1177\\BarcodeReaderSample\\BarcodeReaderSample\\Ba" +
+        "rcodeReaderSample\\Views\\DisaggregationView.xaml")]
     public partial class DisaggregationView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

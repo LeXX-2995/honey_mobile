@@ -8,7 +8,7 @@
 .L.compressed_assembly_descriptors:
 	/* 0: BarcodeReaderSample.Droid.dll */
 	/* uncompressed_file_size */
-	.word	539136
+	.word	539648
 	/* loaded */
 	.byte	0
 	/* data */
@@ -71,7 +71,7 @@
 
 	/* 7: Mono.Android.dll */
 	/* uncompressed_file_size */
-	.word	2232320
+	.word	2234368
 	/* loaded */
 	.byte	0
 	/* data */
@@ -233,7 +233,7 @@
 
 	/* 25: Xamarin.AndroidX.AppCompat.AppCompatResources.dll */
 	/* uncompressed_file_size */
-	.word	16896
+	.word	17408
 	/* loaded */
 	.byte	0
 	/* data */
@@ -476,7 +476,7 @@
 
 	/* 52: mscorlib.dll */
 	/* uncompressed_file_size */
-	.word	2099712
+	.word	2100224
 	/* loaded */
 	.byte	0
 	/* data */

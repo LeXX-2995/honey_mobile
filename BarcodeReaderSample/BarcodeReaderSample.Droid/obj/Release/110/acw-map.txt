@@ -325,9 +325,6 @@ com.google.android.material.appbar.AppBarLayout$OnOffsetChangedListener;com.goog
 Google.Android.Material.AppBar.AppBarLayout+IOnOffsetChangedListenerImplementor, Xamarin.Google.Android.Material;mono.com.google.android.material.appbar.AppBarLayout_OnOffsetChangedListenerImplementor
 Google.Android.Material.AppBar.AppBarLayout.IOnOffsetChangedListenerImplementor;mono.com.google.android.material.appbar.AppBarLayout_OnOffsetChangedListenerImplementor
 mono.com.google.android.material.appbar.AppBarLayout_OnOffsetChangedListenerImplementor;mono.com.google.android.material.appbar.AppBarLayout_OnOffsetChangedListenerImplementor
-BarcodeReaderSample.Droid.MainActivity, BarcodeReaderSample.Droid;crc644fb2efd3e8041ca0.MainActivity
-BarcodeReaderSample.Droid.MainActivity;crc644fb2efd3e8041ca0.MainActivity
-barcodereadersample.droid.MainActivity;crc644fb2efd3e8041ca0.MainActivity
 Honeywell.AIDC.CrossPlatform.BarcodeDeviceEventHandler, Honeywell.AIDC.CrossPlatform.BarcodeReader;crc64f84f70ee2cf5bc6a.BarcodeDeviceEventHandler
 Honeywell.AIDC.CrossPlatform.BarcodeDeviceEventHandler;crc64f84f70ee2cf5bc6a.BarcodeDeviceEventHandler
 honeywell.aidc.crossplatform.BarcodeDeviceEventHandler;crc64f84f70ee2cf5bc6a.BarcodeDeviceEventHandler
@@ -1573,3 +1570,6 @@ kotlin.ranges.ClosedRange;kotlin.ranges.ClosedRange
 Kotlin.Collections.IGrouping, Xamarin.Kotlin.StdLib;kotlin.collections.Grouping
 Kotlin.Collections.IGrouping;kotlin.collections.Grouping
 kotlin.collections.Grouping;kotlin.collections.Grouping
+BarcodeReaderSample.Droid.MainActivity, BarcodeReaderSample.Droid;crc644fb2efd3e8041ca0.MainActivity
+BarcodeReaderSample.Droid.MainActivity;crc644fb2efd3e8041ca0.MainActivity
+barcodereadersample.droid.MainActivity;crc644fb2efd3e8041ca0.MainActivity

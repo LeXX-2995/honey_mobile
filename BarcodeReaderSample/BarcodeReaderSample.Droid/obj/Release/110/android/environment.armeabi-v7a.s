@@ -46,10 +46,12 @@ application_config:
 	.byte	0
 	/* have_runtime_config_blob */
 	.byte	0
+	/* have_assembly_store */
+	.byte	1
 	/* bound_exception_type */
 	.byte	1
 	/* package_naming_policy */
-	.zero	3
+	.zero	2
 	.long	3
 	/* environment_variable_count */
 	.long	10
@@ -58,10 +60,14 @@ application_config:
 	/* number_of_assemblies_in_apk */
 	.long	53
 	/* bundled_assembly_name_width */
-	.long	62
+	.long	0
+	/* number_of_assembly_store_files */
+	.long	2
+	/* mono_components_mask */
+	.long	0
 	/* android_package_name */
 	.long	.L.env.str.1
-	.size	application_config, 36
+	.size	application_config, 44
 	.section	.rodata.env.str.2,"aMS",%progbits,1
 	.type	.L.env.str.2, %object
 .L.env.str.2:
@@ -89,7 +95,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.6,"aMS",%progbits,1
 	.type	.L.env.str.6, %object
 .L.env.str.6:
-	.asciz	"f7088b87-8d3e-4c46-b8f9-98763c424ad3"
+	.asciz	"389d1072-868f-4b7a-a1a6-e15a75f4f235"
 	.size	.L.env.str.6, 37
 	.section	.rodata.env.str.7,"aMS",%progbits,1
 	.type	.L.env.str.7, %object
@@ -143,807 +149,521 @@ app_environment_variables:
 	.global	app_system_properties
 app_system_properties:
 	.size	app_system_properties, 0
-	/* Bundled assembly name buffers, all 62 bytes long */
+
+	/* Bundled assembly name buffers, all 0 bytes long */
 	.section	.bss.bundled_assembly_names,"aw",%nobits
-.L.env.buf.1:
-	.zero	62
-.L.env.buf.2:
-	.zero	62
-.L.env.buf.3:
-	.zero	62
-.L.env.buf.4:
-	.zero	62
-.L.env.buf.5:
-	.zero	62
-.L.env.buf.6:
-	.zero	62
-.L.env.buf.7:
-	.zero	62
-.L.env.buf.8:
-	.zero	62
-.L.env.buf.9:
-	.zero	62
-.L.env.buf.10:
-	.zero	62
-.L.env.buf.11:
-	.zero	62
-.L.env.buf.12:
-	.zero	62
-.L.env.buf.13:
-	.zero	62
-.L.env.buf.14:
-	.zero	62
-.L.env.buf.15:
-	.zero	62
-.L.env.buf.16:
-	.zero	62
-.L.env.buf.17:
-	.zero	62
-.L.env.buf.18:
-	.zero	62
-.L.env.buf.19:
-	.zero	62
-.L.env.buf.20:
-	.zero	62
-.L.env.buf.21:
-	.zero	62
-.L.env.buf.22:
-	.zero	62
-.L.env.buf.23:
-	.zero	62
-.L.env.buf.24:
-	.zero	62
-.L.env.buf.25:
-	.zero	62
-.L.env.buf.26:
-	.zero	62
-.L.env.buf.27:
-	.zero	62
-.L.env.buf.28:
-	.zero	62
-.L.env.buf.29:
-	.zero	62
-.L.env.buf.30:
-	.zero	62
-.L.env.buf.31:
-	.zero	62
-.L.env.buf.32:
-	.zero	62
-.L.env.buf.33:
-	.zero	62
-.L.env.buf.34:
-	.zero	62
-.L.env.buf.35:
-	.zero	62
-.L.env.buf.36:
-	.zero	62
-.L.env.buf.37:
-	.zero	62
-.L.env.buf.38:
-	.zero	62
-.L.env.buf.39:
-	.zero	62
-.L.env.buf.40:
-	.zero	62
-.L.env.buf.41:
-	.zero	62
-.L.env.buf.42:
-	.zero	62
-.L.env.buf.43:
-	.zero	62
-.L.env.buf.44:
-	.zero	62
-.L.env.buf.45:
-	.zero	62
-.L.env.buf.46:
-	.zero	62
-.L.env.buf.47:
-	.zero	62
-.L.env.buf.48:
-	.zero	62
-.L.env.buf.49:
-	.zero	62
-.L.env.buf.50:
-	.zero	62
-.L.env.buf.51:
-	.zero	62
-.L.env.buf.52:
-	.zero	62
-.L.env.buf.53:
-	.zero	62
+
 	/* Bundled assemblies data */
 	.section	.data.bundled_assemblies,"aw",%progbits
 	.type	bundled_assemblies, %object
 	.p2align	2
 	.global	bundled_assemblies
 bundled_assemblies:
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
-	.long	0
-	/* data_size */
-	.long	0
-	/* data */
-	.long	0
-	/* name_length */
-	.long	0
-	/* name */
-	.long	.L.env.buf.1
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
-	.long	0
-	/* data_size */
-	.long	0
-	/* data */
-	.long	0
-	/* name_length */
-	.long	0
-	/* name */
-	.long	.L.env.buf.2
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* Assembly store individual assembly data */
+	.section	.data.assembly_store_bundled_assemblies,"aw",%progbits
+	.type	assembly_store_bundled_assemblies, %object
+	.p2align	2
+	.global	assembly_store_bundled_assemblies
+assembly_store_bundled_assemblies:
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.3
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.4
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.5
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.6
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.7
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.8
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.9
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.10
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.11
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.12
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.13
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.14
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.15
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.16
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.17
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.18
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.19
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.20
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.21
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.22
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.23
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.24
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.25
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.26
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.27
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.28
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.29
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.30
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.31
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.32
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.33
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.34
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.35
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.36
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.37
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.38
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.39
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.40
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.41
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.42
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.43
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.44
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.45
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.46
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.47
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.48
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.49
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.50
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.51
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.52
 
-	/* apk_fd */
-	.long	-1
-	/* data_offset */
+	/* image_data */
 	.long	0
-	/* data_size */
+	/* debug_info_data */
 	.long	0
-	/* data */
+	/* config_data */
 	.long	0
-	/* name_length */
+	/* descriptor */
 	.long	0
-	/* name */
-	.long	.L.env.buf.53
 
-	.size	bundled_assemblies, 1272
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	.size	assembly_store_bundled_assemblies, 848
+
+	/* Assembly store data */
+	.section	.data.assembly_stores,"aw",%progbits
+	.type	assembly_stores, %object
+	.p2align	2
+	.global	assembly_stores
+assembly_stores:
+	/* data_start */
+	.long	0
+	/* assembly_count */
+	.long	0
+	/* assemblies */
+	.long	0
+
+	/* data_start */
+	.long	0
+	/* assembly_count */
+	.long	0
+	/* assemblies */
+	.long	0
+
+	.size	assembly_stores, 24
