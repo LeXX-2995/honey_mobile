@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeReaderSample.Pages.LabelPrinterPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="0">
+
+                <StackLayout Padding="0,5,0,0" Orientation="Horizontal">
+                    <StackLayout.Children>
+                        <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand"  BackgroundColor="Gray"/>
+                        <Label Text="Connection" FontSize="Medium" />
+                        <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand"  BackgroundColor="Gray"/>
+                    </StackLayout.Children>
+                </StackLayout>
+
+                <StackLayout Padding="0,5,0,0" Orientation="Horizontal">
+                    <StackLayout.Children>
+                        <Label Text="Status : " FontSize="Medium" WidthRequest="110"/>
+                        <Label x:Name="lblStatus" Text="NORMAL" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                    </StackLayout.Children>
+                </StackLayout>
+                <StackLayout Padding="0,5,0,0" Orientation="Horizontal">
+                    <StackLayout.Children>
+                        <Label Text="Address : " FontSize="Medium" WidthRequest="110"/>
+                        <Label x:Name="lblAddress" Text="No Printer Selected" HorizontalOptions="EndAndExpand" FontSize="Medium"/>
+                    </StackLayout.Children>
+                </StackLayout>
+
+                <Grid Padding="0,2,0,0" RowSpacing="0" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" Text="Discover" Clicked="OnDeviceSelectionClicked"  HorizontalOptions="FillAndExpand"/>
+                    <Button Grid.Row="0" Grid.Column="1" x:Name="btnOpenService" Text="Open" Clicked="OnDeviceOpenClicked"  HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+                    <Button Grid.Row="0" Grid.Column="2" x:Name="btnCloseService" Text="Close" Clicked="OnDeviceCloseClicked"  HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+                </Grid>
+
+                <StackLayout Padding="0,10,0,0" Orientation="Horizontal">
+                    <StackLayout.Children>
+                        <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand"  BackgroundColor="Gray"/>
+                        <Label Text="Printer Status" FontSize="Medium" />
+                        <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand"  BackgroundColor="Gray"/>
+                    </StackLayout.Children>
+                </StackLayout>
+                <Button x:Name="btnPrintStatus" Text="Check Printer Status" Clicked="OnCheckPrinterStatusClicked" BindingContext="{x:Reference btnCloseService}" IsEnabled="{Binding Path=IsEnabled}"/>
+                <!--BoxView HeightRequest="2" HorizontalOptions="FillAndExpand"  BackgroundColor="Gray"/-->
+
+                <StackLayout Padding="0,10,0,0" Orientation="Horizontal">
+                    <StackLayout.Children>
+                        <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand"  BackgroundColor="Gray"/>
+                        <Label Text="Print Label" FontSize="Medium" />
+                        <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand"  BackgroundColor="Gray"/>
+                    </StackLayout.Children>
+                </StackLayout>
+                <Button x:Name="btnPrintLabel" Text="Print Label" Clicked="OnPrintLabelClicked" BindingContext="{x:Reference btnCloseService}" IsEnabled="{Binding Path=IsEnabled}"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

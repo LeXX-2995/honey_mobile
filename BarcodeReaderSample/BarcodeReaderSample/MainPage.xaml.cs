@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using Xamarin.Forms;
 using Honeywell.AIDC.CrossPlatform;
-using NobelXamarin.PageModel;
+using TraceIQ.Expeditor.PageModels;
 using Xamarin.Essentials;
 
 namespace BarcodeReaderSample
@@ -20,9 +20,8 @@ namespace BarcodeReaderSample
             InitializeComponent();
 
             HoneywellBarcodeReader = new HoneywellBarcodeReader();
-            
-            BindingContext = new MainPageModel(Navigation, HoneywellBarcodeReader);
+
+            BindingContext = new MainPageViewModel(Navigation, HoneywellBarcodeReader);
         }
-        
     }
 }

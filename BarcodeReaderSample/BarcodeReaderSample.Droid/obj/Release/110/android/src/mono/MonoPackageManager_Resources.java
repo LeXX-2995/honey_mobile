@@ -39,6 +39,23 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Jetbrains.Annotations.dll",
 		"Xamarin.Kotlin.StdLib.Common.dll",
 		"Xamarin.Kotlin.StdLib.dll",
+		"Com.Bixolon.Mpos.Xamarin.dll",
+		"DevExpress.Xamarin.Android.CollectionView.dll",
+		"DevExpress.Xamarin.Android.Editors.dll",
+		"DevExpress.Xamarin.Android.Grid.dll",
+		"DevExpress.Xamarin.Android.Navigation.dll",
+		"DevExpress.XamarinForms.CollectionView.Android.dll",
+		"DevExpress.XamarinForms.CollectionView.dll",
+		"DevExpress.XamarinForms.Core.Android.dll",
+		"DevExpress.XamarinForms.Core.dll",
+		"DevExpress.XamarinForms.Editors.Android.dll",
+		"DevExpress.XamarinForms.Editors.dll",
+		"DevExpress.XamarinForms.Grid.Android.dll",
+		"DevExpress.XamarinForms.Grid.dll",
+		"DevExpress.XamarinForms.Navigation.Android.dll",
+		"DevExpress.XamarinForms.Navigation.dll",
+		"Plugin.SatoMpXamarinSDK.Abstractions.dll",
+		"Plugin.SatoMpXamarinSDK.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

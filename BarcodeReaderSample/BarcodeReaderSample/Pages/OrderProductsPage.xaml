@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataGrid="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             x:Class="BarcodeReaderSample.Pages.OrderProductsPage">
+    <NavigationPage.TitleView>
+        <Label Text="Товары" TextColor="White" FontSize="20" VerticalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <dataGrid:DataGridView ItemsSource="{Binding Products}" Grid.Row="0" ColumnHeaderHeight="0">
+                <dataGrid:DataGridView.AdvancedColumnLayout>
+                    <dataGrid:AdvancedColumnLayout>
+                        <dataGrid:AdvancedColumnLayout.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </dataGrid:AdvancedColumnLayout.ColumnDefinitions>
+                        <dataGrid:AdvancedColumnLayout.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                        </dataGrid:AdvancedColumnLayout.RowDefinitions>
+                    </dataGrid:AdvancedColumnLayout>
+                </dataGrid:DataGridView.AdvancedColumnLayout>
+                <dataGrid:DataGridView.CellStyle>
+                    <dataGrid:CellStyle Padding="3"/>
+                </dataGrid:DataGridView.CellStyle>
+
+                <dataGrid:TextColumn FieldName="ProductName" ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:TextColumn FieldName="PriceText" Row="1" Column="0"/>
+                <dataGrid:TextColumn FieldName="AmountText" Row="2" Column="0"/>
+
+                <dataGrid:NumberColumn FieldName="Price" DisplayFormat="#,##0.00" Row="1" Column="1" ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:NumberColumn FieldName="AssembledAmount" Row="2" Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:NumberColumn FieldName="Amount" Row="2" Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </dataGrid:DataGridView>
+
+            <dxe:NumericEdit Grid.Row="1" Value="5000" DisplayFormat="n1"/>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <dxe:SimpleButton Grid.Column="0" 
+                                  Text = "ОК" 
+                                  TextColor="White"
+                                  BackgroundColor="Green"/>
+                <dxe:SimpleButton Grid.Column="1"
+                                  Text = "Обновить" 
+                                  TextColor="Gray"
+                                  BackgroundColor="Yellow"/>
+                <dxe:SimpleButton Grid.Column="2"
+                                  Text = "Отмена" 
+                                  TextColor="White"
+                                  BackgroundColor="Red"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

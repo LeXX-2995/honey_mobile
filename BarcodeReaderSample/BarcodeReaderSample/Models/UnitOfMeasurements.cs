@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace NobelXamarin.Models
+namespace TraceIQ.Expeditor.Models
 {
     public enum UnitOfMeasurements
     {

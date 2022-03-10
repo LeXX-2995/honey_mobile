@@ -9,26 +9,24 @@
     <Import_RootNamespace>BarcodeReaderSample</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Annotations.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)API\RestContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\EnumExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HoneywellBarcodeReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interface\IPlatformInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ApproveModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ArrivalModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Barcode.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\DocumentsModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ClientsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\InterfaceTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ModelObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\OperationResult.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ProductModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ReportArrivalModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ReportInventoryModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ReportShipmentModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ShipmentModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\OrdersModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ProductsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Status.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\StatusEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\StatusType.cs" />
@@ -36,30 +34,38 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\UpdateCodeModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\BaseViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PageModel\DisaggregationModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PageModel\DocumentsListModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PageModel\LoginViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PageModel\MainPageModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PageModel\ProductDetailsModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PageModel\ProductListModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DisaggregationView.xaml.cs">
-      <DependentUpon>DisaggregationView.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\CancellationPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\ClientPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\OrderProductsPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\OrdersPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\PaymentPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\CancellationPage.xaml.cs">
+      <DependentUpon>CancellationPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\DocumentsListView.xaml.cs">
-      <DependentUpon>DocumentsListView.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ClientsPage.xaml.cs">
+      <DependentUpon>ClientsPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml.cs">
-      <DependentUpon>LoginPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\LabelPrinterPage.xaml.cs">
+      <DependentUpon>LabelPrinterPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ProductDetailsView.xaml.cs">
-      <DependentUpon>ProductDetailsView.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\OrderProductsPage.xaml.cs">
+      <DependentUpon>OrderProductsPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ProductListView.xaml.cs">
-      <DependentUpon>ProductListView.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\OrdersPage.xaml.cs">
+      <DependentUpon>OrdersPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\PaymentPage.xaml.cs">
+      <DependentUpon>PaymentPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\PrinterSelectionPage.xaml.cs">
+      <DependentUpon>PrinterSelectionPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -74,27 +80,31 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DisaggregationView.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PaymentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\OrdersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\OrderProductsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\ClientsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DocumentsListView.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\CancellationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\LabelPrinterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProductDetailsView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProductListView.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PrinterSelectionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

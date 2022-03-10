@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace NobelXamarin.Models
+﻿namespace TraceIQ.Expeditor.Models
 {
     public class OperationResult
     {

@@ -3,26 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using BarcodeReaderSample;
 using Xamarin.Forms;
 
-namespace NobelXamarin.PageModel
+namespace TraceIQ.Expeditor.PageModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        private bool _isBusy;
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set => SetProperty(ref _isBusy, value);
-        }
-
-        private string _title = string.Empty;
-        public string Title
-        {
-            get => _title;
-            set => SetProperty(ref _title, value);
-        }
-
+        public HoneywellBarcodeReader Scanner;
+        public INavigation Navigation;
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",
             Action onChanged = null)

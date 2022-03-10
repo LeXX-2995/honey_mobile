@@ -1,0 +1,10 @@
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\bin\Debug\netstandard2.0\TraceIQ.HoneywellScanner.deps.json
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\bin\Debug\netstandard2.0\TraceIQ.HoneywellScanner.dll
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\bin\Debug\netstandard2.0\TraceIQ.HoneywellScanner.pdb
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\obj\Debug\netstandard2.0\TraceIQ.HoneywellScanner.csproj.AssemblyReference.cache
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\obj\Debug\netstandard2.0\TraceIQ.HoneywellScanner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\obj\Debug\netstandard2.0\TraceIQ.HoneywellScanner.AssemblyInfoInputs.cache
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\obj\Debug\netstandard2.0\TraceIQ.HoneywellScanner.AssemblyInfo.cs
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\obj\Debug\netstandard2.0\TraceIQ.HoneywellScanner.csproj.CoreCompileInputs.cache
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\obj\Debug\netstandard2.0\TraceIQ.HoneywellScanner.dll
+C:\Users\sanja\Source\Repos\Sanjar1177\BarcodeReaderSample\TraceIQ.HoneywellScanner\obj\Debug\netstandard2.0\TraceIQ.HoneywellScanner.pdb

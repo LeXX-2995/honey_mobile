@@ -1,0 +1,128 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "TraceIQ.HoneywellScanner/1.0.0": {
+        "dependencies": {
+          "DevExpress.XamarinForms.Editors": "21.2.5",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "TraceIQ.HoneywellScanner.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.CollectionView/21.2.5": {
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "21.2.5",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DevExpress.XamarinForms.CollectionView.dll": {
+            "assemblyVersion": "21.2.5.0",
+            "fileVersion": "21.2.5.0"
+          }
+        }
+      },
+      "DevExpress.XamarinForms.Core/21.2.5": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DevExpress.XamarinForms.Core.dll": {
+            "assemblyVersion": "21.2.5.0",
+            "fileVersion": "21.2.5.0"
+          }
+        }
+      },
+      "DevExpress.XamarinForms.Editors/21.2.5": {
+        "dependencies": {
+          "DevExpress.XamarinForms.CollectionView": "21.2.5",
+          "DevExpress.XamarinForms.Core": "21.2.5",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DevExpress.XamarinForms.Editors.dll": {
+            "assemblyVersion": "21.2.5.0",
+            "fileVersion": "21.2.5.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Xamarin.Forms/5.0.0.2012": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TraceIQ.HoneywellScanner/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.XamarinForms.CollectionView/21.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fRAfkNwrzQ2jPGBh31XEtpbKKHXmwhIcDaZ7VdILZR83Qn40AF9qULbOV8khnts8bMuLIMYysF+MiW0Dq1pLJw==",
+      "path": "devexpress.xamarinforms.collectionview/21.2.5",
+      "hashPath": "devexpress.xamarinforms.collectionview.21.2.5.nupkg.sha512"
+    },
+    "DevExpress.XamarinForms.Core/21.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bHfy6zFCj5T0Pw/Jh4ySXrq9+VuUyJVrxgRGQMVH/FvvLip/wsvY+7BgttM9z31pMGktmM3qN1y7Swabh76K/w==",
+      "path": "devexpress.xamarinforms.core/21.2.5",
+      "hashPath": "devexpress.xamarinforms.core.21.2.5.nupkg.sha512"
+    },
+    "DevExpress.XamarinForms.Editors/21.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-395w++lWkrCGNf3QVooAdF94mtPbFacv7/PtE4Nd8LVEPHNHRu28mlTwUwOSUCOHxILxADjtJ5mgpu45sTc+4Q==",
+      "path": "devexpress.xamarinforms.editors/21.2.5",
+      "hashPath": "devexpress.xamarinforms.editors.21.2.5.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Xamarin.Forms/5.0.0.2012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
+      "path": "xamarin.forms/5.0.0.2012",
+      "hashPath": "xamarin.forms.5.0.0.2012.nupkg.sha512"
+    }
+  }
+}

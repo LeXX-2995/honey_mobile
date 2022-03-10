@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Content.Res;
+using BarcodeReaderSample.Interface;
 using Xamarin.Forms;
 using Application = Android.App.Application;
 
@@ -23,7 +24,14 @@ namespace BarcodeReaderSample.Droid
             Xamarin.Essentials.Platform.Init(this, bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            
+
+            var platform = DependencyService.Get<IPlatformInfo>();
+            if ((platform as PlatformInfo) != null)
+            {
+                platform.AndroidContext = this;
+                platform.AndroidResource = Resources;
+            }
+
             LoadApplication(new App());
 
             //lock application orientation

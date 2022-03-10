@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataGrid="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
+             x:Class="BarcodeReaderSample.Pages.OrdersPage">
+    <NavigationPage.TitleView>
+        <Label Text="Заказы" TextColor="White" FontSize="20" VerticalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <dataGrid:DataGridView x:Name="grid" ItemsSource="{Binding Orders}" ColumnHeaderHeight="0">
+                <dataGrid:DataGridView.StartSwipeItems>
+                    <dataGrid:SwipeItem 
+                        Caption="Выбрать" BackgroundColor="#797bff"
+                        Command="{Binding SelectOrderCommand}"/>
+                </dataGrid:DataGridView.StartSwipeItems>
+                <dataGrid:TextColumn FieldName="OrderName" Caption="Клиенты" />
+            </dataGrid:DataGridView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

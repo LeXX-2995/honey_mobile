@@ -1,0 +1,2526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <assembly>
+    <name>DevExpress.XamarinForms.Navigation</name>
+  </assembly>
+  <members>
+    <member name="N:DevExpress.XamarinForms.Navigation">
+      <summary>
+        <para>Contains classes that implement the functionality of navigation controls (<see cref="T:DevExpress.XamarinForms.Navigation.TabView"/>,  <see cref="T:DevExpress.XamarinForms.Navigation.DrawerView"/>, <see cref="T:DevExpress.XamarinForms.Navigation.TabPage"/> and <see cref="T:DevExpress.XamarinForms.Navigation.DrawerPage"/>).</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.ContentAlignment">
+      <summary>
+        <para>Lists values that indicate item headers’ alignment in the header panel.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.ContentAlignment.Center">
+      <summary>
+        <para>The Tab View centers tab items in the Header Panel.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.ContentAlignment.End">
+      <summary>
+        <para>The Tab View docks tab items to the Header Panel’s ‘end’ edge.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.ContentAlignment.Start">
+      <summary>
+        <para>The Tab View docks tab items to the Header Panel’s ‘start’ edge.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.DrawerBehavior">
+      <summary>
+        <para>Lists values that specify how the drawer behaves on opening / closing.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerBehavior.Push">
+      <summary>
+        <para>The drawer “pushes” the content area to become visible.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerBehavior.Reveal">
+      <summary>
+        <para>The content area moves over to make the drawer visible.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerBehavior.SlideOnTop">
+      <summary>
+        <para>The drawer moves out over the content view to become visible.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerBehavior.Split">
+      <summary>
+        <para>The drawer is always visible.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.DrawerPage">
+      <summary>
+        <para>A page that can show / hide a drawer panel with the application’s main navigation menu and information a user may require (for example, account information).</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.DrawerPage.#ctor">
+      <summary />
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.AreGesturesEnabled">
+      <summary>
+        <para>Gets or sets whether users can use gestures to open / close the drawer.</para>
+      </summary>
+      <value>true, if users can use gestures to open / close the drawer; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.AreGesturesEnabledProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.AreGesturesEnabled"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerBackgroundColor">
+      <summary>
+        <para>Gets or sets the background color of the drawer.</para>
+      </summary>
+      <value>The background color of the drawer.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerBackgroundColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerBackgroundColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerBehavior">
+      <summary>
+        <para>Gets or sets how the drawer behaves on opening / closing.</para>
+      </summary>
+      <value>The value that specifies the drawer behavior on opening / closing.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerBehaviorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerBehavior"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContent">
+      <summary>
+        <para>Gets or sets a view the DrawerPage displays as the drawer content.</para>
+      </summary>
+      <value>The view the DrawerPage displays as the drawer content.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentHeight">
+      <summary>
+        <para>Gets or sets the height of the drawer content view.</para>
+      </summary>
+      <value>The drawer content view height.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the the drawer content view.</para>
+      </summary>
+      <value>The maximum drawer content view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentMaxHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the the drawer content view.</para>
+      </summary>
+      <value>The minimum drawer content view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentMinHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerContent"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterContent">
+      <summary>
+        <para>Gets or sets a view the DrawerPage displays as the drawer footer.</para>
+      </summary>
+      <value>The view the DrawerPage displays as the drawer footer.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterContent"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterHeight">
+      <summary>
+        <para>Gets or sets the height of the drawer footer view.</para>
+      </summary>
+      <value>The drawer footer view height.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the the drawer footer view.</para>
+      </summary>
+      <value>The maximum drawer footer view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterMaxHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the the drawer footer view.</para>
+      </summary>
+      <value>The minimum drawer footer view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerFooterMinHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderContent">
+      <summary>
+        <para>Gets or sets a view the DrawerPage displays as the drawer header.</para>
+      </summary>
+      <value>The view the DrawerPage displays as the drawer header.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderContent"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderHeight">
+      <summary>
+        <para>Gets or sets the height of the drawer header view.</para>
+      </summary>
+      <value>The drawer header view height.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the the drawer header view.</para>
+      </summary>
+      <value>The maximum drawer header view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderMaxHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the the drawer header view.</para>
+      </summary>
+      <value>The minimum drawer header view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeaderMinHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeight">
+      <summary>
+        <para>Gets or sets the height of the drawer when DrawerPosition is set to Top or Bottom.</para>
+      </summary>
+      <value>The drawer height when DrawerPosition is set to Top or Bottom.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the drawer when DrawerPosition is set to Top or Bottom.</para>
+      </summary>
+      <value>The maximum drawer height when DrawerPosition is set to Top or Bottom, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMaxHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMaxWidth">
+      <summary>
+        <para>Gets or sets the maximum width of the drawer when DrawerPosition is set to Left or Right.</para>
+      </summary>
+      <value>The maximum drawer width when DrawerPosition is set to Left or Right, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMaxWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMaxWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the drawer when DrawerPosition is set to Top or Bottom.</para>
+      </summary>
+      <value>The minimum drawer height when DrawerPosition is set to Top or Bottom, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMinHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMinWidth">
+      <summary>
+        <para>Gets or sets the minimum width of the drawer when DrawerPosition is set to Left or Right.</para>
+      </summary>
+      <value>The minimum drawer width when DrawerPosition is set to Left or Right, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMinWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerMinWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerPosition">
+      <summary>
+        <para>Gets or sets the screen edge to which the drawer is anchored.</para>
+      </summary>
+      <value>The screen edge to which the drawer is anchored.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerPositionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerPosition"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowColor">
+      <summary>
+        <para>Gets or sets the color of the drawer shadow.</para>
+      </summary>
+      <value>The drawer shadow color.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowHeight">
+      <summary>
+        <para>Gets or sets the height of the shadow the drawer casts.</para>
+      </summary>
+      <value>The drawer shadow height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowRadius">
+      <summary>
+        <para>Gets or sets the blur radius of the shadow the drawer casts.</para>
+      </summary>
+      <value>The drawer shadow blur radius, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowRadiusProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerShadowRadius"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerWidth">
+      <summary>
+        <para>Gets or sets the width of the drawer when DrawerPosition is set to Left or Right.</para>
+      </summary>
+      <value>The drawer width when DrawerPosition is set to Left or Right.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.DrawerWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.IsDrawerOpened">
+      <summary>
+        <para>Gets or sets whether the drawer is opened.</para>
+      </summary>
+      <value>true, if the drawer is opened; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.IsDrawerOpenedProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.IsDrawerOpened"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.IsDrawerShadowVisible">
+      <summary>
+        <para>Gets or sets whether the drawer casts a shadow.</para>
+      </summary>
+      <value>true, if the drawer casts a shadow; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.IsDrawerShadowVisibleProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.IsDrawerShadowVisible"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.IsScrimEnabled">
+      <summary>
+        <para>Gets or sets whether the scrim is shown when the drawer is opened.</para>
+      </summary>
+      <value>true, if the scrim is shown when the drawer is opened; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.IsScrimEnabledProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.IsScrimEnabled"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.MainContent">
+      <summary>
+        <para>Gets or sets a page that the DrawerPage displays in the content area.</para>
+      </summary>
+      <value>The page that the DrawerPage displays in the content area.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.MainContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.MainContent"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerPage.ScrimColor">
+      <summary>
+        <para>Gets or sets the color the DrawerPage uses to paint the scrim.</para>
+      </summary>
+      <value>The scrim color.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerPage.ScrimColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerPage.ScrimColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.DrawerView">
+      <summary>
+        <para>The view that can show / hide a panel with navigation information and another data the end user may require (for example, account information).</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.DrawerView.#ctor">
+      <summary>
+        <para>Initializes a new <see cref="T:DevExpress.XamarinForms.Navigation.DrawerView"/> instance with the default settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.AreGesturesEnabled">
+      <summary>
+        <para>Gets or sets whether users can use gestures to open / close the drawer.</para>
+      </summary>
+      <value>true, if users can use gestures to open / close the drawer; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.AreGesturesEnabledProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.AreGesturesEnabled"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerBackgroundColor">
+      <summary>
+        <para>Gets or sets the color the view uses to paint the Drawer background.</para>
+      </summary>
+      <value>The color the view uses to paint the Drawer background.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerBackgroundColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerBackgroundColor"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerBehavior">
+      <summary>
+        <para>Gets or sets how the Drawer behaves on opening / closing.</para>
+      </summary>
+      <value>The value that specifies how the drawer behaves on opening / closing.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerBehaviorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerBehavior"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContent">
+      <summary>
+        <para>Gets or sets a view the DrawerView displays as the Drawer content.</para>
+      </summary>
+      <value>The view the DrawerView displays as the drawer content.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentHeight">
+      <summary>
+        <para>Gets or sets the height of the drawer content view.</para>
+      </summary>
+      <value>The drawer content view height.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the the drawer content view.</para>
+      </summary>
+      <value>The maximum drawer content view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentMaxHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the the drawer content view.</para>
+      </summary>
+      <value>The minimum drawer content view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentMinHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerContent"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterContent">
+      <summary>
+        <para>Gets or sets a view the DrawerView displays as the Drawer footer.</para>
+      </summary>
+      <value>The view the DrawerView displays as the drawer footer.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterContent"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterHeight">
+      <summary>
+        <para>Gets or sets the height of the drawer footer view.</para>
+      </summary>
+      <value>The drawer footer view height.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the the drawer footer view.</para>
+      </summary>
+      <value>The maximum drawer footer view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterMaxHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the the drawer footer view.</para>
+      </summary>
+      <value>The minimum drawer footer view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerFooterMinHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderContent">
+      <summary>
+        <para>Gets or sets a view the DrawerView displays as the Drawer header.</para>
+      </summary>
+      <value>The view the DrawerView displays as the drawer header.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderContent"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderHeight">
+      <summary>
+        <para>Gets or sets the height of the drawer header view.</para>
+      </summary>
+      <value>The drawer header view height.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the the drawer header view.</para>
+      </summary>
+      <value>The maximum drawer header view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderMaxHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the the drawer header view.</para>
+      </summary>
+      <value>The minimum drawer header view height, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeaderMinHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeight">
+      <summary>
+        <para>Gets or sets the height of the Drawer when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The drawer height when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Top or Bottom.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMaxHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the Drawer when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The maximum drawer height when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Top or Bottom.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMaxHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMaxWidth">
+      <summary>
+        <para>Gets or sets the maximum width of the Drawer when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The maximum drawer width when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Left or Right.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMaxWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMaxWidth"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the Drawer when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The minimum drawer height when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Top or Bottom.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMinHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMinWidth">
+      <summary>
+        <para>Gets or sets the minimum width of the Drawer when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The minimum drawer width when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Left or Right.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMinWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerMinWidth"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition">
+      <summary>
+        <para>Gets or sets the edge out of which the Drawer moves out.</para>
+      </summary>
+      <value>The edge out of which the drawer moves out.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPositionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowColor">
+      <summary>
+        <para>Gets or sets the color the view uses to paint the Drawer shadow.</para>
+      </summary>
+      <value>The color the view uses to paint the Drawer shadow.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowColor"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowHeight">
+      <summary>
+        <para>Gets or sets the height of the shadow the Drawer casts.</para>
+      </summary>
+      <value>The height of the shadow the Drawer casts, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowRadius">
+      <summary>
+        <para>Gets or sets the blur radius of the shadow the Drawer casts.</para>
+      </summary>
+      <value>The blur radius of the shadow the Drawer casts, in device independent pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowRadiusProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerShadowRadius"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerWidth">
+      <summary>
+        <para>Gets or sets the width of the Drawer when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The drawer width when <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerPosition"/> is set to Left or Right.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.DrawerWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.DrawerWidth"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.IsDrawerOpened">
+      <summary>
+        <para>Gets or sets whether the Drawer is opened.</para>
+      </summary>
+      <value>true, if the drawer is opened; otherwise false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.IsDrawerOpenedProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.IsDrawerOpened"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.IsDrawerShadowVisible">
+      <summary>
+        <para>Gets or sets whether the Drawer’s shadow is visible.</para>
+      </summary>
+      <value>true, if the Drawer’s shadow is visible; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.IsDrawerShadowVisibleProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.IsDrawerShadowVisible"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.IsScrimEnabled">
+      <summary>
+        <para>Gets or sets whether the view shows the Scrim when the Drawer is opened.</para>
+      </summary>
+      <value>true, if the view shows the scrim when the drawer is opened; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.IsScrimEnabledProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.IsScrimEnabled"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.MainContent">
+      <summary>
+        <para>Gets or sets a view the DrawerView displays in the Main Area.</para>
+      </summary>
+      <value>The view the DrawerView displays in the main area.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.MainContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.MainContent"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.DrawerView.ScrimColor">
+      <summary>
+        <para>Gets or sets the color the view uses to paint the Scrim.</para>
+      </summary>
+      <value>The color the view uses to paint the scrim.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.DrawerView.ScrimColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.DrawerView.ScrimColor"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.HeaderElements">
+      <summary>
+        <para>Lists the combination of elements the item header shows.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.HeaderElements.Default">
+      <summary>
+        <para>Identifies header elements a tab item shows by default.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.HeaderElements.Icon">
+      <summary>
+        <para>An item header shows only an icon (<see cref="P:DevExpress.XamarinForms.Navigation.TabPageItem.HeaderIcon"/> or <see cref="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderIcon"/>) even if the <see cref="P:DevExpress.XamarinForms.Navigation.TabPageItem.HeaderText"/> or <see cref="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderText"/> property is also specified.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.HeaderElements.Text">
+      <summary>
+        <para>An item header shows only text (<see cref="P:DevExpress.XamarinForms.Navigation.TabPageItem.HeaderText"/> or <see cref="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderText"/>) even if the <see cref="P:DevExpress.XamarinForms.Navigation.TabPageItem.HeaderIcon"/> or <see cref="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderIcon"/> property is also specified.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.HeaderElements.TextAndIcon">
+      <summary>
+        <para>An item header shows both text (<see cref="P:DevExpress.XamarinForms.Navigation.TabPageItem.HeaderText"/> or <see cref="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderText"/>) and icon (<see cref="P:DevExpress.XamarinForms.Navigation.TabPageItem.HeaderIcon"/> or <see cref="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderIcon"/>).</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.Initializer">
+      <summary>
+        <para>Contains the Init method that initializes the DevExpress Navigation components.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.Initializer.Init">
+      <summary>
+        <para>Initializes the DevExpress Navigation components.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.ItemHeaderPlacement">
+      <summary>
+        <para>Lists values that specify how the <see cref="T:DevExpress.XamarinForms.Navigation.TabView"/> and <see cref="T:DevExpress.XamarinForms.Navigation.TabPage"/> position the selected tab item header.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.ItemHeaderPlacement.Center">
+      <summary>
+        <para>The selected item header is centered in the header panel.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.ItemHeaderPlacement.Edge">
+      <summary>
+        <para>The selected item header is shifted in the header panel to be fully visible.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.ItemHeaderTappedEventArgs">
+      <summary />
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.ItemHeaderTappedEventArgs.#ctor">
+      <summary />
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.ItemHeaderTappedEventArgs.#ctor(System.Int32)">
+      <summary />
+      <param name="index"></param>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.ItemHeaderTappedEventArgs.Index">
+      <summary />
+      <value></value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.ItemHeaderTappedEventHandler">
+      <summary />
+      <param name="sender"></param>
+      <param name="e"></param>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.Position">
+      <summary>
+        <para>Lists values that specify an element position in its container.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.Position.Bottom">
+      <summary>
+        <para>An element is at the bottom edge of the container.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.Position.Default">
+      <summary>
+        <para>Identifies the default element position.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.Position.Left">
+      <summary>
+        <para>An element is at the left edge of the container.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.Position.Right">
+      <summary>
+        <para>An element is at the right edge of the container.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.Position.Top">
+      <summary>
+        <para>An element is at the top edge of the container.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabHeaderLength">
+      <summary>
+        <para>The header panel’s length that supports the the automatically calculated size.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabHeaderLength.#ctor(System.Double)">
+      <summary>
+        <para>Initializes a new <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> instance with the specified absolute value in pixels.</para>
+      </summary>
+      <param name="value">The length value, in pixels.</param>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabHeaderLength.#ctor(System.Double,DevExpress.XamarinForms.Navigation.TabHeaderUnitType)">
+      <summary>
+        <para>Initializes a new <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> instance with the specified value in the unitType units.</para>
+      </summary>
+      <param name="value">The length value, in unitType units.</param>
+      <param name="type">The measurement unit the length uses.</param>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabHeaderLength.Auto">
+      <summary>
+        <para>Returns the <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> instance that stores the length whose value is measured by item header content.</para>
+      </summary>
+      <value>The <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> instance whose <see cref="P:DevExpress.XamarinForms.Navigation.TabHeaderLength.TabHeaderUnitType"/> is set to Auto.</value>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabHeaderLength.Equals(System.Object)">
+      <summary>
+        <para>Determines whether the specified object is equal to the current <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> instance.</para>
+      </summary>
+      <param name="obj">The object to compare with the current instance.</param>
+      <returns>true , if the specified object has the same value and <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> as the current instance; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabHeaderLength.GetHashCode">
+      <summary>
+        <para>Gets or sets a hash code for the <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/>.</para>
+      </summary>
+      <returns>The hash code for the current <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> instance.</returns>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabHeaderLength.IsAbsolute">
+      <summary>
+        <para>Returns whether the length is measured in pixels.</para>
+      </summary>
+      <value>true if the length is in pixels; otherwise false.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabHeaderLength.IsAuto">
+      <summary>
+        <para>Returns whether the length is measured by item header content.</para>
+      </summary>
+      <value>true if the length is measured by item header content; otherwise false.</value>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabHeaderLength.op_Implicit(System.Double)~DevExpress.XamarinForms.Navigation.TabHeaderLength">
+      <summary>
+        <para>Implicitly converts double absoluteValue into <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> with size set to the value in pixels.</para>
+      </summary>
+      <param name="absoluteValue">The absolute length, in pixels.</param>
+      <returns>The <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> object that is the absolute length, in pixels.</returns>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabHeaderLength.TabHeaderUnitType">
+      <summary>
+        <para>Returns the unit type used to measure the length.</para>
+      </summary>
+      <value>The unit type used to measure the length.</value>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabHeaderLength.ToString">
+      <summary>
+        <para>Returns a <see cref="T:System.String"/> representation of the <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/>.</para>
+      </summary>
+      <returns>The <see cref="T:System.String"/> representation of the <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/>.</returns>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabHeaderLength.Value">
+      <summary>
+        <para>Returns <see cref="T:System.Double"/> that represents the value of the <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/>.</para>
+      </summary>
+      <value><see cref="T:System.Double"/> that represents the value of the <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/>.</value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabHeaderUnitType">
+      <summary>
+        <para>Lists types of values that <see cref="T:DevExpress.XamarinForms.Navigation.TabHeaderLength"/> stores.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabHeaderUnitType.Absolute">
+      <summary>
+        <para>The length in pixels.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabHeaderUnitType.Auto">
+      <summary>
+        <para>The Tab View automatically calculates the header panel length by the Header Panel’s content.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabItem">
+      <summary>
+        <para>The base class for the <see cref="T:DevExpress.XamarinForms.Navigation.TabViewItem"/> and <see cref="T:DevExpress.XamarinForms.Navigation.TabPageItem"/> classes.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabItem.#ctor">
+      <summary>
+        <para>Initializes a <see cref="T:DevExpress.XamarinForms.Navigation.TabItem"/> instance with the default settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderContent">
+      <summary>
+        <para>Gets or sets a view the Tab View displays for a tab item instead of the default item header.</para>
+      </summary>
+      <value>The view the Tab View displays for a tab item instead of the default item header.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderContentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderContent"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontAttributes">
+      <summary>
+        <para>Gets or sets a value that indicates whether the font for the item header’s text is bold, italic, or neither.</para>
+      </summary>
+      <value>The value that indicates whether the font for the item header’s text is bold, italic, or neither.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontAttributesProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontAttributes"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontFamily">
+      <summary>
+        <para>Gets or sets the font family to which the font for the item header’s text belongs.</para>
+      </summary>
+      <value>The font family to which the font for the item header’s text belongs.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontFamilyProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontFamily"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontSize">
+      <summary>
+        <para>Gets or sets the size of the font for the item header’s text.</para>
+      </summary>
+      <value>The size of the font for the item header’s text.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontSizeProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderFontSize"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderHeight">
+      <summary>
+        <para>Gets or sets the item header height when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The height of item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconColor">
+      <summary>
+        <para>Gets or sets the color the tab item uses in the default state to paint its header icon.</para>
+      </summary>
+      <value>The color the tab item uses in the default state to paint its icon.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconColor"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconPosition">
+      <summary>
+        <para>Gets or sets the position of the icon relative to the text in the item header.</para>
+      </summary>
+      <value>The position of the icon relative to the text in the item header.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconPositionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconPosition"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconSpacing">
+      <summary>
+        <para>Gets or sets spacing between the icon and the text in the item header.</para>
+      </summary>
+      <value>Spacing between the icon and the text in the item header, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconSpacingProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderIconSpacing"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The maximum height of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderMaxHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderMaxWidth">
+      <summary>
+        <para>Gets or sets the maximum width of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The maximum width of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderMaxWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderMaxWidth"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>Gets or sets the minimum height of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderMinHeight"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderMinWidth">
+      <summary>
+        <para>Gets or sets the minimum width of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The minimum width of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderMinWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderMinWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderPadding">
+      <summary>
+        <para>Gets or sets the inner padding of the item header.</para>
+      </summary>
+      <value>The inner padding of the header item.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderPaddingProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderPadding"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderTextColor">
+      <summary>
+        <para>Gets or sets the color the tab item uses in the default state to paint its header text.</para>
+      </summary>
+      <value>The color the tab item uses in the default state to paint its text.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderTextColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderTextColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderVisibleElements">
+      <summary>
+        <para>Gets or sets a value that specifies elements the item header shows.</para>
+      </summary>
+      <value>The value that specifies elements the item header shows.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderVisibleElementsProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderVisibleElements"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderWidth">
+      <summary>
+        <para>Gets or sets the item header width when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The width of the item header when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.HeaderWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.HeaderWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderBackgroundColor">
+      <summary>
+        <para>Gets or sets the background color of the tab item header in the selected state.</para>
+      </summary>
+      <value>The background color of the tab item header in the selected state.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderBackgroundColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderBackgroundColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderIconColor">
+      <summary>
+        <para>Gets or sets the color the tab item uses in the selected state to paint its header icon.</para>
+      </summary>
+      <value>The color the tab item uses in the selected state to paint its icon.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderIconColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderIconColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderTextColor">
+      <summary>
+        <para>Gets or sets the color the tab item uses in the selected state to paint its header text.</para>
+      </summary>
+      <value>The color the tab item uses in the selected state to paint its text.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderTextColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabItem.SelectedHeaderTextColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabItemLength">
+      <summary>
+        <para>The item length that supports the automatically calculated size, and size measured as a weighted proportion of the available space.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabItemLength.#ctor(System.Double)">
+      <summary>
+        <para>Initializes a new <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> instance with the specified absolute value in pixels.</para>
+      </summary>
+      <param name="value">The length value, in pixels.</param>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabItemLength.#ctor(System.Double,DevExpress.XamarinForms.Navigation.TabItemLengthUnitType)">
+      <summary>
+        <para>Initializes a new <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> instance with the specified value in the unitType units.</para>
+      </summary>
+      <param name="value">The length value, in unitType units.</param>
+      <param name="type">The measurement unit the length uses.</param>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.Auto">
+      <summary>
+        <para>Returns the <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> instance that stores the length whose value is measured by item header content.</para>
+      </summary>
+      <value>The <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> instance whose <see cref="P:DevExpress.XamarinForms.Navigation.TabItemLength.UnitType"/> is set to Auto.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.Default">
+      <summary>
+        <para>Returns an instance that specifies the default <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/>.</para>
+      </summary>
+      <value>an instance that specifies the default <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/>.</value>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabItemLength.Equals(System.Object)">
+      <summary>
+        <para>Determines whether the specified object is equal to the current <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> instance.</para>
+      </summary>
+      <param name="obj">The object to compare with the current instance.</param>
+      <returns>true, if the specified object has the same value and <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> as the current instance; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabItemLength.GetHashCode">
+      <summary>
+        <para>Gets or sets a hash code for the <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/>.</para>
+      </summary>
+      <returns>The hash code for the current <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> instance.</returns>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.IsAbsolute">
+      <summary>
+        <para>Returns whether the length is measured in pixels.</para>
+      </summary>
+      <value>true if the length is in pixels; otherwise false.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.IsAuto">
+      <summary>
+        <para>Returns whether the length is measured by item header content.</para>
+      </summary>
+      <value>true if the length is measured by item header content; otherwise false.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.IsDefault">
+      <summary>
+        <para>Returns whether the instance is default <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/>.</para>
+      </summary>
+      <value>true, if the instance equals <see cref="P:DevExpress.XamarinForms.Navigation.TabItemLength.Default"/>; otherwise false.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.IsStar">
+      <summary>
+        <para>Returns whether the length is measured as a weighted proportion of the available space.</para>
+      </summary>
+      <value>true if the length is measured as a weighted proportion of the available space; otherwise false.</value>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabItemLength.op_Implicit(System.Double)~DevExpress.XamarinForms.Navigation.TabItemLength">
+      <summary>
+        <para>Implicitly converts double absoluteValue into <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> with size set to the value in pixels.</para>
+      </summary>
+      <param name="absoluteValue">The absolute length, in pixels.</param>
+      <returns>The <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> object that is the absolute length, in pixels.</returns>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.Star">
+      <summary>
+        <para>Returns the <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> instance that stores the length measured as a proportion of the available space.</para>
+      </summary>
+      <value>The <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> instance whose <see cref="P:DevExpress.XamarinForms.Navigation.TabItemLength.UnitType"/> is set to Star and <see cref="P:DevExpress.XamarinForms.Navigation.TabItemLength.Value"/> is set to 1.</value>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabItemLength.ToString">
+      <summary>
+        <para>Returns a <see cref="T:System.String"/> representation of the <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/>.</para>
+      </summary>
+      <returns>The <see cref="T:System.String"/> representation of the <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/>.</returns>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.UnitType">
+      <summary>
+        <para>Returns the unit type used to measure the length.</para>
+      </summary>
+      <value>The unit type used to measure the length.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabItemLength.Value">
+      <summary>
+        <para>Returns <see cref="T:System.Double"/> that represents the value of the <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/>.</para>
+      </summary>
+      <value><see cref="T:System.Double"/> that represents the value of the <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/>.</value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabItemLengthUnitType">
+      <summary>
+        <para>Lists types of values that <see cref="T:DevExpress.XamarinForms.Navigation.TabItemLength"/> stores.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItemLengthUnitType.Absolute">
+      <summary>
+        <para>The length in pixels.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItemLengthUnitType.Auto">
+      <summary>
+        <para>The Tab View automatically calculates the item length by a Header Item’s content.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabItemLengthUnitType.Star">
+      <summary>
+        <para>The Tab View calculates the item length as a weighted proportion of available space.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabPage">
+      <summary>
+        <para>A page that allows tab navigation through a collection of pages.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabPage.#ctor">
+      <summary>
+        <para>Initializes a <see cref="T:DevExpress.XamarinForms.Navigation.TabPage"/> instance with the default settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelBackgroundColor">
+      <summary>
+        <para>Gets or sets the background color of the TabPage’s header panel.</para>
+      </summary>
+      <value>The background color of the header panel.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelBackgroundColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelBackgroundColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelContentAlignment">
+      <summary>
+        <para>Specifies how item headers are aligned in the header panel.</para>
+      </summary>
+      <value>The value that specifies how item headers are aligned in the header panel.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelContentAlignmentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelContentAlignment"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelHeight">
+      <summary>
+        <para>Gets or sets the header panel’s height when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The height of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelIndent">
+      <summary>
+        <para>Gets or sets the spacing between the header panel’s start edge and the first item.</para>
+      </summary>
+      <value>The spacing between the header panel’s start edge and the first item, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelIndentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelIndent"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelItemSpacing">
+      <summary>
+        <para>Gets or sets the spacing between tab item headers.</para>
+      </summary>
+      <value>The spacing between item headers, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelItemSpacingProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelItemSpacing"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMaxHeight">
+      <summary>
+        <para>Gets or sets the header panel’s maximum height when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The maximum height of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMaxHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMaxWidth">
+      <summary>
+        <para>Gets or sets the header panel’s maximum width when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The maximum width of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMaxWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMaxWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMinHeight">
+      <summary>
+        <para>Gets or sets the header panel’s minimum height when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The minimum height of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMinHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMinWidth">
+      <summary>
+        <para>Gets or sets the header panel’s minimum width when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The minimum width of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMinWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelMinWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition">
+      <summary>
+        <para>Gets or sets the header panel’s position within the page.</para>
+      </summary>
+      <value>The header panel’s position within the view.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPositionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowColor">
+      <summary>
+        <para>Gets or sets the color the TabPage uses to paint the header panel’s shadow.</para>
+      </summary>
+      <value>The color the TabPage uses to paint the header panel’s shadow.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowHeight">
+      <summary>
+        <para>Gets or sets the height of the header panel’s shadow.</para>
+      </summary>
+      <value>The height of the header panel’s shadow, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowRadius">
+      <summary>
+        <para>Gets or sets the blur radius of the header panel’s shadow.</para>
+      </summary>
+      <value>The blur radius of the header panel’s shadow.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowRadiusProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelShadowRadius"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelWidth">
+      <summary>
+        <para>Gets or sets the header panel’s width when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The width of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.IsHeaderPanelShadowVisible">
+      <summary>
+        <para>Gets or sets whether the header panel’s shadow is visible.</para>
+      </summary>
+      <value>true, if the Header Panel’s shadow is visible; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.IsHeaderPanelShadowVisibleProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.IsHeaderPanelShadowVisible"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.IsSelectedItemIndicatorVisible">
+      <summary>
+        <para>Gets or sets whether the selected item indicator is visible.</para>
+      </summary>
+      <value>true, if the selected item indicator is visible; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.IsSelectedItemIndicatorVisibleProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.IsSelectedItemIndicatorVisible"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontAttributes">
+      <summary>
+        <para>Gets or sets whether the text displayed within item headers is bold, italic, or neither.</para>
+      </summary>
+      <value>The value that specifies whether the text displayed within item headers is bold, italic, or neither.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontAttributesProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontAttributes"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontFamily">
+      <summary>
+        <para>Gets or sets the font family name for the text displayed within item headers.</para>
+      </summary>
+      <value>The item header’s font family name.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontFamilyProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontFamily"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontSize">
+      <summary>
+        <para>Gets or sets the font size for the text displayed within item headers.</para>
+      </summary>
+      <value>The item header’s font size.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontSizeProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderFontSize"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderHeight">
+      <summary>
+        <para>Gets or sets the height of item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The height of item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconColor">
+      <summary>
+        <para>Gets or sets the color of icons displayed in tab item headers.</para>
+      </summary>
+      <value>The item header’s icon color.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconPosition">
+      <summary>
+        <para>Gets or sets the icon position relative to the text within item headers.</para>
+      </summary>
+      <value>The icon position relative to the text within item headers.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconPositionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconPosition"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconSpacing">
+      <summary>
+        <para>Gets or sets the spacing between the icon and text of an item header.</para>
+      </summary>
+      <value>The spacing between the icon and text of an item header, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconSpacingProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderIconSpacing"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of tab item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The maximum height of tab item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMaxHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMaxWidth">
+      <summary>
+        <para>Gets or sets the maximum width of tab item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The maximum width of tab item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMaxWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMaxWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of tab item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The minimum height of tab item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMinHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMinWidth">
+      <summary>
+        <para>Gets or sets the minimum width of tab item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The minimum width of tab item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMinWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderMinWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderPadding">
+      <summary>
+        <para>Gets or sets the inner padding of item headers.</para>
+      </summary>
+      <value>The inner padding of item headers.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderPaddingProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderPadding"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderPlacementOnSelection">
+      <summary>
+        <para>Specifies how the TabPage positions an item header when a user selects the item.</para>
+      </summary>
+      <value>The value that specifies how the TabPage positions an item header when a user selects the item.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderPlacementOnSelectionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderPlacementOnSelection"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="E:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderTapped">
+      <summary />
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderTemplate">
+      <summary>
+        <para>Gets or sets the template the TabPage uses to generate tab item headers from the ItemsSource.</para>
+      </summary>
+      <value>The template the TabPage uses to generate a tab item header from the ItemsSource.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderTemplateProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderTemplate"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderTextColor">
+      <summary>
+        <para>Gets or sets the color of text displayed in tab item headers.</para>
+      </summary>
+      <value>The item header’s text color.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderTextColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderTextColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderVisibleElements">
+      <summary>
+        <para>Gets or sets a value that specifies elements an item header shows.</para>
+      </summary>
+      <value>The value that specifies elements an item header shows.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderVisibleElementsProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderVisibleElements"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderWidth">
+      <summary>
+        <para>Gets or sets the width of item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The width of item headers when the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemHeaderWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.Items">
+      <summary>
+        <para>Gets or sets the list of tab items the TabPage displays.</para>
+      </summary>
+      <value>The list of tab items the TabPage displays.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemsSource">
+      <summary>
+        <para>Gets or sets the collection used to generate the TabPage’s tab items.</para>
+      </summary>
+      <value>The collection used to generate the TabPage’s tab items.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemsSourceProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemsSource"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ItemTemplate">
+      <summary>
+        <para>Gets or sets the template the TabPage uses to generate tab item content from the ItemsSource.</para>
+      </summary>
+      <value>The template the TabPage uses to generate tab item content from the ItemsSource.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ItemTemplateProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ItemTemplate"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.ScrollAnimationEnabled">
+      <summary>
+        <para>Gets or sets whether the TabPage animates the transition between two tab items.</para>
+      </summary>
+      <value>true if the TabPage animates the transition between two tab items; otherwise false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.ScrollAnimationEnabledProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.ScrollAnimationEnabled"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItem">
+      <summary>
+        <para>Gets or sets the currently selected tab item.</para>
+      </summary>
+      <value>The currently selected item.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderBackgroundColor">
+      <summary>
+        <para>Gets or sets the background color of a tab item header when the item is selected.</para>
+      </summary>
+      <value>The background color of the selected tab item header.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderBackgroundColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderBackgroundColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderIconColor">
+      <summary>
+        <para>Gets or sets the color of an icon displayed in the selected tab item header.</para>
+      </summary>
+      <value>The icon color of the selected item header.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderIconColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderIconColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderTextColor">
+      <summary>
+        <para>Gets or sets the color of text displayed in the selected tab item header.</para>
+      </summary>
+      <value>The text color of the selected item header.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderTextColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemHeaderTextColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndex">
+      <summary>
+        <para>Gets or sets the index of the currently selected item.</para>
+      </summary>
+      <value>The zero-based index of the currently selected item in the Items / ItemsSource collection.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndexProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndex"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndicatorColor">
+      <summary>
+        <para>Gets or sets the color of the selected item indicator.</para>
+      </summary>
+      <value>The selected item indicator color.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndicatorColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndicatorColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndicatorHeight">
+      <summary>
+        <para>Gets or sets the height of the selected item indicator.</para>
+      </summary>
+      <value>The selected item indicator’s height, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndicatorHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemIndicatorHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.SelectedItemProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.SelectedItem"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPage.SwipeEnabled">
+      <summary>
+        <para>Gets or sets whether a swipe gesture over the content area switches tab items.</para>
+      </summary>
+      <value>true if swipes over the content area switch tab items; otherwise false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPage.SwipeEnabledProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabPage.SwipeEnabled"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabPageItem">
+      <summary>
+        <para>Stores the <see cref="T:DevExpress.XamarinForms.Navigation.TabPage"/> item’s header settings and content.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabPageItem.#ctor">
+      <summary>
+        <para>Initializes a <see cref="T:DevExpress.XamarinForms.Navigation.TabPageItem"/> instance with the default settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPageItem.Content">
+      <summary>
+        <para>Gets or sets a page that the TabPage displays in the content area when the item is selected.</para>
+      </summary>
+      <value>The page displayed in the content area when the item is selected.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabPageItem.ContentProperty">
+      <summary />
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPageItem.HeaderIcon">
+      <summary>
+        <para>Gets an icon displayed in the item header.</para>
+      </summary>
+      <value>The item header icon’s source.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabPageItem.HeaderText">
+      <summary>
+        <para>Gets the text of the item header title.</para>
+      </summary>
+      <value>The text of the item header title.</value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabView">
+      <summary>
+        <para>A view that displays content in related items at the same level of hierarchy.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabView.#ctor">
+      <summary>
+        <para>Initializes a <see cref="T:DevExpress.XamarinForms.Navigation.TabView"/> instance with the default settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelBackgroundColor">
+      <summary>
+        <para>Gets or sets the background color of the view’s header panel.</para>
+      </summary>
+      <value>The background color of the view’s header panel.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelBackgroundColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelBackgroundColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelContentAlignment">
+      <summary>
+        <para>Gets or sets a value that specifies how the view aligns item headers in the header panel.</para>
+      </summary>
+      <value>The value that specifies how the view aligns item headers in the header panel.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelContentAlignmentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelContentAlignment"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelHeight">
+      <summary>
+        <para>Gets or sets the header panel’s height when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The height of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelIndent">
+      <summary>
+        <para>Gets or sets spacing before the first item and the panel’s start edge.</para>
+      </summary>
+      <value>Spacing before the first item and the panel’s start edge, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelIndentProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelIndent"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelItemSpacing">
+      <summary>
+        <para>Gets or sets the spacing between item headers.</para>
+      </summary>
+      <value>The spacing between item headers, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelItemSpacingProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelItemSpacing"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMaxHeight">
+      <summary>
+        <para>Gets or sets the header panel’s maximum height when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The maximum height of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMaxHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMaxWidth">
+      <summary>
+        <para>Gets or sets the header panel’s maximum width when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The maximum width of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMaxWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMaxWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMinHeight">
+      <summary>
+        <para>Gets or sets the header panel’s minimum height when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The minimum height of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMinHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMinWidth">
+      <summary>
+        <para>Gets or sets the header panel’s minimum width when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The minimum width of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMinWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelMinWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition">
+      <summary>
+        <para>Gets or sets the header panel’s position within the view.</para>
+      </summary>
+      <value>The header panel’s position within the view.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPositionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowColor">
+      <summary>
+        <para>Gets or sets the color the Tab View uses to paint the header panel’s shadow.</para>
+      </summary>
+      <value>The color the Tab View uses to paint the header panel’s shadow.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowHeight">
+      <summary>
+        <para>Gets or sets the height of the header panel’s shadow.</para>
+      </summary>
+      <value>The height of the header panel’s shadow, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowRadius">
+      <summary>
+        <para>Gets or sets the blur radius of the header panel’s shadow.</para>
+      </summary>
+      <value>The blur radius of the header panel’s shadow.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowRadiusProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelShadowRadius"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelWidth">
+      <summary>
+        <para>Gets or sets the header panel’s width when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The width of the header panel when the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.IsHeaderPanelShadowVisible">
+      <summary>
+        <para>Gets or sets whether the Header Panel’s shadow is visible.</para>
+      </summary>
+      <value>true, if the Header Panel’s shadow is visible; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.IsHeaderPanelShadowVisibleProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.IsHeaderPanelShadowVisible"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.IsSelectedItemIndicatorVisible">
+      <summary>
+        <para>Gets or sets whether the Selected Item Indicator is visible.</para>
+      </summary>
+      <value>true, if the Selected Item Indicator is visible; otherwise, false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.IsSelectedItemIndicatorVisibleProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.IsSelectedItemIndicatorVisible"/> dependency property.</para>
+      </summary>
+      <value>The dependency property description.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontAttributes">
+      <summary>
+        <para>Gets or sets a value that indicates whether the font for item headers’ text is bold, italic, or neither.</para>
+      </summary>
+      <value>The value that indicates whether the font for item headers’ text is bold, italic, or neither.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontAttributesProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontAttributes"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontFamily">
+      <summary>
+        <para>Gets or sets the font family to which the font for item headers’ text belongs.</para>
+      </summary>
+      <value>The font family to which the font for item headers’ text belongs.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontFamilyProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontFamily"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontSize">
+      <summary>
+        <para>Gets or sets the size of the font for item headers’ text.</para>
+      </summary>
+      <value>The size of the font for item headers’ text.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontSizeProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderFontSize"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderHeight">
+      <summary>
+        <para>Gets or sets the height of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The height of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconColor">
+      <summary>
+        <para>Gets or sets the color all tab items use to paint its header icons.</para>
+      </summary>
+      <value>The color all tab items use to paint its header icons.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconDataMember">
+      <summary />
+      <value></value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconDataMemberProperty">
+      <summary />
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconPosition">
+      <summary>
+        <para>Gets or sets the position of the header icons relative to the headers’ text.</para>
+      </summary>
+      <value>The position of the header icons relative to the headers’ text.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconPositionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconPosition"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconSpacing">
+      <summary>
+        <para>Gets or sets spacing between the icon and the text of a header item.</para>
+      </summary>
+      <value>Spacing between the icon and the text of a header item.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconSpacingProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderIconSpacing"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMaxHeight">
+      <summary>
+        <para>Gets or sets the maximum height of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The maximum height of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMaxHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMaxHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMaxWidth">
+      <summary>
+        <para>Gets or sets the maximum width of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The maximum width of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMaxWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMaxWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMinHeight">
+      <summary>
+        <para>Gets or sets the minimum height of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right.</para>
+      </summary>
+      <value>The minimum height of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Left or Right, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMinHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMinHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMinWidth">
+      <summary>
+        <para>Gets or sets the minimum width of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The minimum width of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMinWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderMinWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderPadding">
+      <summary>
+        <para>Gets or sets the inner padding of header items.</para>
+      </summary>
+      <value>The inner padding of header items.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderPaddingProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderPadding"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderPlacementOnSelection">
+      <summary>
+        <para>Gets or sets a value that specifies how the TabView positions newly selected items.</para>
+      </summary>
+      <value>The value that specifies how the TabView positions newly selected items.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderPlacementOnSelectionProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderPlacementOnSelection"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="E:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTapped">
+      <summary />
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTemplate">
+      <summary>
+        <para>Gets or sets the template the Tab View uses to generate tab items’ headers from the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemsSource"/>.</para>
+      </summary>
+      <value>The template the Tab View uses to generate tab item headers from the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemsSource"/>.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTemplateProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTemplate"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTextColor">
+      <summary>
+        <para>Gets or sets the color tab items use to paint their texts when items are in the default state.</para>
+      </summary>
+      <value>The color tab items use to paint their texts when items are in the default state.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTextColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTextColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTextDataMember">
+      <summary />
+      <value></value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderTextDataMemberProperty">
+      <summary />
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderVisibleElements">
+      <summary>
+        <para>Gets or sets a value that specifies elements the item header shows.</para>
+      </summary>
+      <value>The value that specifies elements the item header shows.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderVisibleElementsProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderVisibleElements"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderWidth">
+      <summary>
+        <para>Gets or sets the width of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom.</para>
+      </summary>
+      <value>The width of header items when <see cref="P:DevExpress.XamarinForms.Navigation.TabView.HeaderPanelPosition"/> is set to Top or Bottom, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderWidthProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemHeaderWidth"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.Items">
+      <summary>
+        <para>Gets or sets the list of tab items the Tab View displays.</para>
+      </summary>
+      <value>The list of tab items the Tab View displays.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemsSource">
+      <summary>
+        <para>Gets or sets a collection used to generate the Tab View’s tab items.</para>
+      </summary>
+      <value>A collection used to generate the Tab View’s tab items.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemsSourceProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemsSource"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ItemTemplate">
+      <summary>
+        <para>Gets or sets the template the Tab View uses to generate tab items’ content from the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemsSource"/>.</para>
+      </summary>
+      <value>The template the Tab View uses to generate tab items’ content from the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemsSource"/>.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ItemTemplateProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemTemplate"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.ScrollAnimationEnabled">
+      <summary>
+        <para>Gets or sets whether the Tab View animates transition between two tab items.</para>
+      </summary>
+      <value>true if the Tab View animates transition between two tab items; otherwise false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.ScrollAnimationEnabledProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ScrollAnimationEnabled"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItem">
+      <summary>
+        <para>Gets or sets the currently selected item.</para>
+      </summary>
+      <value>The currently selected item.</value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderBackgroundColor">
+      <summary>
+        <para>Gets or sets the background color of tab item headers in the selected state.</para>
+      </summary>
+      <value>The color the selected tab item uses to paint its background.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderBackgroundColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderBackgroundColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderIconColor">
+      <summary>
+        <para>Gets or sets the color tab item headers in the selected state use to paint icons.</para>
+      </summary>
+      <value>The color tab item headers in the selected state use to paint icons.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderIconColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderIconColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderTextColor">
+      <summary>
+        <para>Gets or sets the color tab item headers in the selected state use to paint icons.</para>
+      </summary>
+      <value>The color tab item headers in the selected state use to paint icons.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderTextColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemHeaderTextColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndex">
+      <summary>
+        <para>Gets or sets the index of the currently selected item.</para>
+      </summary>
+      <value>The zero-based index of the currently selected item in the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.Items"/> / <see cref="P:DevExpress.XamarinForms.Navigation.TabView.ItemsSource"/> collection.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndexProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndex"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndicatorColor">
+      <summary>
+        <para>Gets or sets the color of the Selected Item Indicator.</para>
+      </summary>
+      <value>The color of the Selected Item Indicator.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndicatorColorProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndicatorColor"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndicatorHeight">
+      <summary>
+        <para>Gets or sets the height of the Selected Item Indicator.</para>
+      </summary>
+      <value>The Selected Item Indicator’s height, in pixels.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndicatorHeightProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItemIndicatorHeight"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.SelectedItemProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.SelectedItem"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabView.SwipeEnabled">
+      <summary>
+        <para>Gets or sets whether swipes over the content area switch tab items.</para>
+      </summary>
+      <value>true if swipes over the content area switch tab items; otherwise false.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabView.SwipeEnabledProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabView.SwipeEnabled"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="T:DevExpress.XamarinForms.Navigation.TabViewItem">
+      <summary>
+        <para>Stores the <see cref="T:DevExpress.XamarinForms.Navigation.TabView"/> item’s header settings and content.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XamarinForms.Navigation.TabViewItem.#ctor">
+      <summary>
+        <para>Initializes a <see cref="T:DevExpress.XamarinForms.Navigation.TabViewItem"/> instance with the default settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabViewItem.Content">
+      <summary>
+        <para>Gets or sets a view that the TabView displays in the content area when the item is selected.</para>
+      </summary>
+      <value>The view displayed in the content area when the item is selected.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabViewItem.ContentProperty">
+      <summary />
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderIcon">
+      <summary>
+        <para>Gets or sets an icon the item header displays.</para>
+      </summary>
+      <value>The item header icon’s source.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderIconProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderIcon"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+    <member name="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderText">
+      <summary>
+        <para>Gets or sets the text of the item header title.</para>
+      </summary>
+      <value>The text of the item header title.</value>
+    </member>
+    <member name="F:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderTextProperty">
+      <summary>
+        <para>Identifies the <see cref="P:DevExpress.XamarinForms.Navigation.TabViewItem.HeaderText"/> dependency property.</para>
+      </summary>
+      <value></value>
+    </member>
+  </members>
+</doc>

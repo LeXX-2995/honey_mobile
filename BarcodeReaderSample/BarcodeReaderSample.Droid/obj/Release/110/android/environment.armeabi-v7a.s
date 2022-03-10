@@ -58,7 +58,7 @@ application_config:
 	/* system_property_count */
 	.long	0
 	/* number_of_assemblies_in_apk */
-	.long	53
+	.long	70
 	/* bundled_assembly_name_width */
 	.long	0
 	/* number_of_assembly_store_files */
@@ -95,7 +95,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.6,"aMS",%progbits,1
 	.type	.L.env.str.6, %object
 .L.env.str.6:
-	.asciz	"389d1072-868f-4b7a-a1a6-e15a75f4f235"
+	.asciz	"65c1730a-290c-4c23-92cb-77183f3cbd9c"
 	.size	.L.env.str.6, 37
 	.section	.rodata.env.str.7,"aMS",%progbits,1
 	.type	.L.env.str.7, %object
@@ -644,7 +644,160 @@ assembly_store_bundled_assemblies:
 	/* descriptor */
 	.long	0
 
-	.size	assembly_store_bundled_assemblies, 848
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	/* image_data */
+	.long	0
+	/* debug_info_data */
+	.long	0
+	/* config_data */
+	.long	0
+	/* descriptor */
+	.long	0
+
+	.size	assembly_store_bundled_assemblies, 1120
 
 	/* Assembly store data */
 	.section	.data.assembly_stores,"aw",%progbits

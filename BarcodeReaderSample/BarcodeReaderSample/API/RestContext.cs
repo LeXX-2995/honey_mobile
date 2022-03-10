@@ -1,22 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
-using NobelXamarin.Models;
 using RestSharp;
 using RestSharp.Serializers.NewtonsoftJson;
+using TraceIQ.Expeditor.Models;
 
-namespace BarcodeReaderSample.API
+namespace TraceIQ.Expeditor.API
 {
     public class RestContext
     {
         public static string Port = string.Empty;
         public static string ApiResource = "/api/";
-        public static string Ip = "https://dtrack.uz:";
+        public static string Ip = "https://traceapp.carlsberg.uz:10112";
         public static UserModel UserModel;
-        public static string Url = Ip + Port + ApiResource;
+        public static string Url = Ip + ApiResource;
         public static RestClient Client => new RestClient(Url);
 
         public static RestRequest CreateAuthorizedRequest(string resource, Dictionary<string, string> parameters, Method method, object body = null)
