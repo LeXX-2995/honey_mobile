@@ -14,12 +14,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Database\DigitalTrackingContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\EnumExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HoneywellBarcodeReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interface\IPlatformInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220319204907_Initial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220319204907_Initial.Designer.cs">
+      <DependentUpon>20220319204907_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\DigitalTrackingContextModelSnapshot.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Barcode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ClientsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\InterfaceTypes.cs" />

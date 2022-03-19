@@ -1,5 +1,4 @@
 Com.Bixolon.Mpos.Xamarin.dll
-DataCollectionLib.dll
 DevExpress.Xamarin.Android.CollectionView.dll
 DevExpress.Xamarin.Android.Editors.dll
 DevExpress.Xamarin.Android.Grid.dll
@@ -12,6 +11,7 @@ DevExpress.XamarinForms.Navigation.Android.dll
 FormsViewGroup.dll
 Honeywell.AIDC.CrossPlatform.BarcodeReader.dll
 Plugin.SatoMpXamarinSDK.dll
+SQLitePCLRaw.lib.e_sqlite3.android.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll
 Xamarin.AndroidX.Annotation.Experimental.dll
@@ -75,6 +75,7 @@ Xamarin.Google.Android.Material.dll
 Xamarin.Google.Guava.ListenableFuture.dll
 Xamarin.Jetbrains.Annotations.dll
 Xamarin.Kotlin.StdLib.dll
+DataCollectionLib.dll
 androidx.documentfile.documentfile.aar
 androidx.annotation.annotation-experimental.aar
 androidx.multidex.multidex.aar

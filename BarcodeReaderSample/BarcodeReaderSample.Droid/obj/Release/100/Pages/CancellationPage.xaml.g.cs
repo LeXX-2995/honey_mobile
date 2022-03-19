@@ -13,7 +13,7 @@
 namespace BarcodeReaderSample.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\sanja\\Source\\Repos\\Sanjar1177\\BarcodeReaderSample\\BarcodeReaderSample\\Ba" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\sanja\\source\\repos\\Sanjar1177\\BarcodeReaderSample\\BarcodeReaderSample\\Ba" +
         "rcodeReaderSample\\Pages\\CancellationPage.xaml")]
     public partial class CancellationPage : global::Xamarin.Forms.ContentPage {
         

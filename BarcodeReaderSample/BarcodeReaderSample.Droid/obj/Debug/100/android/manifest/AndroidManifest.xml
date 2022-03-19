@@ -8,6 +8,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.honeywell.aidc.cp.BarcodeReaderSample" android:installLocation="auto" android:versionCode="10" android:versionName="1.1.0.0">
   <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="27" />
   <uses-permission android:name="com.honeywell.decode.permission.DECODE" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <application android:label="Sanjar" android:name="androidx.multidex.MultiDexApplication" android:allowBackup="true" android:debuggable="true" android:extractNativeLibs="true">

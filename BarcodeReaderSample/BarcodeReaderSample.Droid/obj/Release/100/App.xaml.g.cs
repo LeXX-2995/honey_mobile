@@ -13,7 +13,7 @@
 namespace BarcodeReaderSample {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\sanja\\Source\\Repos\\Sanjar1177\\BarcodeReaderSample\\BarcodeReaderSample\\Ba" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\sanja\\source\\repos\\Sanjar1177\\BarcodeReaderSample\\BarcodeReaderSample\\Ba" +
         "rcodeReaderSample\\App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         

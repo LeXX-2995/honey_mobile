@@ -1,5 +1,8 @@
-﻿using BarcodeReaderSample;
+﻿using System.Linq;
+using BarcodeReaderSample;
+using BarcodeReaderSample.Database;
 using BarcodeReaderSample.Pages;
+using Microsoft.EntityFrameworkCore;
 using Xamarin.Forms;
 
 namespace TraceIQ.Expeditor.PageModels
@@ -10,6 +13,8 @@ namespace TraceIQ.Expeditor.PageModels
         public Command OpenGoodsOnStockCommand { get; set; }
         public Command OpenReturnCommand { get; set; }
         public Command OpenLabelPrinterPage { get; set; }
+
+        public DigitalTrackingContext _db { get; set; }
         public MainPageViewModel(INavigation navigation, HoneywellBarcodeReader scanner)
         {
             Scanner = scanner;
@@ -19,6 +24,7 @@ namespace TraceIQ.Expeditor.PageModels
             OpenGoodsOnStockCommand = new Command(OpenGoodsOnStock);
             OpenReturnCommand = new Command(OpenReturns);
             OpenLabelPrinterPage = new Command(OpenLabelPrinter);
+
         }
 
         private async void OpenLabelPrinter()

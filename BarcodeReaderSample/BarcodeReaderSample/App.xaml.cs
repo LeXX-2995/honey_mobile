@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using BarcodeReaderSample.Database;
+using BarcodeReaderSample.Droid;
+using Entities;
+using Microsoft.EntityFrameworkCore;
 using Xamarin.Forms;
 
 namespace BarcodeReaderSample
@@ -13,6 +16,13 @@ namespace BarcodeReaderSample
         public App ()
         {
             InitializeComponent();
+
+            using (var db = new DigitalTrackingContext())
+            {
+                // Create db if not exists
+                db.Database.Migrate();
+            }
+
             DevExpress.XamarinForms.Editors.Initializer.Init();
             MainPageApp = new MainPage();
             

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.devexpress.editors" >
+    package="com.devexpress.dxgrid"
+    android:versionName="21.2.5" >
 
     <uses-sdk
         android:minSdkVersion="19"

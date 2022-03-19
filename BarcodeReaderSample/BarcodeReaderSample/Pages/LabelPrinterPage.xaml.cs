@@ -242,7 +242,7 @@ namespace BarcodeReaderSample.Pages
                 if (result != (int)ResultCode.SUCCESS)
                 {
                     _printer = null;
-                    await DisplayAlert("Connection Fail", "openService failed. (" + result.ToString() + ")", "OK");
+                    await DisplayAlert("Connection Fail", "openService failed. (" + result + ")", "OK");
                 }
             }
             finally
