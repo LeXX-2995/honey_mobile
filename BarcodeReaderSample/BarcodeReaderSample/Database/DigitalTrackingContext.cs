@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BarcodeReaderSample.Database
 {
-    public class DigitalTrackingContext : DbContext
+    public partial class DigitalTrackingContext : DbContext
     {
-        private readonly string _databaseFileName = "dtrack.db";
+        private readonly string _databaseFileName = "dtrack8.db";
 
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -22,6 +22,7 @@ namespace BarcodeReaderSample.Database
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<CodesMapping> CodesMappings { get; set; }
         public DbSet<Setting> Setting { get; set; }
+        public DbSet<OrderCodeMapping> OrderCodeMappings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

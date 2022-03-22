@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Entities;
 
 namespace TraceIQ.Expeditor.Models
 {
-    public class ProductsModel : ModelObject
+    public class OrderDetailsModel : ModelObject
     {
         private string _productName;
 
@@ -51,6 +52,18 @@ namespace TraceIQ.Expeditor.Models
             {
                 _assembledAmount = value;
                 OnPropertyChanged(nameof(AssembledAmount));
+            }
+        }
+
+        private UnitOfMeasurement _unitOfMeasurement;
+
+        public UnitOfMeasurement UnitOfMeasurement
+        {
+            get => _unitOfMeasurement;
+            set
+            {
+                _unitOfMeasurement = value;
+                OnPropertyChanged(nameof(UnitOfMeasurement));
             }
         }
 

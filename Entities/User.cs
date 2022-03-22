@@ -13,5 +13,18 @@ namespace Entities
         public string Name { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public Guid TransportId { get; set; }
+        public RoleType RoleType { get; set; }
+    }
+
+    public enum RoleType
+    {
+        Administrator,
+
+        Accountant,
+
+        Picker,
+
+        Expeditor
     }
 }

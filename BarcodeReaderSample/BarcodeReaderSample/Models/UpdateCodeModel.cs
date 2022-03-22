@@ -1,4 +1,5 @@
 ﻿using System;
+using Entities;
 
 namespace TraceIQ.Expeditor.Models
 {
@@ -17,6 +18,6 @@ namespace TraceIQ.Expeditor.Models
         public string ProductName { get; set; }
         public Guid ReportId { get; set; }
         public string Sscc { get; set; }
-        public UnitOfMeasurements UnitOfMeasurement { get; set; }
+        public UnitOfMeasurement UnitOfMeasurement { get; set; }
     }
 }

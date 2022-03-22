@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeReaderSample.Pages.ProductApprovePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Text="Наименование: " Grid.Row="0" Grid.Column="0" FontSize="18"/>
+            <Label Text="Единица измерения: " Grid.Row="1" Grid.Column="0" FontSize="18"/>
+            <Label Text="SSCC: " Grid.Row="2" Grid.Column="0" FontSize="18"/>
+
+            <Label Text="{Binding ProductName}" Grid.Row="0" Grid.Column="1" FontSize="15"/>
+            <Label Text="{Binding UnitOfMeasurement}" Grid.Row="1" Grid.Column="1" FontSize="15"/>
+            <Label Text="{Binding Code}" Grid.Row="2" Grid.Column="1" FontSize="15"/>
+
+            <Grid Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Text="Отменить" Command="{Binding DenyCommand}" BackgroundColor="Red" TextColor="White"/>
+                <Button Grid.Column="1" Text="Принять" Command="{Binding AcceptCommand}" BackgroundColor="Green" TextColor="White" IsVisible="{Binding IsAcceptVisible, Mode=TwoWay}"/>
+                <Button Grid.Column="1" Text="Удалить" Command="{Binding AcceptCommand}" BackgroundColor="Yellow" TextColor="Black" IsVisible="{Binding IsDeleteVisible, Mode=TwoWay}"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

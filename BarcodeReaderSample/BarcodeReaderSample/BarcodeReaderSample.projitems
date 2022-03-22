@@ -11,41 +11,58 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Annotations.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)API\RestContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\BaseApiService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Database\DbService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\DigitalTrackingContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\DigitalTrackingContext.Extension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\EnumExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\NumericValidationBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HoneywellBarcodeReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interface\IBaseApiService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interface\IDbService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interface\IPlatformInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220319204907_Initial.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220319204907_Initial.Designer.cs">
-      <DependentUpon>20220319204907_Initial.cs</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220322020450_Initial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220322020450_Initial.Designer.cs">
+      <DependentUpon>20220322020450_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Migrations\DigitalTrackingContextModelSnapshot.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Barcode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BCrypt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ClientsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\InterfaceTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ModelObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\OperationResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\OrdersModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ProductApproveModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ProductsModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Status.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\StatusEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\StatusType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\UnitOfMeasurements.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SyncDataTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SyncModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UpdateCodeModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\AcceptPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\CancellationPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\ClientPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\LoginPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\MainPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\OrderProductsPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\OrdersPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\PaymentPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\ProductApprovePageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\SyncPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\AcceptPage.xaml.cs">
+      <DependentUpon>AcceptPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CancellationPage.xaml.cs">
       <DependentUpon>CancellationPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -56,6 +73,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LabelPrinterPage.xaml.cs">
       <DependentUpon>LabelPrinterPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\OrderProductsPage.xaml.cs">
@@ -72,6 +93,14 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\PrinterSelectionPage.xaml.cs">
       <DependentUpon>PrinterSelectionPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ProductApprovePage.xaml.cs">
+      <DependentUpon>ProductApprovePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\SyncPage.xaml.cs">
+      <DependentUpon>SyncPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -111,6 +140,26 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PrinterSelectionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\SyncPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\ProductApprovePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\AcceptPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

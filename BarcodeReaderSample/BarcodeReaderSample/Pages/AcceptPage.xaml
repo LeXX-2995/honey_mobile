@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:editors="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             xmlns:helpers="clr-namespace:BarcodeReaderSample.Helpers;assembly=BarcodeReaderSample.Droid"
+             x:Class="BarcodeReaderSample.Pages.AcceptPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+
+            <!--<Entry Grid.Row="0" Placeholder="Наличными" Text="{Binding Cash, Mode=TwoWay}"/>
+            <Entry Grid.Row="1" Placeholder="Терминал" Text="{Binding Terminal, Mode=TwoWay}"/>-->
+            <!--<editors:NumericEdit Grid.Row="0" Value="{Binding Cash, Mode=TwoWay}"/>-->
+            <!--<editors:NumericEdit Grid.Row="1" Value="{Binding Terminal, Mode=TwoWay}" TextColor="Gray" DisplayFormat="n1" LabelText="Терминал"/>-->
+
+            <Entry 
+                Grid.Row="0"
+                   Placeholder="Наличными" Text="{Binding Cash, Mode=TwoWay}"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Keyboard="Numeric">
+                <!--<Entry.Behaviors>
+                    <helpers:NumericValidationBehavior />
+                </Entry.Behaviors>-->
+            </Entry>
+
+            <Entry 
+                Grid.Row="1" Placeholder="Терминал" Text="{Binding Terminal, Mode=TwoWay}"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Keyboard="Numeric">
+                <!--<Entry.Behaviors>
+                    <helpers:NumericValidationBehavior />
+                </Entry.Behaviors>-->
+            </Entry>
+
+
+            <editors:SimpleButton 
+                Grid.Row="2"
+                Text = "Подтвердить" 
+                TextColor="White"
+                Background="Green"
+                CornerMode = "Round"        
+                CornerRadius="10"
+                Margin="10"
+                Command="{Binding ConfirmCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

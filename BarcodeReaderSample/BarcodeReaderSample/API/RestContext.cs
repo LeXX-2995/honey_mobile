@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
+using Entities;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
@@ -16,9 +17,9 @@ namespace TraceIQ.Expeditor.API
     {
         public static string Port = string.Empty;
         public static string ApiResource = "/api/";
-        public static string Ip = "https://traceapp.carlsberg.uz:10112";
-        public static UserModel UserModel;
-        public static string Url = Ip + ApiResource;
+        public static string Ip = string.Empty;
+        public static User User;
+        public static string Url = string.Empty;
         public static RestClient Client => new RestClient(Url);
 
         public static RestRequest CreateAuthorizedRequest(string resource, Dictionary<string, string> parameters, Method method, object body = null)

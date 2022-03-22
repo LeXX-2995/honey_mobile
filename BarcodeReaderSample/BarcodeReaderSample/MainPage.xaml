@@ -33,16 +33,26 @@
                 CornerMode = "Round"        
                 CornerRadius="10"
                 Margin="10"
-                Command="{Binding OpenLabelPrinterPage}"/>
+                Command="{Binding OpenGoodsOnStockCommand}"/>
 
-            <dxe:SimpleButton 
+            <dxe:SimpleButton
+                Grid.Row="2"
+                Text = "Синхронизировать" 
+                Icon = "delete" 
+                TextColor="White"
+                CornerMode = "Round"        
+                CornerRadius="10"
+                Margin="10"
+                Command="{Binding SynchronizeData}"/>
+
+            <!--<dxe:SimpleButton 
                 Grid.Row="2"
                 Text = "Возвраты" 
                 Icon = "delete"
                 TextColor="White"
                 CornerMode = "Round"        
                 CornerRadius="10"
-                Margin="10"/>
+                Margin="10"/>-->
 
             
         </Grid>

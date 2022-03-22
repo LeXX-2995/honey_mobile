@@ -11,12 +11,10 @@ namespace Entities
         [Key]
         public Guid Id { get; set; }
         public string Code { get; set; }
-
         [ForeignKey(nameof(Product))]
         public Guid ProductId { get; set; }
-
         public Product Product { get; set; }
-
+        public bool IsDisAggregated { get; set; }
         public List<Box> Boxes { get; set; }
     }
 
@@ -31,7 +29,7 @@ namespace Entities
 
         [ForeignKey(nameof(Pallet))]
         public Guid? PalletId { get; set; }
-
+        public bool IsDisAggregated { get; set; }
         public Pallet Pallet { get; set; }
         public Product Product { get; set; }
 
@@ -85,16 +83,16 @@ namespace Entities
         public Guid Id { get; set; }
         public string OrderNumber { get; set; }
         public DateTime OrderDate { get; set; }
-        public string OrderStatus { get; set; }
+        public OrderStatus OrderStatus { get; set; }
         public double? Total { get; set; }
         public double Cash { get; set; }
         public double Terminal { get; set; }
         public string QrPaymentUrl { get; set; }
         public PaymentType PaymentType { get; set; }
-        
         [ForeignKey(nameof(Supplier))]
         public Guid SupplierId { get; set; }
 
+        public bool IsWaitingQr { get; set; }
         public Supplier Supplier { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
     }
@@ -109,10 +107,15 @@ namespace Entities
 
         public int Quantity { get; set; }
 
+        [ForeignKey(nameof(Product))]
+        public Guid ProductId { get; set; }
         public UnitOfMeasurement UnitOfMeasurement { get; set; }
         public double Price { get; set; }
         public double Total { get; set; }
         public Order Order { get; set; }
+        public Product Product { get; set; }
+
+        public List<OrderCodeMapping> OrderCodeMappings { get; set; }
     }
 
     public class CodesMapping
@@ -129,18 +132,35 @@ namespace Entities
         [ForeignKey(nameof(DataMatrix))]
         public Guid? DataMatrixCodeId { get; set; }
 
+        public Box Box { get; set; }
+        public Pallet Pallet { get; set; }
+        public DataMatrix DataMatrix { get; set; }
+    }
+
+    public class OrderCodeMapping
+    {
+        [Key]
+        public Guid Id { get; set; }
+
+        [ForeignKey(nameof(Pallet))]
+        public Guid? PalletId { get; set; }
+
+        [ForeignKey(nameof(Box))]
+        public Guid? BoxId { get; set; }
+
+        [ForeignKey(nameof(DataMatrix))]
+        public Guid? DataMatrixCodeId { get; set; }
+
         [ForeignKey(nameof(Order))]
-        public Guid? OrderId { get; set; }
+        public Guid OrderId { get; set; }
 
         [ForeignKey(nameof(OrderDetail))]
-        public Guid? OrderDetailId { get; set; }
-
+        public Guid OrderDetailId { get; set; }
         public Box Box { get; set; }
         public Pallet Pallet { get; set; }
         public DataMatrix DataMatrix { get; set; }
 
         public Order Order { get; set; }
-
         public OrderDetail OrderDetail { get; set; }
     }
 
@@ -168,9 +188,30 @@ namespace Entities
     {
         [Display(Name = "Штука")]
         Item = 1,
-        [Display(Name = "Коробка")]
+        [Display(Name = "Блок")]
         Box,
         [Display(Name = "Паллета")]
         Pallet,
+    }
+
+    public enum OrderStatus
+    {
+        [Display(Name = "Принят")]
+        Accepted = 1,
+
+        [Display(Name = "Создан")]
+        Entered,
+
+        [Display(Name = "Отгружен")]
+        Dispatched,
+
+        [Display(Name = "В пути")]
+        Transit,
+
+        [Display(Name = "Отвергнут")]
+        Rejected,
+
+        [Display(Name = "Отвергнут")]
+        Transfered,
     }
 }

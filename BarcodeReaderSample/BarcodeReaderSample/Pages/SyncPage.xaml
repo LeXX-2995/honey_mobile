@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataGrid="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
+             xmlns:editors="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             x:Class="BarcodeReaderSample.Pages.SyncPage">
+    <NavigationPage.TitleView>
+        <Label Text="Синхронизация" TextColor="White" FontSize="20" VerticalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <dataGrid:DataGridView x:Name="grid" ItemsSource="{Binding SyncModels}" Grid.Row="0">
+                <dataGrid:TextColumn FieldName="SyncDataTypeString" Caption="Тип"/>
+                <dataGrid:TextColumn FieldName="SyncStatusString" Caption="Статус" />
+            </dataGrid:DataGridView>
+
+            <editors:SimpleButton 
+                Grid.Row="1"
+                Text = "Начать" 
+                Icon = "delete" 
+                TextColor="White"
+                CornerMode = "Round"        
+                CornerRadius="10"
+                Margin="10"
+                Command="{Binding StartReceivingCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

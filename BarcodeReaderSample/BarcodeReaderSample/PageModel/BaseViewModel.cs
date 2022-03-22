@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using BarcodeReaderSample;
+using BarcodeReaderSample.Interface;
 using Xamarin.Forms;
 
 namespace TraceIQ.Expeditor.PageModels
@@ -12,6 +13,8 @@ namespace TraceIQ.Expeditor.PageModels
     {
         public HoneywellBarcodeReader Scanner;
         public INavigation Navigation;
+        public IBaseApiService BaseApiService;
+        public IDbService DbService;
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",
             Action onChanged = null)

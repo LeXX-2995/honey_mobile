@@ -25,6 +25,9 @@ namespace MIgrationCreator.Migrations
                     b.Property<string>("Code")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsDisAggregated")
+                        .HasColumnType("INTEGER");
+
                     b.Property<Guid?>("PalletId")
                         .HasColumnType("TEXT");
 
@@ -52,12 +55,6 @@ namespace MIgrationCreator.Migrations
                     b.Property<Guid?>("DataMatrixCodeId")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("OrderDetailId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("OrderId")
-                        .HasColumnType("TEXT");
-
                     b.Property<Guid?>("PalletId")
                         .HasColumnType("TEXT");
 
@@ -66,10 +63,6 @@ namespace MIgrationCreator.Migrations
                     b.HasIndex("BoxId");
 
                     b.HasIndex("DataMatrixCodeId");
-
-                    b.HasIndex("OrderDetailId");
-
-                    b.HasIndex("OrderId");
 
                     b.HasIndex("PalletId");
 
@@ -109,14 +102,17 @@ namespace MIgrationCreator.Migrations
                     b.Property<double>("Cash")
                         .HasColumnType("REAL");
 
+                    b.Property<bool>("IsWaitingQr")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("OrderNumber")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("OrderStatus")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("OrderStatus")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("PaymentType")
                         .HasColumnType("INTEGER");
@@ -140,6 +136,42 @@ namespace MIgrationCreator.Migrations
                     b.ToTable("Orders");
                 });
 
+            modelBuilder.Entity("Entities.OrderCodeMapping", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("BoxId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("DataMatrixCodeId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("OrderDetailId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("PalletId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BoxId");
+
+                    b.HasIndex("DataMatrixCodeId");
+
+                    b.HasIndex("OrderDetailId");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("PalletId");
+
+                    b.ToTable("OrderCodeMappings");
+                });
+
             modelBuilder.Entity("Entities.OrderDetail", b =>
                 {
                     b.Property<Guid>("Id")
@@ -151,6 +183,9 @@ namespace MIgrationCreator.Migrations
 
                     b.Property<double>("Price")
                         .HasColumnType("REAL");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("INTEGER");
@@ -165,6 +200,8 @@ namespace MIgrationCreator.Migrations
 
                     b.HasIndex("OrderId");
 
+                    b.HasIndex("ProductId");
+
                     b.ToTable("OrderDetails");
                 });
 
@@ -176,6 +213,9 @@ namespace MIgrationCreator.Migrations
 
                     b.Property<string>("Code")
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsDisAggregated")
+                        .HasColumnType("INTEGER");
 
                     b.Property<Guid>("ProductId")
                         .HasColumnType("TEXT");
@@ -268,6 +308,12 @@ namespace MIgrationCreator.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("RoleType")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("TransportId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.ToTable("Users");
@@ -296,14 +342,6 @@ namespace MIgrationCreator.Migrations
                         .WithMany()
                         .HasForeignKey("DataMatrixCodeId");
 
-                    b.HasOne("Entities.OrderDetail", "OrderDetail")
-                        .WithMany()
-                        .HasForeignKey("OrderDetailId");
-
-                    b.HasOne("Entities.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderId");
-
                     b.HasOne("Entities.Pallet", "Pallet")
                         .WithMany()
                         .HasForeignKey("PalletId");
@@ -331,11 +369,44 @@ namespace MIgrationCreator.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Entities.OrderCodeMapping", b =>
+                {
+                    b.HasOne("Entities.Box", "Box")
+                        .WithMany()
+                        .HasForeignKey("BoxId");
+
+                    b.HasOne("Entities.DataMatrix", "DataMatrix")
+                        .WithMany()
+                        .HasForeignKey("DataMatrixCodeId");
+
+                    b.HasOne("Entities.OrderDetail", "OrderDetail")
+                        .WithMany("OrderCodeMappings")
+                        .HasForeignKey("OrderDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Pallet", "Pallet")
+                        .WithMany()
+                        .HasForeignKey("PalletId");
+                });
+
             modelBuilder.Entity("Entities.OrderDetail", b =>
                 {
                     b.HasOne("Entities.Order", "Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -24,27 +24,28 @@ namespace BarcodeReaderSample
             }
 
             DevExpress.XamarinForms.Editors.Initializer.Init();
+
             MainPageApp = new MainPage();
             
-            MainPage = new NavigationPage( MainPageApp);
+            MainPage = new NavigationPage(MainPageApp);
         }
 
-        //protected override void OnStart()
-        //{
-        //    // Handle when your app starts
-        //    MainPageApp.HoneywellBarcodeReader.OpenBarcodeReader();
-        //}
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+            MainPageApp.HoneywellBarcodeReader.OpenBarcodeReader();
+        }
 
-        //protected override void OnSleep()
-        //{
-        //    // Handle when your app sleeps
-        //    MainPageApp.HoneywellBarcodeReader.CloseBarcodeReader();
-        //}
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+            MainPageApp.HoneywellBarcodeReader.CloseBarcodeReader();
+        }
 
-        //protected override void OnResume()
-        //{
-        //    // Handle when your app resumes
-        //    MainPageApp.HoneywellBarcodeReader.OpenBarcodeReader();
-        //}
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+            MainPageApp.HoneywellBarcodeReader.OpenBarcodeReader();
+        }
     }
 }

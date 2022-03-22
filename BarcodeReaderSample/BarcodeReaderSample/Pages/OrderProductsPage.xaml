@@ -14,7 +14,7 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <dataGrid:DataGridView ItemsSource="{Binding Products}" Grid.Row="0" ColumnHeaderHeight="0">
+            <dataGrid:DataGridView ItemsSource="{Binding OrderDetails}" Grid.Row="0" ColumnHeaderHeight="0">
                 <dataGrid:DataGridView.AdvancedColumnLayout>
                     <dataGrid:AdvancedColumnLayout>
                         <dataGrid:AdvancedColumnLayout.ColumnDefinitions>
@@ -42,27 +42,34 @@
                 <dataGrid:NumberColumn FieldName="Amount" Row="2" Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </dataGrid:DataGridView>
 
-            <dxe:NumericEdit Grid.Row="1" Value="5000" DisplayFormat="n1"/>
+            <dxe:NumericEdit Grid.Row="1" Value="{Binding Total, Mode=TwoWay}" TextColor="Gray" DisplayFormat="n1"/>
 
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
                 <dxe:SimpleButton Grid.Column="0" 
-                                  Text = "ОК" 
+                                  Text = "Завершить" 
                                   TextColor="White"
-                                  BackgroundColor="Green"/>
+                                  BackgroundColor="Green"
+                                  Command="{Binding AcceptCommand}"
+                                  IsVisible="{Binding IsVisible}"/>
                 <dxe:SimpleButton Grid.Column="1"
-                                  Text = "Обновить" 
-                                  TextColor="Gray"
-                                  BackgroundColor="Yellow"/>
-                <dxe:SimpleButton Grid.Column="2"
                                   Text = "Отмена" 
                                   TextColor="White"
-                                  BackgroundColor="Red"/>
+                                  BackgroundColor="Red"
+                                  Command="{Binding RejectCommand}"
+                                  IsVisible="{Binding IsVisible}"/>
+
+                <dxe:SimpleButton Grid.ColumnSpan="2"
+                                  Text = "Напечатать" 
+                                  TextColor="Gray"
+                                  BackgroundColor="Yellow"
+                                  Command="{Binding PrintCommand}"
+                                  IsVisible="{Binding IsPrintButtonVisible}"/>
+
             </Grid>
         </Grid>
     </ContentPage.Content>
