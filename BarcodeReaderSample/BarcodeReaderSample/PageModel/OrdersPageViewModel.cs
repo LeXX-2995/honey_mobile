@@ -27,7 +27,6 @@ namespace TraceIQ.Expeditor.PageModels
 
             Orders = new ObservableCollection<OrdersModel>();
 
-            Task.Run(GetOrders);
         }
 
         private async void SelectOrder(OrdersModel order)
@@ -35,8 +34,10 @@ namespace TraceIQ.Expeditor.PageModels
             await Navigation.PushAsync(new OrderProductsPage(Navigation, Scanner, DbService, order.Id));
         }
 
-        private void GetOrders()
+        public void GetOrders()
         {
+            Orders.Clear();
+
             var getOrders = DbService.GetOrders(_supplierId);
             if (getOrders.Result != OperationStatus.Success)
             {

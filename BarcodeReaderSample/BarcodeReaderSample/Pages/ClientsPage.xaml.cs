@@ -19,5 +19,26 @@ namespace BarcodeReaderSample.Pages
 
             BindingContext = new ClientPageViewModel(navigation, scanner, dbService);
 		}
-	}
+
+        protected override bool OnBackButtonPressed()
+        {
+
+            return base.OnBackButtonPressed();
+        }
+
+        protected override void OnDisappearing()
+        {
+
+            base.OnDisappearing();
+        }
+
+        protected override void OnAppearing()
+        {
+            var viewModel = (ClientPageViewModel)BindingContext;
+
+            Task.Run(viewModel.GetClients);
+
+            base.OnAppearing();
+        }
+    }
 }

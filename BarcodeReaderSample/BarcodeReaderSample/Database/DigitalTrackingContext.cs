@@ -10,7 +10,7 @@ namespace BarcodeReaderSample.Database
 {
     public partial class DigitalTrackingContext : DbContext
     {
-        private readonly string _databaseFileName = "dtrack8.db";
+        private readonly string _databaseFileName = "dtrack11.db";
 
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }

@@ -102,7 +102,10 @@ namespace MIgrationCreator.Migrations
                     b.Property<double>("Cash")
                         .HasColumnType("REAL");
 
-                    b.Property<bool>("IsWaitingQr")
+                    b.Property<string>("FiscalBoxData")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsWaitingFiscalBox")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("OrderDate")
@@ -240,6 +243,9 @@ namespace MIgrationCreator.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Barcode")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ikpu")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")

@@ -74,7 +74,7 @@ namespace TraceIQ.Expeditor.PageModels
 
         private async void OpenLabelPrinter()
         {
-            await Navigation.PushAsync(new LabelPrinterPage());
+            
         }
 
 

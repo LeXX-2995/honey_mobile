@@ -27,17 +27,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220322020450_Initial.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220322020450_Initial.Designer.cs">
-      <DependentUpon>20220322020450_Initial.cs</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220322062833_Initial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220322062833_Initial.Designer.cs">
+      <DependentUpon>20220322062833_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Migrations\DigitalTrackingContextModelSnapshot.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Barcode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BCrypt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ClientsModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ConfirmOrderModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FiscalBoxResponseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\InterfaceTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ModelObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\OperationResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\OrderDetailsBillModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\OrdersModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ProductApproveModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ProductsModel.cs" />

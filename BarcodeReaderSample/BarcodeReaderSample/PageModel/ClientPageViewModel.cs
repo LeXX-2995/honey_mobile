@@ -27,8 +27,6 @@ namespace TraceIQ.Expeditor.PageModels
             SelectClientCommand = new Command<ClientsModel>(SelectClient);
 
             Clients = new ObservableCollection<ClientsModel>();
-
-            Task.Run(GetClients);
         }
 
         private async void SelectClient(ClientsModel obj)
@@ -36,8 +34,10 @@ namespace TraceIQ.Expeditor.PageModels
             await Navigation.PushAsync(new OrdersPage(Navigation, Scanner, obj.Id, DbService));
         }
 
-        private void GetClients()
+        public void GetClients()
         {
+            Clients.Clear();
+
             var getClients = DbService.GetClients();
             if(getClients.Result != OperationStatus.Success)
             {

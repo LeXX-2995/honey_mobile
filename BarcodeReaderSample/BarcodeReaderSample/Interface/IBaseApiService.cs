@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BarcodeReaderSample.Models;
 using Entities;
 using TraceIQ.Expeditor.Models;
 
@@ -15,6 +16,7 @@ namespace BarcodeReaderSample.Interface
         OperationResult<List<OrderDetail>> GetOrderDetails(Guid transportId);
         OperationResult<List<CodesMapping>> GetCodeMapping(Guid transportId);
         OperationResult<Order> GetOrderQrUrl(Guid orderId);
-        OperationResult<OperationResult> SendOrderConfirmation(List<string> codes, Guid orderId, double cash, double terminal);
+        OperationResult<OperationResult> SendOrderConfirmation(ConfirmOrderModel model);
+        OperationResult<OperationResult> SendRejectOrder(Guid orderId, string rejectReason);
     }
 }

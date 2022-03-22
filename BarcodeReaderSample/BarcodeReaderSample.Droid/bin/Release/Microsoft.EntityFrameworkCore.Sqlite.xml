@@ -124,81 +124,6 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="F:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.SqliteLoggingDefinitions.LogUnexpectedConnectionType">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="F:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.SqliteLoggingDefinitions.LogTableRebuildPendingWarning">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="F:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.SqliteLoggingDefinitions.LogTableRebuildsPendingWarning">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.TableRebuildEventData">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.TableRebuildEventData.#ctor(Microsoft.EntityFrameworkCore.Diagnostics.EventDefinitionBase,System.Func{Microsoft.EntityFrameworkCore.Diagnostics.EventDefinitionBase,Microsoft.EntityFrameworkCore.Diagnostics.EventData,System.String},System.Type,System.String)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="P:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.TableRebuildEventData.OperationType">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="P:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.TableRebuildEventData.TableName">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.UnexpectedConnectionTypeEventData">
-            <summary>
-                The <see cref="T:System.Diagnostics.DiagnosticSource" /> event payload for
-                <see cref="F:Microsoft.EntityFrameworkCore.Diagnostics.SqliteEventId.UnexpectedConnectionTypeWarning" />.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.UnexpectedConnectionTypeEventData.#ctor(Microsoft.EntityFrameworkCore.Diagnostics.EventDefinitionBase,System.Func{Microsoft.EntityFrameworkCore.Diagnostics.EventDefinitionBase,Microsoft.EntityFrameworkCore.Diagnostics.EventData,System.String},System.Type)">
-            <summary>
-                Constructs the event payload.
-            </summary>
-            <param name="eventDefinition"> The event definition. </param>
-            <param name="messageGenerator"> A delegate that generates a log message for this event. </param>
-            <param name="connectionType"> The connection type. </param>
-        </member>
-        <member name="P:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.UnexpectedConnectionTypeEventData.ConnectionType">
-            <summary>
-                The connection type.
-            </summary>
-        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Infrastructure.Internal.SqliteOptionsExtension">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
@@ -303,7 +228,7 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteLoggerExtensions.ForeignKeyReferencesMissingTableWarning(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Scaffolding},System.String,System.String,System.String)">
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteLoggerExtensions.ForeignKeyReferencesMissingTableWarning(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Scaffolding},System.String)">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -367,22 +292,6 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteLoggerExtensions.UnexpectedConnectionTypeWarning(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Infrastructure},System.Type)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteLoggerExtensions.TableRebuildPendingWarning(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Migrations},System.Type,System.String)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteModelValidator">
             <summary>
                 <para>
@@ -430,35 +339,12 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteModelValidator.ValidateCompatible(Microsoft.EntityFrameworkCore.Metadata.IProperty,Microsoft.EntityFrameworkCore.Metadata.IProperty,System.String,Microsoft.EntityFrameworkCore.Metadata.StoreObjectIdentifier@,Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Model.Validation})">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
                 any release. You should only use it directly in your code with extreme caution and knowing that
                 doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings.AggregateOperationNotSupported(System.Object,System.Object)">
-            <summary>
-                SQLite cannot apply aggregate operator '{aggregateOperator}' on expression of type '{type}'. Convert the values to a supported type or use LINQ to Objects to aggregate the results.
-            </summary>
-        </member>
-        <member name="P:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings.ApplyNotSupported">
-            <summary>
-                Translating this query requires APPLY operation in SQL which is not supported on SQLite.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings.DuplicateColumnNameSridMismatch(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
-            <summary>
-                '{entityType1}.{property1}' and '{entityType2}.{property2}' are both mapped to column '{columnName}' in '{table}' but are configured with different SRIDs.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings.InvalidMigrationOperation(System.Object)">
@@ -471,14 +357,19 @@
                 Generating idempotent scripts for migration is not currently supported by SQLite. For more information, see http://go.microsoft.com/fwlink/?LinkId=723262.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings.OrderByNotSupported(System.Object)">
-            <summary>
-                SQLite cannot order by expressions of type '{type}'. Convert the values to a supported type or use LINQ to Objects to order the results.
-            </summary>
-        </member>
         <member name="P:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings.SequencesNotSupported">
             <summary>
                 SQLite does not support sequences. For more information, see http://go.microsoft.com/fwlink/?LinkId=723262.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings.ComputedColumnsNotSupported">
+            <summary>
+                SQLite doesn't support computed columns. For more information, see http://go.microsoft.com/fwlink/?LinkId=723262.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteStrings.OrderByNotSupported(System.Object)">
+            <summary>
+                SQLite cannot order by expressions of type '{type}'. Convert the values to a supported type or use LINQ to Objects to order the results.
             </summary>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources">
@@ -487,51 +378,6 @@
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
                 any release. You should only use it directly in your code with extreme caution and knowing that
                 doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogForeignKeyScaffoldErrorPrincipalTableNotFound(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Skipping foreign key with identity '{id}' on table '{tableName}' since principal table '{principalTableName}' was not found in the model. This usually happens if the principal table was not included in the selection set.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundColumn(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Found column on table: {tableName}, column name: {columnName}, data type: {dataType}, not nullable: {notNullable}, default value: {defaultValue}.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundForeignKey(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Found foreign key on table: {tableName}, id: {id}, principal table: {principalTableName}, delete action: {deleteAction}.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundIndex(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Found index with name: {indexName}, table: {tableName}, is unique: {unique}.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundPrimaryKey(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Found primary key with name: {primaryKeyName}, table: {tableName}.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundTable(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Found table with name: {name}.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundUniqueConstraint(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Found unique constraint with name: {uniqueConstraintName}, table: {tableName}.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogMissingTable(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Unable to find a table in the database matching the selected table {table}.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogPrincipalColumnNotFound(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Skipping foreign key with identity '{id}' on table '{tableName}' since the principal column called '{principalColumnName}' on the foreign key's principal table, '{principalTableName}' was not found in the model.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogSchemaConfigured(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
@@ -544,19 +390,54 @@
                 The model was configured with the database sequence '{sequence}'. SQLite does not support sequences.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogTableRebuildPendingWarning(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                Warning, an operation of type '{operationType}' will be attempted while a rebuild of table '{tableName}' is pending. The database may not be in an expected state. Review the SQL generated by this migration to help diagnose any failures. Consider moving these operations to a subsequent migration.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogUnexpectedConnectionType(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
-            <summary>
-                A connection of an unexpected type ({type}) is being used. The SQL functions prefixed with 'ef_' could not be created automatically. Manually define them if you encounter errors while querying.
-            </summary>
-        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogUsingSchemaSelectionsWarning(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
             <summary>
                 SQLite doesn't support schemas. The specified schema selection arguments will be ignored.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundColumn(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Found column on table: {tableName}, column name: {columnName}, data type: {dataType}, not nullable: {isNotNullable}, default value: {defaultValue}.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundForeignKey(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Found foreign key on table: {tableName}, id: {id}, principal table: {principalTableName}, delete action: {deleteAction}.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogForeignKeyScaffoldErrorPrincipalTableNotFound(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Could not scaffold the foreign key '{foreignKeyName}'. The referenced table could not be found. This most likely occurred because the referenced table was excluded from scaffolding.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundTable(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Found table with name: {name}.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogMissingTable(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Unable to find a table in the database matching the selected table {table}.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogPrincipalColumnNotFound(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                For foreign key with identity {id} on table {tableName}, unable to find the column called {principalColumnName} on the foreign key's principal table, {principaltableName}. Skipping foreign key.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundIndex(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Found index with name: {indexName}, table: {tableName}, is unique: {isUnique}.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundPrimaryKey(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Found primary key with name: {primaryKeyName}, table: {tableName}.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Internal.SqliteResources.LogFoundUniqueConstraint(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Found unique constraint with name: {uniqueConstraintName}, table: {tableName}.
             </summary>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Metadata.Internal.SqliteAnnotationNames">
@@ -623,38 +504,7 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Metadata.Internal.SqliteAnnotationProvider">
-            <summary>
-                <para>
-                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                    the same compatibility standards as public APIs. It may be changed or removed without notice in
-                    any release. You should only use it directly in your code with extreme caution and knowing that
-                    doing so can result in application failures when updating to a new Entity Framework Core release.
-                </para>
-                <para>
-                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />. This means a single instance
-                    is used by many <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instances. The implementation must be thread-safe.
-                    This service cannot depend on services registered as <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />.
-                </para>
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Metadata.Internal.SqliteAnnotationProvider.#ctor(Microsoft.EntityFrameworkCore.Metadata.RelationalAnnotationProviderDependencies)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Metadata.Internal.SqliteAnnotationProvider.For(Microsoft.EntityFrameworkCore.Metadata.IRelationalModel)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Metadata.Internal.SqliteAnnotationProvider.For(Microsoft.EntityFrameworkCore.Metadata.IColumn)">
+        <member name="F:Microsoft.EntityFrameworkCore.Sqlite.Metadata.Internal.SqliteAnnotationNames.Dimension">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -734,7 +584,22 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteByteArrayMethodTranslator">
+        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Migrations.Internal.SqliteMigrationsAnnotationProvider">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />. This means a single instance
+                    is used by many <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instances. The implementation must be thread-safe.
+                    This service cannot depend on services registered as <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Migrations.Internal.SqliteMigrationsAnnotationProvider.#ctor(Microsoft.EntityFrameworkCore.Migrations.MigrationsAnnotationProviderDependencies)">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -742,7 +607,7 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteByteArrayMethodTranslator.#ctor(Microsoft.EntityFrameworkCore.Query.ISqlExpressionFactory)">
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Migrations.Internal.SqliteMigrationsAnnotationProvider.For(Microsoft.EntityFrameworkCore.Metadata.IModel)">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -750,55 +615,7 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteByteArrayMethodTranslator.Translate(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression,System.Reflection.MethodInfo,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression},Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteDateTimeAddTranslator">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteDateTimeAddTranslator.#ctor(Microsoft.EntityFrameworkCore.Query.ISqlExpressionFactory)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteDateTimeAddTranslator.Translate(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression,System.Reflection.MethodInfo,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression},Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteDateTimeMemberTranslator">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteDateTimeMemberTranslator.#ctor(Microsoft.EntityFrameworkCore.Query.ISqlExpressionFactory)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteDateTimeMemberTranslator.Translate(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression,System.Reflection.MemberInfo,System.Type,Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Migrations.Internal.SqliteMigrationsAnnotationProvider.For(Microsoft.EntityFrameworkCore.Metadata.IProperty)">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -815,412 +632,6 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteExpression.Strftime(Microsoft.EntityFrameworkCore.Query.ISqlExpressionFactory,System.Type,System.String,Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression,System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression},Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteMathTranslator">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteMathTranslator.#ctor(Microsoft.EntityFrameworkCore.Query.ISqlExpressionFactory)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteMathTranslator.Translate(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression,System.Reflection.MethodInfo,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression},Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteMemberTranslatorProvider">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteMemberTranslatorProvider.#ctor(Microsoft.EntityFrameworkCore.Query.RelationalMemberTranslatorProviderDependencies)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteMethodCallTranslatorProvider">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteMethodCallTranslatorProvider.#ctor(Microsoft.EntityFrameworkCore.Query.RelationalMethodCallTranslatorProviderDependencies)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor.#ctor(Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitorDependencies,Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitorDependencies,Microsoft.EntityFrameworkCore.Query.QueryCompilationContext)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor.#ctor(Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor.CreateSubqueryVisitor">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor.TranslateOrderBy(Microsoft.EntityFrameworkCore.Query.ShapedQueryExpression,System.Linq.Expressions.LambdaExpression,System.Boolean)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitor.TranslateThenBy(Microsoft.EntityFrameworkCore.Query.ShapedQueryExpression,System.Linq.Expressions.LambdaExpression,System.Boolean)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitorFactory">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitorFactory.#ctor(Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitorDependencies,Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitorDependencies)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableMethodTranslatingExpressionVisitorFactory.Create(Microsoft.EntityFrameworkCore.Query.QueryCompilationContext)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQuerySqlGenerator">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQuerySqlGenerator.#ctor(Microsoft.EntityFrameworkCore.Query.QuerySqlGeneratorDependencies)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQuerySqlGenerator.GetOperator(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlBinaryExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQuerySqlGenerator.GenerateLimitOffset(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SelectExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQuerySqlGenerator.GenerateSetOperationOperand(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SetOperationBase,Microsoft.EntityFrameworkCore.Query.SqlExpressions.SelectExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQuerySqlGeneratorFactory">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQuerySqlGeneratorFactory.#ctor(Microsoft.EntityFrameworkCore.Query.QuerySqlGeneratorDependencies)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQuerySqlGeneratorFactory.Create">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryStringFactory">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryStringFactory.#ctor(Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSource)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryStringFactory.Create(System.Data.Common.DbCommand)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryTranslationPostprocessor">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryTranslationPostprocessor.#ctor(Microsoft.EntityFrameworkCore.Query.QueryTranslationPostprocessorDependencies,Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPostprocessorDependencies,Microsoft.EntityFrameworkCore.Query.QueryCompilationContext)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryTranslationPostprocessor.Process(System.Linq.Expressions.Expression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryTranslationPostprocessorFactory">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryTranslationPostprocessorFactory.#ctor(Microsoft.EntityFrameworkCore.Query.QueryTranslationPostprocessorDependencies,Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPostprocessorDependencies)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryTranslationPostprocessorFactory.Create(Microsoft.EntityFrameworkCore.Query.QueryCompilationContext)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor.#ctor(Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitorDependencies,Microsoft.EntityFrameworkCore.Query.QueryCompilationContext,Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor.VisitUnary(System.Linq.Expressions.UnaryExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor.VisitBinary(System.Linq.Expressions.BinaryExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor.TranslateAverage(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor.TranslateMax(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor.TranslateMin(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor.TranslateSum(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitorFactory">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitorFactory.#ctor(Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitorDependencies)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitorFactory.Create(Microsoft.EntityFrameworkCore.Query.QueryCompilationContext,Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteStringLengthTranslator">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteStringLengthTranslator.#ctor(Microsoft.EntityFrameworkCore.Query.ISqlExpressionFactory)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteStringLengthTranslator.Translate(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression,System.Reflection.MemberInfo,System.Type,Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteStringMethodTranslator">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteStringMethodTranslator.#ctor(Microsoft.EntityFrameworkCore.Query.ISqlExpressionFactory)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteStringMethodTranslator.Translate(Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression,System.Reflection.MethodInfo,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Query.SqlExpressions.SqlExpression},Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -1534,7 +945,7 @@
                 </para>
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.#ctor(Microsoft.EntityFrameworkCore.Storage.RelationalConnectionDependencies,Microsoft.EntityFrameworkCore.Storage.IRawSqlCommandBuilder,Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Infrastructure})">
+        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.#ctor(Microsoft.EntityFrameworkCore.Storage.RelationalConnectionDependencies,Microsoft.EntityFrameworkCore.Storage.IRawSqlCommandBuilder)">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -1543,6 +954,14 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.IsMultipleActiveResultSetsEnabled">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -1581,14 +1000,6 @@
                 doing so can result in application failures when updating to a new Entity Framework Core release.
             </summary>
         </member>
-        <member name="P:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteSqlGenerationHelper.StartTransactionStatement">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteSqlGenerationHelper.DelimitIdentifier(System.String,System.String)">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
@@ -1598,44 +1009,6 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteSqlGenerationHelper.DelimitIdentifier(System.Text.StringBuilder,System.String,System.String)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="T:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteStringTypeMapping">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteStringTypeMapping.#ctor(System.String,System.Nullable{System.Data.DbType},System.Boolean,System.Nullable{System.Int32})">
-            <summary>
-                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteStringTypeMapping" /> class.
-            </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="dbType"> The <see cref="T:System.Data.DbType" /> to be used. </param>
-            <param name="unicode"> A value indicating whether the type should handle Unicode data or not. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteStringTypeMapping.#ctor(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
-            <summary>
-                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteStringTypeMapping" /> class.
-            </summary>
-            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteStringTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
-            <summary>
-                Creates a copy of this mapping.
-            </summary>
-            <param name="parameters"> The parameters for this mapping. </param>
-            <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteStringTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
             <summary>
                 This is an internal API that supports the Entity Framework Core infrastructure and not subject to
                 the same compatibility standards as public APIs. It may be changed or removed without notice in
@@ -1846,26 +1219,6 @@
                 </para>
             </summary>
         </member>
-        <member name="F:Microsoft.EntityFrameworkCore.Diagnostics.SqliteEventId.UnexpectedConnectionTypeWarning">
-            <summary>
-                <para>
-                    A connection of an unexpected type is being used.
-                </para>
-                <para>
-                    This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Infrastructure" /> category.
-                </para>
-                <para>
-                    This event uses the <see cref="T:Microsoft.EntityFrameworkCore.Sqlite.Diagnostics.Internal.UnexpectedConnectionTypeEventData" />
-                    payload when used with a <see cref="T:System.Diagnostics.DiagnosticSource" />.
-                </para>
-            </summary>
-        </member>
-        <member name="F:Microsoft.EntityFrameworkCore.Diagnostics.SqliteEventId.TableRebuildPendingWarning">
-            <summary>
-                An operation may fail due to a pending rebuild of the table.
-                This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Migrations" /> category.
-            </summary>
-        </member>
         <member name="F:Microsoft.EntityFrameworkCore.Diagnostics.SqliteEventId.ColumnFound">
             <summary>
                 A column was found.
@@ -1934,7 +1287,7 @@
         <member name="M:Microsoft.EntityFrameworkCore.SqliteDatabaseFacadeExtensions.IsSqlite(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade)">
             <summary>
                 <para>
-                    Returns <see langword="true" /> if the database provider currently in use is the SQLite provider.
+                    Returns true if the database provider currently in use is the SQLite provider.
                 </para>
                 <para>
                     This method can only be used after the <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> has been configured because
@@ -1944,28 +1297,12 @@
                 </para>
             </summary>
             <param name="database"> The facade from <see cref="P:Microsoft.EntityFrameworkCore.DbContext.Database" />. </param>
-            <returns> <see langword="true" /> if SQLite is being used; <see langword="false" /> otherwise. </returns>
+            <returns> True if SQLite is being used; false otherwise. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.SqliteDbContextOptionsBuilderExtensions">
             <summary>
                 SQLite specific extension methods for <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder" />.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqliteDbContextOptionsBuilderExtensions.UseSqlite(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.SqliteDbContextOptionsBuilder})">
-            <summary>
-                <para>
-                    Configures the context to connect to a SQLite database, but without initially setting any
-                    <see cref="T:System.Data.Common.DbConnection" /> or connection string.
-                </para>
-                <para>
-                    The connection or connection string must be set before the <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> is used to connect
-                    to a database. Set a connection using <see cref="M:Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.SetDbConnection(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.Data.Common.DbConnection)" />.
-                    Set a connection string using <see cref="M:Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.SetConnectionString(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.String)" />.
-                </para>
-            </summary>
-            <param name="optionsBuilder"> The builder being used to configure the context. </param>
-            <param name="sqliteOptionsAction">An optional action to allow additional SQLite specific configuration.</param>
-            <returns> The options builder so that further configuration can be chained. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqliteDbContextOptionsBuilderExtensions.UseSqlite(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder,System.String,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.SqliteDbContextOptionsBuilder})">
             <summary>
@@ -1986,22 +1323,6 @@
                 in the open state then EF will not open or close the connection. If the connection is in the closed
                 state then EF will open and close the connection as needed.
             </param>
-            <param name="sqliteOptionsAction">An optional action to allow additional SQLite specific configuration.</param>
-            <returns> The options builder so that further configuration can be chained. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqliteDbContextOptionsBuilderExtensions.UseSqlite``1(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder{``0},System.Action{Microsoft.EntityFrameworkCore.Infrastructure.SqliteDbContextOptionsBuilder})">
-            <summary>
-                <para>
-                    Configures the context to connect to a SQLite database, but without initially setting any
-                    <see cref="T:System.Data.Common.DbConnection" /> or connection string.
-                </para>
-                <para>
-                    The connection or connection string must be set before the <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> is used to connect
-                    to a database. Set a connection using <see cref="M:Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.SetDbConnection(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.Data.Common.DbConnection)" />.
-                    Set a connection string using <see cref="M:Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.SetConnectionString(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.String)" />.
-                </para>
-            </summary>
-            <param name="optionsBuilder"> The builder being used to configure the context. </param>
             <param name="sqliteOptionsAction">An optional action to allow additional SQLite specific configuration.</param>
             <returns> The options builder so that further configuration can be chained. </returns>
         </member>
@@ -2037,14 +1358,14 @@
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationBuilderExtensions.IsSqlite(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <summary>
                 <para>
-                    Returns <see langword="true" /> if the database provider currently in use is the SQLite provider.
+                    Returns true if the database provider currently in use is the SQLite provider.
                 </para>
             </summary>
             <param name="migrationBuilder">
                 The migrationBuilder from the parameters on <see cref="M:Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)" /> or
                 <see cref="M:Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)" />.
             </param>
-            <returns> <see langword="true" /> if SQLite is being used; <see langword="false" /> otherwise. </returns>
+            <returns> True if SQLite is being used; false otherwise. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator">
             <summary>
@@ -2059,20 +1380,19 @@
                 </para>
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.#ctor(Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGeneratorDependencies,Microsoft.EntityFrameworkCore.Metadata.IRelationalAnnotationProvider)">
+        <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.#ctor(Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGeneratorDependencies,Microsoft.EntityFrameworkCore.Migrations.IMigrationsAnnotationProvider)">
             <summary>
                 Creates a new <see cref="T:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator" /> instance.
             </summary>
             <param name="dependencies"> Parameter object containing dependencies for this service. </param>
             <param name="migrationsAnnotations"> Provider-specific Migrations annotations to use. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Migrations.Operations.MigrationOperation},Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerationOptions)">
+        <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Migrations.Operations.MigrationOperation},Microsoft.EntityFrameworkCore.Metadata.IModel)">
             <summary>
                 Generates commands from a list of operations.
             </summary>
             <param name="operations"> The operations. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
-            <param name="options"> The options to use when generating commands. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <returns> The list of commands to be executed or scripted. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.AlterDatabaseOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2081,7 +1401,7 @@
                 <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder" />.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.AddColumnOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder,System.Boolean)">
@@ -2090,7 +1410,7 @@
                 <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder" />.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
             <param name="terminate"> Indicates whether or not to terminate the command after generating SQL for the operation. </param>
         </member>
@@ -2100,7 +1420,7 @@
                 by making calls on the given <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder" />.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
             <param name="terminate"> Indicates whether or not to terminate the command after generating SQL for the operation. </param>
         </member>
@@ -2110,7 +1430,7 @@
                 by making calls on the given <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder" />.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.RenameTableOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2119,7 +1439,7 @@
                 by making calls on the given <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder" />.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.RenameColumnOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2128,7 +1448,7 @@
                 by making calls on the given <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder" />.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.CreateTableOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder,System.Boolean)">
@@ -2137,7 +1457,7 @@
                 <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder" />.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
             <param name="terminate"> Indicates whether or not to terminate the command after generating SQL for the operation. </param>
         </member>
@@ -2146,18 +1466,18 @@
                 Generates a SQL fragment for the column definitions in an <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.CreateTableOperation" />.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to add the SQL fragment. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.ColumnDefinition(System.String,System.String,System.String,Microsoft.EntityFrameworkCore.Migrations.Operations.ColumnOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
             <summary>
                 Generates a SQL fragment for a column definition for the given column metadata.
             </summary>
-            <param name="schema"> The schema that contains the table, or <see langword="null" /> to use the default schema. </param>
+            <param name="schema"> The schema that contains the table, or <c>null</c> to use the default schema. </param>
             <param name="table"> The table that contains the column. </param>
             <param name="name"> The column name. </param>
             <param name="operation"> The column metadata. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to add the SQL fragment. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.AddForeignKeyOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder,System.Boolean)">
@@ -2166,7 +1486,7 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
             <param name="terminate"> Indicates whether or not to terminate the command after generating SQL for the operation. </param>
         </member>
@@ -2176,7 +1496,7 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
             <param name="terminate"> Indicates whether or not to terminate the command after generating SQL for the operation. </param>
         </member>
@@ -2186,16 +1506,16 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.AddCheckConstraintOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
+        <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.CreateCheckConstraintOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
             <summary>
                 Throws <see cref="T:System.NotSupportedException" /> since this operation requires table rebuilds, which
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.DropColumnOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder,System.Boolean)">
@@ -2204,7 +1524,7 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
             <param name="terminate"> Indicates whether or not to terminate the command after generating SQL for the operation. </param>
         </member>
@@ -2214,7 +1534,7 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
             <param name="terminate"> Indicates whether or not to terminate the command after generating SQL for the operation. </param>
         </member>
@@ -2224,7 +1544,7 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
             <param name="terminate"> Indicates whether or not to terminate the command after generating SQL for the operation. </param>
         </member>
@@ -2234,7 +1554,7 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.DropCheckConstraintOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2243,7 +1563,7 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.AlterColumnOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2252,18 +1572,18 @@
                 are not yet supported.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.ComputedColumnDefinition(System.String,System.String,System.String,Microsoft.EntityFrameworkCore.Migrations.Operations.ColumnOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
             <summary>
                 Generates a SQL fragment for a computed column definition for the given column metadata.
             </summary>
-            <param name="schema"> The schema that contains the table, or <see langword="null" /> to use the default schema. </param>
+            <param name="schema"> The schema that contains the table, or <c>null</c> to use the default schema. </param>
             <param name="table"> The table that contains the column. </param>
             <param name="name"> The column name. </param>
             <param name="operation"> The column metadata. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to add the SQL fragment. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.EnsureSchemaOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2271,7 +1591,7 @@
                 Ignored, since schemas are not supported by SQLite and are silently ignored to improve testing compatibility.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.DropSchemaOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2279,7 +1599,7 @@
                 Ignored, since schemas are not supported by SQLite and are silently ignored to improve testing compatibility.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.RestartSequenceOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2287,7 +1607,7 @@
                 Throws <see cref="T:System.NotSupportedException" /> since SQLite does not support sequences.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.CreateSequenceOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2295,7 +1615,7 @@
                 Throws <see cref="T:System.NotSupportedException" /> since SQLite does not support sequences.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.RenameSequenceOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2303,7 +1623,7 @@
                 Throws <see cref="T:System.NotSupportedException" /> since SQLite does not support sequences.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.AlterSequenceOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2311,7 +1631,7 @@
                 Throws <see cref="T:System.NotSupportedException" /> since SQLite does not support sequences.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqliteMigrationsSqlGenerator.Generate(Microsoft.EntityFrameworkCore.Migrations.Operations.DropSequenceOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
@@ -2319,7 +1639,7 @@
                 Throws <see cref="T:System.NotSupportedException" /> since SQLite does not support sequences.
             </summary>
             <param name="operation"> The operation. </param>
-            <param name="model"> The target model which may be <see langword="null" /> if the operations exist without a model. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to build the commands. </param>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.SqlitePropertyBuilderExtensions">
@@ -2352,7 +1672,7 @@
             <param name="fromDataAnnotation"> Indicates whether the configuration was specified using a data annotation. </param>
             <returns>
                 The same builder instance if the configuration was applied,
-                <see langword="null" /> otherwise.
+                <c>null</c> otherwise.
             </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyBuilderExtensions.CanSetSrid(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,System.Nullable{System.Int32},System.Boolean)">
@@ -2362,7 +1682,68 @@
             <param name="propertyBuilder"> The builder for the property being configured. </param>
             <param name="srid"> The SRID. </param>
             <param name="fromDataAnnotation"> Indicates whether the configuration was specified using a data annotation. </param>
-            <returns> <see langword="true" /> if the given value can be set as the SRID for the column. </returns>
+            <returns> <c>true</c> if the given value can be set as the SRID for the column. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyBuilderExtensions.HasGeometricDimension(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,System.String,System.Boolean)">
+            <summary>
+                Configures the dimension of the column that the property maps to when targeting SQLite.
+            </summary>
+            <param name="propertyBuilder"> The builder for the property being configured. </param>
+            <param name="dimension"> The dimension. </param>
+            <param name="fromDataAnnotation"> Indicates whether the configuration was specified using a data annotation. </param>
+            <returns>
+                The same builder instance if the configuration was applied,
+                <c>null</c> otherwise.
+            </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyBuilderExtensions.CanSetGeometricDimension(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,System.String,System.Boolean)">
+            <summary>
+                Returns a value indicating whether the given value can be set as the dimension for the column.
+            </summary>
+            <param name="propertyBuilder"> The builder for the property being configured. </param>
+            <param name="dimension"> The dimension. </param>
+            <param name="fromDataAnnotation"> Indicates whether the configuration was specified using a data annotation. </param>
+            <returns> <c>true</c> if the given value can be set as the dimension for the column. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyBuilderExtensions.ForSqliteHasSrid(Microsoft.EntityFrameworkCore.Metadata.Builders.PropertyBuilder,System.Int32)">
+            <summary>
+                Configures the SRID of the column that the property maps to when targeting SQLite.
+            </summary>
+            <param name="propertyBuilder"> The builder for the property being configured. </param>
+            <param name="srid"> The SRID. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyBuilderExtensions.ForSqliteHasSrid``1(Microsoft.EntityFrameworkCore.Metadata.Builders.PropertyBuilder{``0},System.Int32)">
+            <summary>
+                Configures the SRID of the column that the property maps to when targeting SQLite.
+            </summary>
+            <param name="propertyBuilder"> The builder for the property being configured. </param>
+            <param name="srid"> The SRID. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyBuilderExtensions.ForSqliteHasSrid(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+                Configures the SRID of the column that the property maps to when targeting SQLite.
+            </summary>
+            <param name="propertyBuilder"> The builder for the property being configured. </param>
+            <param name="srid"> The SRID. </param>
+            <param name="fromDataAnnotation"> Indicates whether the configuration was specified using a data annotation. </param>
+            <returns>
+                The same builder instance if the configuration was applied,
+                <c>null</c> otherwise.
+            </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyBuilderExtensions.ForSqliteHasDimension(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,System.String,System.Boolean)">
+            <summary>
+                Configures the dimension of the column that the property maps to when targeting SQLite.
+            </summary>
+            <param name="propertyBuilder"> The builder for the property being configured. </param>
+            <param name="dimension"> The dimension. </param>
+            <param name="fromDataAnnotation"> Indicates whether the configuration was specified using a data annotation. </param>
+            <returns>
+                The same builder instance if the configuration was applied,
+                <c>null</c> otherwise.
+            </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.SqlitePropertyExtensions">
             <summary>
@@ -2374,14 +1755,6 @@
                 Returns the SRID to use when creating a column for this property.
             </summary>
             <param name="property"> The property. </param>
-            <returns> The SRID to use when creating a column for this property. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyExtensions.GetSrid(Microsoft.EntityFrameworkCore.Metadata.IProperty,Microsoft.EntityFrameworkCore.Metadata.StoreObjectIdentifier@)">
-            <summary>
-                Returns the SRID to use when creating a column for this property.
-            </summary>
-            <param name="property"> The property. </param>
-            <param name="storeObject"> The identifier of the store object. </param>
             <returns> The SRID to use when creating a column for this property. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyExtensions.SetSrid(Microsoft.EntityFrameworkCore.Metadata.IMutableProperty,System.Nullable{System.Int32})">
@@ -2406,6 +1779,35 @@
             <param name="property"> The property. </param>
             <returns> The <see cref="T:Microsoft.EntityFrameworkCore.Metadata.ConfigurationSource" /> for the column SRID. </returns>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyExtensions.GetGeometricDimension(Microsoft.EntityFrameworkCore.Metadata.IProperty)">
+            <summary>
+                Returns the dimension to use when creating a column for this property.
+            </summary>
+            <param name="property"> The property. </param>
+            <returns> The dimension to use when creating a column for this property. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyExtensions.SetGeometricDimension(Microsoft.EntityFrameworkCore.Metadata.IMutableProperty,System.String)">
+            <summary>
+                Sets the dimension to use when creating a column for this property.
+            </summary>
+            <param name="property"> The property. </param>
+            <param name="value"> The dimension. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyExtensions.SetGeometricDimension(Microsoft.EntityFrameworkCore.Metadata.IConventionProperty,System.String,System.Boolean)">
+            <summary>
+                Sets the dimension to use when creating a column for this property.
+            </summary>
+            <param name="property"> The property. </param>
+            <param name="value"> The dimension. </param>
+            <param name="fromDataAnnotation"> Indicates whether the configuration was specified using a data annotation. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlitePropertyExtensions.GetGeometricDimensionConfigurationSource(Microsoft.EntityFrameworkCore.Metadata.IConventionProperty)">
+            <summary>
+                Gets the <see cref="T:Microsoft.EntityFrameworkCore.Metadata.ConfigurationSource" /> for the column dimension.
+            </summary>
+            <param name="property"> The property. </param>
+            <returns> The <see cref="T:Microsoft.EntityFrameworkCore.Metadata.ConfigurationSource" /> for the column dimension. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Infrastructure.SpatialiteLoader">
             <summary>
                 Finds and loads SpatiaLite.
@@ -2416,7 +1818,7 @@
                 Tries to load the mod_spatialite extension into the specified connection.
             </summary>
             <param name="connection"> The connection. </param>
-            <returns> <see langword="true" /> if the extension was loaded; otherwise, <see langword="false" />. </returns>
+            <returns> true if the extension was loaded; otherwise, false. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Infrastructure.SpatialiteLoader.Load(System.Data.Common.DbConnection)">
             <summary>
@@ -2482,18 +1884,6 @@
             </summary>
             <returns> The convention set. </returns>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Metadata.Conventions.SqliteConventionSetBuilder.CreateModelBuilder">
-            <summary>
-                <para>
-                    Call this method to build a <see cref="T:Microsoft.EntityFrameworkCore.ModelBuilder" /> for SQLite outside of <see cref="M:Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)" />.
-                </para>
-                <para>
-                    Note that it is unusual to use this method.
-                    Consider using <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> in the normal way instead.
-                </para>
-            </summary>
-            <returns> The convention set. </returns>
-        </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.SqliteServiceCollectionExtensions">
             <summary>
                 SQLite specific extension methods for <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
@@ -2517,14 +1907,6 @@
             <returns>
                 The same service collection so that multiple calls can be chained.
             </returns>
-        </member>
-        <member name="M:System.SharedTypeExtensions.DisplayName(System.Type,System.Boolean)">
-            <summary>
-                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
-                the same compatibility standards as public APIs. It may be changed or removed without notice in
-                any release. You should only use it directly in your code with extreme caution and knowing that
-                doing so can result in application failures when updating to a new Entity Framework Core release.
-            </summary>
         </member>
     </members>
 </doc>

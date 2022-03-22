@@ -17,7 +17,6 @@ namespace TraceIQ.Expeditor.PageModels
     {
         public ObservableCollection<OrderDetailsModel> OrderDetails { get; set; }
         private readonly SynchronizationContext _mUiContext = SynchronizationContext.Current;
-        private ILabelPrinterDevice _printer = null;
         private readonly Guid _orderId;
         private double _total;
         public double Total
@@ -33,6 +32,9 @@ namespace TraceIQ.Expeditor.PageModels
         public Command AcceptCommand { get; set; }
         public Command RejectCommand { get; set; }
         public Command PrintCommand { get; set; }
+        public Command CompleteCommand { get; set; }
+        public Command YesCommand { get; set; }
+        public Command NoCommand { get; set; }
 
         private bool _isPrintButtonVisible;
         public bool IsPrintButtonVisible
@@ -57,6 +59,43 @@ namespace TraceIQ.Expeditor.PageModels
             }
         }
 
+        private bool _isPopupOpen;
+
+        public bool IsPopupOpen
+        {
+            get => _isPopupOpen;
+            set
+            {
+                _isPopupOpen = value;
+                OnPropertyChanged(nameof(IsPopupOpen));
+            }
+        }
+
+        private bool _isRejectPopupOpen;
+
+        public bool IsRejectPopupOpen
+        {
+            get => _isRejectPopupOpen;
+            set
+            {
+                _isRejectPopupOpen = value;
+                OnPropertyChanged(nameof(IsRejectPopupOpen));
+            }
+        }
+        private string _rejectReason;
+
+        public string RejectReason
+        {
+            get => _rejectReason;
+            set
+            {
+                _rejectReason = value;
+                OnPropertyChanged(nameof(RejectReason));
+            }
+        }
+
+        public Command OpenCompletionCommand { get; set; }
+        public Command CancelCommand { get; set; }
         public OrderProductsPageViewModel(INavigation navigation, HoneywellBarcodeReader scanner, IDbService dbService, Guid orderId)
         {
             Scanner = scanner;
@@ -69,6 +108,62 @@ namespace TraceIQ.Expeditor.PageModels
             AcceptCommand = new Command(Accept);
             RejectCommand = new Command(Reject);
             PrintCommand = new Command(Print);
+            CompleteCommand = new Command(Complete);
+            OpenCompletionCommand = new Command(OpenCompletion);
+            CancelCommand = new Command(Cancel);
+            YesCommand = new Command(YesForReject);
+            NoCommand = new Command(Cancel);
+        }
+
+        private async void YesForReject()
+        {
+            if (string.IsNullOrWhiteSpace(RejectReason))
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Причина пустая. Пожалуйста заполните ее", "ОК");
+                return;
+            }
+
+            IsRejectPopupOpen = false;
+
+            var sendReject = BaseApiService.SendRejectOrder(_orderId, RejectReason);
+            if (sendReject.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", sendReject.ErrorMessage, "ОК");
+                return;
+            }
+
+            var rejectOrder = DbService.RejectOrder(_orderId);
+            if(rejectOrder.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", rejectOrder.ErrorMessage, "ОК");
+                return;
+            }
+
+            await Navigation.PopAsync();
+        }
+
+        private async void Cancel()
+        {
+            IsPopupOpen = false;
+            IsRejectPopupOpen = false;
+        }
+
+        private async void OpenCompletion()
+        {
+            IsPopupOpen = true;
+        }
+
+        private async void Complete()
+        {
+            IsPopupOpen = false;
+            var completeOrder = DbService.CompleteOrder(_orderId);
+            if (completeOrder.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", completeOrder.ErrorMessage, "ОК");
+                return;
+            }
+
+            await Navigation.PopAsync(true);
         }
 
         private async void Print()
@@ -80,28 +175,35 @@ namespace TraceIQ.Expeditor.PageModels
                 return;
             }
 
-            if (getOrderQrUrl.Value == null || string.IsNullOrWhiteSpace(getOrderQrUrl.Value.QrPaymentUrl))
+            if (getOrderQrUrl.Value == null || string.IsNullOrWhiteSpace(getOrderQrUrl.Value.FiscalBoxData))
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", "Данные регистрации продажи еще не прошли", "ОК");
                 return;
             }
 
-            var updateOrderQrUrl = DbService.UpdateOrderQrUrl(_orderId, getOrderQrUrl.Value.QrPaymentUrl);
+            var updateOrderQrUrl = DbService.UpdateOrderQrUrl(_orderId, getOrderQrUrl.Value.FiscalBoxData);
             if(updateOrderQrUrl.Result != OperationStatus.Success)
             {
-                await Application.Current.MainPage.DisplayAlert("Ошибка", updateOrderQrUrl.ErrorMessage, "ОК"); return;
+                await Application.Current.MainPage.DisplayAlert("Ошибка", updateOrderQrUrl.ErrorMessage, "ОК"); 
+                return;
             }
 
-
+            await Navigation.PushAsync(new LabelPrinterPage(_orderId, DbService));
         }
 
         private async void Reject()
         {
-            
+            IsRejectPopupOpen = true;
         }
 
         private async void Accept()
         {
+            if (OrderDetails.Any(s => s.Amount != s.AssembledAmount))
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Не все позиции были собраны", "ОК");
+                return;
+            }
+
             await Navigation.PushAsync(new AcceptPage(Navigation, DbService, _orderId));
         }
 
@@ -135,7 +237,10 @@ namespace TraceIQ.Expeditor.PageModels
 
         public async void GetOrderDetails()
         {
-            OrderDetails.Clear();
+            _mUiContext.Post(s =>
+            {
+                OrderDetails.Clear();
+            }, null);
 
             var getOrder = DbService.GetOrderWaitingStatus(_orderId);
             if (getOrder.Result != OperationStatus.Success)

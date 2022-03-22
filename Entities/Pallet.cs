@@ -60,6 +60,7 @@ namespace Entities
         public int AmountInBox { get; set; }
         public int AmountInPallet { get; set; }
         public string Barcode { get; set; }
+        public string Ikpu { get; set; }
     }
 
     public class Supplier
@@ -91,8 +92,8 @@ namespace Entities
         public PaymentType PaymentType { get; set; }
         [ForeignKey(nameof(Supplier))]
         public Guid SupplierId { get; set; }
-
-        public bool IsWaitingQr { get; set; }
+        public string FiscalBoxData { get; set; }
+        public bool IsWaitingFiscalBox { get; set; }
         public Supplier Supplier { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
     }

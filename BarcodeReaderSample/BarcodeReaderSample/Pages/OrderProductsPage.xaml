@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dataGrid="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
              xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             xmlns:popup="http://schemas.devexpress.com/xamarin/2014/forms/popup"
              x:Class="BarcodeReaderSample.Pages.OrderProductsPage">
     <NavigationPage.TitleView>
         <Label Text="Товары" TextColor="White" FontSize="20" VerticalTextAlignment="Center"/>
@@ -63,7 +64,14 @@
                                   Command="{Binding RejectCommand}"
                                   IsVisible="{Binding IsVisible}"/>
 
-                <dxe:SimpleButton Grid.ColumnSpan="2"
+                <dxe:SimpleButton Grid.Column="0"
+                                  Text = "Завершить" 
+                                  TextColor="White"
+                                  BackgroundColor="Green"
+                                  Command="{Binding OpenCompletionCommand}"
+                                  IsVisible="{Binding IsPrintButtonVisible}"/>
+
+                <dxe:SimpleButton Grid.Column="1"
                                   Text = "Напечатать" 
                                   TextColor="Gray"
                                   BackgroundColor="Yellow"
@@ -71,6 +79,79 @@
                                   IsVisible="{Binding IsPrintButtonVisible}"/>
 
             </Grid>
+
+            <popup:DXPopup x:Name="popup" AllowScrim="True" IsOpen="{Binding IsPopupOpen}">
+                <StackLayout>
+                    <Grid RowSpacing="15" ColumnSpacing="13" 
+                    Margin="10, 10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Вы точно хотите завершить заказ?"/>
+                        <dxe:SimpleButton Grid.Column="0"
+                                          Grid.Row="1"
+                                          Text="Да" 
+                                          TextColor="White"
+                                          BackgroundColor="Green"
+                                          Command="{Binding CompleteCommand}"/>
+
+                        <dxe:SimpleButton Grid.Column="1"
+                                          Grid.Row="1"
+                                          Text="Нет" 
+                                          TextColor="White"
+                                          BackgroundColor="Red"
+                                          Command="{Binding CancelCommand}"/>
+                    </Grid>
+                    
+                </StackLayout>
+            </popup:DXPopup>
+
+            <popup:DXPopup AllowScrim="True" IsOpen="{Binding IsRejectPopupOpen}">
+                <StackLayout>
+                    <Grid RowSpacing="15" ColumnSpacing="13" 
+                          Margin="10, 10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Вы точно хотите отменить заказ?"/>
+
+                        <dxe:TextEdit
+                            Grid.ColumnSpan="2" Grid.Column="0"
+                            Grid.Row="1"
+                            Text="{Binding RejectReason}"
+                            LabelText="Причина"
+                            />
+
+                            <dxe:SimpleButton Grid.Column="0"
+                                          Grid.Row="2"
+                                          Text="Да" 
+                                          TextColor="White"
+                                          BackgroundColor="Green"
+                                          Command="{Binding YesCommand}"/>
+
+                        <dxe:SimpleButton Grid.Column="1"
+                                          Grid.Row="2"
+                                          Text="Нет" 
+                                          TextColor="White"
+                                          BackgroundColor="Red"
+                                          Command="{Binding NoCommand}"/>
+                    </Grid>
+
+                </StackLayout>
+            </popup:DXPopup>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

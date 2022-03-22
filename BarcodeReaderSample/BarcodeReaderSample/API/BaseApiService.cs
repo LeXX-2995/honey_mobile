@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BarcodeReaderSample.Database;
 using BarcodeReaderSample.Interface;
+using BarcodeReaderSample.Models;
 using Entities;
 using RestSharp;
 using TraceIQ.Expeditor.API;
@@ -22,6 +23,7 @@ namespace BarcodeReaderSample.API
         private const string OrderDetailsResource = "Expeditor/GetOrderDetails/";
         private const string CodeMappingsResource = "Expeditor/GetCodeMappings/";
         private const string ConfirmOrderResource = "Expeditor/ConfirmOrder";
+        private const string RejectOrderResource = "Expeditor/RejectOrder";
         private const string OrderQrUrlResource = "Expeditor/GetOrderQrUrl/";
         public BaseApiService()
         {
@@ -99,7 +101,16 @@ namespace BarcodeReaderSample.API
             return RestContext.ExecuteScalar<Order>(OrderQrUrlResource + orderId, null, Method.GET);
         }
 
-        public OperationResult<OperationResult> SendOrderConfirmation(List<string> codes, Guid orderId, double cash, double terminal)
+        public OperationResult<OperationResult> SendOrderConfirmation(ConfirmOrderModel model)
+        {
+            var checkSetting = CheckSetting();
+            if (checkSetting.Result != OperationStatus.Success)
+                return OperationResult<OperationResult>.Fail(checkSetting.ErrorMessage);
+
+            return RestContext.ExecuteScalar<OperationResult>(ConfirmOrderResource, null, Method.POST, model);
+        }
+
+        public OperationResult<OperationResult> SendRejectOrder(Guid orderId, string rejectReason)
         {
             var checkSetting = CheckSetting();
             if (checkSetting.Result != OperationStatus.Success)
@@ -107,15 +118,12 @@ namespace BarcodeReaderSample.API
 
             var model = new
             {
-                OrderId = orderId,
-                Codes = codes,
-                Cash = cash,
-                Terminal = terminal
+                Reason = rejectReason,
+                OrderId = orderId
             };
 
-            return RestContext.ExecuteScalar<OperationResult>(ConfirmOrderResource, null, Method.POST, model);
+            return RestContext.ExecuteScalar<OperationResult>(RejectOrderResource, null, Method.POST, model);
         }
-
 
         private OperationResult CheckSetting()
         {

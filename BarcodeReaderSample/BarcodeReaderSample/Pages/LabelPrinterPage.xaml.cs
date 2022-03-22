@@ -5,8 +5,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using BarcodeReaderSample.Interface;
+using BarcodeReaderSample.Models;
+using Entities;
+using Newtonsoft.Json;
 using Plugin.SatoMpXamarinSDK;
 using Plugin.SatoMpXamarinSDK.Abstractions;
+using TraceIQ.Expeditor.API;
+using TraceIQ.Expeditor.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,36 +23,47 @@ namespace BarcodeReaderSample.Pages
         private ILabelPrinterDevice _printer = null;
         private PrinterConnectionInformation _connectionInfo = null;
         private static SemaphoreSlim _printSemaphore = new SemaphoreSlim(1, 1);
-
-        public LabelPrinterPage()
+        private readonly Guid _orderId;
+        private readonly IDbService _dbService;
+        private readonly List<OrderDetailsBillModel> Orders;
+        private double _total;
+        private FiscalBoxResponseModel FiscalBoxResponseModel;
+        private readonly Order _order;
+        public LabelPrinterPage(Guid orderId, IDbService dbService)
         {
             InitializeComponent();
-        }
-        void PrinterStatusEvent(uint status)
-        {
-            // Any view interaction or any UI interaction should always be done in the main thread.
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                lblStatus.Text = "";
-                if (status == (uint)LabelPrinterStatus.IDLE)
-                {
-                    lblStatus.Text = "NORMAL ";
-                    return;
-                }
-                if ((status & (uint)LabelPrinterStatus.PAPER_EMPTY) != 0) lblStatus.Text += " PAPER EMPTY ";                  // Paper Empty
-                if ((status & (uint)LabelPrinterStatus.COVER_OPEN) != 0) lblStatus.Text += " COVER OPEN ";                   // Cover Open
-                if ((status & (uint)LabelPrinterStatus.TPH_OVERHEAT) != 0) lblStatus.Text += " TPH OVERHEAT ";                 // Thermal Head Overheat
-                if ((status & (uint)LabelPrinterStatus.GAP_ERROR) != 0) lblStatus.Text += " GAP ERROR ";                    // Gap Detection Error
-                if ((status & (uint)LabelPrinterStatus.MOTOR_OVERHEAT) != 0) lblStatus.Text += " MOTOR OVERHEAT ";               // Motor Overheat
-                if ((status & (uint)LabelPrinterStatus.BOARD_OVERHEAT) != 0) lblStatus.Text += " BOARD OVERHEAT ";               // Board Overheat
-                if ((status & (uint)LabelPrinterStatus.BUILDING_LABEL_TO_BE_PRINTED) != 0) lblStatus.Text += " BUIDING LABEL ";                // On building label to be printed in image buffer
-                if ((status & (uint)LabelPrinterStatus.PRINTING_LABEL) != 0) lblStatus.Text += " PRINTING ";                     // On printing label
-                if ((status & (uint)LabelPrinterStatus.ISSUED_LABEL_ISPAUSED) != 0) lblStatus.Text += " PAUSED IN PEELER ";             // label is paused in peeler unit
-                if ((status & (uint)LabelPrinterStatus.WAIT_FOR_PAPER_TO_BE_TAKEN) != 0) lblStatus.Text += " WAIT FOR LABEL TO BE TAKEN ";   // WAIT FOR LABEL TO BE TAKEN
-            });
+            _orderId = orderId;
+            _dbService = dbService;
+
+            var getOrderBills = dbService.GetOrderDetailBill(orderId);
+
+            Orders = getOrderBills.Result == OperationStatus.Success
+                ? getOrderBills.Value
+                : new List<OrderDetailsBillModel>();
+
+            var getOrder = _dbService.GetOrder(orderId);
+            if (getOrder.Result == OperationStatus.Success)
+                _order = getOrder.Value;
+
+            _total = getOrder.Result != OperationStatus.Success ? default : getOrder.Value.Total ?? default ;
+
+            FiscalBoxResponseModel =
+                JsonConvert.DeserializeObject<FiscalBoxResponseModel>(getOrder.Value.FiscalBoxData);
         }
         async void OnPrintLabelClicked(object sender, EventArgs e)
         {
+            if (!Orders.Any())
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Заказы не найдены", "ОК");
+                return;
+            }
+
+            if(_total == default)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Сумма заказа равнятеся нулю.", "ОК");
+                return;
+            }
+
             _printer = await OpenPrinterService(_connectionInfo) as ILabelPrinterDevice;
             if (_printer == null)
                 return;
@@ -70,51 +86,124 @@ namespace BarcodeReaderSample.Pages
                 int xPos = 16;
                 int yPos = 32;
 
-                await _printer.setLength(1000, 0, 'C', 0);
+                await _printer.setLength(1000 + Orders.Count * 700, 0, 'C', 0);
+                _printer.setTextEncoding(1251);
 
                 // Bitmap Font
                 await _printer.setCharacterset((int)LabelCodePage.WPC1252, (int)ICS.USA);
-                await _printer.drawTextDeviceFont("Bitmap Font: Hello", MAX_WIDTH - 24, yPos, (char)LabelBitmapFont.DEVICE_FONT_8PT, 1, 1, 0, 0, false, false, false, (int)LabelAlignment.RIGHT);
-                yPos += 35;
-                await _printer.drawTextDeviceFont("Bitmap Font: 안녕하세요", MAX_WIDTH - 24, yPos, (char)LabelBitmapFont.DEVICE_FONT_KOREAN3, 1, 1, 0, 0, false, false, false, (int)LabelAlignment.RIGHT);
-                yPos += 35;
-                await _printer.drawTextDeviceFont("Bitmap Font: こんにちは", MAX_WIDTH - 24, yPos, (char)LabelBitmapFont.DEVICE_FONT_SHIFT_JIS, 1, 1, 0, 0, false, false, false, (int)LabelAlignment.RIGHT);
-                yPos += 35;
-                await _printer.drawTextDeviceFont("Bitmap Font: 中国 你好", xPos, yPos, (char)LabelBitmapFont.DEVICE_FONT_GB2312, 1, 1, 0, 0, false, false, false, (int)LabelAlignment.LEFT);
-                yPos += 35;
-                await _printer.drawTextDeviceFont("Bitmap Font: 中國 你好", xPos, yPos, (char)LabelBitmapFont.DEVICE_FONT_BIG5, 1, 1, 0, 0, false, false, false, (int)LabelAlignment.LEFT);
+
+                //-------------------
+
+                await _printer.drawTextVectorFont("ИНН: ", xPos , yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+                
+                await _printer.drawTextVectorFont("303054397", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
 
-                // Vector Font
-                await _printer.drawTextVectorFont("Vector Font: Hello", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                //-------------------
+
+                await _printer.drawTextVectorFont($"Дата: {DateTime.Now:dd.MM.yyyy}", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont($"Время: {DateTime.Now:HH:mm:ss}", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
-                await _printer.drawTextVectorFont("Vector Font: 안녕하세요", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_KS5601, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+
+                //-------------------
+                await _printer.drawTextVectorFont($"Номер чека: ", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont($"№12", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
-                await _printer.drawTextVectorFont("Vector Font: こんにちは", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_SHIFT_JIS, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+
+                //-------------------
+                await _printer.drawTextVectorFont($"Кассир: ", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont($"{RestContext.User?.Name}", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
-                await _printer.drawTextVectorFont("Vector Font: 中国 你好", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_GB2312, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                var fontWidth = 16;
+                var fontHeight = 16;
+                foreach (var order in Orders)
+                {
+                    
+                    await _printer.drawTextVectorFont($"-----------------------------------------", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                    var splitNames = Split(order.Name, 20);
+
+                    yPos += 35;
+                    var yPosName = yPos;
+                    foreach (var name in splitNames)
+                    {
+                        await _printer.drawTextVectorFont(name, xPos, yPosName, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, true, false, false, (int)LabelAlignment.LEFT);
+                        yPosName += 25;
+                    }
+
+                    await _printer.drawTextVectorFont(order.Quantity + " " + order.UnitOfMeasurement, (MAX_WIDTH / 2) - 10 , yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 14, 14, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                    await _printer.drawTextVectorFont(order.Price, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                    yPos = yPosName;
+
+                    await _printer.drawTextVectorFont("НДС(15%)", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                    await _printer.drawTextVectorFont(order.Vat, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                    yPos += 35;
+
+                    await _printer.drawTextVectorFont("ИКПУ:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                    await _printer.drawTextVectorFont(order.Ikpu, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                    yPos += 35;
+
+                    await _printer.drawTextVectorFont("КМ:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                    foreach (var code in order.Codes)
+                    {
+                        await _printer.drawTextVectorFont(code, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 14, 14, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                        yPos += 20;
+                    }
+                }
+
+                await _printer.drawTextVectorFont($"-----------------------------------------", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
                 yPos += 35;
-                await _printer.drawTextVectorFont("Vector Font: 中國 你好", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_BIG5, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+
+                await _printer.drawTextVectorFont("ИТОГО:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, true, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont(_total.ToString("#,##0.00"), MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
-                // 1d-Barcode
-                await _printer.drawBarcode1D("1234567890", xPos, yPos, (int)Label1dCodeType.CODE128, 2, 4, 50, (int)LabelHRI.TEXTBELOW, 0, 0);
-                yPos += 90;
-                // PDF417
-                await _printer.drawBarcodePDF417("1234567890", xPos, yPos, 30, 5, 0, 0, false, (int)LabelPDF41StartPosition.ORIGIN_POINT_UPPER, 3, 20, 0);
-                yPos += 100;
+
+                await _printer.drawTextVectorFont("Всего НДС:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont((_total * 0.15).ToString("#,##0.00"), MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                yPos += 35;
+
+                await _printer.drawTextVectorFont("Наличные:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont(_order.Cash.ToString("#,##0.00"), MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                yPos += 35;
+
+                await _printer.drawTextVectorFont("Безналичные:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont(_order.Terminal.ToString("#,##0.00"), MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                yPos += 35;
+
+                await _printer.drawTextVectorFont("Скидка:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont("0", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                yPos += 35;
+
+                await _printer.drawTextVectorFont("Фискаальные данные", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, true, false, false, (int)LabelAlignment.LEFT);
+                yPos += 35;
+
+                await _printer.drawTextVectorFont("ФМ ID:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont(FiscalBoxResponseModel?.Data.TerminalId, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                yPos += 35;
+
+                await _printer.drawTextVectorFont("Фискальная подпись:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+
+                await _printer.drawTextVectorFont(FiscalBoxResponseModel?.Data.FiscalSign, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                yPos += 35;
+
                 // QR Code
-                await _printer.drawBarcodeQRCode("0123456789", xPos, yPos, 3, (int)LabelQRCodeModel.MODEL_1, (int)LabelQRCodeECL.ECCLEVEL_L, 0);
-                yPos += 90;
-                // Graphic Image
-                await _printer.drawImage(await DependencyService.Get<IPlatformInfo>().GetImgResourceAsync(),
-                                        xPos,
-                                        yPos,
-                                        200,                // Image Width
-                                        20,                 // brightness
-                                        true,               // Image Dithering
-                                        true);              // Image Compress
-                yPos += 50;
-                await _printer.drawBlock(8, 8, MAX_WIDTH - 8, yPos, (char)LabelBlock.BOX, 2);
+                await _printer.drawBarcodeQRCode(FiscalBoxResponseModel?.Data.QrUrl, xPos + 150, yPos, 4, (int)LabelQRCodeModel.MODEL_1, (int)LabelQRCodeECL.ECCLEVEL_Q, 0);
+
                 // 'printBuffer' method must be called at the end.
                 await _printer.printBuffer(1);
             }
@@ -151,7 +240,7 @@ namespace BarcodeReaderSample.Pages
                     case InterfaceType.BLUETOOTH:
                     case InterfaceType.WIFI:
                     case InterfaceType.ETHERNET:
-                        lblAddress.Text = connectionInfo.Address;
+                        //lblAddress.Text = connectionInfo.Address;
                         btnOpenService.IsEnabled = true;
                         break;
                     default:
@@ -179,6 +268,7 @@ namespace BarcodeReaderSample.Pages
                 // If there's nothing to do with the printer, call "closeService" method to disconnect the communication between Host and Printer.
                 await _printer.closeService();
                 btnCloseService.IsEnabled = false;
+                btnPrintLabel.IsEnabled = false;
                 btnOpenService.IsEnabled = true;
                 _printer = null;
             }
@@ -201,7 +291,7 @@ namespace BarcodeReaderSample.Pages
             try
             {
                 await _printSemaphore.WaitAsync();
-                PrinterStatusEvent(await _printer.checkPrinterStatus());
+                //PrinterStatusEvent(await _printer.checkPrinterStatus());
             }
             catch (Exception ex)
             {
@@ -244,6 +334,10 @@ namespace BarcodeReaderSample.Pages
                     _printer = null;
                     await DisplayAlert("Connection Fail", "openService failed. (" + result + ")", "OK");
                 }
+                else
+                {
+                    btnPrintLabel.IsEnabled = true;
+                }
             }
             finally
             {
@@ -251,6 +345,12 @@ namespace BarcodeReaderSample.Pages
             }
 
             return _printer;
+        }
+
+        List<string> Split(string str, int chunkSize)
+        {
+            return Enumerable.Range(0, str.Length / chunkSize)
+                .Select(i => str.Substring(i * chunkSize, chunkSize)).ToList();
         }
     }
 }

@@ -109,6 +109,7 @@ namespace BarcodeReaderSample.Database
                         existingProduct.AmountInPallet = product.AmountInPallet;
                         existingProduct.Barcode = product.Barcode;
                         existingProduct.Name = product.Name;
+                        existingProduct.Ikpu = product.Ikpu;
                     }
                     else
                         db.Products.Add(product);
@@ -309,7 +310,7 @@ namespace BarcodeReaderSample.Database
             {
                 var orders = db.Orders
                     .AsNoTracking()
-                    .Where(s => s.SupplierId == supplierId)
+                    .Where(s => s.SupplierId == supplierId && s.OrderStatus == OrderStatus.Transit)
                     .Select(s => new OrdersModel
                     {
                         Id = s.Id,
@@ -603,7 +604,7 @@ namespace BarcodeReaderSample.Database
             });
         }
 
-        public OperationResult UpdateOrderWaiting(Guid orderId)
+        public OperationResult UpdateOrderWaiting(Guid orderId, double cash, double terminal)
         {
             return DigitalTrackingContext.Run(db =>
             {
@@ -611,7 +612,9 @@ namespace BarcodeReaderSample.Database
                 if(order == null)
                     return OperationResult.Fail("Заказа не найден");
 
-                order.IsWaitingQr = true;
+                order.IsWaitingFiscalBox = true;
+                order.Cash = cash;
+                order.Terminal = terminal;
 
                 db.SaveChanges();
 
@@ -633,7 +636,7 @@ namespace BarcodeReaderSample.Database
                 return new OperationResult<bool>
                 {
                     Result = OperationStatus.Success,
-                    Value = order.IsWaitingQr
+                    Value = order.IsWaitingFiscalBox
                 };
             });
         }
@@ -671,15 +674,15 @@ namespace BarcodeReaderSample.Database
             });
         }
 
-        public OperationResult UpdateOrderQrUrl(Guid orderId, string qrUrl)
+        public OperationResult CompleteOrder(Guid orderId)
         {
             return DigitalTrackingContext.Run(db =>
             {
                 var order = db.Orders.FirstOrDefault(s => s.Id == orderId);
                 if (order == null)
-                    return OperationResult<int>.Fail("Запись не найдена");
+                    return OperationResult<Order>.Fail("Запись не найдена");
 
-                order.QrPaymentUrl = qrUrl;
+                order.OrderStatus = OrderStatus.Dispatched;
 
                 db.SaveChanges();
 
@@ -690,7 +693,124 @@ namespace BarcodeReaderSample.Database
             });
         }
 
+        public OperationResult UpdateOrderQrUrl(Guid orderId, string qrUrl)
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var order = db.Orders.FirstOrDefault(s => s.Id == orderId);
+                if (order == null)
+                    return OperationResult<int>.Fail("Запись не найдена");
 
+                order.FiscalBoxData = qrUrl;
+
+                db.SaveChanges();
+
+                return new OperationResult
+                {
+                    Result = OperationStatus.Success
+                };
+            });
+        }
+
+        public OperationResult RejectOrder(Guid orderId)
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var order = db.Orders.FirstOrDefault(s => s.Id == orderId);
+                if (order == null)
+                    return OperationResult<Order>.Fail("Запись не найдена");
+
+                order.OrderStatus = OrderStatus.Rejected;
+
+                db.SaveChanges();
+
+                return new OperationResult
+                {
+                    Result = OperationStatus.Success
+                };
+            });
+        }
+
+        public OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId)
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var orderDetails = db.OrderDetails
+                    .AsNoTracking()
+                    .Include(s => s.Product)
+                    .Include(s => s.OrderCodeMappings)
+                        .ThenInclude(s => s.Box)
+                        .ThenInclude(s => s.DataMatrices)
+                    .Include(s => s.OrderCodeMappings)
+                        .ThenInclude(s => s.DataMatrix)
+                    .Include(s => s.OrderCodeMappings)
+                        .ThenInclude(s => s.Pallet)
+                        .ThenInclude(s => s.Boxes)
+                        .ThenInclude(s => s.DataMatrices)
+                    .Where(s => s.OrderId == orderId)
+                    .ToList();
+
+                var orderBills = new List<OrderDetailsBillModel>();
+
+                foreach (var orderDetail in orderDetails)
+                {
+                    if (orderDetail.OrderCodeMappings.Any(s => s.DataMatrixCodeId.HasValue && s.DataMatrix != null))
+                    {
+                        orderBills.Add(new OrderDetailsBillModel
+                        {
+                            Barcode = orderDetail.Product.Barcode,
+                            Name = orderDetail.Product.Name,
+                            Ikpu = orderDetail.Product.Ikpu,
+                            UnitOfMeasurement = "шт.",
+                            Quantity = orderDetail.Quantity,
+                            Price = orderDetail.Price.ToString("#,##0.00"),
+                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
+                            Codes = orderDetail.OrderCodeMappings.Select(s => s.DataMatrix.Code).ToList(),
+                            OrderDetailId = orderDetail.Id
+                        });
+                    }
+
+                    if (orderDetail.OrderCodeMappings.Any(s => s.BoxId.HasValue && s.Box != null && s.Box.DataMatrices != null && s.Box.DataMatrices.Any()))
+                    {
+                        orderBills.Add(new OrderDetailsBillModel
+                        {
+                            Barcode = orderDetail.Product.Barcode,
+                            Name = orderDetail.Product.Name,
+                            Quantity = orderDetail.Quantity,
+                            Ikpu = orderDetail.Product.Ikpu,
+                            UnitOfMeasurement = "бл.",
+                            Price = orderDetail.Price.ToString("#,##0.00"),
+                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
+                            Codes = orderDetail.OrderCodeMappings.SelectMany(s => s.Box.DataMatrices.Select(t => t.Code)).ToList(),
+                            OrderDetailId = orderDetail.Id
+                        });
+                    }
+
+                    if (orderDetail.OrderCodeMappings.Any(s => s.PalletId.HasValue && s.Pallet != null && s.Pallet.Boxes != null && s.Pallet.Boxes.Any() 
+                                                               && s.Pallet.Boxes.Any(t => t.DataMatrices != null && t.DataMatrices.Any())))
+                    {
+                        orderBills.Add(new OrderDetailsBillModel
+                        {
+                            Barcode = orderDetail.Product.Barcode,
+                            Name = orderDetail.Product.Name,
+                            Quantity = orderDetail.Quantity,
+                            Ikpu = orderDetail.Product.Ikpu,
+                            UnitOfMeasurement = "пал.",
+                            Price = orderDetail.Price.ToString("#,##0.00"),
+                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
+                            Codes = orderDetail.OrderCodeMappings.Select(s => s.Pallet.Code).ToList(),
+                            OrderDetailId = orderDetail.Id
+                        });
+                    }
+                }
+
+                return new OperationResult<List<OrderDetailsBillModel>>
+                {
+                    Result = OperationStatus.Success,
+                    Value = orderBills
+                };
+            });
+        }
         private string RemoveFirstTwoCharacters(string value)
         {
             if (value.Length > 2)

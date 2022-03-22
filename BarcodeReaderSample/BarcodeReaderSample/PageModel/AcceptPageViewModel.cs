@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using BarcodeReaderSample.API;
 using BarcodeReaderSample.Interface;
+using BarcodeReaderSample.Models;
 using TraceIQ.Expeditor.Models;
 using TraceIQ.Expeditor.PageModels;
 using Xamarin.Forms;
@@ -60,7 +62,7 @@ namespace BarcodeReaderSample.PageModel
             ConfirmCommand = new Command(Confirm);
 
             var getTotal = DbService.GetOrderTotal(orderId);
-            if (getTotal.Result != OperationStatus.Success)
+            if (getTotal.Result == OperationStatus.Success)
                 Total = getTotal.Value;
         }
 
@@ -72,17 +74,29 @@ namespace BarcodeReaderSample.PageModel
                 return;
             }
 
-            var getDataMatrixCode = DbService.GetOrderDataMatrix(_orderId);
+            var getDataMatrixCode = DbService.GetOrderDetailBill(_orderId);
             if(getDataMatrixCode.Result != OperationStatus.Success)
                 await Application.Current.MainPage.DisplayAlert("Ошибка", getDataMatrixCode.ErrorMessage, "ОК");
             else
             {
-                var sendAccept = BaseApiService.SendOrderConfirmation(getDataMatrixCode.Value, _orderId, Cash, Terminal);
+                var model = new ConfirmOrderModel
+                {
+                    Cash = Cash,
+                    Terminal = Terminal,
+                    OrderId = _orderId,
+                    ConfirmProductsModels = getDataMatrixCode.Value.Select(s => new ConfirmProductsModel
+                    {
+                        OrderDetailId = s.OrderDetailId,
+                        Codes = s.Codes
+                    }).ToList()
+                };
+
+                var sendAccept = BaseApiService.SendOrderConfirmation(model);
                 if(sendAccept.Result != OperationStatus.Success)
                     await Application.Current.MainPage.DisplayAlert("Ошибка", sendAccept.Value.ErrorMessage, "ОК");
                 else
                 {
-                    var updateOrder = DbService.UpdateOrderWaiting(_orderId);
+                    var updateOrder = DbService.UpdateOrderWaiting(_orderId, Cash, Total);
                     if (updateOrder.Result != OperationStatus.Success)
                     {
                         await Application.Current.MainPage.DisplayAlert("Ошибка", sendAccept.Value.ErrorMessage, "ОК");
