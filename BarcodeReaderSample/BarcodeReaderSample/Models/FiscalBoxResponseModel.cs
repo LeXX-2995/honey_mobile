@@ -5,19 +5,19 @@ using Newtonsoft.Json;
 
 namespace BarcodeReaderSample.Models
 {
-    public class FiscalBoxResponseModel
-    {
-        [JsonProperty("data")]
-        public Data Data { get; set; }
+    //public class FiscalBoxResponseModel
+    //{
+    //    [JsonProperty("data")]
+    //    public Data Data { get; set; }
 
-        [JsonProperty("error")]
-        public object Error { get; set; }
+    //    [JsonProperty("error")]
+    //    public object Error { get; set; }
 
-        [JsonProperty("is_success")]
-        public bool IsSuccess { get; set; }
-    }
+    //    [JsonProperty("is_success")]
+    //    public bool IsSuccess { get; set; }
+    //}
 
-    public class Data
+    public class FiscalBoxDataModel
     {
         [JsonProperty("terminal_id")]
         public string TerminalId { get; set; }

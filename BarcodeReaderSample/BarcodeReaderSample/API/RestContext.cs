@@ -32,7 +32,7 @@ namespace TraceIQ.Expeditor.API
 
             if (parameters != null && parameters.Any())
             {
-                foreach (var param in parameters)
+                foreach (var param in parameters) 
                 {
                     request.AddParameter(param.Key, param.Value);
                 }

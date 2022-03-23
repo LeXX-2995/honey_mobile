@@ -27,7 +27,7 @@ namespace BarcodeReaderSample.Pages
         private readonly IDbService _dbService;
         private readonly List<OrderDetailsBillModel> Orders;
         private double _total;
-        private FiscalBoxResponseModel FiscalBoxResponseModel;
+        private FiscalBoxDataModel FiscalBoxResponseModel;
         private readonly Order _order;
         public LabelPrinterPage(Guid orderId, IDbService dbService)
         {
@@ -48,7 +48,7 @@ namespace BarcodeReaderSample.Pages
             _total = getOrder.Result != OperationStatus.Success ? default : getOrder.Value.Total ?? default ;
 
             FiscalBoxResponseModel =
-                JsonConvert.DeserializeObject<FiscalBoxResponseModel>(getOrder.Value.FiscalBoxData);
+                JsonConvert.DeserializeObject<FiscalBoxDataModel>(getOrder.Value.FiscalBoxData);
         }
         async void OnPrintLabelClicked(object sender, EventArgs e)
         {
@@ -90,7 +90,7 @@ namespace BarcodeReaderSample.Pages
                 _printer.setTextEncoding(1251);
 
                 // Bitmap Font
-                await _printer.setCharacterset((int)LabelCodePage.WPC1252, (int)ICS.USA);
+                await _printer.setCharacterset((int)LabelCodePage.WPC1251, (int)ICS.USA);
 
                 //-------------------
 
@@ -193,17 +193,19 @@ namespace BarcodeReaderSample.Pages
 
                 await _printer.drawTextVectorFont("ФМ ID:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
 
-                await _printer.drawTextVectorFont(FiscalBoxResponseModel?.Data.TerminalId, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                await _printer.drawTextVectorFont(FiscalBoxResponseModel?.TerminalId, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
 
                 await _printer.drawTextVectorFont("Фискальная подпись:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
 
-                await _printer.drawTextVectorFont(FiscalBoxResponseModel?.Data.FiscalSign, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                await _printer.drawTextVectorFont(FiscalBoxResponseModel?.FiscalSign, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
 
-                // QR Code
-                await _printer.drawBarcodeQRCode(FiscalBoxResponseModel?.Data.QrUrl, xPos + 150, yPos, 4, (int)LabelQRCodeModel.MODEL_1, (int)LabelQRCodeECL.ECCLEVEL_Q, 0);
+                var url = FiscalBoxResponseModel?.QrUrl;
 
+                // QR Code
+                await _printer.drawBarcodeQRCode(url, xPos + 150, yPos, 4, (int)LabelQRCodeModel.MODEL_2, (int)LabelQRCodeECL.ECCLEVEL_Q, 0);
+                    
                 // 'printBuffer' method must be called at the end.
                 await _printer.printBuffer(1);
             }
