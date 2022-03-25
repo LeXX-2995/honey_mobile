@@ -665,7 +665,6 @@ namespace BarcodeReaderSample.Database
                 if (order == null)
                     return OperationResult<Order>.Fail("Запись не найдена");
 
-
                 return new OperationResult<Order>
                 {
                     Result = OperationStatus.Success,

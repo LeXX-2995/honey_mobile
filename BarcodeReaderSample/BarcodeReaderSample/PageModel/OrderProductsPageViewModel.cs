@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 using BarcodeReaderSample;
 using BarcodeReaderSample.API;
 using BarcodeReaderSample.Interface;
+using BarcodeReaderSample.Models;
 using BarcodeReaderSample.Pages;
+using Entities;
 using Plugin.SatoMpXamarinSDK.Abstractions;
 using TraceIQ.Expeditor.Models;
 using Xamarin.Forms;
@@ -96,6 +99,7 @@ namespace TraceIQ.Expeditor.PageModels
 
         public Command OpenCompletionCommand { get; set; }
         public Command CancelCommand { get; set; }
+        public PaymentType? PaymentType { get; set; }
         public OrderProductsPageViewModel(INavigation navigation, HoneywellBarcodeReader scanner, IDbService dbService, Guid orderId)
         {
             Scanner = scanner;
@@ -156,6 +160,30 @@ namespace TraceIQ.Expeditor.PageModels
         private async void Complete()
         {
             IsPopupOpen = false;
+
+            if (!PaymentType.HasValue)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Тип оплаты не найден", "ОК");
+                return;
+            }
+
+            if (PaymentType.Value == Entities.PaymentType.Deferred)
+            {
+                var confirmOrder = BaseApiService.SendOrderConfirmation(new ConfirmOrderModel
+                {
+                    OrderId = _orderId,
+                    Terminal = default,
+                    Cash = default,
+                    ConfirmProductsModels = new List<ConfirmProductsModel>()
+                });
+
+                if(confirmOrder.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", confirmOrder.ErrorMessage, "ОК");
+                    return;
+                }
+            }
+
             var completeOrder = DbService.CompleteOrder(_orderId);
             if (completeOrder.Result != OperationStatus.Success)
             {
@@ -204,6 +232,22 @@ namespace TraceIQ.Expeditor.PageModels
                 return;
             }
 
+            if(!PaymentType.HasValue)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Тип оплаты не найден", "ОК");
+                return;
+            }
+
+            if (PaymentType.Value == Entities.PaymentType.Deferred)
+            {
+                _mUiContext.Post(s =>
+                {
+                    IsPopupOpen = true;
+                }, null);
+
+                return;
+            }
+
             await Navigation.PushAsync(new AcceptPage(Navigation, DbService, _orderId));
         }
 
@@ -242,14 +286,15 @@ namespace TraceIQ.Expeditor.PageModels
                 OrderDetails.Clear();
             }, null);
 
-            var getOrder = DbService.GetOrderWaitingStatus(_orderId);
+            var getOrder = DbService.GetOrder(_orderId);
             if (getOrder.Result != OperationStatus.Success)
-            {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", getOrder.ErrorMessage, "ОК");
-                return;
+            else
+            {
+                PaymentType = getOrder.Value.PaymentType;
             }
 
-            if (getOrder.Value)
+            if (getOrder.Value.IsWaitingFiscalBox)
             {
                 _mUiContext.Post(s =>
                 {

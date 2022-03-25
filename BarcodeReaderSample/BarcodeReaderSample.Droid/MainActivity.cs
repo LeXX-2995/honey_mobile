@@ -25,6 +25,8 @@ namespace BarcodeReaderSample.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
+            DevExpress.XamarinForms.Editors.Initializer.Init();
+
             var platform = DependencyService.Get<IPlatformInfo>();
             if ((platform as PlatformInfo) != null)
             {

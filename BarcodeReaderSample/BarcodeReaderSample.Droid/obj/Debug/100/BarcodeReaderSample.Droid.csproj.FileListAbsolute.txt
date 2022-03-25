@@ -1252,3 +1252,4 @@ C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\B
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\androidx\proguard\c0d95615-5a41-4487-8519-0a992af59544.txt
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\androidx\proguard\d55298e6-e80f-4b66-9dec-80e8a9214ad8.txt
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\androidx\proguard\f0355d56-9439-4b59-af87-1330dab385a7.txt
+C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\Pages\GoodsOnStockPage.xaml.g.cs

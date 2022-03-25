@@ -105,20 +105,22 @@ namespace TraceIQ.Expeditor.PageModels
 
         private async void OpenGoodsOnStock()
         {
-            var setting = DbService.GetSetting();
-            if (setting.Result == OperationStatus.Success && !string.IsNullOrWhiteSpace(setting.Value.Url) && setting.Value.Port != default)
-            {
-                if (RestContext.User == null)
-                {
-                    Login();
-                    return;
-                }
-            }
-            else
-            {
-                EnterSettings();
-                return;
-            }
+            //var setting = DbService.GetSetting();
+            //if (setting.Result == OperationStatus.Success && !string.IsNullOrWhiteSpace(setting.Value.Url) && setting.Value.Port != default)
+            //{
+            //    if (RestContext.User == null)
+            //    {
+            //        Login();
+            //        return;
+            //    }
+            //}
+            //else
+            //{
+            //    EnterSettings();
+            //    return;
+            //}
+
+            await Navigation.PushAsync(new GoodsOnStockPage());
         }
 
         private async void OpenReturns()

@@ -55,6 +55,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\CancellationPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\ClientPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModel\GoodsOnStockPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\LoginPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\MainPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageModel\OrderProductsPageViewModel.cs" />
@@ -72,6 +73,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ClientsPage.xaml.cs">
       <DependentUpon>ClientsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\GoodsOnStockPage.xaml.cs">
+      <DependentUpon>GoodsOnStockPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LabelPrinterPage.xaml.cs">
@@ -163,6 +168,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\AcceptPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\GoodsOnStockPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

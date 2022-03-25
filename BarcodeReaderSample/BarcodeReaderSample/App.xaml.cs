@@ -23,8 +23,6 @@ namespace BarcodeReaderSample
                 db.Database.Migrate();
             }
 
-            DevExpress.XamarinForms.Editors.Initializer.Init();
-
             MainPageApp = new MainPage();
             
             MainPage = new NavigationPage(MainPageApp);
