@@ -15,8 +15,8 @@ namespace TraceIQ.Expeditor.PageModels
         public Command OpenOrdersCommand { get; set; }
         public Command OpenGoodsOnStockCommand { get; set; }
         public Command OpenReturnCommand { get; set; }
-        public Command OpenLabelPrinterPage { get; set; }
         public Command SynchronizeData { get; set; }
+        public Command OpenSettingsCommand { get; set; }
         public MainPageViewModel(INavigation navigation, HoneywellBarcodeReader scanner)
         {
             Scanner = scanner;
@@ -24,9 +24,14 @@ namespace TraceIQ.Expeditor.PageModels
             OpenOrdersCommand = new Command(OpenOrders);
             OpenGoodsOnStockCommand = new Command(OpenGoodsOnStock);
             OpenReturnCommand = new Command(OpenReturns);
-            OpenLabelPrinterPage = new Command(OpenLabelPrinter);
             SynchronizeData = new Command(Synchronize);
+            OpenSettingsCommand = new Command(OpenSettings);
             DbService = new DbService();
+        }
+
+        private async void OpenSettings()
+        {
+            await Navigation.PushAsync(new SettingsPage(Navigation, DbService));
         }
 
         private async void Synchronize()
@@ -71,12 +76,6 @@ namespace TraceIQ.Expeditor.PageModels
             if(addSetting.Result != OperationStatus.Success)
                 await Application.Current.MainPage.DisplayAlert("Ошибка", addSetting.ErrorMessage, "ОК");
         }
-
-        private async void OpenLabelPrinter()
-        {
-            
-        }
-
 
         public async void Login()
         {

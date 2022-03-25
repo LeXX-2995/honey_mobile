@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:editors="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             x:Class="BarcodeReaderSample.Pages.SettingsPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Label Text="Адрес сервера"/>
+                <Entry 
+                    Text="{Binding Url, Mode=TwoWay}"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5">
+                </Entry>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1">
+                <Label Text="Порт"/>
+                <Entry 
+                    Text="{Binding Port, Mode=TwoWay}"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
+                    Margin="5">
+                </Entry>
+            </StackLayout>
+
+            <editors:SimpleButton 
+                Grid.Row="2"
+                Text = "Сохранить" 
+                TextColor="White"
+                CornerMode = "Round"        
+                CornerRadius="10"
+                Margin="10"
+                Command="{Binding SaveCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

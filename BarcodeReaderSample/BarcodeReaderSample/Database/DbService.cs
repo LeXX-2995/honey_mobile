@@ -33,12 +33,22 @@ namespace BarcodeReaderSample.Database
         {
             return DigitalTrackingContext.Run(db =>
             {
-                db.Setting.Add(new Setting
+                var setting = db.Setting.FirstOrDefault();
+
+                if (setting == null)
                 {
-                    Id = Guid.NewGuid(),
-                    Port = port,
-                    Url = url
-                });
+                    db.Setting.Add(new Setting
+                    {
+                        Id = Guid.NewGuid(),
+                        Port = port,
+                        Url = url
+                    });
+                }
+                else
+                {
+                    setting.Url = url;
+                    setting.Port = port;
+                }
 
                 db.SaveChanges();
 
