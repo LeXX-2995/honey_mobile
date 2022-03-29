@@ -1,122 +1,122 @@
 	.section	.rodata.map_aname.0,"aMS",%progbits,1
 	.type	.L.map_aname.0, %object
 .L.map_aname.0:
-	.asciz	"DevExpress.XamarinForms.Editors.Android"
-	.size	.L.map_aname.0, 40
+	.asciz	"BarcodeReaderSample.Droid"
+	.size	.L.map_aname.0, 26
 
 	.section	.rodata.map_aname.1,"aMS",%progbits,1
 	.type	.L.map_aname.1, %object
 .L.map_aname.1:
-	.asciz	"Xamarin.Kotlin.StdLib"
-	.size	.L.map_aname.1, 22
+	.asciz	"DevExpress.XamarinForms.Navigation.Android"
+	.size	.L.map_aname.1, 43
 
 	.section	.rodata.map_aname.2,"aMS",%progbits,1
 	.type	.L.map_aname.2, %object
 .L.map_aname.2:
-	.asciz	"DevExpress.Xamarin.Android.CollectionView"
-	.size	.L.map_aname.2, 42
+	.asciz	"Xamarin.Kotlin.StdLib"
+	.size	.L.map_aname.2, 22
 
 	.section	.rodata.map_aname.3,"aMS",%progbits,1
 	.type	.L.map_aname.3, %object
 .L.map_aname.3:
-	.asciz	"Xamarin.AndroidX.Lifecycle.ViewModel"
-	.size	.L.map_aname.3, 37
+	.asciz	"Xamarin.AndroidX.Fragment"
+	.size	.L.map_aname.3, 26
 
 	.section	.rodata.map_aname.4,"aMS",%progbits,1
 	.type	.L.map_aname.4, %object
 .L.map_aname.4:
-	.asciz	"DataCollectionLib"
-	.size	.L.map_aname.4, 18
+	.asciz	"Xamarin.AndroidX.RecyclerView"
+	.size	.L.map_aname.4, 30
 
 	.section	.rodata.map_aname.5,"aMS",%progbits,1
 	.type	.L.map_aname.5, %object
 .L.map_aname.5:
-	.asciz	"Xamarin.AndroidX.Core"
-	.size	.L.map_aname.5, 22
+	.asciz	"DevExpress.Xamarin.Android.CollectionView"
+	.size	.L.map_aname.5, 42
 
 	.section	.rodata.map_aname.6,"aMS",%progbits,1
 	.type	.L.map_aname.6, %object
 .L.map_aname.6:
-	.asciz	"Xamarin.AndroidX.SavedState"
-	.size	.L.map_aname.6, 28
+	.asciz	"Xamarin.AndroidX.AppCompat.AppCompatResources"
+	.size	.L.map_aname.6, 46
 
 	.section	.rodata.map_aname.7,"aMS",%progbits,1
 	.type	.L.map_aname.7, %object
 .L.map_aname.7:
-	.asciz	"Xamarin.Jetbrains.Annotations"
-	.size	.L.map_aname.7, 30
+	.asciz	"DataCollectionLib"
+	.size	.L.map_aname.7, 18
 
 	.section	.rodata.map_aname.8,"aMS",%progbits,1
 	.type	.L.map_aname.8, %object
 .L.map_aname.8:
-	.asciz	"Com.Bixolon.Mpos.Xamarin"
-	.size	.L.map_aname.8, 25
+	.asciz	"DevExpress.XamarinForms.CollectionView.Android"
+	.size	.L.map_aname.8, 47
 
 	.section	.rodata.map_aname.9,"aMS",%progbits,1
 	.type	.L.map_aname.9, %object
 .L.map_aname.9:
-	.asciz	"Xamarin.AndroidX.AppCompat.AppCompatResources"
-	.size	.L.map_aname.9, 46
+	.asciz	"DevExpress.XamarinForms.Grid.Android"
+	.size	.L.map_aname.9, 37
 
 	.section	.rodata.map_aname.10,"aMS",%progbits,1
 	.type	.L.map_aname.10, %object
 .L.map_aname.10:
-	.asciz	"Xamarin.AndroidX.CardView"
-	.size	.L.map_aname.10, 26
+	.asciz	"DevExpress.XamarinForms.Core.Android"
+	.size	.L.map_aname.10, 37
 
 	.section	.rodata.map_aname.11,"aMS",%progbits,1
 	.type	.L.map_aname.11, %object
 .L.map_aname.11:
-	.asciz	"Xamarin.AndroidX.CustomView"
-	.size	.L.map_aname.11, 28
+	.asciz	"Xamarin.Jetbrains.Annotations"
+	.size	.L.map_aname.11, 30
 
 	.section	.rodata.map_aname.12,"aMS",%progbits,1
 	.type	.L.map_aname.12, %object
 .L.map_aname.12:
-	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
-	.size	.L.map_aname.12, 41
+	.asciz	"Xamarin.AndroidX.CardView"
+	.size	.L.map_aname.12, 26
 
 	.section	.rodata.map_aname.13,"aMS",%progbits,1
 	.type	.L.map_aname.13, %object
 .L.map_aname.13:
-	.asciz	"BarcodeReaderSample.Droid"
-	.size	.L.map_aname.13, 26
+	.asciz	"Com.Bixolon.Mpos.Xamarin"
+	.size	.L.map_aname.13, 25
 
 	.section	.rodata.map_aname.14,"aMS",%progbits,1
 	.type	.L.map_aname.14, %object
 .L.map_aname.14:
-	.asciz	"Xamarin.AndroidX.Loader"
-	.size	.L.map_aname.14, 24
+	.asciz	"Xamarin.AndroidX.SavedState"
+	.size	.L.map_aname.14, 28
 
 	.section	.rodata.map_aname.15,"aMS",%progbits,1
 	.type	.L.map_aname.15, %object
 .L.map_aname.15:
-	.asciz	"Xamarin.AndroidX.Fragment"
-	.size	.L.map_aname.15, 26
+	.asciz	"Xamarin.AndroidX.DrawerLayout"
+	.size	.L.map_aname.15, 30
 
 	.section	.rodata.map_aname.16,"aMS",%progbits,1
 	.type	.L.map_aname.16, %object
 .L.map_aname.16:
-	.asciz	"DevExpress.XamarinForms.Core.Android"
-	.size	.L.map_aname.16, 37
+	.asciz	"DevExpress.Xamarin.Android.Navigation"
+	.size	.L.map_aname.16, 38
 
 	.section	.rodata.map_aname.17,"aMS",%progbits,1
 	.type	.L.map_aname.17, %object
 .L.map_aname.17:
-	.asciz	"DevExpress.Xamarin.Android.Editors"
-	.size	.L.map_aname.17, 35
+	.asciz	"Mono.Android"
+	.size	.L.map_aname.17, 13
 
 	.section	.rodata.map_aname.18,"aMS",%progbits,1
 	.type	.L.map_aname.18, %object
 .L.map_aname.18:
-	.asciz	"Xamarin.AndroidX.CoordinatorLayout"
-	.size	.L.map_aname.18, 35
+	.asciz	"DevExpress.XamarinForms.Editors.Android"
+	.size	.L.map_aname.18, 40
 
 	.section	.rodata.map_aname.19,"aMS",%progbits,1
 	.type	.L.map_aname.19, %object
 .L.map_aname.19:
-	.asciz	"Xamarin.AndroidX.Lifecycle.Common"
-	.size	.L.map_aname.19, 34
+	.asciz	"Xamarin.AndroidX.Core"
+	.size	.L.map_aname.19, 22
 
 	.section	.rodata.map_aname.20,"aMS",%progbits,1
 	.type	.L.map_aname.20, %object
@@ -127,108 +127,108 @@
 	.section	.rodata.map_aname.21,"aMS",%progbits,1
 	.type	.L.map_aname.21, %object
 .L.map_aname.21:
-	.asciz	"Xamarin.AndroidX.SwipeRefreshLayout"
-	.size	.L.map_aname.21, 36
+	.asciz	"Xamarin.Google.Android.Material"
+	.size	.L.map_aname.21, 32
 
 	.section	.rodata.map_aname.22,"aMS",%progbits,1
 	.type	.L.map_aname.22, %object
 .L.map_aname.22:
-	.asciz	"Xamarin.AndroidX.Legacy.Support.Core.UI"
-	.size	.L.map_aname.22, 40
+	.asciz	"Xamarin.AndroidX.Activity"
+	.size	.L.map_aname.22, 26
 
 	.section	.rodata.map_aname.23,"aMS",%progbits,1
 	.type	.L.map_aname.23, %object
 .L.map_aname.23:
-	.asciz	"DevExpress.XamarinForms.Grid.Android"
-	.size	.L.map_aname.23, 37
+	.asciz	"DevExpress.Xamarin.Android.Editors"
+	.size	.L.map_aname.23, 35
 
 	.section	.rodata.map_aname.24,"aMS",%progbits,1
 	.type	.L.map_aname.24, %object
 .L.map_aname.24:
-	.asciz	"Mono.Android"
-	.size	.L.map_aname.24, 13
+	.asciz	"Xamarin.AndroidX.ViewPager"
+	.size	.L.map_aname.24, 27
 
 	.section	.rodata.map_aname.25,"aMS",%progbits,1
 	.type	.L.map_aname.25, %object
 .L.map_aname.25:
-	.asciz	"Xamarin.AndroidX.DrawerLayout"
-	.size	.L.map_aname.25, 30
+	.asciz	"Xamarin.AndroidX.Legacy.Support.Core.UI"
+	.size	.L.map_aname.25, 40
 
 	.section	.rodata.map_aname.26,"aMS",%progbits,1
 	.type	.L.map_aname.26, %object
 .L.map_aname.26:
-	.asciz	"Xamarin.AndroidX.Activity"
-	.size	.L.map_aname.26, 26
+	.asciz	"Xamarin.Essentials"
+	.size	.L.map_aname.26, 19
 
 	.section	.rodata.map_aname.27,"aMS",%progbits,1
 	.type	.L.map_aname.27, %object
 .L.map_aname.27:
-	.asciz	"Xamarin.AndroidX.ViewPager"
-	.size	.L.map_aname.27, 27
+	.asciz	"Xamarin.AndroidX.Lifecycle.Common"
+	.size	.L.map_aname.27, 34
 
 	.section	.rodata.map_aname.28,"aMS",%progbits,1
 	.type	.L.map_aname.28, %object
 .L.map_aname.28:
-	.asciz	"FormsViewGroup"
-	.size	.L.map_aname.28, 15
+	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
+	.size	.L.map_aname.28, 41
 
 	.section	.rodata.map_aname.29,"aMS",%progbits,1
 	.type	.L.map_aname.29, %object
 .L.map_aname.29:
-	.asciz	"DevExpress.XamarinForms.CollectionView.Android"
-	.size	.L.map_aname.29, 47
+	.asciz	"Xamarin.AndroidX.CoordinatorLayout"
+	.size	.L.map_aname.29, 35
 
 	.section	.rodata.map_aname.30,"aMS",%progbits,1
 	.type	.L.map_aname.30, %object
 .L.map_aname.30:
-	.asciz	"DevExpress.Xamarin.Android.Grid"
-	.size	.L.map_aname.30, 32
+	.asciz	"FormsViewGroup"
+	.size	.L.map_aname.30, 15
 
 	.section	.rodata.map_aname.31,"aMS",%progbits,1
 	.type	.L.map_aname.31, %object
 .L.map_aname.31:
-	.asciz	"Honeywell.AIDC.CrossPlatform.BarcodeReader"
-	.size	.L.map_aname.31, 43
+	.asciz	"Xamarin.AndroidX.CustomView"
+	.size	.L.map_aname.31, 28
 
 	.section	.rodata.map_aname.32,"aMS",%progbits,1
 	.type	.L.map_aname.32, %object
 .L.map_aname.32:
-	.asciz	"Xamarin.Forms.Platform.Android"
-	.size	.L.map_aname.32, 31
+	.asciz	"DevExpress.Xamarin.Android.Grid"
+	.size	.L.map_aname.32, 32
 
 	.section	.rodata.map_aname.33,"aMS",%progbits,1
 	.type	.L.map_aname.33, %object
 .L.map_aname.33:
-	.asciz	"Xamarin.Google.Guava.ListenableFuture"
-	.size	.L.map_aname.33, 38
+	.asciz	"Honeywell.AIDC.CrossPlatform.BarcodeReader"
+	.size	.L.map_aname.33, 43
 
 	.section	.rodata.map_aname.34,"aMS",%progbits,1
 	.type	.L.map_aname.34, %object
 .L.map_aname.34:
-	.asciz	"DevExpress.XamarinForms.Navigation.Android"
-	.size	.L.map_aname.34, 43
+	.asciz	"Xamarin.Forms.Platform.Android"
+	.size	.L.map_aname.34, 31
 
 	.section	.rodata.map_aname.35,"aMS",%progbits,1
 	.type	.L.map_aname.35, %object
 .L.map_aname.35:
-	.asciz	"Xamarin.Google.Android.Material"
-	.size	.L.map_aname.35, 32
+	.asciz	"Xamarin.Google.Guava.ListenableFuture"
+	.size	.L.map_aname.35, 38
 
 	.section	.rodata.map_aname.36,"aMS",%progbits,1
 	.type	.L.map_aname.36, %object
 .L.map_aname.36:
-	.asciz	"DevExpress.Xamarin.Android.Navigation"
-	.size	.L.map_aname.36, 38
+	.asciz	"Xamarin.AndroidX.Lifecycle.ViewModel"
+	.size	.L.map_aname.36, 37
 
 	.section	.rodata.map_aname.37,"aMS",%progbits,1
 	.type	.L.map_aname.37, %object
 .L.map_aname.37:
-	.asciz	"Xamarin.Essentials"
-	.size	.L.map_aname.37, 19
+	.asciz	"Xamarin.AndroidX.Loader"
+	.size	.L.map_aname.37, 24
 
 	.section	.rodata.map_aname.38,"aMS",%progbits,1
 	.type	.L.map_aname.38, %object
 .L.map_aname.38:
-	.asciz	"Xamarin.AndroidX.RecyclerView"
-	.size	.L.map_aname.38, 30
+	.asciz	"Xamarin.AndroidX.SwipeRefreshLayout"
+	.size	.L.map_aname.38, 36
 

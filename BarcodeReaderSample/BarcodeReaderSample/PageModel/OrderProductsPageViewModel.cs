@@ -169,12 +169,23 @@ namespace TraceIQ.Expeditor.PageModels
 
             if (PaymentType.Value == Entities.PaymentType.Deferred)
             {
+                var getCodes = DbService.GetOrderDetailBillTransferTypeOfPayment(_orderId);
+                if (getCodes.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", getCodes.ErrorMessage, "ОК");
+                    return;
+                }
+
                 var confirmOrder = BaseApiService.SendOrderConfirmation(new ConfirmOrderModel
                 {
                     OrderId = _orderId,
                     Terminal = default,
                     Cash = default,
-                    ConfirmProductsModels = new List<ConfirmProductsModel>()
+                    ConfirmProductsModels = getCodes.Value.Select(s => new ConfirmProductsModel
+                    {
+                        OrderDetailId = s.OrderDetailId,
+                        Codes = s.Codes
+                    }).ToList()
                 });
 
                 if(confirmOrder.Result != OperationStatus.Success)
@@ -253,7 +264,10 @@ namespace TraceIQ.Expeditor.PageModels
 
         public async void ScannerOnBarcodeRead(object sender, Honeywell.AIDC.CrossPlatform.BarcodeDataArgs e)
         {
-            var getOrderByCode = DbService.GetOrdersByCode(e.Data, _orderId);
+            var getOrderByCode = DbService.GetOrdersByCode(
+                e.Data.Replace("(", string.Empty).Replace(")", string.Empty), 
+                _orderId);
+
             if (getOrderByCode.Result != OperationStatus.Success)
             {
                 async void SendOrPostCallback(object s)

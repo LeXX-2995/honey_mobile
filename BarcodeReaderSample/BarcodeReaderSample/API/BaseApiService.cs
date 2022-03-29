@@ -47,7 +47,7 @@ namespace BarcodeReaderSample.API
             return getUser;
         }
 
-        public OperationResult<List<Product>> GetProducts()
+        public OperationResult<List<Product>> GetProducts(Guid transportId)
         {
             var checkSetting = CheckSetting();
             if (checkSetting.Result != OperationStatus.Success)
@@ -56,7 +56,7 @@ namespace BarcodeReaderSample.API
             return RestContext.ExecuteScalar<List<Product>>(ProductsResource, null, Method.GET); ;
         }
 
-        public OperationResult<List<Supplier>> GetSuppliers()
+        public OperationResult<List<Supplier>> GetSuppliers(Guid transportId)
         {
             var checkSetting = CheckSetting();
             if (checkSetting.Result != OperationStatus.Success)

@@ -3,8 +3,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.honeywell.aidc.cp.BarcodeReaderSample"
-	.size	.L.env.str.1, 42
+	.asciz	"uz.traceiq.mobile.expeditor"
+	.size	.L.env.str.1, 28
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -85,7 +85,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"cdad2ba2-1eca-4de3-b465-65eafa505322"
+	.asciz	"56c2ed10-9c36-4eb2-8c26-ebfbe3642c71"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

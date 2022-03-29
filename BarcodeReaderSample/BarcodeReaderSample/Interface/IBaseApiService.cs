@@ -10,8 +10,8 @@ namespace BarcodeReaderSample.Interface
     public interface IBaseApiService
     {
         OperationResult<User> Authorize(string login, string password);
-        OperationResult<List<Product>> GetProducts();
-        OperationResult<List<Supplier>> GetSuppliers();
+        OperationResult<List<Product>> GetProducts(Guid transportId);
+        OperationResult<List<Supplier>> GetSuppliers(Guid transportId);
         OperationResult<List<Order>> GetOrders(Guid transportId);
         OperationResult<List<OrderDetail>> GetOrderDetails(Guid transportId);
         OperationResult<List<CodesMapping>> GetCodeMapping(Guid transportId);

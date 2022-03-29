@@ -54,7 +54,7 @@ namespace BarcodeReaderSample.PageModel
                     {
                         case SyncDataTypes.Product:
 
-                            var getProducts = BaseApiService.GetProducts();
+                            var getProducts = BaseApiService.GetProducts(RestContext.User.TransportId);
                             if (getProducts.Result != OperationStatus.Success)
                                 syncModel.SyncStatus = SyncStatus.Error;
                             else
@@ -71,7 +71,7 @@ namespace BarcodeReaderSample.PageModel
                             break;
                         case SyncDataTypes.Suppliers:
 
-                            var getSuppliers = BaseApiService.GetSuppliers();
+                            var getSuppliers = BaseApiService.GetSuppliers(RestContext.User.TransportId);
                             if (getSuppliers.Result != OperationStatus.Success)
                                 syncModel.SyncStatus = SyncStatus.Error;
                             else

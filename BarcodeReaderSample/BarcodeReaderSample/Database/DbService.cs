@@ -365,6 +365,83 @@ namespace BarcodeReaderSample.Database
             });
         }
 
+        public OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBillTransferTypeOfPayment(Guid orderId)
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var orderDetails = db.OrderDetails
+                    .AsNoTracking()
+                    .Include(s => s.Product)
+                    .Include(s => s.OrderCodeMappings)
+                        .ThenInclude(s => s.Box)
+                    .Include(s => s.OrderCodeMappings)
+                        .ThenInclude(s => s.DataMatrix)
+                    .Include(s => s.OrderCodeMappings)
+                        .ThenInclude(s => s.Pallet)
+                    .Where(s => s.OrderId == orderId)
+                    .ToList();
+
+                var orderBills = new List<OrderDetailsBillModel>();
+
+                foreach (var orderDetail in orderDetails)
+                {
+                    if (orderDetail.OrderCodeMappings.Any(s => s.DataMatrixCodeId.HasValue && s.DataMatrix != null))
+                    {
+                        orderBills.Add(new OrderDetailsBillModel
+                        {
+                            Barcode = orderDetail.Product.Barcode,
+                            Name = orderDetail.Product.Name,
+                            Ikpu = orderDetail.Product.Ikpu,
+                            UnitOfMeasurement = "шт.",
+                            Quantity = orderDetail.Quantity,
+                            Price = orderDetail.Price.ToString("#,##0.00"),
+                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
+                            Codes = orderDetail.OrderCodeMappings.Select(s => s.DataMatrix.Code).ToList(),
+                            OrderDetailId = orderDetail.Id
+                        });
+                    }
+
+                    if (orderDetail.OrderCodeMappings.Any(s => s.BoxId.HasValue && s.Box != null))
+                    {
+                        orderBills.Add(new OrderDetailsBillModel
+                        {
+                            Barcode = orderDetail.Product.Barcode,
+                            Name = orderDetail.Product.Name,
+                            Quantity = orderDetail.Quantity,
+                            Ikpu = orderDetail.Product.Ikpu,
+                            UnitOfMeasurement = "бл.",
+                            Price = orderDetail.Price.ToString("#,##0.00"),
+                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
+                            Codes = orderDetail.OrderCodeMappings.Select(s => s.Box.Code).ToList(),
+                            OrderDetailId = orderDetail.Id
+                        });
+                    }
+
+                    if (orderDetail.OrderCodeMappings.Any(s => s.PalletId.HasValue && s.Pallet != null))
+                    {
+                        orderBills.Add(new OrderDetailsBillModel
+                        {
+                            Barcode = orderDetail.Product.Barcode,
+                            Name = orderDetail.Product.Name,
+                            Quantity = orderDetail.Quantity,
+                            Ikpu = orderDetail.Product.Ikpu,
+                            UnitOfMeasurement = "пал.",
+                            Price = orderDetail.Price.ToString("#,##0.00"),
+                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
+                            Codes = orderDetail.OrderCodeMappings.Select(s => s.Pallet.Code).ToList(),
+                            OrderDetailId = orderDetail.Id
+                        });
+                    }
+                }
+
+                return new OperationResult<List<OrderDetailsBillModel>>
+                {
+                    Result = OperationStatus.Success,
+                    Value = orderBills
+                };
+            });
+        }
+
         public OperationResult<ProductApproveModel> GetOrdersByCode(string code, Guid orderId)
         {
             return DigitalTrackingContext.Run(db =>
