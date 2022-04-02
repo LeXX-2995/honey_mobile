@@ -17,8 +17,8 @@ namespace BarcodeReaderSample.API
         private readonly Setting _setting;
 
         private const string AuthorizeResource = "Expeditor/Login/";
-        private const string ProductsResource = "Expeditor/GetProducts";
-        private const string SuppliersResource = "Expeditor/GetSuppliers";
+        private const string ProductsResource = "Expeditor/GetProducts/";
+        private const string SuppliersResource = "Expeditor/GetSuppliers/";
         private const string OrdersResource = "Expeditor/GetOrders/";
         private const string OrderDetailsResource = "Expeditor/GetOrderDetails/";
         private const string CodeMappingsResource = "Expeditor/GetCodeMappings/";
@@ -53,7 +53,7 @@ namespace BarcodeReaderSample.API
             if (checkSetting.Result != OperationStatus.Success)
                 return OperationResult<List<Product>>.Fail(checkSetting.ErrorMessage);
 
-            return RestContext.ExecuteScalar<List<Product>>(ProductsResource, null, Method.GET); ;
+            return RestContext.ExecuteScalar<List<Product>>(ProductsResource + transportId, null, Method.GET); ;
         }
 
         public OperationResult<List<Supplier>> GetSuppliers(Guid transportId)
@@ -62,7 +62,7 @@ namespace BarcodeReaderSample.API
             if (checkSetting.Result != OperationStatus.Success)
                 return OperationResult<List<Supplier>>.Fail(checkSetting.ErrorMessage);
 
-            return RestContext.ExecuteScalar<List<Supplier>>(SuppliersResource, null, Method.GET);
+            return RestContext.ExecuteScalar<List<Supplier>>(SuppliersResource + transportId, null, Method.GET);
         }
         //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public OperationResult<List<Order>> GetOrders(Guid transportId)
