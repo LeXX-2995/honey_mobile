@@ -948,7 +948,6 @@ C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\B
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\bin\Release\System.Text.Encodings.Web.xml
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\bin\Release\System.Text.Json.xml
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\lp\71\jl\files.cache
-C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\lp\77\jl\files.cache
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\lp\79\jl\files.cache
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\lp\82\jl\files.cache
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\lp\88\jl\files.cache

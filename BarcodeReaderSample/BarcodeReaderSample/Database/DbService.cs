@@ -454,12 +454,17 @@ namespace BarcodeReaderSample.Database
                 var box = db.Boxes
                     .AsNoTracking()
                     .Include(s => s.Product)
-                    .FirstOrDefault(s => s.Code.Trim() == code.Trim() || s.Code == RemoveFirstTwoCharacters(code));
+                    .FirstOrDefault(s => 
+                        s.Code.Trim() == code.Trim() || 
+                        s.Code == RemoveFirstTwoCharacters(code) || 
+                        s.Code == code.Replace("(", string.Empty).Replace(")", string.Empty));
 
                 var pallet = db.Pallets
                     .AsNoTracking()
                     .Include(s => s.Product)
-                    .FirstOrDefault(s => s.Code == code);
+                    .FirstOrDefault(s => 
+                        s.Code == code || 
+                        s.Code == code.Replace("(", string.Empty).Replace(")", string.Empty));
 
                 Guid? productId = default;
                 Product product = default;

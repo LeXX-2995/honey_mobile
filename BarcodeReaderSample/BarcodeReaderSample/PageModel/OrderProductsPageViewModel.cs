@@ -264,10 +264,8 @@ namespace TraceIQ.Expeditor.PageModels
 
         public async void ScannerOnBarcodeRead(object sender, Honeywell.AIDC.CrossPlatform.BarcodeDataArgs e)
         {
-            
-
             var getOrderByCode = DbService.GetOrdersByCode(
-                e.Data.Replace("(", string.Empty).Replace(")", string.Empty), 
+                e.Data, 
                 _orderId);
 
             if (getOrderByCode.Result != OperationStatus.Success)
