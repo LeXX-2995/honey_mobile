@@ -580,6 +580,9 @@
       <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\tracking.png" />
+  </ItemGroup>
   <Import Condition="Exists('..\BarcodeReaderSample\BarcodeReaderSample.projitems')" Label="Shared" Project="..\BarcodeReaderSample\BarcodeReaderSample.projitems" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target BeforeTargets="PrepareForBuild" Name="EnsureNuGetPackageBuildImports">

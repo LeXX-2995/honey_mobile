@@ -44,7 +44,7 @@ namespace BarcodeReaderSample.PageModel
                     SyncStatus = SyncStatus.Waiting,
                     SyncType = s,
                     SyncDataTypeString = s.GetDisplayName(),
-                }).ToList();
+                }).OrderBy(s => s.SyncType).ToList();
 
             foreach (var syncModel in syncTypes)
             {
@@ -84,7 +84,7 @@ namespace BarcodeReaderSample.PageModel
                                     syncModel.SyncStatus = addSuppliers.Result != OperationStatus.Success ? SyncStatus.Error : SyncStatus.Completed;
                                 }
                             }
-                            
+
 
                             break;
                         case SyncDataTypes.Orders:
@@ -119,7 +119,7 @@ namespace BarcodeReaderSample.PageModel
                                     syncModel.SyncStatus = addOrderDetails.Result != OperationStatus.Success ? SyncStatus.Error : SyncStatus.Completed;
                                 }
                             }
-                            
+
 
                             break;
                         case SyncDataTypes.CodesMapping:
@@ -136,7 +136,7 @@ namespace BarcodeReaderSample.PageModel
                                     syncModel.SyncStatus = addCodeMapping.Result != OperationStatus.Success ? SyncStatus.Error : SyncStatus.Completed;
                                 }
                             }
-                            
+
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
@@ -148,6 +148,8 @@ namespace BarcodeReaderSample.PageModel
                         SyncModels.Add(syncModel);
                     }, null);
                 });
+
+                Thread.Sleep(300);
             }
         }
     }
