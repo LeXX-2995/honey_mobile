@@ -36,23 +36,21 @@ namespace TraceIQ.Expeditor.PageModels
 
         public void GetClients()
         {
+            _mUiContext.Post(SendOrPostCallback, null);
+        }
+
+        private async void SendOrPostCallback(object s)
+        {
             Clients.Clear();
 
             var getClients = DbService.GetClients();
-            if(getClients.Result != OperationStatus.Success)
+            if (getClients.Result != OperationStatus.Success)
             {
-                async void SendOrPostCallback(object o)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", getClients.ErrorMessage, "ОК");
-                }
-
-                _mUiContext.Post(SendOrPostCallback, null);
+                await Application.Current.MainPage.DisplayAlert("Ошибка", getClients.ErrorMessage, "ОК");
             }
 
-            _mUiContext.Post(s =>
-            {
-                getClients.Value.ForEach(c => Clients.Add(c));
-            }, null);
+
+            getClients.Value.ForEach(c => Clients.Add(c));
         }
     }
 }

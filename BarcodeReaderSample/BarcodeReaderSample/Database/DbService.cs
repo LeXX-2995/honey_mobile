@@ -353,7 +353,8 @@ namespace BarcodeReaderSample.Database
                         UnitOfMeasurement = s.UnitOfMeasurement,
                         Amount = s.Quantity,
                         AssembledAmount = s.OrderCodeMappings != null ? s.OrderCodeMappings.Count : default,
-                        ProductName = s.Product.Name
+                        ProductName = s.Product.Name,
+                        AggregationQuantity = s.UnitOfMeasurement == UnitOfMeasurement.Item ? 1 : s.UnitOfMeasurement == UnitOfMeasurement.Box ? s.Product.AmountInBox : s.Product.AmountInPallet
                     })
                     .ToList();
 

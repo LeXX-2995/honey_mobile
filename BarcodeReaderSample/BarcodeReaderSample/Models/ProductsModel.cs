@@ -55,6 +55,19 @@ namespace TraceIQ.Expeditor.Models
             }
         }
 
+        private int _aggergationQuantity;
+
+        public int AggregationQuantity
+        {
+            get => _aggergationQuantity;
+            set
+            {
+                _aggergationQuantity = value;
+                OnPropertyChanged(nameof(AggregationQuantity));
+            }
+        }
+
+
         private UnitOfMeasurement _unitOfMeasurement;
 
         public UnitOfMeasurement UnitOfMeasurement
@@ -66,6 +79,19 @@ namespace TraceIQ.Expeditor.Models
                 OnPropertyChanged(nameof(UnitOfMeasurement));
             }
         }
+
+        private string _unitOfMeasurementText;
+
+        public string UnitOfMeasurementText
+        {
+            get => _unitOfMeasurementText;
+            set
+            {
+                _unitOfMeasurementText = value;
+                OnPropertyChanged(nameof(UnitOfMeasurementText));
+            }
+        }
+
 
         private Guid _id;
 

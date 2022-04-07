@@ -36,23 +36,26 @@ namespace TraceIQ.Expeditor.PageModels
 
         public void GetOrders()
         {
+            _mUiContext.Post(SendOrPostCallback, null);
+        }
+
+        private async void SendOrPostCallback(object s)
+        {
             Orders.Clear();
 
             var getOrders = DbService.GetOrders(_supplierId);
             if (getOrders.Result != OperationStatus.Success)
             {
-                async void SendOrPostCallback(object o)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", getOrders.ErrorMessage, "ОК");
-                }
+                //async void SendOrPostCallback(object o)
+                //{
+                await Application.Current.MainPage.DisplayAlert("Ошибка", getOrders.ErrorMessage, "ОК");
+                //}
 
-                _mUiContext.Post(SendOrPostCallback, null);
+                //_mUiContext.Post(SendOrPostCallback, null);
             }
 
-            _mUiContext.Post(s =>
-            {
-                getOrders.Value.ForEach(o => Orders.Add(o));
-            }, null);
+
+            getOrders.Value.ForEach(o => Orders.Add(o));
         }
     }
 }

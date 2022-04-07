@@ -10,6 +10,7 @@ using BarcodeReaderSample.Interface;
 using BarcodeReaderSample.Models;
 using BarcodeReaderSample.Pages;
 using Entities;
+using NobelXamarin.Helpers;
 using Plugin.SatoMpXamarinSDK.Abstractions;
 using TraceIQ.Expeditor.Models;
 using Xamarin.Forms;
@@ -100,6 +101,20 @@ namespace TraceIQ.Expeditor.PageModels
         public Command OpenCompletionCommand { get; set; }
         public Command CancelCommand { get; set; }
         public PaymentType? PaymentType { get; set; }
+
+        private string _paymentTypeText;
+
+        public string PaymentTypeText
+        {
+            get => _paymentTypeText;
+            set
+            {
+                _paymentTypeText = value;
+                OnPropertyChanged(nameof(PaymentTypeText));
+            }
+        }
+
+
         public OrderProductsPageViewModel(INavigation navigation, HoneywellBarcodeReader scanner, IDbService dbService, Guid orderId)
         {
             Scanner = scanner;
@@ -306,6 +321,7 @@ namespace TraceIQ.Expeditor.PageModels
             else
             {
                 PaymentType = getOrder.Value.PaymentType;
+                PaymentTypeText = PaymentType.GetDisplayName();
             }
 
             if (getOrder.Value.IsWaitingFiscalBox)
@@ -341,10 +357,11 @@ namespace TraceIQ.Expeditor.PageModels
             {
                 getOrderDetails.Value.ForEach(c =>
                 {
+                    c.UnitOfMeasurementText = c.UnitOfMeasurement.GetDisplayName();
                     OrderDetails.Add(c);
                 });
 
-                Total = getOrderDetails.Value.Sum(t => t.AssembledAmount * t.Price);
+                Total = getOrderDetails.Value.Sum(t => t.AssembledAmount * t.AggregationQuantity * t.Price);
             }, null);
         }
 
