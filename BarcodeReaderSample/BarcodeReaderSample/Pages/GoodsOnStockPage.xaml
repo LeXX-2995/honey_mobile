@@ -6,7 +6,40 @@
              x:Class="BarcodeReaderSample.Pages.GoodsOnStockPage">
     <ContentPage.Content>
         <Grid>
-            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <dataGrid:DataGridView ItemsSource="{Binding GoodsOnStock}" Grid.Row="0" ColumnHeaderHeight="0">
+                <dataGrid:DataGridView.AdvancedColumnLayout>
+                    <dataGrid:AdvancedColumnLayout>
+                        <dataGrid:AdvancedColumnLayout.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </dataGrid:AdvancedColumnLayout.ColumnDefinitions>
+                        <dataGrid:AdvancedColumnLayout.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                        </dataGrid:AdvancedColumnLayout.RowDefinitions>
+                    </dataGrid:AdvancedColumnLayout>
+                </dataGrid:DataGridView.AdvancedColumnLayout>
+                <dataGrid:DataGridView.CellStyle>
+                    <dataGrid:CellStyle Padding="3"/>
+                </dataGrid:DataGridView.CellStyle>
+
+                <dataGrid:TextColumn FieldName="ProductName" ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BackgroundColor="DarkGreen" FontColor="White"/>
+                <dataGrid:TextColumn FieldName="UnitOfMeasurementText" Row="1" ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:TextColumn FieldName="PriceText" Row="2" Column="0"/>
+                <dataGrid:TextColumn FieldName="AmountText" Row="3" Column="0"/>
+
+                <dataGrid:NumberColumn FieldName="Price" DisplayFormat="#,##0.00" Row="2" Column="1" ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:NumberColumn FieldName="AssembledAmount" Row="3" Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:NumberColumn FieldName="Amount" Row="3" Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </dataGrid:DataGridView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

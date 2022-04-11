@@ -1,20 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace Entities
 {
-    public class Pallet
+    public class DataMatrix
     {
         [Key]
         public Guid Id { get; set; }
         public string Code { get; set; }
+
+        [ForeignKey(nameof(Box))]
+        public Guid? BoxId { get; set; }
+
         [ForeignKey(nameof(Product))]
         public Guid ProductId { get; set; }
+
         public Product Product { get; set; }
-        public bool IsDisAggregated { get; set; }
-        public List<Box> Boxes { get; set; }
+        public Box Box { get; set; }
     }
 }

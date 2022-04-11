@@ -119,7 +119,7 @@ namespace TraceIQ.Expeditor.PageModels
             //    return;
             //}
 
-            await Navigation.PushAsync(new GoodsOnStockPage());
+            await Navigation.PushAsync(new GoodsOnStockPage(Navigation));
         }
 
         private async void OpenReturns()

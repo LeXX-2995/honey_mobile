@@ -366,6 +366,34 @@ namespace BarcodeReaderSample.Database
             });
         }
 
+        public OperationResult<List<OrderDetailsModel>> GetGoodsOnStock()
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var orderDetails = db.OrderDetails
+                    .AsNoTracking()
+                    .Include(s => s.Product)
+                    .Include(s => s.OrderCodeMappings)
+                    .Select(s => new OrderDetailsModel
+                    {
+                        Id = s.Id,
+                        Price = s.Price,
+                        UnitOfMeasurement = s.UnitOfMeasurement,
+                        Amount = s.Quantity,
+                        AssembledAmount = s.OrderCodeMappings != null ? s.OrderCodeMappings.Count : default,
+                        ProductName = s.Product.Name,
+                        AggregationQuantity = s.UnitOfMeasurement == UnitOfMeasurement.Item ? 1 : s.UnitOfMeasurement == UnitOfMeasurement.Box ? s.Product.AmountInBox : s.Product.AmountInPallet
+                    })
+                    .Where(s => s.Amount != s.AssembledAmount).ToList();
+
+                return new OperationResult<List<OrderDetailsModel>>
+                {
+                    Result = OperationStatus.Success,
+                    Value = orderDetails
+                };
+            });
+        }
+
         public OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBillTransferTypeOfPayment(Guid orderId)
         {
             return DigitalTrackingContext.Run(db =>

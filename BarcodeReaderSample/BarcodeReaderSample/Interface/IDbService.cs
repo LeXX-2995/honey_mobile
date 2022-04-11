@@ -26,6 +26,7 @@ namespace BarcodeReaderSample.Interface
         OperationResult<List<ClientsModel>> GetClients();
         OperationResult<List<OrdersModel>> GetOrders(Guid supplierId);
         OperationResult<List<OrderDetailsModel>> GetOrderDetails(Guid orderId);
+        OperationResult<List<OrderDetailsModel>> GetGoodsOnStock();
         OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBillTransferTypeOfPayment(Guid orderId);
 
         OperationResult<ProductApproveModel> GetOrdersByCode(string code, Guid orderId);

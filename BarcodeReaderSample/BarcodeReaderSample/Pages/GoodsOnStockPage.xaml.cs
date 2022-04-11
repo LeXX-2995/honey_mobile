@@ -14,11 +14,11 @@ namespace BarcodeReaderSample.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class GoodsOnStockPage : ContentPage
 	{
-		public GoodsOnStockPage()
+		public GoodsOnStockPage(INavigation navigation)
 		{
 			InitializeComponent();
 
-            BindingContext = new GoodsOnStockPageViewModel();
+            BindingContext = new GoodsOnStockPageViewModel(navigation);
         }
 
     }
