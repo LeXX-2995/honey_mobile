@@ -20,6 +20,14 @@ namespace BarcodeReaderSample.Pages
 
             BindingContext = new GoodsOnStockPageViewModel(navigation);
         }
+        protected override void OnAppearing()
+        {
+            var viewModel = (GoodsOnStockPageViewModel)BindingContext;
 
+            if (viewModel != null)
+                Task.Run(viewModel.GetGoodsOnStock);
+
+            base.OnAppearing();
+        }
     }
 }
