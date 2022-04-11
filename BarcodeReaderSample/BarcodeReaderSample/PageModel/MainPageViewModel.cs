@@ -14,7 +14,6 @@ namespace TraceIQ.Expeditor.PageModels
     {
         public Command OpenOrdersCommand { get; set; }
         public Command OpenGoodsOnStockCommand { get; set; }
-        public Command OpenReturnCommand { get; set; }
         public Command SynchronizeData { get; set; }
         public Command OpenSettingsCommand { get; set; }
         public MainPageViewModel(INavigation navigation, HoneywellBarcodeReader scanner)
@@ -23,7 +22,6 @@ namespace TraceIQ.Expeditor.PageModels
             Navigation = navigation;
             OpenOrdersCommand = new Command(OpenOrders);
             OpenGoodsOnStockCommand = new Command(OpenGoodsOnStock);
-            OpenReturnCommand = new Command(OpenReturns);
             SynchronizeData = new Command(Synchronize);
             OpenSettingsCommand = new Command(OpenSettings);
             DbService = new DbService();
@@ -104,26 +102,6 @@ namespace TraceIQ.Expeditor.PageModels
 
         private async void OpenGoodsOnStock()
         {
-            //var setting = DbService.GetSetting();
-            //if (setting.Result == OperationStatus.Success && !string.IsNullOrWhiteSpace(setting.Value.Url) && setting.Value.Port != default)
-            //{
-            //    if (RestContext.User == null)
-            //    {
-            //        Login();
-            //        return;
-            //    }
-            //}
-            //else
-            //{
-            //    EnterSettings();
-            //    return;
-            //}
-
-            await Navigation.PushAsync(new GoodsOnStockPage(Navigation));
-        }
-
-        private async void OpenReturns()
-        {
             var setting = DbService.GetSetting();
             if (setting.Result == OperationStatus.Success && !string.IsNullOrWhiteSpace(setting.Value.Url) && setting.Value.Port != default)
             {
@@ -138,6 +116,8 @@ namespace TraceIQ.Expeditor.PageModels
                 EnterSettings();
                 return;
             }
+
+            await Navigation.PushAsync(new GoodsOnStockPage(Navigation));
         }
 
         

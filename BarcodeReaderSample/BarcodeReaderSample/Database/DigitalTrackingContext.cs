@@ -23,6 +23,7 @@ namespace BarcodeReaderSample.Database
         public DbSet<CodesMapping> CodesMappings { get; set; }
         public DbSet<Setting> Setting { get; set; }
         public DbSet<OrderCodeMapping> OrderCodeMappings { get; set; }
+        public DbSet<ReportReturn> ReportReturns { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

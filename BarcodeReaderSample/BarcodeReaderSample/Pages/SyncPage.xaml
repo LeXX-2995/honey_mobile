@@ -26,7 +26,8 @@
                 CornerMode = "Round"        
                 CornerRadius="10"
                 Margin="10"
-                Command="{Binding StartReceivingCommand}"/>
+                Command="{Binding StartReceivingCommand}"
+                IsEnabled="{Binding IsSyncButtonEnabled}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

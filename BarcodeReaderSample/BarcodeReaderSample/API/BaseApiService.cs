@@ -5,6 +5,7 @@ using BarcodeReaderSample.Database;
 using BarcodeReaderSample.Interface;
 using BarcodeReaderSample.Models;
 using Entities;
+using Newtonsoft.Json;
 using RestSharp;
 using TraceIQ.Expeditor.API;
 using TraceIQ.Expeditor.Models;
@@ -25,6 +26,8 @@ namespace BarcodeReaderSample.API
         private const string ConfirmOrderResource = "Expeditor/ConfirmOrder";
         private const string RejectOrderResource = "Expeditor/RejectOrder";
         private const string OrderQrUrlResource = "Expeditor/GetOrderQrUrl/";
+        private const string ReportReturnResource = "Expeditor/ReportReturn";
+        private const string CheckAnyReportReturnResource = "Expeditor/CheckAnyReportReturn/";
         public BaseApiService()
         {
             IDbService dbService = new DbService();
@@ -123,6 +126,24 @@ namespace BarcodeReaderSample.API
             };
 
             return RestContext.ExecuteScalar<OperationResult>(RejectOrderResource, null, Method.POST, model);
+        }
+
+        public OperationResult<OperationResult> SendReportReturn(ReportReturnModel model)
+        {
+            var checkSetting = CheckSetting();
+            if (checkSetting.Result != OperationStatus.Success)
+                return OperationResult<OperationResult>.Fail(checkSetting.ErrorMessage);
+
+            return RestContext.ExecuteScalar<OperationResult>(ReportReturnResource, null, Method.POST, model);
+        }
+
+        public OperationResult<OperationResult> CheckAnyReportReturn(Guid transportId)
+        {
+            var checkSetting = CheckSetting();
+            if (checkSetting.Result != OperationStatus.Success)
+                return OperationResult<OperationResult>.Fail(checkSetting.ErrorMessage);
+
+            return RestContext.ExecuteScalar<OperationResult>(CheckAnyReportReturnResource + transportId, null, Method.GET);
         }
 
         private OperationResult CheckSetting()

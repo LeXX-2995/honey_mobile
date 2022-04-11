@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:editors="http://schemas.devexpress.com/xamarin/2014/forms/editors"
              xmlns:dataGrid="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
+             xmlns:popup="http://schemas.devexpress.com/xamarin/2014/forms/popup"
              x:Class="BarcodeReaderSample.Pages.GoodsOnStockPage">
     <ContentPage.Content>
         <Grid>
@@ -23,7 +24,6 @@
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="40"/>
-                            <RowDefinition Height="40"/>
                         </dataGrid:AdvancedColumnLayout.RowDefinitions>
                     </dataGrid:AdvancedColumnLayout>
                 </dataGrid:DataGridView.AdvancedColumnLayout>
@@ -33,13 +33,50 @@
 
                 <dataGrid:TextColumn FieldName="ProductName" ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BackgroundColor="DarkGreen" FontColor="White"/>
                 <dataGrid:TextColumn FieldName="UnitOfMeasurementText" Row="1" ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <dataGrid:TextColumn FieldName="PriceText" Row="2" Column="0"/>
-                <dataGrid:TextColumn FieldName="AmountText" Row="3" Column="0"/>
+                <dataGrid:TextColumn FieldName="AmountText" Row="2" Column="0"/>
 
-                <dataGrid:NumberColumn FieldName="Price" DisplayFormat="#,##0.00" Row="2" Column="1" ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <dataGrid:NumberColumn FieldName="AssembledAmount" Row="3" Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <dataGrid:NumberColumn FieldName="Amount" Row="3" Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:NumberColumn FieldName="AssembledAmount" Row="2" Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:NumberColumn FieldName="Amount" Row="2" Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </dataGrid:DataGridView>
+
+            <editors:SimpleButton Grid.Row="1" 
+                              Text = "Создать возврат" 
+                              TextColor="White"
+                              BackgroundColor="DodgerBlue"
+                              Command="{Binding CreateReturnCommand}"
+                              IsVisible="{Binding IsReturnVisible}"/>
+
+            <popup:DXPopup x:Name="popup" AllowScrim="True" IsOpen="{Binding IsPopupOpen}">
+                <StackLayout>
+                    <Grid RowSpacing="15" ColumnSpacing="13" 
+                          Margin="10, 10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Вы точно хотите создать документ возврата?"/>
+                        <editors:SimpleButton Grid.Column="0"
+                                          Grid.Row="1"
+                                          Text="Да" 
+                                          TextColor="White"
+                                          BackgroundColor="Green"
+                                          Command="{Binding CompleteCommand}"/>
+
+                        <editors:SimpleButton Grid.Column="1"
+                                          Grid.Row="1"
+                                          Text="Нет" 
+                                          TextColor="White"
+                                          BackgroundColor="Red"
+                                          Command="{Binding CancelCommand}"/>
+                    </Grid>
+
+                </StackLayout>
+            </popup:DXPopup>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

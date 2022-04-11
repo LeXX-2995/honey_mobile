@@ -48,7 +48,11 @@ namespace TraceIQ.Expeditor.API
             });
 
             if (body != null && method == Method.POST)
-                request.AddJsonBody(body);
+            {
+                var serializedBody = JsonConvert.SerializeObject(body);
+                request.AddParameter("application/json", serializedBody, ParameterType.RequestBody);
+                //request.AddJsonBody(body);
+            }
 
             return request;
         }
@@ -66,6 +70,9 @@ namespace TraceIQ.Expeditor.API
 
             var response = Client.Execute<T>(request);
 
+            if(response.StatusCode == HttpStatusCode.BadRequest)
+                return response;
+
             if (response.Data == null && !string.IsNullOrEmpty(response.Content))
                 response.Data = JsonConvert.DeserializeObject<T>(response.Content, new StringEnumConverter());
 
@@ -81,6 +88,9 @@ namespace TraceIQ.Expeditor.API
 
             if (response == null)
                 return OperationResult<T>.Fail("Response empty");
+
+            if(response.StatusCode == HttpStatusCode.BadRequest)
+                return OperationResult<T>.Fail(response.Content);
 
             if (response.StatusCode != HttpStatusCode.OK)
                 return OperationResult<T>.Fail(response.StatusCode.ToString());

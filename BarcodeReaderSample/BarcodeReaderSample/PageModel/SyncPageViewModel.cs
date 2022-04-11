@@ -22,6 +22,17 @@ namespace BarcodeReaderSample.PageModel
         public ObservableCollection<SyncModel> SyncModels { get; set; }
         private readonly SynchronizationContext _mUiContext = SynchronizationContext.Current;
         public Command StartReceivingCommand { get; set; }
+        private bool _isSyncButtonEnabled;
+
+        public bool IsSyncButtonEnabled
+        {
+            get => _isSyncButtonEnabled;
+            set
+            {
+                _isSyncButtonEnabled = value;
+                OnPropertyChanged(nameof(IsSyncButtonEnabled));
+            }
+        }
 
         public SyncPageViewModel(INavigation navigation)
         {
@@ -32,10 +43,30 @@ namespace BarcodeReaderSample.PageModel
             StartReceivingCommand = new Command(SyncData);
 
             SyncModels = new ObservableCollection<SyncModel>();
+            IsSyncButtonEnabled = true;
         }
 
-        public void SyncData()
+        public async void SyncData()
         {
+            _mUiContext.Post(o =>
+            {
+                IsSyncButtonEnabled = false;
+            }, null);
+            
+
+            var checkReportReturn = BaseApiService.CheckAnyReportReturn(RestContext.User.TransportId);
+            if (checkReportReturn.Result != OperationStatus.Success)
+            {
+                 await Application.Current.MainPage.DisplayAlert("Ошибка", checkReportReturn.ErrorMessage, "ОК");
+                return;
+            }
+
+            if (checkReportReturn.Value.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", checkReportReturn.Value.ErrorMessage, "ОК");
+                return;
+            }
+
             SyncModels.Clear();
 
             var syncTypes = Enum.GetValues(typeof(SyncDataTypes)).Cast<SyncDataTypes>().ToList().Select(s =>
@@ -48,7 +79,7 @@ namespace BarcodeReaderSample.PageModel
 
             foreach (var syncModel in syncTypes)
             {
-                Task.Run(() =>
+                await Task.Run(() =>
                 {
                     switch (syncModel.SyncType)
                     {
@@ -151,6 +182,11 @@ namespace BarcodeReaderSample.PageModel
 
                 Thread.Sleep(300);
             }
+
+            _mUiContext.Post(o =>
+            {
+                IsSyncButtonEnabled = true;
+            }, null);
         }
     }
 }

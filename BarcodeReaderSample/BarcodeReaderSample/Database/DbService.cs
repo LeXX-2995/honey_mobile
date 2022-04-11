@@ -382,14 +382,36 @@ namespace BarcodeReaderSample.Database
                         Amount = s.Quantity,
                         AssembledAmount = s.OrderCodeMappings != null ? s.OrderCodeMappings.Count : default,
                         ProductName = s.Product.Name,
+                        ProductId = s.ProductId,
                         AggregationQuantity = s.UnitOfMeasurement == UnitOfMeasurement.Item ? 1 : s.UnitOfMeasurement == UnitOfMeasurement.Box ? s.Product.AmountInBox : s.Product.AmountInPallet
                     })
                     .Where(s => s.Amount != s.AssembledAmount).ToList();
 
+                orderDetails.ForEach(s =>
+                {
+                    s.Amount -= s.AssembledAmount;
+                    s.AssembledAmount = 0;
+                });
+
+                var returnOrderDetails = new List<OrderDetailsModel>();
+
+                foreach (var groupedDetails in orderDetails.GroupBy(s => new {s.ProductId, s.UnitOfMeasurement}))
+                {
+                    returnOrderDetails.Add(new OrderDetailsModel
+                    {
+                        UnitOfMeasurement = groupedDetails.Key.UnitOfMeasurement,
+                        AssembledAmount = 0,
+                        Amount = groupedDetails.Sum(s => s.Amount),
+                        ProductName = groupedDetails.First().ProductName,
+                        ProductId = groupedDetails.Key.ProductId
+                    });   
+                }
+
+
                 return new OperationResult<List<OrderDetailsModel>>
                 {
                     Result = OperationStatus.Success,
-                    Value = orderDetails
+                    Value = returnOrderDetails
                 };
             });
         }

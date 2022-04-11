@@ -256,6 +256,23 @@ namespace MIgrationCreator.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Entities.ReportReturn", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReportNumber")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ReturnStatus")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReportReturns");
+                });
+
             modelBuilder.Entity("Entities.Setting", b =>
                 {
                     b.Property<Guid>("Id")

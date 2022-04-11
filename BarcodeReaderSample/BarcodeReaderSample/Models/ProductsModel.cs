@@ -92,6 +92,7 @@ namespace TraceIQ.Expeditor.Models
             }
         }
 
+        public Guid ProductId { get; set; }
 
         private Guid _id;
 
