@@ -20,6 +20,6 @@ namespace Entities
         Rejected,
 
         [Display(Name = "Отвергнут")]
-        Transfered,
+        Transfered
     }
 }

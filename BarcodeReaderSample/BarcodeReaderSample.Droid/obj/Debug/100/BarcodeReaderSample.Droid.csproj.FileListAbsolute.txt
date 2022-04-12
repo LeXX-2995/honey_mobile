@@ -1238,7 +1238,6 @@ C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\B
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\android\bin\uz.traceiq.mobile.expeditor.apks
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\android\src\uz\traceiq\mobile\expeditor\R.java
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\res\drawable\tracking.png
-C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\77\jl\files.cache
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\androidx\jl\1f9e0fda-a89a-4602-bdf5-7417d44e41e4.jar
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\androidx\jl\216e5035-924c-400e-9b03-5777b39b342e.jar
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\androidx\jl\97e4614e-e8d2-4287-a9a0-2ecf5f1bb392.jar

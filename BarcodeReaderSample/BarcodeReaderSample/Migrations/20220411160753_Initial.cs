@@ -24,19 +24,6 @@ namespace MIgrationCreator.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ReportReturns",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(nullable: false),
-                    ReportNumber = table.Column<string>(nullable: true),
-                    ReturnStatus = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ReportReturns", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Setting",
                 columns: table => new
                 {
@@ -377,9 +364,6 @@ namespace MIgrationCreator.Migrations
 
             migrationBuilder.DropTable(
                 name: "OrderCodeMappings");
-
-            migrationBuilder.DropTable(
-                name: "ReportReturns");
 
             migrationBuilder.DropTable(
                 name: "Setting");

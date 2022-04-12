@@ -185,6 +185,17 @@ namespace BarcodeReaderSample.PageModel
                                 else
                                 {
                                     var addCodeMapping = DbService.AddCodeMappings(getCodesMapping.Value);
+
+                                    if (addCodeMapping.Result != OperationStatus.Success)
+                                    {
+
+                                        _mUiContext.Post(async o =>
+                                        {
+                                            await Application.Current.MainPage.DisplayAlert("Ошибка", addCodeMapping.ErrorMessage, "ОК");
+                                        }, null);
+                                        return;
+                                    }
+
                                     syncModel.SyncStatus = addCodeMapping.Result != OperationStatus.Success ? SyncStatus.Error : SyncStatus.Completed;
                                 }
                             }

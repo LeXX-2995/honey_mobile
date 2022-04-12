@@ -262,24 +262,35 @@ namespace BarcodeReaderSample.Database
                         Result = OperationStatus.Success
                     };
 
-                var existingMappings = db.CodesMappings
-                    .Include(s => s.DataMatrix)
-                    .Include(s => s.Box)
-                        .ThenInclude(s => s.DataMatrices)
-                    .Include(s => s.Pallet)
-                        .ThenInclude(s => s.Boxes)
-                            .ThenInclude(s => s.DataMatrices)
-                    .Where(s => codesMappings.Select(t => t.Id).Contains(s.Id))
-                    .ToList();
-
-                foreach (var codeMapping in codesMappings)
+                foreach (var dataMatrix in codesMappings.Where(s => s.DataMatrix != null).Select(s => s.DataMatrix).ToList())
                 {
-                    var existingCodeMapping = existingMappings.FirstOrDefault(s => s.Id == codeMapping.Id);
-                    if (existingCodeMapping == null)
-                    {
-                        db.CodesMappings.Add(codeMapping);
-                    }
+                    db.DataMatrix.Add(dataMatrix);
                 }
+
+                db.SaveChanges();
+
+                foreach (var box in codesMappings.Where(s => s.Box != null).Select(s => s.Box).ToList())
+                {
+                    db.Boxes.Add(box);
+                }
+
+                db.SaveChanges();
+
+                foreach (var pallet in codesMappings.Where(s => s.Pallet != null).Select(s => s.Pallet).ToList())
+                {
+                    db.Pallets.Add(pallet);
+                }
+
+                db.SaveChanges();
+
+                codesMappings.ForEach(s =>
+                {
+                    s.DataMatrix = null;
+                    s.Box = null;
+                    s.Pallet = null;
+                });
+
+                db.CodesMappings.AddRange(codesMappings);
 
                 db.SaveChanges();
 
@@ -496,10 +507,7 @@ namespace BarcodeReaderSample.Database
         {
             return DigitalTrackingContext.Run(db =>
             {
-                var dataMatrix = db.DataMatrix
-                    .AsNoTracking()
-                    .Include(s => s.Product)
-                    .FirstOrDefault(s => s.Code.Trim() == code.Trim() || s.Code == RemoveFirstTwoCharacters(code));
+                DataMatrix dataMatrix = null;
 
                 var box = db.Boxes
                     .AsNoTracking()
@@ -515,6 +523,14 @@ namespace BarcodeReaderSample.Database
                     .FirstOrDefault(s => 
                         s.Code == code || 
                         s.Code == code.Replace("(", string.Empty).Replace(")", string.Empty));
+
+                if (box == null && pallet == null && code.Length > 10)
+                {
+                    dataMatrix = db.DataMatrix
+                        .AsNoTracking()
+                        .Include(s => s.Product)
+                        .FirstOrDefault(s => s.Code.Trim().Contains(code.Substring(0, code.Length - 7)));
+                }
 
                 Guid? productId = default;
                 Product product = default;
