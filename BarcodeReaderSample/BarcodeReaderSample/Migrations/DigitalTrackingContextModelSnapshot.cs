@@ -117,6 +117,9 @@ namespace MIgrationCreator.Migrations
                     b.Property<int>("OrderStatus")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("PartialShipmentAllowed")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("PaymentType")
                         .HasColumnType("INTEGER");
 
@@ -254,6 +257,26 @@ namespace MIgrationCreator.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Entities.ReportReturn", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OrderDetails")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReportNumber")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ReturnStatus")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReportReturn");
                 });
 
             modelBuilder.Entity("Entities.Setting", b =>

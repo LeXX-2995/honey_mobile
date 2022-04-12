@@ -21,6 +21,7 @@ namespace Entities
         public Guid SupplierId { get; set; }
         public string FiscalBoxData { get; set; }
         public bool IsWaitingFiscalBox { get; set; }
+        public bool PartialShipmentAllowed { get; set; }
         public Supplier Supplier { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
     }

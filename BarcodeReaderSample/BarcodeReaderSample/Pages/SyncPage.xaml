@@ -27,7 +27,7 @@
                 CornerRadius="10"
                 Margin="10"
                 Command="{Binding StartReceivingCommand}"
-                IsEnabled="{Binding IsSyncButtonEnabled}"/>
+                IsVisible="{Binding IsSyncButtonEnabled}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

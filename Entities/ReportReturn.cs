@@ -9,5 +9,6 @@ namespace Entities
         public Guid Id { get; set; }
         public string ReportNumber { get; set; }
         public ReturnStatus ReturnStatus { get; set; }
+        public string OrderDetails { get; set; }
     }
 }

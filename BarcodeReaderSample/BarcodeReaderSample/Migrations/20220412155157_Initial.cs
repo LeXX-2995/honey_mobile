@@ -24,6 +24,20 @@ namespace MIgrationCreator.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ReportReturn",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    ReportNumber = table.Column<string>(nullable: true),
+                    ReturnStatus = table.Column<int>(nullable: false),
+                    OrderDetails = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ReportReturn", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Setting",
                 columns: table => new
                 {
@@ -103,7 +117,8 @@ namespace MIgrationCreator.Migrations
                     PaymentType = table.Column<int>(nullable: false),
                     SupplierId = table.Column<Guid>(nullable: false),
                     FiscalBoxData = table.Column<string>(nullable: true),
-                    IsWaitingFiscalBox = table.Column<bool>(nullable: false)
+                    IsWaitingFiscalBox = table.Column<bool>(nullable: false),
+                    PartialShipmentAllowed = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -364,6 +379,9 @@ namespace MIgrationCreator.Migrations
 
             migrationBuilder.DropTable(
                 name: "OrderCodeMappings");
+
+            migrationBuilder.DropTable(
+                name: "ReportReturn");
 
             migrationBuilder.DropTable(
                 name: "Setting");

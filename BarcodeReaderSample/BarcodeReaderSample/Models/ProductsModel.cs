@@ -106,6 +106,7 @@ namespace TraceIQ.Expeditor.Models
             }
         }
 
+        public List<Guid> OrderDetailIds { get; set; }
         public string PriceText { get; set; } = "Цена";
         public string AmountText { get; set; } = "Кол-во";
 

@@ -33,8 +33,6 @@ namespace BarcodeReaderSample.PageModel
             }
         }
 
-        private bool IsDataWillBeDeleted = false;
-
         public SyncPageViewModel(INavigation navigation)
         {
             Navigation = navigation;
@@ -51,41 +49,71 @@ namespace BarcodeReaderSample.PageModel
         {
             IsSyncButtonEnabled = false;
 
-            var checkReportReturn = BaseApiService.CheckAnyReportReturn(RestContext.User.TransportId);
-            if (checkReportReturn.Result != OperationStatus.Success)
+            var anyIncompleteOrders = DbService.AnyInCompleteOrders();
+            if (anyIncompleteOrders.Result != OperationStatus.Success)
             {
-                 await Application.Current.MainPage.DisplayAlert("Ошибка", checkReportReturn.ErrorMessage, "ОК");
+                await Application.Current.MainPage.DisplayAlert("Ошибка", anyIncompleteOrders.ErrorMessage, "ОК");
                 return;
             }
 
-            if (checkReportReturn.Value.Result != OperationStatus.Success)
+            var getReportReturns = DbService.GetIncompleteReportReturns();
+            if(getReportReturns.Result != OperationStatus.Success)
             {
-                await Application.Current.MainPage.DisplayAlert("Ошибка", checkReportReturn.Value.ErrorMessage, "ОК");
+                await Application.Current.MainPage.DisplayAlert("Ошибка", getReportReturns.ErrorMessage, "ОК");
                 return;
+            }
+
+            if (getReportReturns.Value.Any())
+            {  
+                var getReportReturnsApi = BaseApiService.CheckReportReturnStatus(getReportReturns.Value.Select(s => s.Id).ToList());
+                if (getReportReturnsApi.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", getReportReturnsApi.ErrorMessage, "ОК");
+                    return;
+                }
+
+                var updateReports = DbService.UpdateReportReturns(getReportReturnsApi.Value);
+                if (updateReports.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateReports.ErrorMessage, "ОК");
+                    return;
+                }
+
+                if (getReportReturnsApi.Value.Any(s => s.ReturnStatus != ReturnStatus.Completed))
+                {
+                    await Application.Current.MainPage.DisplayAlert("Предупреждение", "У вас есть незавершенные документы возвратов", "ОК");
+                    return;
+                }
             }
 
             var getGoodsOnStock = DbService.GetGoodsOnStock();
-            if (getGoodsOnStock.Result != OperationStatus.Success)
+            if(getGoodsOnStock.Result != OperationStatus.Success)
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", getGoodsOnStock.ErrorMessage, "ОК");
                 return;
             }
 
-            if (getGoodsOnStock.Value.Any() && !IsDataWillBeDeleted)
+            if (getGoodsOnStock.Value.Any())
             {
-                await Application.Current.MainPage.DisplayAlert("Предупреждение", "У вас есть остатки. Если не создатите документ возврата, данные будут удалены", "ОК");
-                IsDataWillBeDeleted = true;
-                return;
-            }
-
-            if (IsDataWillBeDeleted)
-            {
-                var deleteAllData = DbService.DeleteAllData();
-                if (deleteAllData.Result != OperationStatus.Success)
+                var checkWithReportReturns = DbService.CheckGoodsOnStockWithReportReturns(getGoodsOnStock.Value);
+                if (checkWithReportReturns.Result != OperationStatus.Success)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", deleteAllData.ErrorMessage, "ОК");
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", checkWithReportReturns.ErrorMessage, "ОК");
                     return;
                 }
+
+                if(!checkWithReportReturns.Value)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", "У вас есть незавершенные документы возвратов", "ОК");
+                    return;
+                }
+            }
+
+            var deleteAllData = DbService.DeleteAllData();
+            if(deleteAllData.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", deleteAllData.ErrorMessage, "ОК");
+                return;
             }
 
             SyncModels.Clear();

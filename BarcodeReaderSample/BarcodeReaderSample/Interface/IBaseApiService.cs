@@ -20,6 +20,6 @@ namespace BarcodeReaderSample.Interface
         OperationResult<OperationResult> SendRejectOrder(Guid orderId, string rejectReason);
 
         OperationResult<OperationResult> SendReportReturn(ReportReturnModel model);
-        OperationResult<OperationResult> CheckAnyReportReturn(Guid transportId);
+        OperationResult<List<ReportReturn>> CheckReportReturnStatus(List<Guid> returnReportIds);
     }
 }

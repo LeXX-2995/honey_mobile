@@ -32,17 +32,19 @@ namespace BarcodeReaderSample.Interface
         OperationResult<ProductApproveModel> GetOrdersByCode(string code, Guid orderId);
 
         OperationResult ApproveOrderDetail(ProductApproveModel model);
-
-        OperationResult<List<string>> GetOrderDataMatrix(Guid orderId);
+        OperationResult AnyInCompleteOrders();
+        OperationResult UpdateReportReturns(List<ReportReturn> returns);
         OperationResult UpdateOrderWaiting(Guid orderId, double cash, double terminal);
-
-        OperationResult<bool> GetOrderWaitingStatus(Guid orderId);
+        OperationResult CreateReportReturn(ReportReturnModel model);
+        OperationResult<List<ReportReturn>> GetIncompleteReportReturns();
         OperationResult<int> GetOrderTotal(Guid orderId);
         OperationResult<Order> GetOrder(Guid orderId);
         OperationResult CompleteOrder(Guid orderId);
         OperationResult UpdateOrderQrUrl(Guid orderId, string qrUrl);
         OperationResult RejectOrder(Guid orderId);
         OperationResult DeleteAllData();
+
+        OperationResult<bool> CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel);
         OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId);
     }
 }

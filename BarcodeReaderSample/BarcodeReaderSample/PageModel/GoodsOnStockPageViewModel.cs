@@ -44,7 +44,6 @@ namespace BarcodeReaderSample.PageModel
             }
         }
 
-
         public Command CancelCommand { get; set; }
         public Command CompleteCommand { get; set; }
         public Command CreateReturnCommand { get; set; }
@@ -64,24 +63,59 @@ namespace BarcodeReaderSample.PageModel
         {
             IsPopupOpen = false;
 
-            var checkReportReturn = BaseApiService.CheckAnyReportReturn(RestContext.User.TransportId);
-            if (checkReportReturn.Result != OperationStatus.Success)
+            if (!GoodsOnStock.Any())
+                return;
+
+            var anyIncompleteOrders = DbService.AnyInCompleteOrders();
+            if (anyIncompleteOrders.Result != OperationStatus.Success)
             {
-                await Application.Current.MainPage.DisplayAlert("Ошибка", checkReportReturn.ErrorMessage, "ОК");
+                await Application.Current.MainPage.DisplayAlert("Ошибка", anyIncompleteOrders.ErrorMessage, "ОК");
                 return;
             }
 
-            if(checkReportReturn.Value.Result != OperationStatus.Success)
+            var getReportReturns = DbService.GetIncompleteReportReturns();
+            if (getReportReturns.Result != OperationStatus.Success)
             {
-                await Application.Current.MainPage.DisplayAlert("Ошибка", checkReportReturn.Value.ErrorMessage, "ОК");
+                await Application.Current.MainPage.DisplayAlert("Ошибка", getReportReturns.ErrorMessage, "ОК");
                 return;
+            }
+
+            if (getReportReturns.Value.Any())
+            {
+                var getReportReturnsApi = BaseApiService.CheckReportReturnStatus(getReportReturns.Value.Select(s => s.Id).ToList());
+                if (getReportReturnsApi.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", getReportReturnsApi.ErrorMessage, "ОК");
+                    return;
+                }
+
+                var updateReports = DbService.UpdateReportReturns(getReportReturnsApi.Value);
+                if (updateReports.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateReports.ErrorMessage, "ОК");
+                    return;
+                }
+
+                if (getReportReturnsApi.Value.Any(s => s.ReturnStatus != ReturnStatus.Completed))
+                {
+                    await Application.Current.MainPage.DisplayAlert("Предупреждение", "У вас есть незавершенные документы возвратов", "ОК");
+                    return;
+                }
             }
 
             var model = new ReportReturnModel
             {
+                Id = Guid.NewGuid(),
                 OrderDetailsModels = GoodsOnStock.ToList(),
                 TransportId = RestContext.User.TransportId
             };
+
+            var createReportReturn = DbService.CreateReportReturn(model);
+            if (createReportReturn.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", createReportReturn.ErrorMessage, "ОК");
+                return;
+            }
 
             var sendReportReturn = BaseApiService.SendReportReturn(model);
             if(sendReportReturn.Result != OperationStatus.Success)

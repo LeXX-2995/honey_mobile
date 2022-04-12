@@ -200,6 +200,7 @@ namespace BarcodeReaderSample.Database
                         existingOrder.SupplierId = order.SupplierId;
                         existingOrder.Terminal = order.Terminal;
                         existingOrder.Total = order.Total;
+                        existingOrder.PartialShipmentAllowed = order.PartialShipmentAllowed;
                     }
                     else
                         db.Orders.Add(order);
@@ -301,6 +302,9 @@ namespace BarcodeReaderSample.Database
             });
         }
 
+
+
+
         public OperationResult<List<ClientsModel>> GetClients()
         {
             return DigitalTrackingContext.Run(db =>
@@ -381,10 +385,14 @@ namespace BarcodeReaderSample.Database
         {
             return DigitalTrackingContext.Run(db =>
             {
-                var orderDetails = db.OrderDetails
+                var orderDetails = db.Orders
                     .AsNoTracking()
-                    .Include(s => s.Product)
-                    .Include(s => s.OrderCodeMappings)
+                    .Include(s => s.OrderDetails)
+                    .ThenInclude(s => s.Product)
+                    .Include(s => s.OrderDetails)
+                    .ThenInclude(s => s.OrderCodeMappings)
+                    .Where(s => s.PartialShipmentAllowed || s.OrderStatus == OrderStatus.Rejected)
+                    .SelectMany(s => s.OrderDetails)
                     .Select(s => new OrderDetailsModel
                     {
                         Id = s.Id,
@@ -414,7 +422,8 @@ namespace BarcodeReaderSample.Database
                         AssembledAmount = 0,
                         Amount = groupedDetails.Sum(s => s.Amount),
                         ProductName = groupedDetails.First().ProductName,
-                        ProductId = groupedDetails.Key.ProductId
+                        ProductId = groupedDetails.Key.ProductId,
+                        OrderDetailIds = groupedDetails.Select(s => s.Id).ToList()
                     });   
                 }
 
@@ -524,7 +533,7 @@ namespace BarcodeReaderSample.Database
                         s.Code == code || 
                         s.Code == code.Replace("(", string.Empty).Replace(")", string.Empty));
 
-                if (box == null && pallet == null && code.Length > 10)
+                if (box == null && pallet == null && code.Length > 10 && !code.Replace("(", string.Empty).Replace(")", string.Empty).All(c => c >= '0' && c <= '9'))
                 {
                     dataMatrix = db.DataMatrix
                         .AsNoTracking()
@@ -715,52 +724,55 @@ namespace BarcodeReaderSample.Database
             });
         }
 
-        public OperationResult<List<string>> GetOrderDataMatrix(Guid orderId)
+        public OperationResult AnyInCompleteOrders()
         {
             return DigitalTrackingContext.Run(db =>
             {
-                var orders = db.OrderDetails
+                var anyIncompleteOrders = db
+                    .Orders
                     .AsNoTracking()
-                    .Include(s => s.OrderCodeMappings)
-                        .ThenInclude(s => s.Box)
-                        .ThenInclude(s => s.DataMatrices)
-                    .Include(s => s.OrderCodeMappings)
-                        .ThenInclude(s => s.DataMatrix)
-                    .Include(s => s.OrderCodeMappings)
-                        .ThenInclude(s => s.Pallet)
-                        .ThenInclude(s => s.Boxes)
-                        .ThenInclude(s => s.DataMatrices)
-                    .Where(s => s.OrderId == orderId)
-                    .SelectMany(s => s.OrderCodeMappings)
-                    .ToList();
+                    .Any(s => s.OrderStatus == OrderStatus.Transit);
 
-                var codes = new List<string>();
+                if(anyIncompleteOrders)
+                    return OperationResult.Fail("Есть незавершенные заказы.");
 
-                if(orders.Any(s => s.DataMatrixCodeId.HasValue && s.DataMatrix != null))
-                    codes.AddRange(orders.Where(s => s.DataMatrixCodeId.HasValue && s.DataMatrix != null).Select(s => s.DataMatrix.Code).ToList());
-
-                if(orders.Any(s => s.BoxId.HasValue && s.Box != null && s.Box.DataMatrices != null && s.Box.DataMatrices.Any()))
-                    codes.AddRange(orders.Where(s => s.BoxId.HasValue && s.Box != null && s.Box.DataMatrices != null && s.Box.DataMatrices.Any())
-                        .SelectMany(s => s.Box.DataMatrices.Select(t => t.Code)).ToList());
-
-                foreach (var order in orders.Where(s => s.PalletId.HasValue))
+                return new OperationResult
                 {
-                    if (order.Pallet?.Boxes == null || !order.Pallet.Boxes.Any()) 
-                        continue;
-
-                    if (order.Pallet.Boxes.Any(s => s.DataMatrices != null && s.DataMatrices.Any()))
-                    {
-                        codes.AddRange(order.Pallet.Boxes.SelectMany(s => s.DataMatrices.Select(t => t.Code).ToList()));
-                    }
-                }
-
-                return new OperationResult<List<string>>
-                {
-                    Result = OperationStatus.Success,
-                    Value = codes
+                    Result = OperationStatus.Success
                 };
             });
         }
+
+        public OperationResult UpdateReportReturns(List<ReportReturn> reportReturns)
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                if(!reportReturns.Any())
+                    return new OperationResult
+                    {
+                        Result = OperationStatus.Success
+                    };
+
+                var dbReportReturns = db.ReportReturn
+                    .Where(s => reportReturns.Select(t => t.Id).Contains(s.Id))
+                    .ToList();
+
+                foreach (var report in reportReturns)
+                {
+                    var reportReturn = dbReportReturns.FirstOrDefault(s => s.Id == report.Id);
+                    if (reportReturn != null)
+                        reportReturn.ReturnStatus = report.ReturnStatus;
+                }
+
+                db.SaveChanges();
+
+                return new OperationResult
+                {
+                    Result = OperationStatus.Success
+                };
+            });
+        }
+
 
         public OperationResult UpdateOrderWaiting(Guid orderId, double cash, double terminal)
         {
@@ -783,18 +795,36 @@ namespace BarcodeReaderSample.Database
             });
         }
 
-        public OperationResult<bool> GetOrderWaitingStatus(Guid orderId)
+        public OperationResult CreateReportReturn(ReportReturnModel model)
         {
             return DigitalTrackingContext.Run(db =>
             {
-                var order = db.Orders.AsNoTracking().FirstOrDefault(s => s.Id == orderId);
-                if(order == null)
-                    return OperationResult<bool>.Fail("Запись не найдена");
+                db.ReportReturn.Add(new ReportReturn
+                {
+                    Id = model.Id,
+                    OrderDetails = string.Join(",", model.OrderDetailsModels.SelectMany(s => s.OrderDetailIds).ToList()),
+                    ReturnStatus = ReturnStatus.Created,
+                });
 
-                return new OperationResult<bool>
+                db.SaveChanges();
+
+                return new OperationResult
+                {
+                    Result = OperationStatus.Success
+                };
+            });
+        }
+
+        public OperationResult<List<ReportReturn>> GetIncompleteReportReturns()
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var reportReturns = db.ReportReturn.AsNoTracking().Where(s => s.ReturnStatus != ReturnStatus.Completed).ToList();
+
+                return new OperationResult<List<ReportReturn>>
                 {
                     Result = OperationStatus.Success,
-                    Value = order.IsWaitingFiscalBox
+                    Value = reportReturns
                 };
             });
         }
@@ -915,6 +945,36 @@ namespace BarcodeReaderSample.Database
                 return new OperationResult
                 {
                     Result = OperationStatus.Success
+                };
+            });
+        }
+
+        public OperationResult<bool> CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel)
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var reportReturns = db.ReportReturn.AsNoTracking().ToList();
+
+                var orderDetIds = detailsModel.SelectMany(s => s.OrderDetailIds).ToList();
+
+                foreach (var reportReturn in reportReturns)
+                {
+                    if (!string.IsNullOrWhiteSpace(reportReturn.OrderDetails))
+                    {
+                        var orderDetailIds = reportReturn.OrderDetails.Split(",").Select(Guid.Parse).ToList();
+                        if (orderDetIds.Any(s => orderDetailIds.Contains(s)) && reportReturn.ReturnStatus != ReturnStatus.Completed)
+                            return new OperationResult<bool>
+                            {
+                                Result = OperationStatus.Success,
+                                Value = false
+                            };
+                    }
+                }
+
+                return new OperationResult<bool>
+                {
+                    Result = OperationStatus.Success,
+                    Value = true
                 };
             });
         }

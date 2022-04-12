@@ -8,7 +8,7 @@
 .L.compressed_assembly_descriptors:
 	/* 0: BarcodeReaderSample.Droid.dll */
 	/* uncompressed_file_size */
-	.word	932864
+	.word	939520
 	/* loaded */
 	.byte	0
 	/* data */
@@ -161,7 +161,7 @@
 
 	/* 17: Entities.dll */
 	/* uncompressed_file_size */
-	.word	16896
+	.word	17408
 	/* loaded */
 	.byte	0
 	/* data */
@@ -908,7 +908,7 @@
 
 	/* 100: mscorlib.dll */
 	/* uncompressed_file_size */
-	.word	2197504
+	.word	2198016
 	/* loaded */
 	.byte	0
 	/* data */
