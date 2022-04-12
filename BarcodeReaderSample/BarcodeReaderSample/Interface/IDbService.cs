@@ -42,6 +42,7 @@ namespace BarcodeReaderSample.Interface
         OperationResult CompleteOrder(Guid orderId);
         OperationResult UpdateOrderQrUrl(Guid orderId, string qrUrl);
         OperationResult RejectOrder(Guid orderId);
+        OperationResult DeleteAllData();
         OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId);
     }
 }

@@ -54,7 +54,7 @@
                 <dxe:TextEdit Grid.Column="0" Text="{Binding PaymentTypeText, Mode=TwoWay}" TextColor="Gray" IsEnabled="False"/>
                 <dxe:NumericEdit Grid.Column="1" Value="{Binding Total, Mode=TwoWay}" TextColor="Gray" DisplayFormat="n1"/>
             </Grid>
-            
+
 
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
@@ -119,7 +119,7 @@
                                           BackgroundColor="Red"
                                           Command="{Binding CancelCommand}"/>
                     </Grid>
-                    
+
                 </StackLayout>
             </popup:DXPopup>
 
@@ -139,14 +139,18 @@
 
                         <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Вы точно хотите отменить заказ?"/>
 
-                        <dxe:TextEdit
-                            Grid.ColumnSpan="2" Grid.Column="0"
-                            Grid.Row="1"
-                            Text="{Binding RejectReason}"
-                            LabelText="Причина"
-                            />
+                        <StackLayout Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1">
+                            <Label Text="Причина"/>
+                            <Entry 
+                            Text="{Binding RejectReason, Mode=TwoWay}"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            IsEnabled="True"
+                            Margin="5">
+                            </Entry>
+                        </StackLayout>
 
-                            <dxe:SimpleButton Grid.Column="0"
+                        <dxe:SimpleButton Grid.Column="0"
                                           Grid.Row="2"
                                           Text="Да" 
                                           TextColor="White"

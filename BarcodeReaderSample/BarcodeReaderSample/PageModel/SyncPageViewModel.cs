@@ -23,7 +23,6 @@ namespace BarcodeReaderSample.PageModel
         private readonly SynchronizationContext _mUiContext = SynchronizationContext.Current;
         public Command StartReceivingCommand { get; set; }
         private bool _isSyncButtonEnabled;
-
         public bool IsSyncButtonEnabled
         {
             get => _isSyncButtonEnabled;
@@ -33,6 +32,8 @@ namespace BarcodeReaderSample.PageModel
                 OnPropertyChanged(nameof(IsSyncButtonEnabled));
             }
         }
+
+        private bool IsDataWillBeDeleted = false;
 
         public SyncPageViewModel(INavigation navigation)
         {
@@ -48,11 +49,7 @@ namespace BarcodeReaderSample.PageModel
 
         public async void SyncData()
         {
-            _mUiContext.Post(o =>
-            {
-                IsSyncButtonEnabled = false;
-            }, null);
-            
+            IsSyncButtonEnabled = false;
 
             var checkReportReturn = BaseApiService.CheckAnyReportReturn(RestContext.User.TransportId);
             if (checkReportReturn.Result != OperationStatus.Success)
@@ -65,6 +62,30 @@ namespace BarcodeReaderSample.PageModel
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", checkReportReturn.Value.ErrorMessage, "ОК");
                 return;
+            }
+
+            var getGoodsOnStock = DbService.GetGoodsOnStock();
+            if (getGoodsOnStock.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", getGoodsOnStock.ErrorMessage, "ОК");
+                return;
+            }
+
+            if (getGoodsOnStock.Value.Any() && !IsDataWillBeDeleted)
+            {
+                await Application.Current.MainPage.DisplayAlert("Предупреждение", "У вас есть остатки. Если не создатите документ возврата, данные будут удалены", "ОК");
+                IsDataWillBeDeleted = true;
+                return;
+            }
+
+            if (IsDataWillBeDeleted)
+            {
+                var deleteAllData = DbService.DeleteAllData();
+                if (deleteAllData.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", deleteAllData.ErrorMessage, "ОК");
+                    return;
+                }
             }
 
             SyncModels.Clear();
@@ -179,14 +200,9 @@ namespace BarcodeReaderSample.PageModel
                         SyncModels.Add(syncModel);
                     }, null);
                 });
-
-                Thread.Sleep(300);
             }
-
-            _mUiContext.Post(o =>
-            {
-                IsSyncButtonEnabled = true;
-            }, null);
+            
+            IsSyncButtonEnabled = true;
         }
     }
 }

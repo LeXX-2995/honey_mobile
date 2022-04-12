@@ -407,7 +407,6 @@ namespace BarcodeReaderSample.Database
                     });   
                 }
 
-
                 return new OperationResult<List<OrderDetailsModel>>
                 {
                     Result = OperationStatus.Success,
@@ -863,6 +862,37 @@ namespace BarcodeReaderSample.Database
                     return OperationResult<Order>.Fail("Запись не найдена");
 
                 order.OrderStatus = OrderStatus.Rejected;
+
+                db.SaveChanges();
+
+                return new OperationResult
+                {
+                    Result = OperationStatus.Success
+                };
+            });
+        }
+
+        public OperationResult DeleteAllData()
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var codeMappings = db.CodesMappings.ToList();
+                db.CodesMappings.RemoveRange(codeMappings);
+
+                var orderDetails = db.OrderDetails.ToList();
+                db.OrderDetails.RemoveRange(orderDetails);
+
+                var dataMatrxiCodes = db.DataMatrix.ToList();
+                db.DataMatrix.RemoveRange(dataMatrxiCodes);
+
+                var boxes = db.Boxes.ToList();
+                db.Boxes.RemoveRange(boxes);
+
+                var pallet = db.Pallets.ToList();
+                db.Pallets.RemoveRange(pallet);
+
+                var orders = db.Orders.ToList();
+                db.Orders.RemoveRange(orders);
 
                 db.SaveChanges();
 

@@ -22,7 +22,6 @@ namespace Entities
         public double Total { get; set; }
         public Order Order { get; set; }
         public Product Product { get; set; }
-
         public List<OrderCodeMapping> OrderCodeMappings { get; set; }
     }
 }
