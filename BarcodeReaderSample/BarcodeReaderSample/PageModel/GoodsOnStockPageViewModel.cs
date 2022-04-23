@@ -104,7 +104,7 @@ namespace BarcodeReaderSample.PageModel
             }
 
             var model = new ReportReturnModel
-            {
+            { 
                 Id = Guid.NewGuid(),
                 OrderDetailsModels = GoodsOnStock.ToList(),
                 TransportId = RestContext.User.TransportId

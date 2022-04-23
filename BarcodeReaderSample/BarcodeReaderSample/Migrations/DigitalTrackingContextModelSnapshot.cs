@@ -202,6 +202,9 @@ namespace MIgrationCreator.Migrations
                     b.Property<int>("UnitOfMeasurement")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("Vat")
+                        .HasColumnType("REAL");
+
                     b.HasKey("Id");
 
                     b.HasIndex("OrderId");
@@ -231,6 +234,25 @@ namespace MIgrationCreator.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("Pallets");
+                });
+
+            modelBuilder.Entity("Entities.PalletDataMatrix", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("PalletId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PalletId");
+
+                    b.ToTable("PalletDataMatrix");
                 });
 
             modelBuilder.Entity("Entities.Product", b =>
@@ -351,7 +373,7 @@ namespace MIgrationCreator.Migrations
             modelBuilder.Entity("Entities.Box", b =>
                 {
                     b.HasOne("Entities.Pallet", "Pallet")
-                        .WithMany("Boxes")
+                        .WithMany()
                         .HasForeignKey("PalletId");
 
                     b.HasOne("Entities.Product", "Product")
@@ -445,6 +467,15 @@ namespace MIgrationCreator.Migrations
                     b.HasOne("Entities.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Entities.PalletDataMatrix", b =>
+                {
+                    b.HasOne("Entities.Pallet", "Pallet")
+                        .WithMany("PalletDataMatrix")
+                        .HasForeignKey("PalletId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

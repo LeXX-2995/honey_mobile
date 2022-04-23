@@ -28,6 +28,7 @@ namespace BarcodeReaderSample.API
         private const string OrderQrUrlResource = "Expeditor/GetOrderQrUrl/";
         private const string ReportReturnResource = "Expeditor/ReportReturn";
         private const string CheckReportReturnStatusResource = "Expeditor/CheckReportReturnStatus";
+        private const string GetSettingResource = "Expeditor/GetSetting";
         public BaseApiService()
         {
             IDbService dbService = new DbService();
@@ -126,6 +127,15 @@ namespace BarcodeReaderSample.API
             };
 
             return RestContext.ExecuteScalar<OperationResult>(RejectOrderResource, null, Method.POST, model);
+        }
+
+        public OperationResult<SettingModel> GetSetting()
+        {
+            var checkSetting = CheckSetting();
+            if (checkSetting.Result != OperationStatus.Success)
+                return OperationResult<SettingModel>.Fail(checkSetting.ErrorMessage);
+
+            return RestContext.ExecuteScalar<SettingModel>(GetSettingResource, null, Method.GET);
         }
 
         public OperationResult<OperationResult> SendReportReturn(ReportReturnModel model)

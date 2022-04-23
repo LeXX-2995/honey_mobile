@@ -15,6 +15,7 @@ namespace BarcodeReaderSample.Models
     public class ConfirmProductsModel
     {
         public Guid OrderDetailId { get; set; }
+        public int Amount { get; set; }
         public List<string> Codes { get; set; }
     }
 }

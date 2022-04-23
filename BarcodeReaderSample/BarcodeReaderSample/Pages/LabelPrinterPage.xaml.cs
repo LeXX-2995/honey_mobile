@@ -27,15 +27,16 @@ namespace BarcodeReaderSample.Pages
         private readonly IDbService _dbService;
         private readonly List<OrderDetailsBillModel> Orders;
         private double _total;
-        private FiscalBoxDataModel FiscalBoxResponseModel;
+        private FiscalBoxResponseModel FiscalBoxResponseModel;
         private readonly Order _order;
-        public LabelPrinterPage(Guid orderId, IDbService dbService)
+        private readonly string _inn;
+        public LabelPrinterPage(Guid orderId, IDbService dbService, double total, string inn)
         {
             InitializeComponent();
             _orderId = orderId;
             _dbService = dbService;
 
-            var getOrderBills = dbService.GetOrderDetailBill(orderId);
+            var getOrderBills = dbService.GetOrderDetailBill(orderId, true);
 
             Orders = getOrderBills.Result == OperationStatus.Success
                 ? getOrderBills.Value
@@ -45,10 +46,11 @@ namespace BarcodeReaderSample.Pages
             if (getOrder.Result == OperationStatus.Success)
                 _order = getOrder.Value;
 
-            _total = getOrder.Result != OperationStatus.Success ? default : getOrder.Value.Total ?? default ;
+            _total = total;
+            _inn = inn;
 
             FiscalBoxResponseModel =
-                JsonConvert.DeserializeObject<FiscalBoxDataModel>(getOrder.Value.FiscalBoxData);
+                JsonConvert.DeserializeObject<FiscalBoxResponseModel>(getOrder.Value.FiscalBoxData);
         }
         async void OnPrintLabelClicked(object sender, EventArgs e)
         {
@@ -96,7 +98,7 @@ namespace BarcodeReaderSample.Pages
 
                 await _printer.drawTextVectorFont("ИНН: ", xPos , yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
                 
-                await _printer.drawTextVectorFont("303054397", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                await _printer.drawTextVectorFont(_inn, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
 
                 //-------------------
@@ -135,7 +137,7 @@ namespace BarcodeReaderSample.Pages
                         yPosName += 25;
                     }
 
-                    await _printer.drawTextVectorFont(order.Quantity + " " + order.UnitOfMeasurement, (MAX_WIDTH / 2) - 10 , yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 14, 14, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+                    await _printer.drawTextVectorFont(order.AmountInItems + " " + order.UnitOfMeasurement, (MAX_WIDTH / 2) - 10 , yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 14, 14, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
 
                     await _printer.drawTextVectorFont(order.Price, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                     yPos = yPosName;
@@ -170,7 +172,7 @@ namespace BarcodeReaderSample.Pages
 
                 await _printer.drawTextVectorFont("Всего НДС:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
 
-                await _printer.drawTextVectorFont((_total * 0.15).ToString("#,##0.00"), MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                await _printer.drawTextVectorFont(Orders.Sum(s => s.TotalVat).ToString("#,##0.00"), MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
 
                 await _printer.drawTextVectorFont("Наличные:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
@@ -193,15 +195,15 @@ namespace BarcodeReaderSample.Pages
 
                 await _printer.drawTextVectorFont("ФМ ID:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
 
-                await _printer.drawTextVectorFont(FiscalBoxResponseModel?.TerminalId, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                await _printer.drawTextVectorFont(FiscalBoxResponseModel.Data.TerminalId, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
 
                 await _printer.drawTextVectorFont("Фискальная подпись:", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
 
-                await _printer.drawTextVectorFont(FiscalBoxResponseModel?.FiscalSign, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                await _printer.drawTextVectorFont(FiscalBoxResponseModel.Data.FiscalSign, MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, fontWidth, fontHeight, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
 
-                var url = FiscalBoxResponseModel?.QrUrl;
+                var url = FiscalBoxResponseModel.Data.QrUrl;
 
                 // QR Code
                 await _printer.drawBarcodeQRCode(url, xPos + 150, yPos, 4, (int)LabelQRCodeModel.MODEL_2, (int)LabelQRCodeECL.ECCLEVEL_Q, 0);

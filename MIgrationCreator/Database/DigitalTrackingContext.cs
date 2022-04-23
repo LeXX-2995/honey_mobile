@@ -24,6 +24,7 @@ namespace MIgrationCreator.Database
         public DbSet<Setting> Setting { get; set; }
         public DbSet<OrderCodeMapping> OrderCodeMappings { get; set; }
         public DbSet<ReportReturn> ReportReturn { get; set; }
+        public DbSet<PalletDataMatrix> PalletDataMatrix { get; set; }
         public DigitalTrackingContext()
         {
             

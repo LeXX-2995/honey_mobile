@@ -18,7 +18,7 @@ namespace BarcodeReaderSample.Interface
         OperationResult<Order> GetOrderQrUrl(Guid orderId);
         OperationResult<OperationResult> SendOrderConfirmation(ConfirmOrderModel model);
         OperationResult<OperationResult> SendRejectOrder(Guid orderId, string rejectReason);
-
+        OperationResult<SettingModel> GetSetting();
         OperationResult<OperationResult> SendReportReturn(ReportReturnModel model);
         OperationResult<List<ReportReturn>> CheckReportReturnStatus(List<Guid> returnReportIds);
     }

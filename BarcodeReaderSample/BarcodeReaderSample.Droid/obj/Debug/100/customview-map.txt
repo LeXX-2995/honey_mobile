@@ -49,8 +49,6 @@ com.google.android.material.bottomnavigation.BottomNavigationView;C:\Users\sanja
 com.google.android.material.tabs.TabLayout;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\71\jl\res\layout\fallbacktabbardonotuse.xml
 com.google.android.material.tabs.TabLayout;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\71\jl\res\layout\rootlayout.xml
 com.google.android.material.tabs.TabLayout;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\71\jl\res\layout\tabbar.xml
-crc643f46942d9dd1fff9.ShellFlyoutLayout;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\71\jl\res\layout\flyoutcontent.xml
-crc64720bb2db43a66fe9.FormsViewPager;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\71\jl\res\layout\rootlayout.xml
 declare-styleable;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\2\jl\res\values\values.xml
 declare-styleable;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\71\jl\res\values\attrs.xml
 dimen;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\2\jl\res\values\values.xml
@@ -134,6 +132,7 @@ path;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSam
 paths;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\70\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 resources;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\1\jl\res\values\values.xml
 resources;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\11\jl\res\values\strings.xml
+resources;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\128\jl\res\values\values.xml
 resources;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\2\jl\res\values\values.xml
 resources;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\3\jl\res\values\values.xml
 resources;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\4\jl\res\values\values.xml
@@ -160,6 +159,7 @@ set;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSamp
 set;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\71\jl\res\anim\exittoright.xml
 string;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\1\jl\res\values\values.xml
 string;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\11\jl\res\values\strings.xml
+string;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\128\jl\res\values\values.xml
 string;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\2\jl\res\values\values.xml
 string;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\3\jl\res\values\values.xml
 string;C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Debug\100\lp\4\jl\res\values\values.xml

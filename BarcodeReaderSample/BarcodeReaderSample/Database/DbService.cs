@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using Android.Content.Res;
+using Android.Support.V7.Graphics;
 using BarcodeReaderSample.Interface;
 using BarcodeReaderSample.Models;
 using Entities;
@@ -268,28 +270,24 @@ namespace BarcodeReaderSample.Database
                     db.DataMatrix.Add(dataMatrix);
                 }
 
-                db.SaveChanges();
+                //db.SaveChanges();
 
                 foreach (var box in codesMappings.Where(s => s.Box != null).Select(s => s.Box).ToList())
                 {
                     db.Boxes.Add(box);
                 }
 
-                db.SaveChanges();
+                //db.SaveChanges();
 
                 foreach (var pallet in codesMappings.Where(s => s.Pallet != null).Select(s => s.Pallet).ToList())
                 {
+                    if(pallet.PalletDataMatrix == null || !pallet.PalletDataMatrix.Any())
+                        return OperationResult.Fail("Датаматриксы паллетных кодов не найдены");
+
                     db.Pallets.Add(pallet);
                 }
 
-                db.SaveChanges();
-
-                codesMappings.ForEach(s =>
-                {
-                    s.DataMatrix = null;
-                    s.Box = null;
-                    s.Pallet = null;
-                });
+                //db.SaveChanges();
 
                 db.CodesMappings.AddRange(codesMappings);
 
@@ -301,9 +299,6 @@ namespace BarcodeReaderSample.Database
                 };
             });
         }
-
-
-
 
         public OperationResult<List<ClientsModel>> GetClients()
         {
@@ -517,22 +512,27 @@ namespace BarcodeReaderSample.Database
             return DigitalTrackingContext.Run(db =>
             {
                 DataMatrix dataMatrix = null;
-
-                var box = db.Boxes
-                    .AsNoTracking()
-                    .Include(s => s.Product)
-                    .FirstOrDefault(s => 
-                        s.Code.Trim() == code.Trim() || 
-                        s.Code == RemoveFirstTwoCharacters(code) || 
-                        s.Code == code.Replace("(", string.Empty).Replace(")", string.Empty));
+                Box box = null;
 
                 var pallet = db.Pallets
                     .AsNoTracking()
                     .Include(s => s.Product)
-                    .FirstOrDefault(s => 
-                        s.Code == code || 
+                    .FirstOrDefault(s =>
+                        s.Code == code ||
+                        s.Code == RemoveFirstTwoCharacters(code) ||
                         s.Code == code.Replace("(", string.Empty).Replace(")", string.Empty));
 
+                if (pallet == null)
+                {
+                    box = db.Boxes
+                        .AsNoTracking()
+                        .Include(s => s.Product)
+                        .FirstOrDefault(s =>
+                            s.Code.Trim() == code.Trim() ||
+                            s.Code == RemoveFirstTwoCharacters(code) ||
+                            s.Code == code.Replace("(", string.Empty).Replace(")", string.Empty));
+                }
+                
                 if (box == null && pallet == null && code.Length > 10 && !code.Replace("(", string.Empty).Replace(")", string.Empty).All(c => c >= '0' && c <= '9'))
                 {
                     dataMatrix = db.DataMatrix
@@ -586,6 +586,26 @@ namespace BarcodeReaderSample.Database
                     UnitOfMeasurement.Pallet => db.OrderCodeMappings.Any(s => s.PalletId == itemId && s.OrderId == orderId),
                     _ => throw new ArgumentOutOfRangeException()
                 };
+
+                var orderCodeMapping = unitOfMeasurement.Value switch
+                {
+                    UnitOfMeasurement.Item => db.OrderCodeMappings
+                        .Include(s => s.Order)
+                            .ThenInclude(s => s.Supplier)
+                        .AsNoTracking().FirstOrDefault(s => s.DataMatrixCodeId == itemId),
+                    UnitOfMeasurement.Box => db.OrderCodeMappings
+                        .Include(s => s.Order)
+                            .ThenInclude(s => s.Supplier)
+                        .AsNoTracking().FirstOrDefault(s => s.BoxId == itemId),
+                    UnitOfMeasurement.Pallet => db.OrderCodeMappings
+                        .Include(s => s.Order)
+                            .ThenInclude(s => s.Supplier)
+                        .AsNoTracking().FirstOrDefault(s => s.PalletId == itemId),
+                    _ => throw new ArgumentOutOfRangeException()
+                };
+
+                if (orderCodeMapping != null && orderCodeMapping.OrderId != orderId)
+                    return OperationResult<ProductApproveModel>.Fail($"Данный код привязан в заказе '{orderCodeMapping.Order.OrderNumber}' контрагента '{orderCodeMapping.Order.Supplier.Name}'");
 
                 return new OperationResult<ProductApproveModel>
                 {
@@ -880,15 +900,16 @@ namespace BarcodeReaderSample.Database
             });
         }
 
-        public OperationResult UpdateOrderQrUrl(Guid orderId, string qrUrl)
+        public OperationResult UpdateOrderQrUrl(Order order)
         {
             return DigitalTrackingContext.Run(db =>
             {
-                var order = db.Orders.FirstOrDefault(s => s.Id == orderId);
-                if (order == null)
+                var orderEntity = db.Orders.FirstOrDefault(s => s.Id == order.Id);
+                if (orderEntity == null)
                     return OperationResult<int>.Fail("Запись не найдена");
 
-                order.FiscalBoxData = qrUrl;
+                orderEntity.FiscalBoxData = order.FiscalBoxData;
+                orderEntity.PartialShipmentAllowed = order.PartialShipmentAllowed;
 
                 db.SaveChanges();
 
@@ -979,7 +1000,7 @@ namespace BarcodeReaderSample.Database
             });
         }
 
-        public OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId)
+        public OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId, bool isForPrinting = false)
         {
             return DigitalTrackingContext.Run(db =>
             {
@@ -993,8 +1014,7 @@ namespace BarcodeReaderSample.Database
                         .ThenInclude(s => s.DataMatrix)
                     .Include(s => s.OrderCodeMappings)
                         .ThenInclude(s => s.Pallet)
-                        .ThenInclude(s => s.Boxes)
-                        .ThenInclude(s => s.DataMatrices)
+                        .ThenInclude(s => s.PalletDataMatrix)
                     .Where(s => s.OrderId == orderId)
                     .ToList();
 
@@ -1004,51 +1024,97 @@ namespace BarcodeReaderSample.Database
                 {
                     if (orderDetail.OrderCodeMappings.Any(s => s.DataMatrixCodeId.HasValue && s.DataMatrix != null))
                     {
-                        orderBills.Add(new OrderDetailsBillModel
+                        var orderCodeMappingCount = orderDetail.OrderCodeMappings.Count;
+
+                        var bill = new OrderDetailsBillModel
                         {
                             Barcode = orderDetail.Product.Barcode,
                             Name = orderDetail.Product.Name,
                             Ikpu = orderDetail.Product.Ikpu,
                             UnitOfMeasurement = "шт.",
-                            Quantity = orderDetail.Quantity,
+                            Quantity = orderDetail.Quantity != orderCodeMappingCount
+                                ? orderDetail.Quantity - orderCodeMappingCount
+                                : orderDetail.Quantity,
                             Price = orderDetail.Price.ToString("#,##0.00"),
-                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
+                            Vat = orderDetail.Vat.ToString("#,##0.00"),
                             Codes = orderDetail.OrderCodeMappings.Select(s => s.DataMatrix.Code).ToList(),
-                            OrderDetailId = orderDetail.Id
-                        });
+                            OrderDetailId = orderDetail.Id,
+                        };
+
+                        bill.AmountInItems = orderDetail.UnitOfMeasurement == UnitOfMeasurement.Item
+                            ? orderDetail.Quantity
+                            : orderDetail.UnitOfMeasurement == UnitOfMeasurement.Box
+                                ? orderDetail.Quantity * orderDetail.Product.AmountInBox
+                                : orderDetail.Quantity * orderDetail.Product.AmountInPallet;
+
+                        bill.TotalVat = bill.AmountInItems * orderDetail.Vat;
+
+                        orderBills.Add(bill);
                     }
 
                     if (orderDetail.OrderCodeMappings.Any(s => s.BoxId.HasValue && s.Box != null && s.Box.DataMatrices != null && s.Box.DataMatrices.Any()))
                     {
-                        orderBills.Add(new OrderDetailsBillModel
+                        var orderCodeMappingCount = orderDetail.OrderCodeMappings.Count;
+
+                        var bill = new OrderDetailsBillModel
                         {
                             Barcode = orderDetail.Product.Barcode,
                             Name = orderDetail.Product.Name,
-                            Quantity = orderDetail.Quantity,
+                            Quantity = orderDetail.Quantity != orderCodeMappingCount
+                                ? orderDetail.Quantity - orderCodeMappingCount
+                                : orderDetail.Quantity,
                             Ikpu = orderDetail.Product.Ikpu,
-                            UnitOfMeasurement = "бл.",
+                            UnitOfMeasurement = "шт.",
                             Price = orderDetail.Price.ToString("#,##0.00"),
-                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
-                            Codes = orderDetail.OrderCodeMappings.SelectMany(s => s.Box.DataMatrices.Select(t => t.Code)).ToList(),
-                            OrderDetailId = orderDetail.Id
-                        });
+                            Vat = orderDetail.Vat.ToString("#,##0.00"),
+                            Codes = orderDetail.OrderCodeMappings
+                                .SelectMany(s => s.Box.DataMatrices.Select(t => t.Code)).ToList(),
+                            OrderDetailId = orderDetail.Id,
+                            
+                        };
+
+                        bill.AmountInItems = orderDetail.UnitOfMeasurement == UnitOfMeasurement.Item
+                            ? orderDetail.Quantity
+                            : orderDetail.UnitOfMeasurement == UnitOfMeasurement.Box
+                                ? orderDetail.Quantity * orderDetail.Product.AmountInBox
+                                : orderDetail.Quantity * orderDetail.Product.AmountInPallet;
+
+                        bill.TotalVat = bill.AmountInItems * orderDetail.Vat;
+
+                        orderBills.Add(bill);
                     }
 
-                    if (orderDetail.OrderCodeMappings.Any(s => s.PalletId.HasValue && s.Pallet != null && s.Pallet.Boxes != null && s.Pallet.Boxes.Any() 
-                                                               && s.Pallet.Boxes.Any(t => t.DataMatrices != null && t.DataMatrices.Any())))
+                    if (orderDetail.OrderCodeMappings.Any(s => s.PalletId.HasValue && s.Pallet != null && s.Pallet.PalletDataMatrix != null && s.Pallet.PalletDataMatrix.Any()))
                     {
-                        orderBills.Add(new OrderDetailsBillModel
+                        var orderCodeMappingCount = orderDetail.OrderCodeMappings.Count;
+
+                        var bill = new OrderDetailsBillModel
                         {
                             Barcode = orderDetail.Product.Barcode,
                             Name = orderDetail.Product.Name,
-                            Quantity = orderDetail.Quantity,
+                            Quantity = orderDetail.Quantity != orderCodeMappingCount
+                                ? orderDetail.Quantity - orderCodeMappingCount
+                                : orderDetail.Quantity,
                             Ikpu = orderDetail.Product.Ikpu,
-                            UnitOfMeasurement = "пал.",
+                            UnitOfMeasurement = "шт.",
                             Price = orderDetail.Price.ToString("#,##0.00"),
-                            Vat = Math.Round((orderDetail.Price * 0.15), 2, MidpointRounding.AwayFromZero).ToString(),
-                            Codes = orderDetail.OrderCodeMappings.Select(s => s.Pallet.Code).ToList(),
+                            Vat = orderDetail.Vat.ToString("#,##0.00"),
+                            Codes = isForPrinting
+                                ? orderDetail.OrderCodeMappings
+                                    .SelectMany(s => s.Pallet.PalletDataMatrix.Select(t => t.Code)).ToList()
+                                : orderDetail.OrderCodeMappings.Select(s => s.Pallet.Code).ToList(),
                             OrderDetailId = orderDetail.Id
-                        });
+                        };
+
+                        bill.AmountInItems = orderDetail.UnitOfMeasurement == UnitOfMeasurement.Item
+                            ? orderDetail.Quantity
+                            : orderDetail.UnitOfMeasurement == UnitOfMeasurement.Box
+                                ? orderDetail.Quantity * orderDetail.Product.AmountInBox
+                                : orderDetail.Quantity * orderDetail.Product.AmountInPallet;
+
+                        bill.TotalVat = bill.AmountInItems * orderDetail.Vat;
+
+                        orderBills.Add(bill);
                     }
                 }
 

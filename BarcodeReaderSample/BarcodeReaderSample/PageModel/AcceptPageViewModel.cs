@@ -61,13 +61,26 @@ namespace BarcodeReaderSample.PageModel
             BaseApiService = new BaseApiService();
             ConfirmCommand = new Command(Confirm);
 
-            var getTotal = DbService.GetOrderTotal(orderId);
-            if (getTotal.Result == OperationStatus.Success)
-                Total = getTotal.Value;
+            var getOrderDetails = DbService.GetOrderDetails(_orderId);
+            if (getOrderDetails.Result != OperationStatus.Success)
+            {
+                Application.Current.MainPage.DisplayAlert("Ошибка", getOrderDetails.ErrorMessage, "ОК");
+            }
+            else
+            {
+                Total = (int)getOrderDetails.Value.Sum(
+                    t => t.AssembledAmount * t.AggregationQuantity * t.Price);
+            }
         }
 
         private async void Confirm()
         {
+            if (Total == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Сумма нулевая", "ОК");
+                return;
+            }
+
             if (Cash + Terminal != Total)
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", "Сумма не верная", "ОК");
@@ -87,7 +100,8 @@ namespace BarcodeReaderSample.PageModel
                     ConfirmProductsModels = getDataMatrixCode.Value.Select(s => new ConfirmProductsModel
                     {
                         OrderDetailId = s.OrderDetailId,
-                        Codes = s.Codes
+                        Codes = s.Codes,
+                        Amount = s.Quantity
                     }).ToList()
                 };
 

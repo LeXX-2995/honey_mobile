@@ -235,14 +235,51 @@ namespace TraceIQ.Expeditor.PageModels
                 return;
             }
 
-            var updateOrderQrUrl = DbService.UpdateOrderQrUrl(_orderId, getOrderQrUrl.Value.FiscalBoxData);
+            getOrderQrUrl.Value.Id = _orderId;
+
+            var updateOrderQrUrl = DbService.UpdateOrderQrUrl(getOrderQrUrl.Value);
             if(updateOrderQrUrl.Result != OperationStatus.Success)
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", updateOrderQrUrl.ErrorMessage, "ОК"); 
                 return;
             }
 
-            await Navigation.PushAsync(new LabelPrinterPage(_orderId, DbService));
+            var getOrderDetails = DbService.GetOrderDetails(_orderId);
+            if (getOrderDetails.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", getOrderDetails.ErrorMessage, "ОК");
+                return;
+            }
+            
+            var total = (int)getOrderDetails.Value.Sum(
+                    t => t.AssembledAmount * t.AggregationQuantity * t.Price);
+
+            if(total == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Сумма нулевая", "ОК");
+                return;
+            }
+
+            var getSetting = BaseApiService.GetSetting();
+            if (getSetting.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", getSetting.ErrorMessage, "ОК");
+                return;
+            }
+
+            if(getSetting.Value == null)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "ИНН не найден", "ОК");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(getSetting.Value.Inn))
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "ИНН не найден", "ОК");
+                return;
+            }
+
+            await Navigation.PushAsync(new LabelPrinterPage(_orderId, DbService, total, getSetting.Value.Inn));
         }
 
         private async void Reject()
@@ -254,8 +291,27 @@ namespace TraceIQ.Expeditor.PageModels
         {
             if (OrderDetails.Any(s => s.Amount != s.AssembledAmount))
             {
-                await Application.Current.MainPage.DisplayAlert("Ошибка", "Не все позиции были собраны", "ОК");
-                return;
+                var getOrderQrUrl = BaseApiService.GetOrderQrUrl(_orderId);
+                if (getOrderQrUrl.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", getOrderQrUrl.ErrorMessage, "ОК");
+                    return;
+                }
+
+                if (!getOrderQrUrl.Value.PartialShipmentAllowed)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Не все позиции были собраны", "ОК");
+                    return;
+                }
+
+                getOrderQrUrl.Value.Id = _orderId;
+
+                var updateOrderQrUrl = DbService.UpdateOrderQrUrl(getOrderQrUrl.Value);
+                if (updateOrderQrUrl.Result != OperationStatus.Success)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", updateOrderQrUrl.ErrorMessage, "ОК");
+                    return;
+                }
             }
 
             if(!PaymentType.HasValue)

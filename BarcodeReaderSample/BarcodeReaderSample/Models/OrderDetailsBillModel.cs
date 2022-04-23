@@ -21,6 +21,9 @@ namespace BarcodeReaderSample.Models
 
         public string Vat { get; set; }
 
+        public double TotalVat { get; set; }
         public List<string> Codes { get; set; }
+
+        public int AmountInItems { get; set; }
     }
 }

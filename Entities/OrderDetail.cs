@@ -19,6 +19,7 @@ namespace Entities
         public Guid ProductId { get; set; }
         public UnitOfMeasurement UnitOfMeasurement { get; set; }
         public double Price { get; set; }
+        public double Vat { get; set; }
         public double Total { get; set; }
         public Order Order { get; set; }
         public Product Product { get; set; }

@@ -36,7 +36,6 @@ public class MonoPackageManager_Resources {
 		"DevExpress.XamarinForms.Grid.dll",
 		"DevExpress.XamarinForms.Navigation.Android.dll",
 		"DevExpress.XamarinForms.Navigation.dll",
-		"Entities.dll",
 		"FormsViewGroup.dll",
 		"FreshIOC.dll",
 		"FreshMvvm.dll",
@@ -83,6 +82,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Jetbrains.Annotations.dll",
 		"Xamarin.Kotlin.StdLib.Common.dll",
 		"Xamarin.Kotlin.StdLib.dll",
+		"Entities.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

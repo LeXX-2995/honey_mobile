@@ -40,11 +40,11 @@ namespace BarcodeReaderSample.Interface
         OperationResult<int> GetOrderTotal(Guid orderId);
         OperationResult<Order> GetOrder(Guid orderId);
         OperationResult CompleteOrder(Guid orderId);
-        OperationResult UpdateOrderQrUrl(Guid orderId, string qrUrl);
+        OperationResult UpdateOrderQrUrl(Order order);
         OperationResult RejectOrder(Guid orderId);
         OperationResult DeleteAllData();
 
         OperationResult<bool> CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel);
-        OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId);
+        OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId, bool isForPrinting = false);
     }
 }

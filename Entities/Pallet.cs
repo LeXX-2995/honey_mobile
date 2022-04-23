@@ -15,6 +15,6 @@ namespace Entities
         public Guid ProductId { get; set; }
         public Product Product { get; set; }
         public bool IsDisAggregated { get; set; }
-        public List<Box> Boxes { get; set; }
+        public List<PalletDataMatrix> PalletDataMatrix { get; set; }
     }
 }
