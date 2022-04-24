@@ -73,6 +73,18 @@ namespace BarcodeReaderSample.PageModel
             }
         }
 
+        public void Recalculate(bool isCash = true)
+        {
+            if (isCash && Cash != 0)
+            {
+                Terminal = Total - Cash;
+            }
+            else if(Terminal != 0)
+            {
+                Cash = Total - Terminal;
+            }
+        }
+
         private async void Confirm()
         {
             if (Total == 0)
@@ -110,7 +122,7 @@ namespace BarcodeReaderSample.PageModel
                     await Application.Current.MainPage.DisplayAlert("Ошибка", sendAccept.Value.ErrorMessage, "ОК");
                 else
                 {
-                    var updateOrder = DbService.UpdateOrderWaiting(_orderId, Cash, Total);
+                    var updateOrder = DbService.UpdateOrderWaiting(_orderId, Cash, Terminal);
                     if (updateOrder.Result != OperationStatus.Success)
                     {
                         await Application.Current.MainPage.DisplayAlert("Ошибка", sendAccept.Value.ErrorMessage, "ОК");

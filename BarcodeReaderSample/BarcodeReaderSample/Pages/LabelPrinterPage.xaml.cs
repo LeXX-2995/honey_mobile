@@ -30,7 +30,9 @@ namespace BarcodeReaderSample.Pages
         private FiscalBoxResponseModel FiscalBoxResponseModel;
         private readonly Order _order;
         private readonly string _inn;
-        public LabelPrinterPage(Guid orderId, IDbService dbService, double total, string inn)
+        private readonly string _companyName;
+        private int _billCount;
+        public LabelPrinterPage(Guid orderId, IDbService dbService, double total, string inn, string companyName)
         {
             InitializeComponent();
             _orderId = orderId;
@@ -48,11 +50,19 @@ namespace BarcodeReaderSample.Pages
 
             _total = total;
             _inn = inn;
+            _companyName = companyName;
+
+            var getSetting = _dbService.GetSetting();
+            if (getSetting.Result != OperationStatus.Success)
+                DisplayAlert("Ошибка", getSetting.ErrorMessage, "OK");
+
+            _billCount = getSetting.Value.BillCount + 1;
 
             FiscalBoxResponseModel =
                 JsonConvert.DeserializeObject<FiscalBoxResponseModel>(getOrder.Value.FiscalBoxData);
         }
-        async void OnPrintLabelClicked(object sender, EventArgs e)
+
+        private async void OnPrintLabelClicked(object sender, EventArgs e)
         {
             if (!Orders.Any())
             {
@@ -88,13 +98,19 @@ namespace BarcodeReaderSample.Pages
                 int xPos = 16;
                 int yPos = 32;
 
-                await _printer.setLength(1000 + Orders.Count * 700, 0, 'C', 0);
+                await _printer.setLength(1000 + Orders.Count * 400, 0, 'C', 0);
                 _printer.setTextEncoding(1251);
 
                 // Bitmap Font
                 await _printer.setCharacterset((int)LabelCodePage.WPC1251, (int)ICS.USA);
 
                 //-------------------
+
+                await _printer.drawTextVectorFont("Копия 1", (MAX_WIDTH / 2), yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.CENTER);
+                yPos += 35;
+
+                await _printer.drawTextVectorFont(_companyName, xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+                yPos += 35;
 
                 await _printer.drawTextVectorFont("ИНН: ", xPos , yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
                 
@@ -111,7 +127,7 @@ namespace BarcodeReaderSample.Pages
                 //-------------------
                 await _printer.drawTextVectorFont($"Номер чека: ", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
 
-                await _printer.drawTextVectorFont($"№12", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
+                await _printer.drawTextVectorFont($"№{_billCount}", MAX_WIDTH - 24, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.RIGHT);
                 yPos += 35;
 
                 //-------------------
@@ -210,6 +226,8 @@ namespace BarcodeReaderSample.Pages
                     
                 // 'printBuffer' method must be called at the end.
                 await _printer.printBuffer(1);
+
+                await Task.Run(() => _dbService.IncrementCounter());
             }
             catch (Exception ex)
             {
@@ -252,7 +270,8 @@ namespace BarcodeReaderSample.Pages
                 }
             }
         }
-        async void OnDeviceOpenClicked(object sender, EventArgs e)
+
+        private async void OnDeviceOpenClicked(object sender, EventArgs e)
         {
             // Prepares to communicate with the printer 
             _printer = await OpenPrinterService(_connectionInfo) as ILabelPrinterDevice;
@@ -263,7 +282,7 @@ namespace BarcodeReaderSample.Pages
             }
         }
 
-        async void OnDeviceCloseClicked(object sender, EventArgs e)
+        private async void OnDeviceCloseClicked(object sender, EventArgs e)
         {
             await _printSemaphore.WaitAsync();
 
@@ -280,12 +299,12 @@ namespace BarcodeReaderSample.Pages
             _printSemaphore.Release();
         }
 
-        async void OnDeviceSelectionClicked(object sender, EventArgs e)
+        private async void OnDeviceSelectionClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PrinterSelectionPage() { BindingContext = this });
         }
 
-        async void OnCheckPrinterStatusClicked(object sender, EventArgs e)
+        private async void OnCheckPrinterStatusClicked(object sender, EventArgs e)
         {
             // Prepares to communicate with the printer 
             _printer = await OpenPrinterService(_connectionInfo) as ILabelPrinterDevice;
@@ -351,7 +370,7 @@ namespace BarcodeReaderSample.Pages
             return _printer;
         }
 
-        List<string> Split(string str, int chunkSize)
+        private static List<string> Split(string str, int chunkSize)
         {
             return Enumerable.Range(0, str.Length / chunkSize)
                 .Select(i => str.Substring(i * chunkSize, chunkSize)).ToList();

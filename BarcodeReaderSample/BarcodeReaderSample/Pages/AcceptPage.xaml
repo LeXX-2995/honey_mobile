@@ -30,6 +30,7 @@
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     Keyboard="Numeric"
+                    Unfocused="Cash_OnUnfocused"
                     Margin="5">
                 </Entry>
             </StackLayout>
@@ -41,6 +42,7 @@
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     Keyboard="Numeric"
+                    Unfocused="Terminal_OnUnfocused"
                     Margin="5">
                 </Entry>
             </StackLayout>

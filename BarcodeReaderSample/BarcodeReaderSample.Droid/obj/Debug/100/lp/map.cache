@@ -75,6 +75,7 @@ Xamarin.Google.Android.Material.dll
 Xamarin.Google.Guava.ListenableFuture.dll
 Xamarin.Jetbrains.Annotations.dll
 Xamarin.Kotlin.StdLib.dll
+DataCollectionLib.dll
 androidx.documentfile.documentfile.aar
 androidx.annotation.annotation-experimental.aar
 androidx.multidex.multidex.aar
@@ -126,4 +127,3 @@ androidx.palette.palette.aar
 androidx.mediarouter.mediarouter.aar
 androidx.palette.palette-ktx.aar
 androidx.autofill.autofill.aar
-DataCollectionLib.dll

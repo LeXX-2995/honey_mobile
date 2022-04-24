@@ -279,7 +279,13 @@ namespace TraceIQ.Expeditor.PageModels
                 return;
             }
 
-            await Navigation.PushAsync(new LabelPrinterPage(_orderId, DbService, total, getSetting.Value.Inn));
+            if (string.IsNullOrWhiteSpace(getSetting.Value.CompanyName))
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Наименование организации пустая", "ОК");
+                return;
+            }
+
+            await Navigation.PushAsync(new LabelPrinterPage(_orderId, DbService, total, getSetting.Value.Inn, getSetting.Value.CompanyName));
         }
 
         private async void Reject()

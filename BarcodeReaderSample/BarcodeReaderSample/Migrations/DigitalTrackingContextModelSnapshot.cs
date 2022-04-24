@@ -307,6 +307,9 @@ namespace MIgrationCreator.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("BillCount")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Port")
                         .HasColumnType("INTEGER");
 

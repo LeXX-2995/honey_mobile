@@ -19,5 +19,17 @@ namespace BarcodeReaderSample.Pages
 
             BindingContext = new AcceptPageViewModel(navigation, dbService, orderId);
         }
-	}
+
+        private void Cash_OnUnfocused(object sender, FocusEventArgs e)
+        {
+            var viewModel = (AcceptPageViewModel) BindingContext;
+            viewModel?.Recalculate();
+        }
+
+        private void Terminal_OnUnfocused(object sender, FocusEventArgs e)
+        {
+            var viewModel = (AcceptPageViewModel)BindingContext;
+            viewModel?.Recalculate(false);
+        }
+    }
 }

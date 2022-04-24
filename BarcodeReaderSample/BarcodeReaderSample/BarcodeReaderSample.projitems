@@ -27,9 +27,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220423204051_Initial.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220423204051_Initial.Designer.cs">
-      <DependentUpon>20220423204051_Initial.cs</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220424103311_Initial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\20220424103311_Initial.Designer.cs">
+      <DependentUpon>20220424103311_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Migrations\DigitalTrackingContextModelSnapshot.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Barcode.cs" />

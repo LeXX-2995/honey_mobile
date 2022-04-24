@@ -7,5 +7,6 @@ namespace BarcodeReaderSample.Models
     public class SettingModel
     {
         public string Inn { get; set; }
+        public string CompanyName { get; set; }
     }
 }

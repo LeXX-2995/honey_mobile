@@ -10,6 +10,7 @@ namespace BarcodeReaderSample.Interface
     public interface IDbService
     {
         OperationResult<Setting> GetSetting();
+        OperationResult IncrementCounter();
         OperationResult AddSetting(string url, int port);
         OperationResult<User> Login(string login, string password);
 
@@ -43,7 +44,7 @@ namespace BarcodeReaderSample.Interface
         OperationResult UpdateOrderQrUrl(Order order);
         OperationResult RejectOrder(Guid orderId);
         OperationResult DeleteAllData();
-
+        
         OperationResult<bool> CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel);
         OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId, bool isForPrinting = false);
     }

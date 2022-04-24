@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using Android.Content.Res;
+using Android.OS.Strictmode;
 using Android.Support.V7.Graphics;
 using BarcodeReaderSample.Interface;
 using BarcodeReaderSample.Models;
@@ -27,6 +28,25 @@ namespace BarcodeReaderSample.Database
                 {
                     Result = OperationStatus.Success,
                     Value = setting
+                };
+            });
+        }
+
+        public OperationResult IncrementCounter()
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var setting = db.Setting.FirstOrDefault();
+                if(setting == null)
+                    return OperationResult.Fail("Настройки не найдены");
+
+                setting.BillCount++;
+
+                db.SaveChanges();
+
+                return new OperationResult
+                {
+                    Result = OperationStatus.Success,
                 };
             });
         }
@@ -270,14 +290,10 @@ namespace BarcodeReaderSample.Database
                     db.DataMatrix.Add(dataMatrix);
                 }
 
-                //db.SaveChanges();
-
                 foreach (var box in codesMappings.Where(s => s.Box != null).Select(s => s.Box).ToList())
                 {
                     db.Boxes.Add(box);
                 }
-
-                //db.SaveChanges();
 
                 foreach (var pallet in codesMappings.Where(s => s.Pallet != null).Select(s => s.Pallet).ToList())
                 {
@@ -287,9 +303,13 @@ namespace BarcodeReaderSample.Database
                     db.Pallets.Add(pallet);
                 }
 
-                //db.SaveChanges();
-
                 db.CodesMappings.AddRange(codesMappings);
+
+                db.SaveChanges();
+
+                var setting = db.Setting.FirstOrDefault();
+                if (setting != null)
+                    setting.BillCount = 0;
 
                 db.SaveChanges();
 
@@ -793,7 +813,6 @@ namespace BarcodeReaderSample.Database
             });
         }
 
-
         public OperationResult UpdateOrderWaiting(Guid orderId, double cash, double terminal)
         {
             return DigitalTrackingContext.Run(db =>
@@ -970,6 +989,8 @@ namespace BarcodeReaderSample.Database
             });
         }
 
+        
+
         public OperationResult<bool> CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel)
         {
             return DigitalTrackingContext.Run(db =>
@@ -1033,7 +1054,7 @@ namespace BarcodeReaderSample.Database
                             Ikpu = orderDetail.Product.Ikpu,
                             UnitOfMeasurement = "шт.",
                             Quantity = orderDetail.Quantity != orderCodeMappingCount
-                                ? orderDetail.Quantity - orderCodeMappingCount
+                                ? orderCodeMappingCount
                                 : orderDetail.Quantity,
                             Price = orderDetail.Price.ToString("#,##0.00"),
                             Vat = orderDetail.Vat.ToString("#,##0.00"),
@@ -1042,10 +1063,10 @@ namespace BarcodeReaderSample.Database
                         };
 
                         bill.AmountInItems = orderDetail.UnitOfMeasurement == UnitOfMeasurement.Item
-                            ? orderDetail.Quantity
+                            ? bill.Quantity
                             : orderDetail.UnitOfMeasurement == UnitOfMeasurement.Box
-                                ? orderDetail.Quantity * orderDetail.Product.AmountInBox
-                                : orderDetail.Quantity * orderDetail.Product.AmountInPallet;
+                                ? bill.Quantity * orderDetail.Product.AmountInBox
+                                : bill.Quantity * orderDetail.Product.AmountInPallet;
 
                         bill.TotalVat = bill.AmountInItems * orderDetail.Vat;
 
@@ -1061,7 +1082,7 @@ namespace BarcodeReaderSample.Database
                             Barcode = orderDetail.Product.Barcode,
                             Name = orderDetail.Product.Name,
                             Quantity = orderDetail.Quantity != orderCodeMappingCount
-                                ? orderDetail.Quantity - orderCodeMappingCount
+                                ? orderCodeMappingCount
                                 : orderDetail.Quantity,
                             Ikpu = orderDetail.Product.Ikpu,
                             UnitOfMeasurement = "шт.",
@@ -1074,12 +1095,12 @@ namespace BarcodeReaderSample.Database
                         };
 
                         bill.AmountInItems = orderDetail.UnitOfMeasurement == UnitOfMeasurement.Item
-                            ? orderDetail.Quantity
+                            ? bill.Quantity
                             : orderDetail.UnitOfMeasurement == UnitOfMeasurement.Box
-                                ? orderDetail.Quantity * orderDetail.Product.AmountInBox
-                                : orderDetail.Quantity * orderDetail.Product.AmountInPallet;
+                                ? bill.Quantity * orderDetail.Product.AmountInBox
+                                : bill.Quantity * orderDetail.Product.AmountInPallet;
 
-                        bill.TotalVat = bill.AmountInItems * orderDetail.Vat;
+                        bill.TotalVat = bill.AmountInItems * Math.Round(orderDetail.Vat, 2, MidpointRounding.AwayFromZero);
 
                         orderBills.Add(bill);
                     }
@@ -1093,7 +1114,7 @@ namespace BarcodeReaderSample.Database
                             Barcode = orderDetail.Product.Barcode,
                             Name = orderDetail.Product.Name,
                             Quantity = orderDetail.Quantity != orderCodeMappingCount
-                                ? orderDetail.Quantity - orderCodeMappingCount
+                                ? orderCodeMappingCount
                                 : orderDetail.Quantity,
                             Ikpu = orderDetail.Product.Ikpu,
                             UnitOfMeasurement = "шт.",
@@ -1107,10 +1128,10 @@ namespace BarcodeReaderSample.Database
                         };
 
                         bill.AmountInItems = orderDetail.UnitOfMeasurement == UnitOfMeasurement.Item
-                            ? orderDetail.Quantity
+                            ? bill.Quantity
                             : orderDetail.UnitOfMeasurement == UnitOfMeasurement.Box
-                                ? orderDetail.Quantity * orderDetail.Product.AmountInBox
-                                : orderDetail.Quantity * orderDetail.Product.AmountInPallet;
+                                ? bill.Quantity * orderDetail.Product.AmountInBox
+                                : bill.Quantity * orderDetail.Product.AmountInPallet;
 
                         bill.TotalVat = bill.AmountInItems * orderDetail.Vat;
 
