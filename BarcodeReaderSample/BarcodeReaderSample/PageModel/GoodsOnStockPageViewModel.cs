@@ -103,6 +103,7 @@ namespace BarcodeReaderSample.PageModel
                 }
             }
 
+            //Creating Return Reports
             var model = new ReportReturnModel
             { 
                 Id = Guid.NewGuid(),

@@ -838,6 +838,19 @@ namespace BarcodeReaderSample.Database
         {
             return DigitalTrackingContext.Run(db =>
             {
+                var reportReturns = db.ReportReturn.AsNoTracking().ToList();
+
+                if (reportReturns.Any())
+                {
+                    var reportReturnOrderDetailIds = reportReturns.Where(s => !string.IsNullOrWhiteSpace(s.OrderDetails))
+                        .SelectMany(s => s.OrderDetails.Split(",").Select(Guid.Parse).ToList()).ToList();
+
+                    var orderDetIds = model.OrderDetailsModels.SelectMany(s => s.OrderDetailIds).ToList();
+
+                    if (orderDetIds.Any(s => reportReturnOrderDetailIds.Contains(s)))
+                        return OperationResult.Fail("Документ возврата был уже создан. Синхронизируйтесь пожалуйста.");
+                }
+
                 db.ReportReturn.Add(new ReportReturn
                 {
                     Id = model.Id,
@@ -991,7 +1004,7 @@ namespace BarcodeReaderSample.Database
 
         
 
-        public OperationResult<bool> CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel)
+        public OperationResult CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel)
         {
             return DigitalTrackingContext.Run(db =>
             {
@@ -999,24 +1012,40 @@ namespace BarcodeReaderSample.Database
 
                 var orderDetIds = detailsModel.SelectMany(s => s.OrderDetailIds).ToList();
 
+                if(!reportReturns.Any())
+                    return new OperationResult
+                    {
+                        Result = OperationStatus.Failed,
+                        ErrorMessage = "Есть остатки на транспорте и не создан документ возврата"
+                    };
+
+                var reportReturnOrderDetailIds = reportReturns.Where(s => !string.IsNullOrWhiteSpace(s.OrderDetails))
+                    .SelectMany(s => s.OrderDetails.Split(",").Select(Guid.Parse).ToList()).ToList();
+                
+                if(!orderDetIds.Any(s => reportReturnOrderDetailIds.Contains(s)))
+                    return new OperationResult
+                    {
+                        Result = OperationStatus.Failed,
+                        ErrorMessage = "Есть остатки на транспорте и не создан документ возврата"
+                    };
+
                 foreach (var reportReturn in reportReturns)
                 {
                     if (!string.IsNullOrWhiteSpace(reportReturn.OrderDetails))
                     {
                         var orderDetailIds = reportReturn.OrderDetails.Split(",").Select(Guid.Parse).ToList();
                         if (orderDetIds.Any(s => orderDetailIds.Contains(s)) && reportReturn.ReturnStatus != ReturnStatus.Completed)
-                            return new OperationResult<bool>
+                            return new OperationResult
                             {
-                                Result = OperationStatus.Success,
-                                Value = false
+                                Result = OperationStatus.Failed,
+                                ErrorMessage = "Есть незавершенные документы возвратов"
                             };
                     }
                 }
 
-                return new OperationResult<bool>
+                return new OperationResult
                 {
                     Result = OperationStatus.Success,
-                    Value = true
                 };
             });
         }

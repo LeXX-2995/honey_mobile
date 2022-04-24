@@ -13,9 +13,9 @@ namespace BarcodeReaderSample.PageModel
 {
     public class AcceptPageViewModel : BaseViewModel
     {
-        private int _cash;
+        private int? _cash;
 
-        public int Cash
+        public int? Cash
         {
             get => _cash;
             set
@@ -25,9 +25,9 @@ namespace BarcodeReaderSample.PageModel
             }
         }
 
-        private int _terminal;
+        private int? _terminal;
 
-        public int Terminal
+        public int? Terminal
         {
             get => _terminal;
             set
@@ -73,14 +73,36 @@ namespace BarcodeReaderSample.PageModel
             }
         }
 
-        public void Recalculate(bool isCash = true)
+        public async void Recalculate(bool isCash = true)
         {
-            if (isCash && Cash != 0)
+            if (isCash && Cash.HasValue && Cash.Value != default)
             {
+                if (Cash > Total)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Цена не может быть больше общей суммы", "ОК");
+                    Cash = default;
+                    Terminal = default;
+                    return;
+                }
+
+                if (Cash < 10)
+                    Cash = 0;
+                
                 Terminal = Total - Cash;
             }
-            else if(Terminal != 0)
+            else if(Terminal.HasValue && Terminal.Value != default)
             {
+                if (Terminal > Total)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Цена не может быть больше общей суммы", "ОК");
+                    Cash = default;
+                    Terminal = default;
+                    return;
+                }
+
+                if (Terminal < 10)
+                    Terminal = 0;
+
                 Cash = Total - Terminal;
             }
         }
@@ -92,6 +114,15 @@ namespace BarcodeReaderSample.PageModel
                 await Application.Current.MainPage.DisplayAlert("Ошибка", "Сумма нулевая", "ОК");
                 return;
             }
+
+            if(!Cash.HasValue && !Terminal.HasValue)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Цены не указаны", "ОК");
+                return;
+            }
+
+            Cash ??= default;
+            Terminal ??= default;
 
             if (Cash + Terminal != Total)
             {
@@ -106,8 +137,8 @@ namespace BarcodeReaderSample.PageModel
             {
                 var model = new ConfirmOrderModel
                 {
-                    Cash = Cash,
-                    Terminal = Terminal,
+                    Cash = Cash.Value,
+                    Terminal = Terminal.Value,
                     OrderId = _orderId,
                     ConfirmProductsModels = getDataMatrixCode.Value.Select(s => new ConfirmProductsModel
                     {
@@ -122,7 +153,7 @@ namespace BarcodeReaderSample.PageModel
                     await Application.Current.MainPage.DisplayAlert("Ошибка", sendAccept.Value.ErrorMessage, "ОК");
                 else
                 {
-                    var updateOrder = DbService.UpdateOrderWaiting(_orderId, Cash, Terminal);
+                    var updateOrder = DbService.UpdateOrderWaiting(_orderId, Cash.Value, Terminal.Value);
                     if (updateOrder.Result != OperationStatus.Success)
                     {
                         await Application.Current.MainPage.DisplayAlert("Ошибка", sendAccept.Value.ErrorMessage, "ОК");

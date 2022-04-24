@@ -101,12 +101,6 @@ namespace BarcodeReaderSample.PageModel
                     await Application.Current.MainPage.DisplayAlert("Ошибка", checkWithReportReturns.ErrorMessage, "ОК");
                     return;
                 }
-
-                if(!checkWithReportReturns.Value)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка", "У вас есть незавершенные документы возвратов", "ОК");
-                    return;
-                }
             }
 
             var deleteAllData = DbService.DeleteAllData();

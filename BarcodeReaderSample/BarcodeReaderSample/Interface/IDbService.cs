@@ -45,7 +45,7 @@ namespace BarcodeReaderSample.Interface
         OperationResult RejectOrder(Guid orderId);
         OperationResult DeleteAllData();
         
-        OperationResult<bool> CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel);
+        OperationResult CheckGoodsOnStockWithReportReturns(List<OrderDetailsModel> detailsModel);
         OperationResult<List<OrderDetailsBillModel>> GetOrderDetailBill(Guid orderId, bool isForPrinting = false);
     }
 }
