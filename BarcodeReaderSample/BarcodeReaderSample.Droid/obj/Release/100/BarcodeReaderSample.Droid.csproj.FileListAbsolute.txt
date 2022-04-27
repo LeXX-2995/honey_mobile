@@ -1046,3 +1046,4 @@ C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\B
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\androidx\proguard\af12630d-e99e-46ce-8a2d-be8cc201d610.txt
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\androidx\proguard\f485ae30-3983-4ca9-82d1-7fbff2f87789.txt
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\androidx\proguard\fa7da4d8-4075-425e-af21-6ba60ae6a7a7.txt
+C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\BarcodeReaderSample\BarcodeReaderSample.Droid\obj\Release\100\lp\77\jl\files.cache

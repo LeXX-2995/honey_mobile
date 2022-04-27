@@ -98,7 +98,17 @@ namespace BarcodeReaderSample.Pages
                 int xPos = 16;
                 int yPos = 32;
 
-                await _printer.setLength(1000 + Orders.Count * 400, 0, 'C', 0);
+                const int labelIntroductionLength = 250;
+                var orderNamesLength = Orders.Select(s => Split(s.Name, 20).Count).Sum() * 25;
+                const int orderDetailsLength = 105;
+                var orderCodesLength = Orders.Select(s => s.Codes.Count).Sum() * 20;
+                const int orderConclusionLength = 315;
+                const int qrCodeLength = 500;
+
+                var total = labelIntroductionLength + orderNamesLength + orderDetailsLength + orderCodesLength +
+                            orderConclusionLength + qrCodeLength;
+
+                await _printer.setLength(total, 0, 'C', 0);
                 _printer.setTextEncoding(1251);
 
                 // Bitmap Font

@@ -590,7 +590,7 @@ namespace BarcodeReaderSample.Database
                 }
 
                 if(!productId.HasValue)
-                    return OperationResult<ProductApproveModel>.Fail("Товар не найден");
+                    return OperationResult<ProductApproveModel>.Fail($"Товар с кодом {code} не найден");
 
                 var orderDetail = db.OrderDetails
                     .AsNoTracking()
