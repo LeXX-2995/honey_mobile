@@ -33,9 +33,9 @@
 
                 <dataGrid:TextColumn FieldName="ProductName" ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BackgroundColor="DarkGreen" FontColor="White"/>
                 <dataGrid:TextColumn FieldName="UnitOfMeasurementText" Row="1" ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <dataGrid:TextColumn FieldName="AmountText" Row="2" Column="0"/>
 
-                <dataGrid:NumberColumn FieldName="Amount" Row="2" ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <dataGrid:TextColumn FieldName="AmountText" Row="2" Column="0"/>
+                <dataGrid:NumberColumn FieldName="Amount" Row="2" Column="1" ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </dataGrid:DataGridView>
 
             <editors:SimpleButton Grid.Row="1" 

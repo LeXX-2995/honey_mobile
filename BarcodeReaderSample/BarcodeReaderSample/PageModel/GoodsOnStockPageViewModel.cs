@@ -8,6 +8,7 @@ using BarcodeReaderSample.API;
 using BarcodeReaderSample.Database;
 using BarcodeReaderSample.Models;
 using Entities;
+using Newtonsoft.Json;
 using NobelXamarin.Helpers;
 using TraceIQ.Expeditor.API;
 using TraceIQ.Expeditor.Models;
@@ -110,6 +111,8 @@ namespace BarcodeReaderSample.PageModel
                 OrderDetailsModels = GoodsOnStock.ToList(),
                 TransportId = RestContext.User.TransportId
             };
+
+            var test = JsonConvert.SerializeObject(model);
 
             var createReportReturn = DbService.CreateReportReturn(model);
             if (createReportReturn.Result != OperationStatus.Success)

@@ -119,7 +119,7 @@ namespace BarcodeReaderSample.Pages
                 await _printer.drawTextVectorFont("Копия 1", (MAX_WIDTH / 2), yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.CENTER);
                 yPos += 35;
 
-                await _printer.drawTextVectorFont(_companyName, xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
+                await _printer.drawTextVectorFont(_companyName, xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 15, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
                 yPos += 35;
 
                 await _printer.drawTextVectorFont("ИНН: ", xPos , yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
@@ -154,6 +154,9 @@ namespace BarcodeReaderSample.Pages
                     await _printer.drawTextVectorFont($"-----------------------------------------", xPos, yPos, (char)LabelVectorFont.VECTOR_FONT_ASCII, 28, 28, 0, 0, false, false, false, false, (int)LabelAlignment.LEFT);
 
                     var splitNames = Split(order.Name, 20);
+
+                    if(splitNames.Count == 0)
+                        splitNames.Add(order.Name);
 
                     yPos += 35;
                     var yPosName = yPos;

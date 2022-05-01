@@ -97,6 +97,13 @@ namespace TraceIQ.Expeditor.PageModels
                 return;
             }
 
+            var anyCodeMappings = DbService.AnyCodeMappings();
+            if (anyCodeMappings.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", anyCodeMappings.ErrorMessage, "ОК");
+                return;
+            }
+
             await Navigation.PushAsync(new ClientsPage(Navigation, Scanner, DbService));
         }
 

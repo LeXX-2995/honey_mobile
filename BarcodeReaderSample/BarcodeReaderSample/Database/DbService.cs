@@ -297,7 +297,7 @@ namespace BarcodeReaderSample.Database
 
                 foreach (var pallet in codesMappings.Where(s => s.Pallet != null).Select(s => s.Pallet).ToList())
                 {
-                    if(pallet.PalletDataMatrix == null || !pallet.PalletDataMatrix.Any())
+                    if (pallet.PalletDataMatrix == null || !pallet.PalletDataMatrix.Any())
                         return OperationResult.Fail("Датаматриксы паллетных кодов не найдены");
 
                     db.Pallets.Add(pallet);
@@ -312,6 +312,26 @@ namespace BarcodeReaderSample.Database
                     setting.BillCount = 0;
 
                 db.SaveChanges();
+
+                return new OperationResult
+                {
+                    Result = OperationStatus.Success
+                };
+            });
+        }
+
+        public OperationResult AnyCodeMappings()
+        {
+            return DigitalTrackingContext.Run(db =>
+            {
+                var anyCodeMappings = db.CodesMappings.AsNoTracking().Any();
+
+                if (!anyCodeMappings)
+                    return new OperationResult
+                    {
+                        Result = OperationStatus.Failed,
+                        ErrorMessage = "Коды маркировки не найдены"
+                    };
 
                 return new OperationResult
                 {

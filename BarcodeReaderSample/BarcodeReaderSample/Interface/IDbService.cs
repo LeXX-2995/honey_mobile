@@ -23,7 +23,7 @@ namespace BarcodeReaderSample.Interface
         OperationResult AddOrderDetails(List<OrderDetail> orderDetails);
         OperationResult AddCodeMappings(List<CodesMapping> codesMappings);
 
-
+        OperationResult AnyCodeMappings();
         OperationResult<List<ClientsModel>> GetClients();
         OperationResult<List<OrdersModel>> GetOrders(Guid supplierId);
         OperationResult<List<OrderDetailsModel>> GetOrderDetails(Guid orderId);
