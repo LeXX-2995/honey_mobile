@@ -99,7 +99,7 @@ namespace BarcodeReaderSample.Pages
                 int yPos = 32;
 
                 const int labelIntroductionLength = 250;
-                var orderNamesLength = Orders.Select(s => Split(s.Name, 20).Count).Sum() * 25;
+                var orderNamesLength = Orders.Select(s => Split(s.Name, 20).Count == 0 ? 1 : Split(s.Name, 20).Count).Sum() * 25;
                 const int orderDetailsLength = 105;
                 var orderCodesLength = Orders.Select(s => s.Codes.Count).Sum() * 20;
                 const int orderConclusionLength = 315;

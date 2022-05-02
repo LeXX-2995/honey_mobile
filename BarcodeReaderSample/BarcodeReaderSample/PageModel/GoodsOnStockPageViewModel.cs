@@ -112,19 +112,17 @@ namespace BarcodeReaderSample.PageModel
                 TransportId = RestContext.User.TransportId
             };
 
-            var test = JsonConvert.SerializeObject(model);
+            var sendReportReturn = BaseApiService.SendReportReturn(model);
+            if (sendReportReturn.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", sendReportReturn.ErrorMessage, "ОК");
+                return;
+            }
 
             var createReportReturn = DbService.CreateReportReturn(model);
             if (createReportReturn.Result != OperationStatus.Success)
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", createReportReturn.ErrorMessage, "ОК");
-                return;
-            }
-
-            var sendReportReturn = BaseApiService.SendReportReturn(model);
-            if(sendReportReturn.Result != OperationStatus.Success)
-            {
-                await Application.Current.MainPage.DisplayAlert("Ошибка", sendReportReturn.ErrorMessage, "ОК");
                 return;
             }
 
