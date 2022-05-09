@@ -287,12 +287,14 @@ namespace BarcodeReaderSample.Database
 
                 foreach (var dataMatrix in codesMappings.Where(s => s.DataMatrix != null).Select(s => s.DataMatrix).ToList())
                 {
+
                     db.DataMatrix.Add(dataMatrix);
                 }
 
                 foreach (var box in codesMappings.Where(s => s.Box != null).Select(s => s.Box).ToList())
                 {
                     db.Boxes.Add(box);
+                    db.SaveChanges();
                 }
 
                 foreach (var pallet in codesMappings.Where(s => s.Pallet != null).Select(s => s.Pallet).ToList())
@@ -578,6 +580,7 @@ namespace BarcodeReaderSample.Database
                     dataMatrix = db.DataMatrix
                         .AsNoTracking()
                         .Include(s => s.Product)
+                        .Include(s => s.Box)
                         .FirstOrDefault(s => s.Code.Trim().Contains(code.Substring(0, code.Length - 7)));
                 }
 
@@ -998,17 +1001,32 @@ namespace BarcodeReaderSample.Database
                 var codeMappings = db.CodesMappings.ToList();
                 db.CodesMappings.RemoveRange(codeMappings);
 
+                db.SaveChanges();
+
                 var orderDetails = db.OrderDetails.ToList();
                 db.OrderDetails.RemoveRange(orderDetails);
 
-                var dataMatrxiCodes = db.DataMatrix.ToList();
-                db.DataMatrix.RemoveRange(dataMatrxiCodes);
+                db.SaveChanges();
+
+                var dataMatrixCodes = db.DataMatrix.ToList();
+                db.DataMatrix.RemoveRange(dataMatrixCodes);
+
+                db.SaveChanges();
 
                 var boxes = db.Boxes.ToList();
                 db.Boxes.RemoveRange(boxes);
 
+                db.SaveChanges();
+
+                var palletDataMatrix = db.PalletDataMatrix.ToList();
+                db.PalletDataMatrix.RemoveRange(palletDataMatrix);
+
+                db.SaveChanges();
+
                 var pallet = db.Pallets.ToList();
                 db.Pallets.RemoveRange(pallet);
+
+                db.SaveChanges();
 
                 var orders = db.Orders.ToList();
                 db.Orders.RemoveRange(orders);
