@@ -11,6 +11,6 @@ namespace Entities
         Deferred = 3,
 
         [Display(Name = "Терминалом")]
-        OnRequest = 4
+        OnRequest = 4,
     }
 }

@@ -596,6 +596,9 @@ namespace BarcodeReaderSample.Database
                     unitOfMeasurement = UnitOfMeasurement.Item;
                     product = dataMatrix.Product;
                     itemId = dataMatrix.Id;
+
+                    if (dataMatrix.BoxId.HasValue && dataMatrix.Box != null)
+                        return OperationResult<ProductApproveModel>.Fail($"Это штучный товар находится в блоке {dataMatrix.Box.Code} и не разаггрегирована. Вы не можете ее отгрузить");
                 }
                 else if (box != null)
                 {
