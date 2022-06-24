@@ -103,7 +103,7 @@ namespace BarcodeReaderSample.PageModel
                     return;
                 }
             }
-
+             
             //Creating Return Reports
             var model = new ReportReturnModel
             { 
