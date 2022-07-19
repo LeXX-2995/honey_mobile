@@ -79,6 +79,30 @@ namespace TraceIQ.Expeditor.API
             return response;
         }
 
+        public static OperationResult Execute(string resource, Dictionary<string, string> parameters, Method method, object body = null)
+        {
+            if (string.IsNullOrWhiteSpace(resource))
+                return OperationResult.Fail("Не указан ресурс");
+
+            var request = CreateAuthorizedRequest(resource, parameters, method, body);
+            if (request == null)
+                return null;
+
+            var url = Client.BuildUri(request);
+
+            Client.FailOnDeserializationError = true;
+
+            var response = Client.Execute(request);
+
+            if (response.StatusCode == HttpStatusCode.BadRequest)
+                return OperationResult.Fail(response.Content);
+
+            if (response.StatusCode != HttpStatusCode.OK)
+                return OperationResult.Fail(response.StatusCode.ToString());
+
+            return OperationResult.Success();
+        }
+
         public static OperationResult<T> ExecuteScalar<T>(string resource, Dictionary<string, string> parameters, Method method, object body = null) where T : new()
         {
             if (string.IsNullOrWhiteSpace(resource))

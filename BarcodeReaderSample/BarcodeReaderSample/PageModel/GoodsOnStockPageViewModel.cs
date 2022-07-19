@@ -67,6 +67,13 @@ namespace BarcodeReaderSample.PageModel
             if (!GoodsOnStock.Any())
                 return;
 
+            var isAlive = BaseApiService.IsAlive();
+            if(isAlive.Result != OperationStatus.Success)
+            {
+                await Application.Current.MainPage.DisplayAlert("Ошибка", "Нет интернета", "ОК");
+                return;
+            }
+
             var anyIncompleteOrders = DbService.AnyInCompleteOrders();
             if (anyIncompleteOrders.Result != OperationStatus.Success)
             {

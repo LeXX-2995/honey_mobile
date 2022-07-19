@@ -21,5 +21,7 @@ namespace BarcodeReaderSample.Interface
         OperationResult<SettingModel> GetSetting();
         OperationResult<OperationResult> SendReportReturn(ReportReturnModel model);
         OperationResult<List<ReportReturn>> CheckReportReturnStatus(List<Guid> returnReportIds);
+
+        OperationResult IsAlive();
     }
 }

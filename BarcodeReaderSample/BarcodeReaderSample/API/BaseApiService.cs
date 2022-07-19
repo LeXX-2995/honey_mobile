@@ -29,6 +29,7 @@ namespace BarcodeReaderSample.API
         private const string ReportReturnResource = "Expeditor/ReportReturn";
         private const string CheckReportReturnStatusResource = "Expeditor/CheckReportReturnStatus";
         private const string GetSettingResource = "Expeditor/GetSetting";
+        private const string IsAliveResource = "Expeditor/IsAlive";
         public BaseApiService()
         {
             IDbService dbService = new DbService();
@@ -154,6 +155,15 @@ namespace BarcodeReaderSample.API
                 return OperationResult<List<ReportReturn>>.Fail(checkSetting.ErrorMessage);
 
             return RestContext.ExecuteScalar<List<ReportReturn>>(CheckReportReturnStatusResource, null, Method.POST, returnReportIds);
+        }
+
+        public OperationResult IsAlive()
+        {
+            var checkSetting = CheckSetting();
+            if (checkSetting.Result != OperationStatus.Success)
+                return OperationResult.Fail(checkSetting.ErrorMessage);
+
+            return RestContext.Execute(IsAliveResource, null, Method.GET);
         }
 
         private OperationResult CheckSetting()
