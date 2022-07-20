@@ -17,5 +17,10 @@ namespace BarcodeReaderSample.Pages
 			InitializeComponent();
             BindingContext = new SyncPageViewModel(navigation);
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
 	}
 }

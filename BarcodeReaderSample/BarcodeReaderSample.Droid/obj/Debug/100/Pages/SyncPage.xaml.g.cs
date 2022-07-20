@@ -21,9 +21,13 @@ namespace BarcodeReaderSample.Pages {
         private global::DevExpress.XamarinForms.DataGrid.DataGridView grid;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::DevExpress.XamarinForms.Popup.DXPopup popup;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SyncPage));
             grid = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DevExpress.XamarinForms.DataGrid.DataGridView>(this, "grid");
+            popup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DevExpress.XamarinForms.Popup.DXPopup>(this, "popup");
         }
     }
 }

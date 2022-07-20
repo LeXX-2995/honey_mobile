@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dataGrid="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
              xmlns:editors="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             xmlns:popup="http://schemas.devexpress.com/xamarin/2014/forms/popup"
              x:Class="BarcodeReaderSample.Pages.SyncPage">
     <NavigationPage.TitleView>
         <Label Text="Синхронизация" TextColor="White" FontSize="20" VerticalTextAlignment="Center"/>
@@ -28,6 +29,23 @@
                 Margin="10"
                 Command="{Binding StartReceivingCommand}"
                 IsVisible="{Binding IsSyncButtonEnabled}"/>
+
+            <popup:DXPopup x:Name="popup" AllowScrim="True" IsOpen="{Binding IsLoadingDialogVisible}">
+                <StackLayout>
+                    <Grid RowSpacing="15" ColumnSpacing="13" 
+                          Margin="10, 10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="60" />
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Text="Идет загрузка подождите..." FontSize="18"/>
+
+                        <Label Grid.Row="1" Text="{Binding LoadingCodesCount, Mode=TwoWay}" FontSize="20"/>
+                    </Grid>
+
+                </StackLayout>
+            </popup:DXPopup>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

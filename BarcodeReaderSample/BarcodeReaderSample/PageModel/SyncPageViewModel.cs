@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using BarcodeReaderSample.API;
 using BarcodeReaderSample.Database;
 using BarcodeReaderSample.Models;
+using BarcodeReaderSample.Pages;
 using Entities;
 using NobelXamarin.Helpers;
 using TraceIQ.Expeditor.API;
@@ -22,6 +23,7 @@ namespace BarcodeReaderSample.PageModel
         public ObservableCollection<SyncModel> SyncModels { get; set; }
         private readonly SynchronizationContext _mUiContext = SynchronizationContext.Current;
         public Command StartReceivingCommand { get; set; }
+
         private bool _isSyncButtonEnabled;
         public bool IsSyncButtonEnabled
         {
@@ -33,8 +35,36 @@ namespace BarcodeReaderSample.PageModel
             }
         }
 
-        public SyncPageViewModel(INavigation navigation)
+        private bool _isLoadingDialogVisible;
+
+        public bool IsLoadingDialogVisible
         {
+            get => _isLoadingDialogVisible;
+            set
+            {
+                _isLoadingDialogVisible = value;
+                OnPropertyChanged(nameof(IsLoadingDialogVisible));
+            }
+        }
+
+        private SyncPage page { get; set; }
+
+        private string _loadingCodesCount;
+
+        public string LoadingCodesCount
+        {
+            get => _loadingCodesCount;
+            set
+            {
+                _loadingCodesCount = value;
+                OnPropertyChanged(nameof(LoadingCodesCount));
+            }
+        }
+
+
+        public SyncPageViewModel(INavigation navigation, SyncPage page)
+        {
+            this.page = page;
             Navigation = navigation;
             DbService = new DbService();
             BaseApiService = new BaseApiService();
@@ -45,9 +75,17 @@ namespace BarcodeReaderSample.PageModel
             IsSyncButtonEnabled = true;
         }
 
+
+
+        private void SetHasNavigationBar(bool hasNavigationBar)
+        {
+            NavigationPage.SetHasNavigationBar(page, hasNavigationBar);
+        }
+
         public async void SyncData()
         {
             IsSyncButtonEnabled = false;
+            SetHasNavigationBar(false);
 
             var anyIncompleteOrders = DbService.AnyInCompleteOrders();
             if (anyIncompleteOrders.Result != OperationStatus.Success)
@@ -60,6 +98,7 @@ namespace BarcodeReaderSample.PageModel
             if(getReportReturns.Result != OperationStatus.Success)
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", getReportReturns.ErrorMessage, "ОК");
+                SetHasNavigationBar(true);
                 return;
             }
 
@@ -69,6 +108,7 @@ namespace BarcodeReaderSample.PageModel
                 if (getReportReturnsApi.Result != OperationStatus.Success)
                 {
                     await Application.Current.MainPage.DisplayAlert("Ошибка", getReportReturnsApi.ErrorMessage, "ОК");
+                    SetHasNavigationBar(true);
                     return;
                 }
 
@@ -76,12 +116,14 @@ namespace BarcodeReaderSample.PageModel
                 if (updateReports.Result != OperationStatus.Success)
                 {
                     await Application.Current.MainPage.DisplayAlert("Ошибка", updateReports.ErrorMessage, "ОК");
+                    SetHasNavigationBar(true);
                     return;
                 }
 
                 if (getReportReturnsApi.Value.Any(s => s.ReturnStatus != ReturnStatus.Completed))
                 {
                     await Application.Current.MainPage.DisplayAlert("Предупреждение", "У вас есть незавершенные документы возвратов", "ОК");
+                    SetHasNavigationBar(true);
                     return;
                 }
             }
@@ -90,6 +132,7 @@ namespace BarcodeReaderSample.PageModel
             if(getGoodsOnStock.Result != OperationStatus.Success)
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", getGoodsOnStock.ErrorMessage, "ОК");
+                SetHasNavigationBar(true);
                 return;
             }
 
@@ -99,6 +142,7 @@ namespace BarcodeReaderSample.PageModel
                 if (checkWithReportReturns.Result != OperationStatus.Success)
                 {
                     await Application.Current.MainPage.DisplayAlert("Ошибка", checkWithReportReturns.ErrorMessage, "ОК");
+                    SetHasNavigationBar(true);
                     return;
                 }
             }
@@ -107,6 +151,7 @@ namespace BarcodeReaderSample.PageModel
             if(deleteAllData.Result != OperationStatus.Success)
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", deleteAllData.ErrorMessage, "ОК");
+                SetHasNavigationBar(true);
                 return;
             }
 
@@ -197,6 +242,11 @@ namespace BarcodeReaderSample.PageModel
 
                             break;
                         case SyncDataTypes.CodesMapping:
+                            _mUiContext.Post(async o =>
+                            {
+                                IsLoadingDialogVisible = true;
+                            }, null);
+
                             var getCodesMapping = BaseApiService.GetCodeMapping(RestContext.User.TransportId);
                             if (getCodesMapping.Result != OperationStatus.Success)
                                 syncModel.SyncStatus = SyncStatus.Error;
@@ -206,21 +256,43 @@ namespace BarcodeReaderSample.PageModel
                                     syncModel.SyncStatus = SyncStatus.NoData;
                                 else
                                 {
-                                    var addCodeMapping = DbService.AddCodeMappings(getCodesMapping.Value);
+                                    var isError = false;
 
-                                    if (addCodeMapping.Result != OperationStatus.Success)
+                                    var count = 1;
+                                    foreach (var codesMapping in getCodesMapping.Value)
                                     {
-
                                         _mUiContext.Post(async o =>
                                         {
-                                            await Application.Current.MainPage.DisplayAlert("Ошибка", addCodeMapping.ErrorMessage, "ОК");
+                                            LoadingCodesCount =
+                                                $"Загружено кодов {count} из {getCodesMapping.Value.Count}";
                                         }, null);
-                                        return;
+
+                                        var addCodeMapping = DbService.AddCodeMappings(new List<CodesMapping> { codesMapping });
+
+                                        if (addCodeMapping.Result != OperationStatus.Success)
+                                        {
+
+                                            _mUiContext.Post(async o =>
+                                            {
+                                                await Application.Current.MainPage.DisplayAlert("Ошибка", addCodeMapping.ErrorMessage, "ОК");
+                                                SetHasNavigationBar(true);
+                                            }, null);
+
+                                            isError = true;
+                                            break;
+                                        }
+
+                                        count++;
                                     }
 
-                                    syncModel.SyncStatus = addCodeMapping.Result != OperationStatus.Success ? SyncStatus.Error : SyncStatus.Completed;
+                                    syncModel.SyncStatus = isError ? SyncStatus.Error : SyncStatus.Completed;
                                 }
                             }
+
+                            _mUiContext.Post(async o =>
+                            {
+                                IsLoadingDialogVisible = false;
+                            }, null);
 
                             break;
                         default:
@@ -236,6 +308,7 @@ namespace BarcodeReaderSample.PageModel
             }
             
             IsSyncButtonEnabled = true;
+            SetHasNavigationBar(true);
         }
     }
 }
