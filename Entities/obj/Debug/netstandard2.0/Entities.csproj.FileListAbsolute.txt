@@ -8,3 +8,13 @@ C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\Entities\obj\Debug\ne
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\sanja\source\repos\Sanjar1177\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.csproj.AssemblyReference.cache
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\Users\timur\Source\Repos\BarcodeReaderSample\Entities\obj\Debug\netstandard2.0\Entities.pdb

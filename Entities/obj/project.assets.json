@@ -1039,36 +1039,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sanja\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\timur\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sanja\\source\\repos\\Sanjar1177\\BarcodeReaderSample\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\sanja\\source\\repos\\Sanjar1177\\BarcodeReaderSample\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\sanja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sanja\\source\\repos\\Sanjar1177\\BarcodeReaderSample\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\timur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sanja\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\timur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Install\\Software_XamarinMpSDK_SATO_V1.0.2\\01_Lib": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/TTWgUhlFowvROW6bFO1hk5rLRGlhcl2UTsm8GJIpkOElGdr3kc/api": {},
         "https://nuget.devexpress.com/nFHalUlsklwd7fa998HnCgwG3MKWB8BTu8IWkpxf6hls5uz8Rc/api": {}
       },
       "frameworks": {

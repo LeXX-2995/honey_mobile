@@ -15,7 +15,7 @@ namespace BarcodeReaderSample.Pages
 		public SyncPage (INavigation navigation)
 		{
 			InitializeComponent();
-            BindingContext = new SyncPageViewModel(navigation);
+            BindingContext = new SyncPageViewModel(navigation, this);
         }
 
         protected override bool OnBackButtonPressed()

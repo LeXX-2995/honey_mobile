@@ -271,10 +271,23 @@ namespace BarcodeReaderSample.PageModel
 
                                         if (addCodeMapping.Result != OperationStatus.Success)
                                         {
-
                                             _mUiContext.Post(async o =>
                                             {
-                                                await Application.Current.MainPage.DisplayAlert("Ошибка", addCodeMapping.ErrorMessage, "ОК");
+                                                if (codesMapping.DataMatrixCodeId.HasValue && !string.IsNullOrWhiteSpace(codesMapping.DataMatrix?.Code))
+                                                {
+                                                    await Application.Current.MainPage.DisplayAlert("Ошибка", $"Код - {codesMapping.DataMatrix.Code} - {addCodeMapping.ErrorMessage}", "ОК");
+                                                }
+                                                else
+                                                if (codesMapping.BoxId.HasValue && !string.IsNullOrWhiteSpace(codesMapping.Box?.Code))
+                                                {
+                                                    await Application.Current.MainPage.DisplayAlert("Ошибка", $"Код - {codesMapping.Box.Code} - {addCodeMapping.ErrorMessage}", "ОК");
+                                                } 
+                                                else
+                                                if (codesMapping.PalletId.HasValue && !string.IsNullOrWhiteSpace(codesMapping.Pallet?.Code))
+                                                {
+                                                    await Application.Current.MainPage.DisplayAlert("Ошибка", $"Код - {codesMapping.Pallet.Code} - {addCodeMapping.ErrorMessage}", "ОК");
+                                                }
+                                                
                                                 SetHasNavigationBar(true);
                                             }, null);
 
