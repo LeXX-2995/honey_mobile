@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj": {}
+    "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj": {
+    "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\timur\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\obj\\",
         "projectStyle": "PackageReference",
@@ -66,12 +66,12 @@
         }
       }
     },
-    "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj": {
+    "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj",
+        "projectUniqueName": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj",
         "projectName": "MIgrationCreator",
-        "projectPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj",
+        "projectPath": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj",
         "packagesPath": "C:\\Users\\timur\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\MIgrationCreator\\obj\\",
         "projectStyle": "PackageReference",
@@ -91,8 +91,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj"
+              "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\Entities\\Entities.csproj"
               }
             }
           }

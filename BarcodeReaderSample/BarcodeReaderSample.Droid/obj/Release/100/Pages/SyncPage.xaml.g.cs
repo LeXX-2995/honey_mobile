@@ -13,17 +13,21 @@
 namespace BarcodeReaderSample.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\sanja\\source\\repos\\Sanjar1177\\BarcodeReaderSample\\BarcodeReaderSample\\Ba" +
-        "rcodeReaderSample\\Pages\\SyncPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\BarcodeReaderSample\\BarcodeReader" +
+        "Sample\\Pages\\SyncPage.xaml")]
     public partial class SyncPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::DevExpress.XamarinForms.DataGrid.DataGridView grid;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::DevExpress.XamarinForms.Popup.DXPopup popup;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SyncPage));
             grid = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DevExpress.XamarinForms.DataGrid.DataGridView>(this, "grid");
+            popup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DevExpress.XamarinForms.Popup.DXPopup>(this, "popup");
         }
     }
 }

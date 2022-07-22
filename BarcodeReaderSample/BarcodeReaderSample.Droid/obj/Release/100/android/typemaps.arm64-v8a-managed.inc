@@ -1,5702 +1,8423 @@
-	.section	.rodata.module0_managed_to_java,"a",@progbits
-	.type	module0_managed_to_java, @object
-	.p2align	2
-module0_managed_to_java:
-	.word	33554474
-	.word	906
-	.word	33554475
-	.word	907
-	.word	33554477
-	.word	895
-	.word	33554478
-	.word	896
-	.word	33554480
-	.word	897
-	.word	33554481
-	.word	888
-	.word	33554482
-	.word	889
-	.word	33554483
-	.word	903
-	.word	33554486
-	.word	904
-	.word	33554488
-	.word	1886
-	.word	33554489
-	.word	905
-	.word	33554491
-	.word	1887
-	.word	33554496
-	.word	900
-	.word	33554498
-	.word	901
-	.word	33554500
-	.word	902
-	.word	33554502
-	.word	908
-	.word	33554503
-	.word	912
-	.word	33554504
-	.word	909
-	.word	33554509
-	.word	1888
-	.word	33554510
-	.word	910
-	.word	33554512
-	.word	911
-	.word	33554519
-	.word	898
-	.word	33554520
-	.word	899
-	.word	33554522
-	.word	890
-	.word	33554523
-	.word	891
-	.word	33554524
-	.word	892
-	.word	33554525
-	.word	893
-	.word	33554527
-	.word	894
-	.word	33554529
-	.word	882
-	.word	33554530
-	.word	883
-	.word	33554531
-	.word	884
-	.word	33554534
-	.word	1885
-	.word	33554535
-	.word	885
-	.word	33554538
-	.word	886
-	.word	33554540
-	.word	887
-	.size	module0_managed_to_java, 280
-
-	.section	.rodata.module0_managed_to_java_duplicates,"a",@progbits
-	.type	module0_managed_to_java_duplicates, @object
-	.p2align	2
-module0_managed_to_java_duplicates:
-	.word	33554476
-	.word	907
-	.word	33554479
-	.word	896
-	.word	33554487
-	.word	904
-	.word	33554490
-	.word	905
-	.word	33554497
-	.word	900
-	.word	33554499
-	.word	901
-	.word	33554501
-	.word	903
-	.word	33554505
-	.word	909
-	.word	33554511
-	.word	910
-	.word	33554521
-	.word	899
-	.word	33554526
-	.word	893
-	.word	33554528
-	.word	894
-	.word	33554532
-	.word	884
-	.word	33554539
-	.word	886
-	.size	module0_managed_to_java_duplicates, 112
-
-	.section	.rodata.module1_managed_to_java,"a",@progbits
-	.type	module1_managed_to_java, @object
-	.p2align	2
-module1_managed_to_java:
-	.word	33554507
-	.word	517
-	.word	33554508
-	.word	518
-	.word	33554509
-	.word	519
-	.word	33554511
-	.word	523
-	.word	33554513
-	.word	520
-	.word	33554514
-	.word	521
-	.word	33554516
-	.word	522
-	.word	33554518
-	.word	524
-	.word	33554519
-	.word	525
-	.word	33554520
-	.word	526
-	.word	33554521
-	.word	527
-	.word	33554523
-	.word	528
-	.word	33554524
-	.word	529
-	.word	33554525
-	.word	530
-	.word	33554526
-	.word	531
-	.word	33554528
-	.word	532
-	.word	33554530
-	.word	533
-	.word	33554532
-	.word	534
-	.word	33554533
-	.word	535
-	.word	33554534
-	.word	536
-	.word	33554536
-	.word	537
-	.word	33554538
-	.word	538
-	.word	33554540
-	.word	539
-	.word	33554541
-	.word	540
-	.word	33554543
-	.word	541
-	.word	33554545
-	.word	542
-	.word	33554546
-	.word	543
-	.word	33554550
-	.word	1848
-	.word	33554551
-	.word	544
-	.word	33554553
-	.word	545
-	.word	33554558
-	.word	1849
-	.word	33554559
-	.word	546
-	.word	33554561
-	.word	547
-	.word	33554562
-	.word	548
-	.word	33554563
-	.word	549
-	.word	33554566
-	.word	1850
-	.word	33554567
-	.word	550
-	.word	33554568
-	.word	551
-	.word	33554569
-	.word	552
-	.word	33554572
-	.word	553
-	.word	33554573
-	.word	554
-	.word	33554575
-	.word	555
-	.word	33554589
-	.word	556
-	.word	33554590
-	.word	557
-	.size	module1_managed_to_java, 352
-
-	.section	.rodata.module1_managed_to_java_duplicates,"a",@progbits
-	.type	module1_managed_to_java_duplicates, @object
-	.p2align	2
-module1_managed_to_java_duplicates:
-	.word	33554510
-	.word	519
-	.word	33554512
-	.word	523
-	.word	33554515
-	.word	521
-	.word	33554517
-	.word	522
-	.word	33554522
-	.word	527
-	.word	33554527
-	.word	530
-	.word	33554529
-	.word	532
-	.word	33554531
-	.word	533
-	.word	33554535
-	.word	536
-	.word	33554537
-	.word	535
-	.word	33554539
-	.word	538
-	.word	33554542
-	.word	540
-	.word	33554544
-	.word	539
-	.word	33554547
-	.word	543
-	.word	33554552
-	.word	544
-	.word	33554554
-	.word	545
-	.word	33554560
-	.word	546
-	.word	33554564
-	.word	549
-	.word	33554570
-	.word	552
-	.word	33554571
-	.word	550
-	.word	33554574
-	.word	554
-	.word	33554576
-	.word	555
-	.word	33554591
-	.word	557
-	.size	module1_managed_to_java_duplicates, 184
-
-	.section	.rodata.module2_managed_to_java,"a",@progbits
-	.type	module2_managed_to_java, @object
-	.p2align	2
-module2_managed_to_java:
-	.word	33554468
-	.word	489
-	.word	33554469
-	.word	487
-	.word	33554470
-	.word	488
-	.word	33554471
-	.word	490
-	.word	33554472
-	.word	491
-	.word	33554473
-	.word	492
-	.word	33554475
-	.word	493
-	.word	33554477
-	.word	494
-	.word	33554479
-	.word	1846
-	.word	33554485
-	.word	496
-	.word	33554487
-	.word	499
-	.word	33554489
-	.word	495
-	.word	33554492
-	.word	1847
-	.word	33554493
-	.word	497
-	.word	33554495
-	.word	498
-	.size	module2_managed_to_java, 120
-
-	.section	.rodata.module2_managed_to_java_duplicates,"a",@progbits
-	.type	module2_managed_to_java_duplicates, @object
-	.p2align	2
-module2_managed_to_java_duplicates:
-	.word	33554474
-	.word	492
-	.word	33554476
-	.word	493
-	.word	33554478
-	.word	494
-	.word	33554484
-	.word	491
-	.word	33554486
-	.word	496
-	.word	33554488
-	.word	499
-	.word	33554490
-	.word	495
-	.word	33554494
-	.word	497
-	.word	33554496
-	.word	498
-	.size	module2_managed_to_java_duplicates, 72
-
-	.section	.rodata.module3_managed_to_java,"a",@progbits
-	.type	module3_managed_to_java, @object
-	.p2align	2
-module3_managed_to_java:
-	.word	33554435
-	.word	560
-	.word	33554437
-	.word	558
-	.word	33554438
-	.word	559
-	.size	module3_managed_to_java, 24
-
-	.section	.rodata.module3_managed_to_java_duplicates,"a",@progbits
-	.type	module3_managed_to_java_duplicates, @object
-	.p2align	2
-module3_managed_to_java_duplicates:
-	.word	33554436
-	.word	560
-	.word	33554439
-	.word	559
-	.size	module3_managed_to_java_duplicates, 16
-
-	.section	.rodata.module4_managed_to_java,"a",@progbits
-	.type	module4_managed_to_java, @object
-	.p2align	2
-module4_managed_to_java:
-	.word	33554494
-	.word	1407
-	.word	33554496
-	.word	1409
-	.word	33554497
-	.word	1410
-	.word	33554498
-	.word	1411
-	.word	33554499
-	.word	1412
-	.word	33554500
-	.word	1413
-	.word	33554504
-	.word	1416
-	.word	33554506
-	.word	1418
-	.word	33554512
-	.word	1426
-	.word	33554513
-	.word	1408
-	.word	33554515
-	.word	1414
-	.word	33554517
-	.word	1415
-	.word	33554519
-	.word	1417
-	.word	33554521
-	.word	1420
-	.word	33554522
-	.word	1419
-	.word	33554524
-	.word	1421
-	.word	33554526
-	.word	1422
-	.word	33554528
-	.word	1423
-	.word	33554530
-	.word	1424
-	.word	33554532
-	.word	1425
-	.word	33554534
-	.word	1430
-	.word	33554536
-	.word	1434
-	.word	33554538
-	.word	1438
-	.word	33554540
-	.word	1439
-	.word	33554542
-	.word	1440
-	.word	33554544
-	.word	1442
-	.word	33554546
-	.word	1445
-	.word	33554548
-	.word	1446
-	.word	33554550
-	.word	1448
-	.word	33554551
-	.word	1447
-	.word	33554553
-	.word	1451
-	.word	33554555
-	.word	1453
-	.word	33554557
-	.word	1479
-	.word	33554559
-	.word	1481
-	.word	33554561
-	.word	1427
-	.word	33554562
-	.word	1428
-	.word	33554563
-	.word	1429
-	.word	33554564
-	.word	1431
-	.word	33554565
-	.word	1433
-	.word	33554567
-	.word	1436
-	.word	33554568
-	.word	1435
-	.word	33554569
-	.word	1437
-	.word	33554573
-	.word	1441
-	.word	33554575
-	.word	1443
-	.word	33554576
-	.word	1444
-	.word	33554580
-	.word	1449
-	.word	33554581
-	.word	1450
-	.word	33554583
-	.word	1452
-	.word	33554585
-	.word	1454
-	.word	33554586
-	.word	1455
-	.word	33554587
-	.word	1456
-	.word	33554588
-	.word	1457
-	.word	33554589
-	.word	1458
-	.word	33554590
-	.word	1459
-	.word	33554591
-	.word	1460
-	.word	33554592
-	.word	1461
-	.word	33554593
-	.word	1462
-	.word	33554594
-	.word	1463
-	.word	33554595
-	.word	1464
-	.word	33554596
-	.word	1465
-	.word	33554597
-	.word	1466
-	.word	33554598
-	.word	1467
-	.word	33554599
-	.word	1468
-	.word	33554600
-	.word	1469
-	.word	33554601
-	.word	1470
-	.word	33554602
-	.word	1471
-	.word	33554603
-	.word	1477
-	.word	33554604
-	.word	1478
-	.word	33554606
-	.word	1480
-	.word	33554607
-	.word	1472
-	.word	33554609
-	.word	1473
-	.word	33554610
-	.word	1474
-	.word	33554611
-	.word	1475
-	.word	33554612
-	.word	1476
-	.word	33554613
-	.word	1804
-	.word	33554615
-	.word	1805
-	.word	33554617
-	.word	1806
-	.word	33554618
-	.word	1808
-	.word	33554619
-	.word	1809
-	.word	33554621
-	.word	1812
-	.word	33554622
-	.word	1811
-	.word	33554624
-	.word	1817
-	.word	33554625
-	.word	1816
-	.word	33554627
-	.word	1813
-	.word	33554628
-	.word	1814
-	.word	33554629
-	.word	1819
-	.word	33554630
-	.word	1815
-	.word	33554632
-	.word	1818
-	.word	33554633
-	.word	1782
-	.word	33554634
-	.word	1784
-	.word	33554635
-	.word	1787
-	.word	33554636
-	.word	1788
-	.word	33554637
-	.word	1786
-	.word	33554638
-	.word	1790
-	.word	33554640
-	.word	1791
-	.word	33554642
-	.word	1793
-	.word	33554643
-	.word	1794
-	.word	33554644
-	.word	1792
-	.word	33554646
-	.word	1789
-	.word	33554647
-	.word	1795
-	.word	33554648
-	.word	1797
-	.word	33554649
-	.word	1798
-	.word	33554650
-	.word	1799
-	.word	33554651
-	.word	1800
-	.word	33554652
-	.word	1801
-	.word	33554653
-	.word	1802
-	.word	33554654
-	.word	1803
-	.word	33554655
-	.word	1780
-	.word	33554656
-	.word	1781
-	.word	33554657
-	.word	1776
-	.word	33554659
-	.word	1777
-	.word	33554661
-	.word	1778
-	.word	33554662
-	.word	1779
-	.word	33554663
-	.word	1733
-	.word	33554665
-	.word	1735
-	.word	33554666
-	.word	1734
-	.word	33554668
-	.word	1737
-	.word	33554669
-	.word	1736
-	.word	33554671
-	.word	1740
-	.word	33554673
-	.word	1741
-	.word	33554675
-	.word	1743
-	.word	33554676
-	.word	1742
-	.word	33554678
-	.word	1745
-	.word	33554680
-	.word	1744
-	.word	33554682
-	.word	1747
-	.word	33554684
-	.word	1746
-	.word	33554686
-	.word	1749
-	.word	33554688
-	.word	1748
-	.word	33554690
-	.word	1751
-	.word	33554692
-	.word	1750
-	.word	33554694
-	.word	1753
-	.word	33554695
-	.word	1754
-	.word	33554696
-	.word	1752
-	.word	33554698
-	.word	1756
-	.word	33554700
-	.word	1757
-	.word	33554701
-	.word	1758
-	.word	33554703
-	.word	1755
-	.word	33554705
-	.word	1760
-	.word	33554707
-	.word	1759
-	.word	33554709
-	.word	1762
-	.word	33554711
-	.word	1761
-	.word	33554713
-	.word	1764
-	.word	33554715
-	.word	1763
-	.word	33554717
-	.word	1766
-	.word	33554718
-	.word	1765
-	.word	33554720
-	.word	1767
-	.word	33554722
-	.word	1738
-	.word	33554723
-	.word	1739
-	.word	33554724
-	.word	1768
-	.word	33554725
-	.word	1771
-	.word	33554726
-	.word	1772
-	.word	33554727
-	.word	1773
-	.word	33554728
-	.word	1774
-	.word	33554729
-	.word	1702
-	.word	33554730
-	.word	1703
-	.word	33554732
-	.word	1705
-	.word	33554733
-	.word	1706
-	.word	33554734
-	.word	1697
-	.word	33554735
-	.word	1699
-	.word	33554737
-	.word	1700
-	.word	33554739
-	.word	1701
-	.word	33554741
-	.word	1698
-	.word	33554743
-	.word	1695
-	.word	33554744
-	.word	1696
-	.word	33554745
-	.word	1584
-	.word	33554747
-	.word	1585
-	.word	33554749
-	.word	1586
-	.word	33554751
-	.word	1587
-	.word	33554753
-	.word	1588
-	.word	33554755
-	.word	1589
-	.word	33554757
-	.word	1590
-	.word	33554759
-	.word	1591
-	.word	33554761
-	.word	1592
-	.word	33554763
-	.word	1593
-	.word	33554765
-	.word	1594
-	.word	33554767
-	.word	1595
-	.word	33554769
-	.word	1597
-	.word	33554771
-	.word	1598
-	.word	33554773
-	.word	1599
-	.word	33554775
-	.word	1600
-	.word	33554777
-	.word	1601
-	.word	33554779
-	.word	1602
-	.word	33554781
-	.word	1583
-	.word	33554794
-	.word	1596
-	.word	33554801
-	.word	1627
-	.word	33554802
-	.word	1628
-	.word	33554803
-	.word	1629
-	.word	33554804
-	.word	1630
-	.word	33554805
-	.word	1631
-	.word	33554806
-	.word	1632
-	.word	33554808
-	.word	1633
-	.word	33554809
-	.word	1635
-	.word	33554810
-	.word	1637
-	.word	33554811
-	.word	1638
-	.word	33554812
-	.word	1639
-	.word	33554813
-	.word	1640
-	.word	33554814
-	.word	1643
-	.word	33554815
-	.word	1634
-	.word	33554817
-	.word	1641
-	.word	33554819
-	.word	1642
-	.word	33554821
-	.word	1648
-	.word	33554823
-	.word	1644
-	.word	33554824
-	.word	1646
-	.word	33554825
-	.word	1645
-	.word	33554826
-	.word	1649
-	.word	33554828
-	.word	1650
-	.word	33554829
-	.word	1651
-	.word	33554830
-	.word	1652
-	.word	33554831
-	.word	1653
-	.word	33554832
-	.word	1654
-	.word	33554833
-	.word	1655
-	.word	33554835
-	.word	1656
-	.word	33554837
-	.word	1657
-	.word	33554839
-	.word	1658
-	.word	33554841
-	.word	1659
-	.word	33554842
-	.word	1660
-	.word	33554844
-	.word	1661
-	.word	33554846
-	.word	1662
-	.word	33554848
-	.word	1663
-	.word	33554850
-	.word	1664
-	.word	33554852
-	.word	1665
-	.word	33554853
-	.word	1675
-	.word	33554854
-	.word	1676
-	.word	33554855
-	.word	1677
-	.word	33554856
-	.word	1678
-	.word	33554857
-	.word	1679
-	.word	33554858
-	.word	1680
-	.word	33554859
-	.word	1683
-	.word	33554860
-	.word	1694
-	.word	33554861
-	.word	1685
-	.word	33554863
-	.word	1686
-	.word	33554865
-	.word	1687
-	.word	33554867
-	.word	1688
-	.word	33554869
-	.word	1689
-	.word	33554871
-	.word	1690
-	.word	33554873
-	.word	1692
-	.word	33554875
-	.word	1691
-	.word	33554877
-	.word	1693
-	.word	33554879
-	.word	1603
-	.word	33554881
-	.word	1604
-	.word	33554883
-	.word	1605
-	.word	33554885
-	.word	1606
-	.word	33554887
-	.word	1607
-	.word	33554889
-	.word	1608
-	.word	33554891
-	.word	1609
-	.word	33554893
-	.word	1610
-	.word	33554895
-	.word	1611
-	.word	33554897
-	.word	1612
-	.word	33554899
-	.word	1613
-	.word	33554901
-	.word	1614
-	.word	33554903
-	.word	1615
-	.word	33554905
-	.word	1616
-	.word	33554907
-	.word	1617
-	.word	33554909
-	.word	1618
-	.word	33554911
-	.word	1619
-	.word	33554913
-	.word	1620
-	.word	33554915
-	.word	1621
-	.word	33554917
-	.word	1622
-	.word	33554919
-	.word	1623
-	.word	33554921
-	.word	1624
-	.word	33554923
-	.word	1625
-	.word	33554925
-	.word	1626
-	.word	33554928
-	.word	1582
-	.word	33554930
-	.word	1567
-	.word	33554931
-	.word	1568
-	.word	33554932
-	.word	1569
-	.word	33554933
-	.word	1570
-	.word	33554934
-	.word	1571
-	.word	33554935
-	.word	1572
-	.word	33554936
-	.word	1573
-	.word	33554937
-	.word	1577
-	.word	33554938
-	.word	1574
-	.word	33554939
-	.word	1575
-	.word	33554940
-	.word	1576
-	.word	33554941
-	.word	1578
-	.word	33554942
-	.word	1579
-	.word	33554943
-	.word	1580
-	.word	33554944
-	.word	1581
-	.word	33554945
-	.word	1564
-	.word	33554946
-	.word	1565
-	.word	33554947
-	.word	1566
-	.word	33554948
-	.word	1562
-	.word	33554950
-	.word	1563
-	.word	33554952
-	.word	1541
-	.word	33554954
-	.word	1546
-	.word	33554955
-	.word	1552
-	.word	33554956
-	.word	1553
-	.word	33554957
-	.word	1542
-	.word	33554959
-	.word	1544
-	.word	33554960
-	.word	1545
-	.word	33554961
-	.word	1543
-	.word	33554965
-	.word	1548
-	.word	33554966
-	.word	1550
-	.word	33554967
-	.word	1549
-	.word	33554969
-	.word	1551
-	.word	33554971
-	.word	1547
-	.word	33554973
-	.word	1554
-	.word	33554976
-	.word	1557
-	.word	33554977
-	.word	1559
-	.word	33554978
-	.word	1560
-	.word	33554979
-	.word	1558
-	.word	33554981
-	.word	1561
-	.word	33554982
-	.word	1556
-	.word	33554983
-	.word	1555
-	.word	33554984
-	.word	1534
-	.word	33554986
-	.word	1530
-	.word	33554988
-	.word	1531
-	.word	33554990
-	.word	1533
-	.word	33554991
-	.word	1532
-	.word	33554993
-	.word	1535
-	.word	33554995
-	.word	1536
-	.word	33554997
-	.word	1537
-	.word	33554998
-	.word	1538
-	.word	33555000
-	.word	1539
-	.word	33555002
-	.word	1540
-	.word	33555004
-	.word	1527
-	.word	33555005
-	.word	1528
-	.word	33555006
-	.word	1529
-	.word	33555007
-	.word	1525
-	.word	33555008
-	.word	1526
-	.word	33555009
-	.word	1482
-	.word	33555010
-	.word	1483
-	.word	33555011
-	.word	1484
-	.word	33555013
-	.word	1485
-	.word	33555015
-	.word	1486
-	.word	33555017
-	.word	1487
-	.word	33555023
-	.word	1730
-	.word	33555024
-	.word	1726
-	.word	33555025
-	.word	1707
-	.word	33555026
-	.word	1709
-	.word	33555027
-	.word	1712
-	.word	33555028
-	.word	1711
-	.word	33555030
-	.word	1714
-	.word	33555031
-	.word	1713
-	.word	33555033
-	.word	1715
-	.word	33555034
-	.word	1717
-	.word	33555035
-	.word	1719
-	.word	33555036
-	.word	1721
-	.word	33555037
-	.word	1723
-	.word	33555038
-	.word	1724
-	.word	33555039
-	.word	1728
-	.word	33555040
-	.word	1732
-	.word	33555041
-	.word	1497
-	.word	33555042
-	.word	1491
-	.word	33555043
-	.word	1488
-	.word	33555045
-	.word	1489
-	.word	33555048
-	.word	1492
-	.word	33555050
-	.word	1493
-	.word	33555052
-	.word	1494
-	.word	33555054
-	.word	1495
-	.word	33555056
-	.word	1496
-	.word	33555059
-	.word	1498
-	.word	33555060
-	.word	1499
-	.word	33555061
-	.word	1500
-	.word	33555063
-	.word	1501
-	.word	33555065
-	.word	1502
-	.word	33555067
-	.word	1503
-	.word	33555068
-	.word	1504
-	.word	33555070
-	.word	1505
-	.word	33555072
-	.word	1507
-	.word	33555073
-	.word	1506
-	.word	33555075
-	.word	1508
-	.word	33555076
-	.word	1509
-	.word	33555078
-	.word	1510
-	.word	33555080
-	.word	1511
-	.word	33555081
-	.word	1512
-	.word	33555082
-	.word	1513
-	.word	33555083
-	.word	1514
-	.word	33555085
-	.word	1515
-	.word	33555086
-	.word	1516
-	.word	33555087
-	.word	1517
-	.word	33555088
-	.word	1518
-	.word	33555090
-	.word	1519
-	.word	33555091
-	.word	1520
-	.word	33555093
-	.word	1521
-	.word	33555095
-	.word	1522
-	.word	33555097
-	.word	1524
-	.word	33555098
-	.word	1523
-	.word	33555099
-	.word	1432
-	.word	33555100
-	.word	1807
-	.word	33555101
-	.word	1810
-	.word	33555102
-	.word	1783
-	.word	33555103
-	.word	1785
-	.word	33555104
-	.word	1796
-	.word	33555105
-	.word	1769
-	.word	33555106
-	.word	1770
-	.word	33555107
-	.word	1775
-	.word	33555108
-	.word	1704
-	.word	33555109
-	.word	1636
-	.word	33555110
-	.word	1647
-	.word	33555111
-	.word	1666
-	.word	33555112
-	.word	1667
-	.word	33555113
-	.word	1668
-	.word	33555114
-	.word	1669
-	.word	33555115
-	.word	1670
-	.word	33555116
-	.word	1671
-	.word	33555117
-	.word	1672
-	.word	33555118
-	.word	1673
-	.word	33555119
-	.word	1674
-	.word	33555120
-	.word	1681
-	.word	33555121
-	.word	1684
-	.word	33555122
-	.word	1731
-	.word	33555123
-	.word	1727
-	.word	33555124
-	.word	1708
-	.word	33555125
-	.word	1710
-	.word	33555126
-	.word	1716
-	.word	33555127
-	.word	1718
-	.word	33555128
-	.word	1720
-	.word	33555129
-	.word	1722
-	.word	33555130
-	.word	1725
-	.word	33555131
-	.word	1729
-	.word	33555132
-	.word	1490
-	.word	33555133
-	.word	1682
-	.size	module4_managed_to_java, 3304
-
-	.section	.rodata.module4_managed_to_java_duplicates,"a",@progbits
-	.type	module4_managed_to_java_duplicates, @object
-	.p2align	2
-module4_managed_to_java_duplicates:
-	.word	33554501
-	.word	1413
-	.word	33554514
-	.word	1408
-	.word	33554516
-	.word	1414
-	.word	33554518
-	.word	1415
-	.word	33554520
-	.word	1417
-	.word	33554523
-	.word	1419
-	.word	33554525
-	.word	1421
-	.word	33554527
-	.word	1422
-	.word	33554529
-	.word	1423
-	.word	33554531
-	.word	1424
-	.word	33554533
-	.word	1425
-	.word	33554535
-	.word	1430
-	.word	33554537
-	.word	1434
-	.word	33554539
-	.word	1438
-	.word	33554541
-	.word	1439
-	.word	33554543
-	.word	1440
-	.word	33554545
-	.word	1442
-	.word	33554547
-	.word	1445
-	.word	33554549
-	.word	1446
-	.word	33554552
-	.word	1447
-	.word	33554554
-	.word	1451
-	.word	33554556
-	.word	1453
-	.word	33554558
-	.word	1479
-	.word	33554560
-	.word	1481
-	.word	33554614
-	.word	1804
-	.word	33554616
-	.word	1805
-	.word	33554623
-	.word	1811
-	.word	33554626
-	.word	1816
-	.word	33554631
-	.word	1815
-	.word	33554639
-	.word	1790
-	.word	33554641
-	.word	1791
-	.word	33554645
-	.word	1792
-	.word	33554658
-	.word	1776
-	.word	33554660
-	.word	1777
-	.word	33554664
-	.word	1733
-	.word	33554667
-	.word	1734
-	.word	33554670
-	.word	1736
-	.word	33554672
-	.word	1740
-	.word	33554674
-	.word	1741
-	.word	33554677
-	.word	1742
-	.word	33554679
-	.word	1745
-	.word	33554681
-	.word	1744
-	.word	33554683
-	.word	1747
-	.word	33554685
-	.word	1746
-	.word	33554687
-	.word	1749
-	.word	33554689
-	.word	1748
-	.word	33554691
-	.word	1751
-	.word	33554693
-	.word	1750
-	.word	33554697
-	.word	1752
-	.word	33554699
-	.word	1756
-	.word	33554702
-	.word	1758
-	.word	33554704
-	.word	1755
-	.word	33554706
-	.word	1760
-	.word	33554708
-	.word	1759
-	.word	33554710
-	.word	1762
-	.word	33554712
-	.word	1761
-	.word	33554714
-	.word	1764
-	.word	33554716
-	.word	1763
-	.word	33554719
-	.word	1765
-	.word	33554721
-	.word	1767
-	.word	33554731
-	.word	1703
-	.word	33554736
-	.word	1699
-	.word	33554738
-	.word	1700
-	.word	33554740
-	.word	1701
-	.word	33554742
-	.word	1698
-	.word	33554746
-	.word	1584
-	.word	33554748
-	.word	1585
-	.word	33554750
-	.word	1586
-	.word	33554752
-	.word	1587
-	.word	33554754
-	.word	1588
-	.word	33554756
-	.word	1589
-	.word	33554758
-	.word	1590
-	.word	33554760
-	.word	1591
-	.word	33554762
-	.word	1592
-	.word	33554764
-	.word	1593
-	.word	33554766
-	.word	1594
-	.word	33554768
-	.word	1595
-	.word	33554770
-	.word	1597
-	.word	33554772
-	.word	1598
-	.word	33554774
-	.word	1599
-	.word	33554776
-	.word	1600
-	.word	33554778
-	.word	1601
-	.word	33554780
-	.word	1602
-	.word	33554807
-	.word	1632
-	.word	33554816
-	.word	1634
-	.word	33554818
-	.word	1641
-	.word	33554820
-	.word	1642
-	.word	33554822
-	.word	1648
-	.word	33554827
-	.word	1649
-	.word	33554834
-	.word	1655
-	.word	33554836
-	.word	1656
-	.word	33554838
-	.word	1657
-	.word	33554840
-	.word	1658
-	.word	33554843
-	.word	1660
-	.word	33554845
-	.word	1661
-	.word	33554847
-	.word	1662
-	.word	33554849
-	.word	1663
-	.word	33554851
-	.word	1664
-	.word	33554862
-	.word	1685
-	.word	33554864
-	.word	1686
-	.word	33554866
-	.word	1687
-	.word	33554868
-	.word	1688
-	.word	33554870
-	.word	1689
-	.word	33554872
-	.word	1690
-	.word	33554874
-	.word	1692
-	.word	33554876
-	.word	1691
-	.word	33554878
-	.word	1693
-	.word	33554880
-	.word	1603
-	.word	33554882
-	.word	1604
-	.word	33554884
-	.word	1605
-	.word	33554886
-	.word	1606
-	.word	33554888
-	.word	1607
-	.word	33554890
-	.word	1608
-	.word	33554892
-	.word	1609
-	.word	33554894
-	.word	1610
-	.word	33554896
-	.word	1611
-	.word	33554898
-	.word	1612
-	.word	33554900
-	.word	1613
-	.word	33554902
-	.word	1614
-	.word	33554904
-	.word	1615
-	.word	33554906
-	.word	1616
-	.word	33554908
-	.word	1617
-	.word	33554910
-	.word	1618
-	.word	33554912
-	.word	1619
-	.word	33554914
-	.word	1620
-	.word	33554916
-	.word	1621
-	.word	33554918
-	.word	1622
-	.word	33554920
-	.word	1623
-	.word	33554922
-	.word	1624
-	.word	33554924
-	.word	1625
-	.word	33554926
-	.word	1626
-	.word	33554929
-	.word	1582
-	.word	33554951
-	.word	1563
-	.word	33554953
-	.word	1541
-	.word	33554958
-	.word	1542
-	.word	33554962
-	.word	1543
-	.word	33554963
-	.word	1543
-	.word	33554964
-	.word	1543
-	.word	33554968
-	.word	1549
-	.word	33554970
-	.word	1551
-	.word	33554972
-	.word	1547
-	.word	33554974
-	.word	1554
-	.word	33554980
-	.word	1558
-	.word	33554987
-	.word	1530
-	.word	33554989
-	.word	1531
-	.word	33554992
-	.word	1532
-	.word	33554994
-	.word	1535
-	.word	33554996
-	.word	1536
-	.word	33554999
-	.word	1538
-	.word	33555001
-	.word	1539
-	.word	33555003
-	.word	1540
-	.word	33555012
-	.word	1484
-	.word	33555014
-	.word	1485
-	.word	33555016
-	.word	1486
-	.word	33555018
-	.word	1487
-	.word	33555029
-	.word	1711
-	.word	33555032
-	.word	1713
-	.word	33555044
-	.word	1488
-	.word	33555046
-	.word	1489
-	.word	33555047
-	.word	1491
-	.word	33555049
-	.word	1492
-	.word	33555051
-	.word	1493
-	.word	33555053
-	.word	1494
-	.word	33555055
-	.word	1495
-	.word	33555057
-	.word	1496
-	.word	33555058
-	.word	1497
-	.word	33555062
-	.word	1500
-	.word	33555064
-	.word	1501
-	.word	33555066
-	.word	1502
-	.word	33555069
-	.word	1504
-	.word	33555071
-	.word	1505
-	.word	33555074
-	.word	1506
-	.word	33555077
-	.word	1509
-	.word	33555079
-	.word	1510
-	.word	33555084
-	.word	1514
-	.word	33555089
-	.word	1518
-	.word	33555092
-	.word	1520
-	.word	33555094
-	.word	1521
-	.word	33555096
-	.word	1522
-	.size	module4_managed_to_java_duplicates, 1432
-
-	.section	.rodata.module5_managed_to_java,"a",@progbits
-	.type	module5_managed_to_java, @object
-	.p2align	2
-module5_managed_to_java:
-	.word	33554476
-	.word	701
-	.word	33554477
-	.word	702
-	.word	33554478
-	.word	703
-	.word	33554479
-	.word	705
-	.word	33554480
-	.word	706
-	.word	33554481
-	.word	707
-	.word	33554484
-	.word	704
-	.word	33554485
-	.word	708
-	.word	33554488
-	.word	711
-	.word	33554496
-	.word	1854
-	.word	33554497
-	.word	712
-	.word	33554499
-	.word	709
-	.word	33554501
-	.word	710
-	.word	33554503
-	.word	713
-	.word	33554504
-	.word	714
-	.word	33554505
-	.word	715
-	.word	33554506
-	.word	770
-	.word	33554507
-	.word	771
-	.word	33554508
-	.word	750
-	.word	33554509
-	.word	751
-	.word	33554510
-	.word	752
-	.word	33554511
-	.word	753
-	.word	33554512
-	.word	756
-	.word	33554513
-	.word	754
-	.word	33554515
-	.word	755
-	.word	33554517
-	.word	757
-	.word	33554519
-	.word	759
-	.word	33554522
-	.word	1857
-	.word	33554523
-	.word	766
-	.word	33554526
-	.word	1858
-	.word	33554527
-	.word	758
-	.word	33554528
-	.word	760
-	.word	33554529
-	.word	761
-	.word	33554530
-	.word	762
-	.word	33554531
-	.word	763
-	.word	33554532
-	.word	764
-	.word	33554534
-	.word	765
-	.word	33554535
-	.word	768
-	.word	33554538
-	.word	767
-	.word	33554539
-	.word	769
-	.word	33554540
-	.word	738
-	.word	33554541
-	.word	739
-	.word	33554545
-	.word	740
-	.word	33554546
-	.word	741
-	.word	33554547
-	.word	742
-	.word	33554548
-	.word	743
-	.word	33554549
-	.word	744
-	.word	33554550
-	.word	745
-	.word	33554551
-	.word	746
-	.word	33554552
-	.word	747
-	.word	33554553
-	.word	748
-	.word	33554554
-	.word	749
-	.word	33554555
-	.word	737
-	.word	33554556
-	.word	716
-	.word	33554557
-	.word	726
-	.word	33554558
-	.word	727
-	.word	33554575
-	.word	718
-	.word	33554576
-	.word	719
-	.word	33554577
-	.word	720
-	.word	33554580
-	.word	723
-	.word	33554581
-	.word	724
-	.word	33554582
-	.word	725
-	.word	33554583
-	.word	729
-	.word	33554584
-	.word	717
-	.word	33554586
-	.word	721
-	.word	33554588
-	.word	722
-	.word	33554590
-	.word	728
-	.word	33554597
-	.word	1855
-	.word	33554598
-	.word	730
-	.word	33554601
-	.word	1856
-	.word	33554602
-	.word	732
-	.word	33554604
-	.word	733
-	.word	33554606
-	.word	731
-	.word	33554607
-	.word	734
-	.word	33554608
-	.word	735
-	.word	33554609
-	.word	736
-	.size	module5_managed_to_java, 608
-
-	.section	.rodata.module5_managed_to_java_duplicates,"a",@progbits
-	.type	module5_managed_to_java_duplicates, @object
-	.p2align	2
-module5_managed_to_java_duplicates:
-	.word	33554489
-	.word	711
-	.word	33554498
-	.word	712
-	.word	33554500
-	.word	709
-	.word	33554502
-	.word	710
-	.word	33554514
-	.word	754
-	.word	33554516
-	.word	755
-	.word	33554518
-	.word	757
-	.word	33554520
-	.word	759
-	.word	33554524
-	.word	766
-	.word	33554533
-	.word	763
-	.word	33554544
-	.word	739
-	.word	33554585
-	.word	717
-	.word	33554587
-	.word	721
-	.word	33554589
-	.word	722
-	.word	33554591
-	.word	728
-	.word	33554599
-	.word	730
-	.word	33554603
-	.word	732
-	.word	33554605
-	.word	733
-	.size	module5_managed_to_java_duplicates, 144
-
-	.section	.rodata.module6_managed_to_java,"a",@progbits
-	.type	module6_managed_to_java, @object
-	.p2align	2
-module6_managed_to_java:
-	.word	33554435
-	.word	915
-	.word	33554436
-	.word	916
-	.word	33554439
-	.word	914
-	.word	33554440
-	.word	917
-	.word	33554441
-	.word	918
-	.word	33554442
-	.word	919
-	.word	33554444
-	.word	920
-	.word	33554446
-	.word	921
-	.word	33554447
-	.word	922
-	.word	33554448
-	.word	923
-	.word	33554449
-	.word	925
-	.word	33554451
-	.word	926
-	.word	33554453
-	.word	927
-	.word	33554454
-	.word	928
-	.word	33554455
-	.word	924
-	.word	33554456
-	.word	929
-	.word	33554457
-	.word	930
-	.word	33554458
-	.word	931
-	.word	33554459
-	.word	932
-	.word	33554460
-	.word	933
-	.word	33554461
-	.word	934
-	.word	33554462
-	.word	935
-	.word	33554463
-	.word	936
-	.word	33554464
-	.word	937
-	.word	33554465
-	.word	938
-	.size	module6_managed_to_java, 200
-
-	.section	.rodata.module6_managed_to_java_duplicates,"a",@progbits
-	.type	module6_managed_to_java_duplicates, @object
-	.p2align	2
-module6_managed_to_java_duplicates:
-	.word	33554437
-	.word	915
-	.size	module6_managed_to_java_duplicates, 8
-
-	.section	.rodata.module7_managed_to_java,"a",@progbits
-	.type	module7_managed_to_java, @object
-	.p2align	2
-module7_managed_to_java:
-	.word	33554439
-	.word	507
-	.word	33554441
-	.word	506
-	.size	module7_managed_to_java, 16
-
-	.section	.rodata.module7_managed_to_java_duplicates,"a",@progbits
-	.type	module7_managed_to_java_duplicates, @object
-	.p2align	2
-module7_managed_to_java_duplicates:
-	.word	33554440
-	.word	507
-	.word	33554442
-	.word	506
-	.size	module7_managed_to_java_duplicates, 16
-
-	.section	.rodata.module8_managed_to_java,"a",@progbits
-	.type	module8_managed_to_java, @object
-	.p2align	2
-module8_managed_to_java:
-	.word	33554471
-	.word	403
-	.word	33554472
-	.word	404
-	.word	33554474
-	.word	405
-	.word	33554476
-	.word	406
-	.size	module8_managed_to_java, 32
-
-	.section	.rodata.module8_managed_to_java_duplicates,"a",@progbits
-	.type	module8_managed_to_java_duplicates, @object
-	.p2align	2
-module8_managed_to_java_duplicates:
-	.word	33554473
-	.word	404
-	.word	33554475
-	.word	405
-	.size	module8_managed_to_java_duplicates, 16
-
-	.section	.rodata.module9_managed_to_java,"a",@progbits
-	.type	module9_managed_to_java, @object
-	.p2align	2
-module9_managed_to_java:
-	.word	33554443
-	.word	402
-	.size	module9_managed_to_java, 8
-
-	.section	.rodata.module10_managed_to_java,"a",@progbits
-	.type	module10_managed_to_java, @object
-	.p2align	2
-module10_managed_to_java:
-	.word	33554440
-	.word	1917
-	.word	33554441
-	.word	1924
-	.word	33554444
-	.word	1929
-	.word	33554445
-	.word	1927
-	.word	33554447
-	.word	1928
-	.word	33554449
-	.word	1931
-	.word	33554451
-	.word	1933
-	.word	33554452
-	.word	1932
-	.word	33554454
-	.word	1934
-	.word	33554456
-	.word	1935
-	.word	33554458
-	.word	1936
-	.word	33554460
-	.word	1937
-	.word	33554462
-	.word	1938
-	.word	33554464
-	.word	1939
-	.word	33554466
-	.word	1940
-	.word	33554468
-	.word	1941
-	.word	33554470
-	.word	1942
-	.word	33554472
-	.word	1943
-	.word	33554474
-	.word	1944
-	.word	33554492
-	.word	1891
-	.word	33554496
-	.word	1892
-	.word	33554498
-	.word	1911
-	.word	33554500
-	.word	1912
-	.word	33554502
-	.word	1913
-	.word	33554504
-	.word	1914
-	.word	33554506
-	.word	1915
-	.word	33554508
-	.word	1916
-	.word	33554510
-	.word	1893
-	.word	33554517
-	.word	1918
-	.word	33554519
-	.word	1919
-	.word	33554521
-	.word	1920
-	.word	33554523
-	.word	1921
-	.word	33554525
-	.word	1922
-	.word	33554527
-	.word	1923
-	.word	33554529
-	.word	1925
-	.word	33554531
-	.word	1926
-	.word	33554533
-	.word	1930
-	.word	33554535
-	.word	1894
-	.word	33554537
-	.word	1895
-	.word	33554539
-	.word	1896
-	.word	33554541
-	.word	1897
-	.word	33554543
-	.word	1898
-	.word	33554545
-	.word	1899
-	.word	33554547
-	.word	1900
-	.word	33554549
-	.word	1901
-	.word	33554551
-	.word	1902
-	.word	33554553
-	.word	1903
-	.word	33554555
-	.word	1904
-	.word	33554557
-	.word	1905
-	.word	33554559
-	.word	1906
-	.word	33554561
-	.word	1907
-	.word	33554563
-	.word	1908
-	.word	33554565
-	.word	1909
-	.word	33554567
-	.word	1910
-	.size	module10_managed_to_java, 432
-
-	.section	.rodata.module10_managed_to_java_duplicates,"a",@progbits
-	.type	module10_managed_to_java_duplicates, @object
-	.p2align	2
-module10_managed_to_java_duplicates:
-	.word	33554446
-	.word	1927
-	.word	33554448
-	.word	1928
-	.word	33554450
-	.word	1931
-	.word	33554453
-	.word	1932
-	.word	33554455
-	.word	1934
-	.word	33554457
-	.word	1935
-	.word	33554459
-	.word	1936
-	.word	33554461
-	.word	1937
-	.word	33554463
-	.word	1938
-	.word	33554465
-	.word	1939
-	.word	33554467
-	.word	1940
-	.word	33554469
-	.word	1941
-	.word	33554471
-	.word	1942
-	.word	33554473
-	.word	1943
-	.word	33554475
-	.word	1944
-	.word	33554493
-	.word	1891
-	.word	33554494
-	.word	1891
-	.word	33554495
-	.word	1891
-	.word	33554497
-	.word	1892
-	.word	33554499
-	.word	1911
-	.word	33554501
-	.word	1912
-	.word	33554503
-	.word	1913
-	.word	33554505
-	.word	1914
-	.word	33554507
-	.word	1915
-	.word	33554509
-	.word	1916
-	.word	33554518
-	.word	1918
-	.word	33554520
-	.word	1919
-	.word	33554522
-	.word	1920
-	.word	33554524
-	.word	1921
-	.word	33554526
-	.word	1922
-	.word	33554528
-	.word	1923
-	.word	33554530
-	.word	1925
-	.word	33554532
-	.word	1926
-	.word	33554534
-	.word	1930
-	.word	33554536
-	.word	1894
-	.word	33554538
-	.word	1895
-	.word	33554540
-	.word	1896
-	.word	33554542
-	.word	1897
-	.word	33554544
-	.word	1898
-	.word	33554546
-	.word	1899
-	.word	33554548
-	.word	1900
-	.word	33554550
-	.word	1901
-	.word	33554552
-	.word	1902
-	.word	33554554
-	.word	1903
-	.word	33554556
-	.word	1904
-	.word	33554558
-	.word	1905
-	.word	33554560
-	.word	1906
-	.word	33554562
-	.word	1907
-	.word	33554564
-	.word	1908
-	.word	33554566
-	.word	1909
-	.word	33554568
-	.word	1910
-	.size	module10_managed_to_java_duplicates, 408
-
-	.section	.rodata.module11_managed_to_java,"a",@progbits
-	.type	module11_managed_to_java, @object
-	.p2align	2
-module11_managed_to_java:
-	.word	33554435
-	.word	569
-	.word	33554437
-	.word	570
-	.word	33554438
-	.word	571
-	.word	33554439
-	.word	572
-	.word	33554440
-	.word	573
-	.word	33554441
-	.word	574
-	.word	33554442
-	.word	575
-	.word	33554443
-	.word	576
-	.word	33554444
-	.word	577
-	.word	33554445
-	.word	578
-	.word	33554446
-	.word	579
-	.word	33554447
-	.word	580
-	.word	33554448
-	.word	581
-	.word	33554449
-	.word	582
-	.word	33554450
-	.word	583
-	.word	33554451
-	.word	584
-	.word	33554452
-	.word	585
-	.word	33554453
-	.word	586
-	.word	33554454
-	.word	587
-	.word	33554455
-	.word	588
-	.word	33554456
-	.word	589
-	.word	33554457
-	.word	590
-	.word	33554458
-	.word	591
-	.word	33554459
-	.word	592
-	.word	33554460
-	.word	593
-	.word	33554461
-	.word	594
-	.word	33554462
-	.word	595
-	.word	33554463
-	.word	596
-	.word	33554464
-	.word	597
-	.word	33554465
-	.word	598
-	.word	33554466
-	.word	599
-	.word	33554467
-	.word	600
-	.word	33554468
-	.word	601
-	.word	33554469
-	.word	602
-	.word	33554470
-	.word	603
-	.word	33554471
-	.word	649
-	.word	33554472
-	.word	650
-	.word	33554473
-	.word	651
-	.word	33554474
-	.word	652
-	.word	33554475
-	.word	653
-	.word	33554476
-	.word	654
-	.word	33554477
-	.word	655
-	.word	33554478
-	.word	644
-	.word	33554479
-	.word	645
-	.word	33554480
-	.word	646
-	.word	33554481
-	.word	647
-	.word	33554482
-	.word	648
-	.word	33554483
-	.word	641
-	.word	33554484
-	.word	642
-	.word	33554485
-	.word	643
-	.word	33554486
-	.word	639
-	.word	33554487
-	.word	640
-	.word	33554488
-	.word	630
-	.word	33554489
-	.word	631
-	.word	33554490
-	.word	632
-	.word	33554491
-	.word	633
-	.word	33554492
-	.word	634
-	.word	33554493
-	.word	635
-	.word	33554494
-	.word	636
-	.word	33554495
-	.word	637
-	.word	33554496
-	.word	638
-	.word	33554497
-	.word	616
-	.word	33554498
-	.word	618
-	.word	33554499
-	.word	620
-	.word	33554501
-	.word	617
-	.word	33554503
-	.word	619
-	.word	33554505
-	.word	621
-	.word	33554507
-	.word	622
-	.word	33554509
-	.word	627
-	.word	33554511
-	.word	629
-	.word	33554512
-	.word	623
-	.word	33554514
-	.word	624
-	.word	33554515
-	.word	625
-	.word	33554517
-	.word	626
-	.word	33554518
-	.word	628
-	.word	33554519
-	.word	609
-	.word	33554520
-	.word	610
-	.word	33554521
-	.word	611
-	.word	33554522
-	.word	612
-	.word	33554524
-	.word	613
-	.word	33554526
-	.word	614
-	.word	33554527
-	.word	615
-	.word	33554528
-	.word	604
-	.word	33554529
-	.word	605
-	.word	33554530
-	.word	606
-	.word	33554531
-	.word	607
-	.word	33554532
-	.word	608
-	.size	module11_managed_to_java, 696
-
-	.section	.rodata.module11_managed_to_java_duplicates,"a",@progbits
-	.type	module11_managed_to_java_duplicates, @object
-	.p2align	2
-module11_managed_to_java_duplicates:
-	.word	33554436
-	.word	569
-	.word	33554513
-	.word	623
-	.word	33554516
-	.word	624
-	.word	33554523
-	.word	612
-	.word	33554525
-	.word	613
-	.size	module11_managed_to_java_duplicates, 40
-
-	.section	.rodata.module12_managed_to_java,"a",@progbits
-	.type	module12_managed_to_java, @object
-	.p2align	2
-module12_managed_to_java:
-	.word	33554466
-	.word	852
-	.word	33554467
-	.word	851
-	.word	33554469
-	.word	849
-	.word	33554471
-	.word	850
-	.word	33554472
-	.word	819
-	.word	33554473
-	.word	820
-	.word	33554474
-	.word	822
-	.word	33554475
-	.word	823
-	.word	33554476
-	.word	821
-	.word	33554478
-	.word	828
-	.word	33554480
-	.word	829
-	.word	33554481
-	.word	835
-	.word	33554482
-	.word	834
-	.word	33554483
-	.word	824
-	.word	33554485
-	.word	825
-	.word	33554486
-	.word	826
-	.word	33554488
-	.word	827
-	.word	33554489
-	.word	836
-	.word	33554490
-	.word	837
-	.word	33554491
-	.word	838
-	.word	33554492
-	.word	830
-	.word	33554494
-	.word	831
-	.word	33554496
-	.word	832
-	.word	33554498
-	.word	833
-	.word	33554500
-	.word	839
-	.word	33554501
-	.word	853
-	.word	33554503
-	.word	840
-	.word	33554504
-	.word	841
-	.word	33554506
-	.word	1875
-	.word	33554507
-	.word	842
-	.word	33554509
-	.word	1876
-	.word	33554510
-	.word	843
-	.word	33554514
-	.word	1877
-	.word	33554525
-	.word	844
-	.word	33554526
-	.word	845
-	.word	33554527
-	.word	846
-	.word	33554528
-	.word	847
-	.word	33554529
-	.word	848
-	.word	33554540
-	.word	772
-	.word	33554541
-	.word	773
-	.word	33554544
-	.word	1859
-	.word	33554545
-	.word	774
-	.word	33554548
-	.word	1860
-	.word	33554549
-	.word	775
-	.word	33554552
-	.word	1861
-	.word	33554561
-	.word	777
-	.word	33554562
-	.word	778
-	.word	33554565
-	.word	1862
-	.word	33554566
-	.word	779
-	.word	33554567
-	.word	782
-	.word	33554568
-	.word	785
-	.word	33554569
-	.word	786
-	.word	33554571
-	.word	787
-	.word	33554574
-	.word	1863
-	.word	33554575
-	.word	788
-	.word	33554578
-	.word	1864
-	.word	33554585
-	.word	789
-	.word	33554586
-	.word	792
-	.word	33554591
-	.word	793
-	.word	33554592
-	.word	794
-	.word	33554597
-	.word	1865
-	.word	33554606
-	.word	790
-	.word	33554607
-	.word	791
-	.word	33554608
-	.word	799
-	.word	33554612
-	.word	802
-	.word	33554613
-	.word	776
-	.word	33554615
-	.word	780
-	.word	33554617
-	.word	781
-	.word	33554619
-	.word	783
-	.word	33554621
-	.word	784
-	.word	33554623
-	.word	795
-	.word	33554625
-	.word	796
-	.word	33554628
-	.word	1866
-	.word	33554629
-	.word	797
-	.word	33554631
-	.word	798
-	.word	33554634
-	.word	1867
-	.word	33554635
-	.word	800
-	.word	33554637
-	.word	801
-	.word	33554641
-	.word	1868
-	.word	33554642
-	.word	808
-	.word	33554646
-	.word	1870
-	.word	33554647
-	.word	809
-	.word	33554650
-	.word	1871
-	.word	33554651
-	.word	810
-	.word	33554654
-	.word	1872
-	.word	33554655
-	.word	812
-	.word	33554658
-	.word	1873
-	.word	33554659
-	.word	803
-	.word	33554661
-	.word	818
-	.word	33554663
-	.word	804
-	.word	33554664
-	.word	805
-	.word	33554665
-	.word	806
-	.word	33554667
-	.word	1869
-	.word	33554674
-	.word	807
-	.word	33554676
-	.word	811
-	.word	33554677
-	.word	813
-	.word	33554678
-	.word	814
-	.word	33554679
-	.word	815
-	.word	33554685
-	.word	816
-	.word	33554686
-	.word	817
-	.word	33554689
-	.word	1874
-	.size	module12_managed_to_java, 808
-
-	.section	.rodata.module12_managed_to_java_duplicates,"a",@progbits
-	.type	module12_managed_to_java_duplicates, @object
-	.p2align	2
-module12_managed_to_java_duplicates:
-	.word	33554468
-	.word	851
-	.word	33554470
-	.word	849
-	.word	33554477
-	.word	821
-	.word	33554479
-	.word	828
-	.word	33554484
-	.word	824
-	.word	33554487
-	.word	826
-	.word	33554493
-	.word	830
-	.word	33554495
-	.word	831
-	.word	33554497
-	.word	832
-	.word	33554499
-	.word	833
-	.word	33554502
-	.word	853
-	.word	33554505
-	.word	841
-	.word	33554508
-	.word	842
-	.word	33554511
-	.word	843
-	.word	33554542
-	.word	773
-	.word	33554546
-	.word	774
-	.word	33554550
-	.word	775
-	.word	33554563
-	.word	778
-	.word	33554570
-	.word	786
-	.word	33554572
-	.word	787
-	.word	33554576
-	.word	788
-	.word	33554593
-	.word	794
-	.word	33554611
-	.word	799
-	.word	33554614
-	.word	776
-	.word	33554616
-	.word	780
-	.word	33554618
-	.word	781
-	.word	33554620
-	.word	783
-	.word	33554622
-	.word	784
-	.word	33554624
-	.word	795
-	.word	33554626
-	.word	796
-	.word	33554630
-	.word	797
-	.word	33554632
-	.word	798
-	.word	33554636
-	.word	800
-	.word	33554638
-	.word	801
-	.word	33554643
-	.word	808
-	.word	33554648
-	.word	809
-	.word	33554652
-	.word	810
-	.word	33554656
-	.word	812
-	.word	33554660
-	.word	803
-	.word	33554662
-	.word	818
-	.word	33554666
-	.word	806
-	.word	33554675
-	.word	807
-	.word	33554684
-	.word	815
-	.word	33554687
-	.word	817
-	.size	module12_managed_to_java_duplicates, 352
-
-	.section	.rodata.module13_managed_to_java,"a",@progbits
-	.type	module13_managed_to_java, @object
-	.p2align	2
-module13_managed_to_java:
-	.word	33554440
-	.word	1204
-	.word	33554441
-	.word	1205
-	.word	33554451
-	.word	1221
-	.word	33554452
-	.word	1220
-	.word	33554454
-	.word	1172
-	.word	33554455
-	.word	1171
-	.word	33554456
-	.word	1173
-	.size	module13_managed_to_java, 56
-
-	.section	.rodata.module14_managed_to_java,"a",@progbits
-	.type	module14_managed_to_java, @object
-	.p2align	2
-module14_managed_to_java:
-	.word	33554501
-	.word	428
-	.word	33554503
-	.word	427
-	.word	33554504
-	.word	423
-	.word	33554506
-	.word	424
-	.word	33554508
-	.word	421
-	.word	33554509
-	.word	422
-	.word	33554510
-	.word	418
-	.word	33554511
-	.word	419
-	.word	33554512
-	.word	420
-	.word	33554513
-	.word	407
-	.word	33554514
-	.word	408
-	.word	33554516
-	.word	409
-	.word	33554518
-	.word	410
-	.word	33554520
-	.word	411
-	.word	33554521
-	.word	412
-	.word	33554522
-	.word	413
-	.word	33554523
-	.word	414
-	.word	33554524
-	.word	415
-	.word	33554527
-	.word	416
-	.word	33554528
-	.word	417
-	.word	33554530
-	.word	477
-	.word	33554531
-	.word	478
-	.word	33554534
-	.word	1844
-	.word	33554537
-	.word	476
-	.word	33554538
-	.word	475
-	.word	33554540
-	.word	480
-	.word	33554542
-	.word	481
-	.word	33554544
-	.word	482
-	.word	33554546
-	.word	479
-	.word	33554547
-	.word	444
-	.word	33554548
-	.word	429
-	.word	33554549
-	.word	430
-	.word	33554550
-	.word	431
-	.word	33554553
-	.word	1841
-	.word	33554554
-	.word	432
-	.word	33554557
-	.word	1842
-	.word	33554563
-	.word	433
-	.word	33554564
-	.word	434
-	.word	33554565
-	.word	435
-	.word	33554566
-	.word	440
-	.word	33554568
-	.word	441
-	.word	33554570
-	.word	442
-	.word	33554572
-	.word	443
-	.word	33554575
-	.word	445
-	.word	33554577
-	.word	446
-	.word	33554579
-	.word	447
-	.word	33554581
-	.word	450
-	.word	33554583
-	.word	451
-	.word	33554585
-	.word	455
-	.word	33554587
-	.word	456
-	.word	33554589
-	.word	460
-	.word	33554591
-	.word	436
-	.word	33554592
-	.word	437
-	.word	33554594
-	.word	438
-	.word	33554595
-	.word	439
-	.word	33554597
-	.word	448
-	.word	33554598
-	.word	449
-	.word	33554599
-	.word	452
-	.word	33554600
-	.word	453
-	.word	33554602
-	.word	454
-	.word	33554603
-	.word	457
-	.word	33554604
-	.word	458
-	.word	33554605
-	.word	459
-	.word	33554607
-	.word	461
-	.word	33554608
-	.word	462
-	.word	33554609
-	.word	463
-	.word	33554610
-	.word	464
-	.word	33554613
-	.word	1843
-	.word	33554616
-	.word	465
-	.word	33554617
-	.word	466
-	.word	33554618
-	.word	467
-	.word	33554619
-	.word	468
-	.word	33554620
-	.word	469
-	.word	33554621
-	.word	470
-	.word	33554622
-	.word	471
-	.word	33554623
-	.word	474
-	.word	33554624
-	.word	473
-	.word	33554626
-	.word	472
-	.word	33554628
-	.word	425
-	.word	33554629
-	.word	426
-	.size	module14_managed_to_java, 640
-
-	.section	.rodata.module14_managed_to_java_duplicates,"a",@progbits
-	.type	module14_managed_to_java_duplicates, @object
-	.p2align	2
-module14_managed_to_java_duplicates:
-	.word	33554502
-	.word	428
-	.word	33554505
-	.word	423
-	.word	33554507
-	.word	424
-	.word	33554515
-	.word	408
-	.word	33554517
-	.word	409
-	.word	33554519
-	.word	410
-	.word	33554525
-	.word	415
-	.word	33554526
-	.word	414
-	.word	33554529
-	.word	417
-	.word	33554532
-	.word	478
-	.word	33554539
-	.word	475
-	.word	33554541
-	.word	480
-	.word	33554543
-	.word	481
-	.word	33554545
-	.word	482
-	.word	33554551
-	.word	431
-	.word	33554555
-	.word	432
-	.word	33554562
-	.word	430
-	.word	33554567
-	.word	440
-	.word	33554569
-	.word	441
-	.word	33554571
-	.word	442
-	.word	33554573
-	.word	443
-	.word	33554574
-	.word	444
-	.word	33554576
-	.word	445
-	.word	33554578
-	.word	446
-	.word	33554580
-	.word	447
-	.word	33554582
-	.word	450
-	.word	33554584
-	.word	451
-	.word	33554586
-	.word	455
-	.word	33554588
-	.word	456
-	.word	33554590
-	.word	460
-	.word	33554593
-	.word	437
-	.word	33554596
-	.word	439
-	.word	33554601
-	.word	453
-	.word	33554606
-	.word	459
-	.word	33554611
-	.word	464
-	.word	33554625
-	.word	473
-	.word	33554627
-	.word	472
-	.size	module14_managed_to_java_duplicates, 296
-
-	.section	.rodata.module15_managed_to_java,"a",@progbits
-	.type	module15_managed_to_java, @object
-	.p2align	2
-module15_managed_to_java:
-	.word	33554463
-	.word	662
-	.word	33554464
-	.word	663
-	.word	33554465
-	.word	664
-	.word	33554466
-	.word	656
-	.word	33554467
-	.word	665
-	.word	33554468
-	.word	666
-	.word	33554469
-	.word	667
-	.word	33554470
-	.word	668
-	.word	33554471
-	.word	684
-	.word	33554473
-	.word	685
-	.word	33554475
-	.word	686
-	.word	33554477
-	.word	687
-	.word	33554479
-	.word	688
-	.word	33554481
-	.word	689
-	.word	33554483
-	.word	690
-	.word	33554485
-	.word	691
-	.word	33554487
-	.word	692
-	.word	33554489
-	.word	694
-	.word	33554491
-	.word	695
-	.word	33554493
-	.word	696
-	.word	33554495
-	.word	698
-	.word	33554497
-	.word	699
-	.word	33554499
-	.word	700
-	.word	33554501
-	.word	669
-	.word	33554502
-	.word	693
-	.word	33554504
-	.word	670
-	.word	33554505
-	.word	671
-	.word	33554506
-	.word	697
-	.word	33554507
-	.word	672
-	.word	33554508
-	.word	673
-	.word	33554509
-	.word	674
-	.word	33554510
-	.word	675
-	.word	33554511
-	.word	676
-	.word	33554512
-	.word	678
-	.word	33554514
-	.word	677
-	.word	33554516
-	.word	679
-	.word	33554517
-	.word	680
-	.word	33554518
-	.word	681
-	.word	33554519
-	.word	682
-	.word	33554520
-	.word	683
-	.word	33554522
-	.word	660
-	.word	33554523
-	.word	661
-	.word	33554524
-	.word	657
-	.word	33554526
-	.word	658
-	.word	33554528
-	.word	659
-	.size	module15_managed_to_java, 360
-
-	.section	.rodata.module15_managed_to_java_duplicates,"a",@progbits
-	.type	module15_managed_to_java_duplicates, @object
-	.p2align	2
-module15_managed_to_java_duplicates:
-	.word	33554472
-	.word	684
-	.word	33554474
-	.word	685
-	.word	33554476
-	.word	686
-	.word	33554478
-	.word	687
-	.word	33554480
-	.word	688
-	.word	33554482
-	.word	689
-	.word	33554484
-	.word	690
-	.word	33554486
-	.word	691
-	.word	33554488
-	.word	692
-	.word	33554490
-	.word	694
-	.word	33554492
-	.word	695
-	.word	33554494
-	.word	696
-	.word	33554496
-	.word	698
-	.word	33554498
-	.word	699
-	.word	33554500
-	.word	700
-	.word	33554503
-	.word	693
-	.word	33554513
-	.word	678
-	.word	33554515
-	.word	677
-	.word	33554521
-	.word	683
-	.word	33554525
-	.word	657
-	.word	33554527
-	.word	658
-	.word	33554529
-	.word	659
-	.size	module15_managed_to_java_duplicates, 176
-
-	.section	.rodata.module16_managed_to_java,"a",@progbits
-	.type	module16_managed_to_java, @object
-	.p2align	2
-module16_managed_to_java:
-	.word	33554441
-	.word	500
-	.size	module16_managed_to_java, 8
-
-	.section	.rodata.module17_managed_to_java,"a",@progbits
-	.type	module17_managed_to_java, @object
-	.p2align	2
-module17_managed_to_java:
-	.word	33554455
-	.word	1170
-	.size	module17_managed_to_java, 8
-
-	.section	.rodata.module18_managed_to_java,"a",@progbits
-	.type	module18_managed_to_java, @object
-	.p2align	2
-module18_managed_to_java:
-	.word	33554590
-	.word	1945
-	.word	33554592
-	.word	1946
-	.word	33554594
-	.word	1404
-	.word	33554596
-	.word	1406
-	.word	33554598
-	.word	1405
-	.word	33554599
-	.word	1402
-	.word	33554601
-	.word	1403
-	.word	33554603
-	.word	1401
-	.word	33554614
-	.word	278
-	.word	33554616
-	.word	279
-	.word	33554618
-	.word	283
-	.word	33554621
-	.word	280
-	.word	33554622
-	.word	281
-	.word	33554624
-	.word	282
-	.word	33554626
-	.word	284
-	.word	33554628
-	.word	285
-	.word	33554629
-	.word	286
-	.word	33554630
-	.word	147
-	.word	33554631
-	.word	148
-	.word	33554632
-	.word	149
-	.word	33554633
-	.word	150
-	.word	33554634
-	.word	59
-	.word	33554635
-	.word	60
-	.word	33554637
-	.word	62
-	.word	33554640
-	.word	61
-	.word	33554642
-	.word	287
-	.word	33554643
-	.word	288
-	.word	33554646
-	.word	293
-	.word	33554647
-	.word	294
-	.word	33554650
-	.word	1837
-	.word	33554651
-	.word	295
-	.word	33554653
-	.word	296
-	.word	33554656
-	.word	297
-	.word	33554659
-	.word	298
-	.word	33554660
-	.word	304
-	.word	33554661
-	.word	305
-	.word	33554663
-	.word	322
-	.word	33554664
-	.word	323
-	.word	33554666
-	.word	337
-	.word	33554667
-	.word	338
-	.word	33554668
-	.word	339
-	.word	33554670
-	.word	290
-	.word	33554671
-	.word	291
-	.word	33554672
-	.word	289
-	.word	33554678
-	.word	299
-	.word	33554679
-	.word	300
-	.word	33554681
-	.word	302
-	.word	33554682
-	.word	303
-	.word	33554685
-	.word	306
-	.word	33554686
-	.word	307
-	.word	33554687
-	.word	308
-	.word	33554688
-	.word	309
-	.word	33554690
-	.word	310
-	.word	33554692
-	.word	312
-	.word	33554693
-	.word	313
-	.word	33554694
-	.word	314
-	.word	33554695
-	.word	292
-	.word	33554697
-	.word	301
-	.word	33554699
-	.word	311
-	.word	33554701
-	.word	320
-	.word	33554703
-	.word	315
-	.word	33554704
-	.word	316
-	.word	33554705
-	.word	317
-	.word	33554706
-	.word	332
-	.word	33554708
-	.word	335
-	.word	33554711
-	.word	318
-	.word	33554712
-	.word	319
-	.word	33554713
-	.word	321
-	.word	33554714
-	.word	324
-	.word	33554716
-	.word	325
-	.word	33554717
-	.word	326
-	.word	33554718
-	.word	327
-	.word	33554719
-	.word	328
-	.word	33554721
-	.word	329
-	.word	33554722
-	.word	330
-	.word	33554723
-	.word	331
-	.word	33554725
-	.word	333
-	.word	33554726
-	.word	334
-	.word	33554728
-	.word	336
-	.word	33554729
-	.word	340
-	.word	33554730
-	.word	341
-	.word	33554732
-	.word	342
-	.word	33554733
-	.word	233
-	.word	33554734
-	.word	234
-	.word	33554735
-	.word	235
-	.word	33554736
-	.word	236
-	.word	33554737
-	.word	237
-	.word	33554741
-	.word	1832
-	.word	33554742
-	.word	238
-	.word	33554744
-	.word	1833
-	.word	33554745
-	.word	239
-	.word	33554747
-	.word	240
-	.word	33554749
-	.word	241
-	.word	33554751
-	.word	242
-	.word	33554754
-	.word	1834
-	.word	33554755
-	.word	243
-	.word	33554758
-	.word	1835
-	.word	33554759
-	.word	244
-	.word	33554762
-	.word	1836
-	.word	33554773
-	.word	212
-	.word	33554774
-	.word	213
-	.word	33554776
-	.word	214
-	.word	33554777
-	.word	215
-	.word	33554779
-	.word	216
-	.word	33554781
-	.word	222
-	.word	33554782
-	.word	253
-	.word	33554783
-	.word	254
-	.word	33554785
-	.word	255
-	.word	33554787
-	.word	256
-	.word	33554789
-	.word	257
-	.word	33554791
-	.word	258
-	.word	33554792
-	.word	259
-	.word	33554794
-	.word	196
-	.word	33554795
-	.word	197
-	.word	33554799
-	.word	198
-	.word	33554802
-	.word	202
-	.word	33554804
-	.word	203
-	.word	33554806
-	.word	204
-	.word	33554808
-	.word	205
-	.word	33554810
-	.word	206
-	.word	33554811
-	.word	207
-	.word	33554813
-	.word	208
-	.word	33554815
-	.word	209
-	.word	33554817
-	.word	199
-	.word	33554819
-	.word	201
-	.word	33554821
-	.word	200
-	.word	33554823
-	.word	217
-	.word	33554826
-	.word	220
-	.word	33554828
-	.word	221
-	.word	33554830
-	.word	219
-	.word	33554835
-	.word	210
-	.word	33554836
-	.word	211
-	.word	33554838
-	.word	227
-	.word	33554840
-	.word	230
-	.word	33554842
-	.word	231
-	.word	33554844
-	.word	229
-	.word	33554846
-	.word	250
-	.word	33554848
-	.word	251
-	.word	33554850
-	.word	262
-	.word	33554851
-	.word	261
-	.word	33554860
-	.word	218
-	.word	33554865
-	.word	223
-	.word	33554866
-	.word	224
-	.word	33554868
-	.word	225
-	.word	33554870
-	.word	226
-	.word	33554873
-	.word	228
-	.word	33554875
-	.word	232
-	.word	33554878
-	.word	245
-	.word	33554879
-	.word	246
-	.word	33554880
-	.word	247
-	.word	33554881
-	.word	248
-	.word	33554882
-	.word	249
-	.word	33554885
-	.word	252
-	.word	33554889
-	.word	260
-	.word	33554891
-	.word	268
-	.word	33554892
-	.word	269
-	.word	33554893
-	.word	270
-	.word	33554896
-	.word	271
-	.word	33554897
-	.word	272
-	.word	33554898
-	.word	273
-	.word	33554900
-	.word	274
-	.word	33554901
-	.word	275
-	.word	33554903
-	.word	276
-	.word	33554904
-	.word	277
-	.word	33554908
-	.word	263
-	.word	33554909
-	.word	265
-	.word	33554910
-	.word	266
-	.word	33554911
-	.word	267
-	.word	33554915
-	.word	264
-	.word	33554917
-	.word	190
-	.word	33554919
-	.word	189
-	.word	33554920
-	.word	188
-	.word	33554922
-	.word	191
-	.word	33554923
-	.word	192
-	.word	33554924
-	.word	193
-	.word	33554925
-	.word	194
-	.word	33554926
-	.word	195
-	.word	33554928
-	.word	155
-	.word	33554929
-	.word	153
-	.word	33554932
-	.word	154
-	.word	33554935
-	.word	157
-	.word	33554936
-	.word	156
-	.word	33554938
-	.word	159
-	.word	33554941
-	.word	160
-	.word	33554943
-	.word	161
-	.word	33554946
-	.word	165
-	.word	33554949
-	.word	166
-	.word	33554951
-	.word	170
-	.word	33554953
-	.word	158
-	.word	33554955
-	.word	162
-	.word	33554957
-	.word	163
-	.word	33554959
-	.word	164
-	.word	33554962
-	.word	167
-	.word	33554963
-	.word	168
-	.word	33554964
-	.word	169
-	.word	33554965
-	.word	178
-	.word	33554966
-	.word	179
-	.word	33554968
-	.word	180
-	.word	33554970
-	.word	181
-	.word	33554971
-	.word	182
-	.word	33554973
-	.word	184
-	.word	33554975
-	.word	185
-	.word	33554977
-	.word	186
-	.word	33554979
-	.word	187
-	.word	33554981
-	.word	183
-	.word	33554983
-	.word	172
-	.word	33554985
-	.word	173
-	.word	33554986
-	.word	174
-	.word	33554988
-	.word	177
-	.word	33554990
-	.word	175
-	.word	33554992
-	.word	176
-	.word	33554994
-	.word	171
-	.word	33554995
-	.word	146
-	.word	33554996
-	.word	126
-	.word	33554997
-	.word	127
-	.word	33555000
-	.word	135
-	.word	33555001
-	.word	141
-	.word	33555002
-	.word	145
-	.word	33555003
-	.word	128
-	.word	33555004
-	.word	129
-	.word	33555005
-	.word	130
-	.word	33555006
-	.word	131
-	.word	33555008
-	.word	132
-	.word	33555009
-	.word	133
-	.word	33555010
-	.word	134
-	.word	33555011
-	.word	137
-	.word	33555013
-	.word	136
-	.word	33555015
-	.word	138
-	.word	33555017
-	.word	144
-	.word	33555019
-	.word	143
-	.word	33555021
-	.word	139
-	.word	33555022
-	.word	140
-	.word	33555023
-	.word	142
-	.word	33555026
-	.word	125
-	.word	33555028
-	.word	124
-	.word	33555030
-	.word	122
-	.word	33555031
-	.word	123
-	.word	33555033
-	.word	63
-	.word	33555034
-	.word	64
-	.word	33555035
-	.word	69
-	.word	33555038
-	.word	65
-	.word	33555039
-	.word	66
-	.word	33555045
-	.word	67
-	.word	33555046
-	.word	68
-	.word	33555047
-	.word	70
-	.word	33555048
-	.word	71
-	.word	33555050
-	.word	72
-	.word	33555051
-	.word	73
-	.word	33555052
-	.word	74
-	.word	33555053
-	.word	75
-	.word	33555054
-	.word	76
-	.word	33555055
-	.word	77
-	.word	33555056
-	.word	78
-	.word	33555057
-	.word	79
-	.word	33555058
-	.word	80
-	.word	33555060
-	.word	81
-	.word	33555061
-	.word	82
-	.word	33555062
-	.word	83
-	.word	33555063
-	.word	84
-	.word	33555064
-	.word	85
-	.word	33555065
-	.word	86
-	.word	33555066
-	.word	87
-	.word	33555067
-	.word	88
-	.word	33555068
-	.word	89
-	.word	33555069
-	.word	90
-	.word	33555070
-	.word	91
-	.word	33555071
-	.word	92
-	.word	33555072
-	.word	93
-	.word	33555073
-	.word	94
-	.word	33555074
-	.word	95
-	.word	33555075
-	.word	96
-	.word	33555076
-	.word	97
-	.word	33555078
-	.word	98
-	.word	33555079
-	.word	106
-	.word	33555080
-	.word	107
-	.word	33555082
-	.word	108
-	.word	33555084
-	.word	109
-	.word	33555085
-	.word	112
-	.word	33555086
-	.word	102
-	.word	33555087
-	.word	103
-	.word	33555088
-	.word	104
-	.word	33555089
-	.word	105
-	.word	33555091
-	.word	110
-	.word	33555092
-	.word	111
-	.word	33555094
-	.word	99
-	.word	33555096
-	.word	101
-	.word	33555098
-	.word	100
-	.word	33555100
-	.word	113
-	.word	33555101
-	.word	114
-	.word	33555102
-	.word	115
-	.word	33555103
-	.word	116
-	.word	33555106
-	.word	117
-	.word	33555107
-	.word	118
-	.word	33555108
-	.word	119
-	.word	33555109
-	.word	120
-	.word	33555110
-	.word	121
-	.word	33555112
-	.word	24
-	.word	33555113
-	.word	0
-	.word	33555114
-	.word	1
-	.word	33555116
-	.word	2
-	.word	33555118
-	.word	1821
-	.word	33555119
-	.word	4
-	.word	33555120
-	.word	6
-	.word	33555121
-	.word	7
-	.word	33555124
-	.word	1822
-	.word	33555128
-	.word	3
-	.word	33555130
-	.word	5
-	.word	33555133
-	.word	8
-	.word	33555135
-	.word	9
-	.word	33555137
-	.word	10
-	.word	33555139
-	.word	1824
-	.word	33555140
-	.word	11
-	.word	33555141
-	.word	12
-	.word	33555142
-	.word	13
-	.word	33555143
-	.word	14
-	.word	33555144
-	.word	15
-	.word	33555146
-	.word	16
-	.word	33555148
-	.word	17
-	.word	33555150
-	.word	1823
-	.word	33555151
-	.word	18
-	.word	33555159
-	.word	21
-	.word	33555160
-	.word	22
-	.word	33555162
-	.word	23
-	.word	33555167
-	.word	19
-	.word	33555169
-	.word	20
-	.word	33555172
-	.word	33
-	.word	33555173
-	.word	41
-	.word	33555175
-	.word	25
-	.word	33555177
-	.word	26
-	.word	33555178
-	.word	27
-	.word	33555179
-	.word	28
-	.word	33555180
-	.word	31
-	.word	33555181
-	.word	32
-	.word	33555184
-	.word	34
-	.word	33555186
-	.word	29
-	.word	33555188
-	.word	30
-	.word	33555190
-	.word	36
-	.word	33555192
-	.word	1825
-	.word	33555193
-	.word	37
-	.word	33555196
-	.word	1826
-	.word	33555197
-	.word	38
-	.word	33555199
-	.word	1827
-	.word	33555200
-	.word	39
-	.word	33555202
-	.word	40
-	.word	33555205
-	.word	35
-	.word	33555207
-	.word	42
-	.word	33555208
-	.word	43
-	.word	33555209
-	.word	45
-	.word	33555211
-	.word	46
-	.word	33555213
-	.word	44
-	.word	33555216
-	.word	47
-	.word	33555219
-	.word	48
-	.word	33555221
-	.word	49
-	.word	33555222
-	.word	50
-	.word	33555226
-	.word	51
-	.word	33555227
-	.word	58
-	.word	33555228
-	.word	52
-	.word	33555229
-	.word	53
-	.word	33555230
-	.word	54
-	.word	33555233
-	.word	55
-	.word	33555234
-	.word	56
-	.word	33555236
-	.word	57
-	.word	33555260
-	.word	1828
-	.word	33555262
-	.word	1829
-	.word	33555264
-	.word	1365
-	.word	33555266
-	.word	1371
-	.word	33555275
-	.word	1364
-	.word	33555281
-	.word	1830
-	.word	33555283
-	.word	151
-	.word	33555284
-	.word	1372
-	.word	33555299
-	.word	1831
-	.word	33555311
-	.word	152
-	.word	33555312
-	.word	1355
-	.word	33555313
-	.word	1356
-	.word	33555314
-	.word	1358
-	.word	33555316
-	.word	1357
-	.word	33555318
-	.word	1326
-	.word	33555319
-	.word	1327
-	.word	33555320
-	.word	1328
-	.word	33555322
-	.word	1329
-	.word	33555324
-	.word	1330
-	.word	33555325
-	.word	1331
-	.word	33555326
-	.word	1323
-	.word	33555327
-	.word	1324
-	.word	33555328
-	.word	1325
-	.word	33555329
-	.word	1359
-	.word	33555331
-	.word	1360
-	.word	33555333
-	.word	1361
-	.word	33555335
-	.word	1362
-	.word	33555337
-	.word	1363
-	.word	33555339
-	.word	1367
-	.word	33555340
-	.word	1370
-	.word	33555345
-	.word	1366
-	.word	33555347
-	.word	1368
-	.word	33555349
-	.word	1369
-	.word	33555351
-	.word	1373
-	.word	33555353
-	.word	1376
-	.word	33555355
-	.word	1377
-	.word	33555357
-	.word	1380
-	.word	33555359
-	.word	1379
-	.word	33555361
-	.word	1381
-	.word	33555363
-	.word	1382
-	.word	33555365
-	.word	1384
-	.word	33555367
-	.word	1385
-	.word	33555369
-	.word	1386
-	.word	33555371
-	.word	1374
-	.word	33555372
-	.word	1375
-	.word	33555373
-	.word	1378
-	.word	33555374
-	.word	1383
-	.word	33555375
-	.word	1387
-	.word	33555377
-	.word	1388
-	.word	33555378
-	.word	1389
-	.word	33555379
-	.word	1400
-	.word	33555380
-	.word	1390
-	.word	33555382
-	.word	1391
-	.word	33555384
-	.word	1392
-	.word	33555386
-	.word	1393
-	.word	33555388
-	.word	1394
-	.word	33555390
-	.word	1395
-	.word	33555392
-	.word	1396
-	.word	33555394
-	.word	1397
-	.word	33555395
-	.word	1398
-	.word	33555396
-	.word	1399
-	.word	33555397
-	.word	1348
-	.word	33555398
-	.word	1349
-	.word	33555400
-	.word	1350
-	.word	33555402
-	.word	1351
-	.word	33555404
-	.word	1352
-	.word	33555405
-	.word	1354
-	.word	33555407
-	.word	1353
-	.word	33555409
-	.word	1332
-	.word	33555410
-	.word	1334
-	.word	33555413
-	.word	1333
-	.word	33555416
-	.word	1335
-	.word	33555418
-	.word	1336
-	.word	33555420
-	.word	1347
-	.word	33555422
-	.word	1339
-	.word	33555424
-	.word	1337
-	.word	33555426
-	.word	1338
-	.word	33555428
-	.word	1340
-	.word	33555430
-	.word	1341
-	.word	33555432
-	.word	1342
-	.word	33555434
-	.word	1343
-	.word	33555436
-	.word	1344
-	.word	33555438
-	.word	1345
-	.word	33555440
-	.word	1346
-	.word	33555442
-	.word	1274
-	.word	33555443
-	.word	1275
-	.word	33555444
-	.word	1277
-	.word	33555445
-	.word	1278
-	.word	33555446
-	.word	1281
-	.word	33555447
-	.word	1284
-	.word	33555448
-	.word	1287
-	.word	33555449
-	.word	1288
-	.word	33555450
-	.word	1276
-	.word	33555451
-	.word	1293
-	.word	33555452
-	.word	1296
-	.word	33555453
-	.word	1300
-	.word	33555454
-	.word	1889
-	.word	33555455
-	.word	1305
-	.word	33555456
-	.word	1306
-	.word	33555457
-	.word	1308
-	.word	33555459
-	.word	1309
-	.word	33555461
-	.word	1310
-	.word	33555462
-	.word	1890
-	.word	33555463
-	.word	1311
-	.word	33555464
-	.word	1270
-	.word	33555465
-	.word	1271
-	.word	33555468
-	.word	1279
-	.word	33555469
-	.word	1280
-	.word	33555471
-	.word	1285
-	.word	33555473
-	.word	1286
-	.word	33555474
-	.word	1272
-	.word	33555476
-	.word	1273
-	.word	33555480
-	.word	1282
-	.word	33555482
-	.word	1283
-	.word	33555484
-	.word	1294
-	.word	33555486
-	.word	1289
-	.word	33555487
-	.word	1290
-	.word	33555488
-	.word	1291
-	.word	33555489
-	.word	1292
-	.word	33555490
-	.word	1301
-	.word	33555492
-	.word	1303
-	.word	33555494
-	.word	1295
-	.word	33555495
-	.word	1297
-	.word	33555496
-	.word	1298
-	.word	33555497
-	.word	1299
-	.word	33555499
-	.word	1302
-	.word	33555500
-	.word	1304
-	.word	33555501
-	.word	1307
-	.word	33555502
-	.word	1312
-	.word	33555503
-	.word	1313
-	.word	33555504
-	.word	1314
-	.word	33555506
-	.word	1315
-	.word	33555507
-	.word	1317
-	.word	33555509
-	.word	1316
-	.word	33555511
-	.word	1318
-	.word	33555513
-	.word	1319
-	.word	33555515
-	.word	1321
-	.word	33555517
-	.word	1322
-	.word	33555519
-	.word	1320
-	.word	33555520
-	.word	1254
-	.word	33555521
-	.word	1255
-	.word	33555522
-	.word	1257
-	.word	33555523
-	.word	1258
-	.word	33555524
-	.word	1259
-	.word	33555525
-	.word	1260
-	.word	33555526
-	.word	1256
-	.word	33555528
-	.word	1261
-	.word	33555530
-	.word	1263
-	.word	33555532
-	.word	1262
-	.word	33555533
-	.word	1267
-	.word	33555535
-	.word	1264
-	.word	33555537
-	.word	1265
-	.word	33555538
-	.word	1266
-	.word	33555540
-	.word	1268
-	.word	33555541
-	.word	1269
-	.word	33555564
-	.word	1820
-	.size	module18_managed_to_java, 4144
-
-	.section	.rodata.module18_managed_to_java_duplicates,"a",@progbits
-	.type	module18_managed_to_java_duplicates, @object
-	.p2align	2
-module18_managed_to_java_duplicates:
-	.word	33554591
-	.word	1945
-	.word	33554595
-	.word	1404
-	.word	33554597
-	.word	1406
-	.word	33554600
-	.word	1402
-	.word	33554602
-	.word	1403
-	.word	33554604
-	.word	1401
-	.word	33554615
-	.word	278
-	.word	33554617
-	.word	279
-	.word	33554619
-	.word	283
-	.word	33554623
-	.word	281
-	.word	33554625
-	.word	282
-	.word	33554627
-	.word	284
-	.word	33554636
-	.word	60
-	.word	33554638
-	.word	62
-	.word	33554641
-	.word	61
-	.word	33554644
-	.word	288
-	.word	33554645
-	.word	287
-	.word	33554648
-	.word	294
-	.word	33554652
-	.word	295
-	.word	33554654
-	.word	296
-	.word	33554655
-	.word	293
-	.word	33554662
-	.word	305
-	.word	33554665
-	.word	323
-	.word	33554669
-	.word	339
-	.word	33554673
-	.word	289
-	.word	33554674
-	.word	293
-	.word	33554676
-	.word	298
-	.word	33554677
-	.word	298
-	.word	33554683
-	.word	303
-	.word	33554684
-	.word	302
-	.word	33554689
-	.word	309
-	.word	33554691
-	.word	308
-	.word	33554696
-	.word	292
-	.word	33554698
-	.word	301
-	.word	33554700
-	.word	311
-	.word	33554702
-	.word	320
-	.word	33554707
-	.word	332
-	.word	33554709
-	.word	335
-	.word	33554724
-	.word	331
-	.word	33554727
-	.word	334
-	.word	33554731
-	.word	341
-	.word	33554738
-	.word	237
-	.word	33554743
-	.word	238
-	.word	33554746
-	.word	239
-	.word	33554748
-	.word	240
-	.word	33554750
-	.word	241
-	.word	33554752
-	.word	242
-	.word	33554756
-	.word	243
-	.word	33554760
-	.word	244
-	.word	33554775
-	.word	213
-	.word	33554778
-	.word	215
-	.word	33554780
-	.word	216
-	.word	33554784
-	.word	254
-	.word	33554786
-	.word	255
-	.word	33554788
-	.word	256
-	.word	33554790
-	.word	257
-	.word	33554793
-	.word	259
-	.word	33554796
-	.word	197
-	.word	33554797
-	.word	196
-	.word	33554800
-	.word	198
-	.word	33554812
-	.word	207
-	.word	33554814
-	.word	208
-	.word	33554818
-	.word	199
-	.word	33554820
-	.word	201
-	.word	33554822
-	.word	200
-	.word	33554825
-	.word	217
-	.word	33554827
-	.word	220
-	.word	33554829
-	.word	221
-	.word	33554832
-	.word	219
-	.word	33554837
-	.word	211
-	.word	33554839
-	.word	227
-	.word	33554841
-	.word	230
-	.word	33554843
-	.word	231
-	.word	33554845
-	.word	229
-	.word	33554847
-	.word	250
-	.word	33554849
-	.word	251
-	.word	33554852
-	.word	261
-	.word	33554857
-	.word	214
-	.word	33554867
-	.word	224
-	.word	33554883
-	.word	249
-	.word	33554884
-	.word	246
-	.word	33554887
-	.word	258
-	.word	33554894
-	.word	270
-	.word	33554895
-	.word	269
-	.word	33554899
-	.word	273
-	.word	33554902
-	.word	275
-	.word	33554916
-	.word	264
-	.word	33554921
-	.word	188
-	.word	33554930
-	.word	153
-	.word	33554933
-	.word	154
-	.word	33554937
-	.word	156
-	.word	33554939
-	.word	159
-	.word	33554942
-	.word	160
-	.word	33554944
-	.word	161
-	.word	33554947
-	.word	165
-	.word	33554950
-	.word	166
-	.word	33554952
-	.word	170
-	.word	33554954
-	.word	158
-	.word	33554960
-	.word	164
-	.word	33554967
-	.word	179
-	.word	33554969
-	.word	180
-	.word	33554972
-	.word	182
-	.word	33554974
-	.word	184
-	.word	33554976
-	.word	185
-	.word	33554978
-	.word	186
-	.word	33554980
-	.word	187
-	.word	33554982
-	.word	183
-	.word	33554984
-	.word	172
-	.word	33554987
-	.word	174
-	.word	33554989
-	.word	177
-	.word	33554991
-	.word	175
-	.word	33554993
-	.word	176
-	.word	33554998
-	.word	127
-	.word	33555012
-	.word	137
-	.word	33555014
-	.word	136
-	.word	33555016
-	.word	138
-	.word	33555018
-	.word	144
-	.word	33555020
-	.word	143
-	.word	33555027
-	.word	125
-	.word	33555081
-	.word	107
-	.word	33555083
-	.word	108
-	.word	33555090
-	.word	106
-	.word	33555095
-	.word	99
-	.word	33555097
-	.word	101
-	.word	33555099
-	.word	100
-	.word	33555104
-	.word	116
-	.word	33555111
-	.word	121
-	.word	33555115
-	.word	1
-	.word	33555117
-	.word	2
-	.word	33555122
-	.word	7
-	.word	33555127
-	.word	0
-	.word	33555129
-	.word	3
-	.word	33555131
-	.word	5
-	.word	33555136
-	.word	9
-	.word	33555138
-	.word	10
-	.word	33555145
-	.word	15
-	.word	33555149
-	.word	17
-	.word	33555161
-	.word	22
-	.word	33555164
-	.word	8
-	.word	33555168
-	.word	19
-	.word	33555176
-	.word	25
-	.word	33555182
-	.word	32
-	.word	33555183
-	.word	33
-	.word	33555187
-	.word	29
-	.word	33555189
-	.word	30
-	.word	33555191
-	.word	36
-	.word	33555194
-	.word	37
-	.word	33555198
-	.word	38
-	.word	33555201
-	.word	39
-	.word	33555203
-	.word	40
-	.word	33555206
-	.word	35
-	.word	33555210
-	.word	45
-	.word	33555212
-	.word	46
-	.word	33555214
-	.word	44
-	.word	33555223
-	.word	50
-	.word	33555231
-	.word	58
-	.word	33555265
-	.word	1365
-	.word	33555271
-	.word	1371
-	.word	33555278
-	.word	1364
-	.word	33555285
-	.word	1372
-	.word	33555315
-	.word	1358
-	.word	33555317
-	.word	1357
-	.word	33555321
-	.word	1328
-	.word	33555323
-	.word	1329
-	.word	33555330
-	.word	1359
-	.word	33555332
-	.word	1360
-	.word	33555334
-	.word	1361
-	.word	33555336
-	.word	1362
-	.word	33555338
-	.word	1363
-	.word	33555341
-	.word	1371
-	.word	33555342
-	.word	1372
-	.word	33555343
-	.word	1365
-	.word	33555344
-	.word	1365
-	.word	33555346
-	.word	1366
-	.word	33555348
-	.word	1368
-	.word	33555350
-	.word	1369
-	.word	33555352
-	.word	1373
-	.word	33555354
-	.word	1376
-	.word	33555356
-	.word	1377
-	.word	33555358
-	.word	1380
-	.word	33555360
-	.word	1379
-	.word	33555362
-	.word	1381
-	.word	33555364
-	.word	1382
-	.word	33555366
-	.word	1384
-	.word	33555368
-	.word	1385
-	.word	33555370
-	.word	1386
-	.word	33555376
-	.word	1387
-	.word	33555381
-	.word	1390
-	.word	33555383
-	.word	1391
-	.word	33555385
-	.word	1392
-	.word	33555387
-	.word	1393
-	.word	33555389
-	.word	1394
-	.word	33555391
-	.word	1395
-	.word	33555393
-	.word	1396
-	.word	33555399
-	.word	1349
-	.word	33555401
-	.word	1350
-	.word	33555403
-	.word	1351
-	.word	33555406
-	.word	1354
-	.word	33555408
-	.word	1353
-	.word	33555412
-	.word	1332
-	.word	33555414
-	.word	1333
-	.word	33555415
-	.word	1334
-	.word	33555417
-	.word	1335
-	.word	33555419
-	.word	1336
-	.word	33555421
-	.word	1347
-	.word	33555423
-	.word	1339
-	.word	33555425
-	.word	1337
-	.word	33555427
-	.word	1338
-	.word	33555429
-	.word	1340
-	.word	33555431
-	.word	1341
-	.word	33555433
-	.word	1342
-	.word	33555435
-	.word	1343
-	.word	33555437
-	.word	1344
-	.word	33555439
-	.word	1345
-	.word	33555441
-	.word	1346
-	.word	33555467
-	.word	1271
-	.word	33555470
-	.word	1280
-	.word	33555472
-	.word	1285
-	.word	33555475
-	.word	1272
-	.word	33555477
-	.word	1273
-	.word	33555478
-	.word	1276
-	.word	33555481
-	.word	1282
-	.word	33555483
-	.word	1283
-	.word	33555485
-	.word	1294
-	.word	33555491
-	.word	1301
-	.word	33555493
-	.word	1303
-	.word	33555498
-	.word	1299
-	.word	33555505
-	.word	1314
-	.word	33555508
-	.word	1317
-	.word	33555510
-	.word	1316
-	.word	33555512
-	.word	1318
-	.word	33555514
-	.word	1319
-	.word	33555516
-	.word	1321
-	.word	33555518
-	.word	1322
-	.word	33555527
-	.word	1256
-	.word	33555529
-	.word	1261
-	.word	33555531
-	.word	1263
-	.word	33555534
-	.word	1267
-	.word	33555536
-	.word	1264
-	.word	33555539
-	.word	1266
-	.word	33555542
-	.word	1269
-	.size	module18_managed_to_java_duplicates, 1928
-
-	.section	.rodata.module19_managed_to_java,"a",@progbits
-	.type	module19_managed_to_java, @object
-	.p2align	2
-module19_managed_to_java:
-	.word	33554454
-	.word	484
-	.word	33554455
-	.word	485
-	.word	33554461
-	.word	1845
-	.word	33554462
-	.word	486
-	.size	module19_managed_to_java, 32
-
-	.section	.rodata.module19_managed_to_java_duplicates,"a",@progbits
-	.type	module19_managed_to_java_duplicates, @object
-	.p2align	2
-module19_managed_to_java_duplicates:
-	.word	33554456
-	.word	485
-	.size	module19_managed_to_java_duplicates, 8
-
-	.section	.rodata.module20_managed_to_java,"a",@progbits
-	.type	module20_managed_to_java, @object
-	.p2align	2
-module20_managed_to_java:
-	.word	33554434
-	.word	1197
-	.word	33554437
-	.word	1198
-	.word	33554438
-	.word	1200
-	.word	33554440
-	.word	1196
-	.word	33554441
-	.word	1199
-	.size	module20_managed_to_java, 40
-
-	.section	.rodata.module21_managed_to_java,"a",@progbits
-	.type	module21_managed_to_java, @object
-	.p2align	2
-module21_managed_to_java:
-	.word	33554434
-	.word	1222
-	.word	33554437
-	.word	1227
-	.word	33554438
-	.word	1234
-	.word	33554439
-	.word	1233
-	.word	33554440
-	.word	1246
-	.word	33554441
-	.word	1235
-	.word	33554450
-	.word	1242
-	.word	33554451
-	.word	1238
-	.word	33554452
-	.word	1240
-	.word	33554453
-	.word	1244
-	.word	33554454
-	.word	1230
-	.word	33554455
-	.word	1243
-	.word	33554456
-	.word	1225
-	.word	33554457
-	.word	1232
-	.word	33554458
-	.word	1245
-	.word	33554459
-	.word	1228
-	.word	33554460
-	.word	1229
-	.word	33554461
-	.word	1241
-	.word	33554462
-	.word	1239
-	.word	33554463
-	.word	1231
-	.word	33554464
-	.word	1236
-	.word	33554466
-	.word	1226
-	.word	33554467
-	.word	1237
-	.word	33554468
-	.word	1202
-	.word	33554469
-	.word	1201
-	.word	33554473
-	.word	1203
-	.word	33554480
-	.word	977
-	.word	33554481
-	.word	971
-	.word	33554482
-	.word	973
-	.word	33554483
-	.word	978
-	.word	33554484
-	.word	969
-	.word	33554485
-	.word	975
-	.word	33554486
-	.word	976
-	.word	33554487
-	.word	974
-	.word	33554488
-	.word	972
-	.word	33554489
-	.word	970
-	.word	33554490
-	.word	967
-	.word	33554491
-	.word	968
-	.word	33554492
-	.word	964
-	.word	33554493
-	.word	966
-	.word	33554494
-	.word	965
-	.word	33554497
-	.word	944
-	.word	33554506
-	.word	943
-	.word	33554508
-	.word	945
-	.word	33554517
-	.word	952
-	.word	33554518
-	.word	954
-	.word	33554519
-	.word	955
-	.word	33554524
-	.word	950
-	.word	33554525
-	.word	948
-	.word	33554526
-	.word	949
-	.word	33554532
-	.word	942
-	.word	33554533
-	.word	951
-	.word	33554540
-	.word	947
-	.word	33554541
-	.word	941
-	.word	33554542
-	.word	946
-	.word	33554543
-	.word	953
-	.word	33554551
-	.word	956
-	.size	module21_managed_to_java, 456
-
-	.section	.rodata.module22_managed_to_java,"a",@progbits
-	.type	module22_managed_to_java, @object
-	.p2align	2
-module22_managed_to_java:
-	.word	33554459
-	.word	564
-	.word	33554461
-	.word	565
-	.word	33554462
-	.word	566
-	.word	33554465
-	.word	1852
-	.word	33554466
-	.word	567
-	.word	33554471
-	.word	1853
-	.word	33554472
-	.word	568
-	.size	module22_managed_to_java, 56
-
-	.section	.rodata.module22_managed_to_java_duplicates,"a",@progbits
-	.type	module22_managed_to_java_duplicates, @object
-	.p2align	2
-module22_managed_to_java_duplicates:
-	.word	33554460
-	.word	564
-	.word	33554463
-	.word	566
-	.word	33554467
-	.word	567
-	.word	33554473
-	.word	568
-	.size	module22_managed_to_java_duplicates, 32
-
-	.section	.rodata.module23_managed_to_java,"a",@progbits
-	.type	module23_managed_to_java, @object
-	.p2align	2
-module23_managed_to_java:
-	.word	33554437
-	.word	501
-	.word	33554439
-	.word	511
-	.word	33554441
-	.word	508
-	.word	33554442
-	.word	509
-	.word	33554444
-	.word	510
-	.size	module23_managed_to_java, 40
-
-	.section	.rodata.module23_managed_to_java_duplicates,"a",@progbits
-	.type	module23_managed_to_java_duplicates, @object
-	.p2align	2
-module23_managed_to_java_duplicates:
-	.word	33554438
-	.word	501
-	.word	33554440
-	.word	511
-	.word	33554443
-	.word	509
-	.size	module23_managed_to_java_duplicates, 24
-
-	.section	.rodata.module24_managed_to_java,"a",@progbits
-	.type	module24_managed_to_java, @object
-	.p2align	2
-module24_managed_to_java:
-	.word	33554447
-	.word	514
-	.word	33554448
-	.word	515
-	.word	33554450
-	.word	516
-	.word	33554452
-	.word	512
-	.word	33554453
-	.word	513
-	.size	module24_managed_to_java, 40
-
-	.section	.rodata.module24_managed_to_java_duplicates,"a",@progbits
-	.type	module24_managed_to_java_duplicates, @object
-	.p2align	2
-module24_managed_to_java_duplicates:
-	.word	33554449
-	.word	515
-	.word	33554451
-	.word	516
-	.word	33554454
-	.word	513
-	.word	33554455
-	.word	512
-	.size	module24_managed_to_java_duplicates, 32
-
-	.section	.rodata.module25_managed_to_java,"a",@progbits
-	.type	module25_managed_to_java, @object
-	.p2align	2
-module25_managed_to_java:
-	.word	33554486
-	.word	376
-	.word	33554487
-	.word	365
-	.word	33554488
-	.word	366
-	.word	33554489
-	.word	368
-	.word	33554490
-	.word	367
-	.word	33554491
-	.word	369
-	.word	33554492
-	.word	356
-	.word	33554493
-	.word	357
-	.word	33554494
-	.word	358
-	.word	33554497
-	.word	1839
-	.word	33554498
-	.word	359
-	.word	33554500
-	.word	360
-	.word	33554502
-	.word	361
-	.word	33554507
-	.word	362
-	.word	33554508
-	.word	363
-	.word	33554510
-	.word	364
-	.word	33554512
-	.word	370
-	.word	33554513
-	.word	372
-	.word	33554515
-	.word	373
-	.word	33554516
-	.word	371
-	.word	33554518
-	.word	398
-	.word	33554519
-	.word	401
-	.word	33554521
-	.word	399
-	.word	33554522
-	.word	400
-	.word	33554525
-	.word	1840
-	.word	33554528
-	.word	387
-	.word	33554529
-	.word	388
-	.word	33554530
-	.word	389
-	.word	33554531
-	.word	390
-	.word	33554532
-	.word	391
-	.word	33554533
-	.word	392
-	.word	33554534
-	.word	393
-	.word	33554536
-	.word	394
-	.word	33554537
-	.word	395
-	.word	33554538
-	.word	396
-	.word	33554539
-	.word	397
-	.word	33554540
-	.word	377
-	.word	33554541
-	.word	378
-	.word	33554544
-	.word	379
-	.word	33554545
-	.word	380
-	.word	33554547
-	.word	383
-	.word	33554549
-	.word	382
-	.word	33554551
-	.word	385
-	.word	33554553
-	.word	384
-	.word	33554555
-	.word	381
-	.word	33554556
-	.word	386
-	.size	module25_managed_to_java, 368
-
-	.section	.rodata.module25_managed_to_java_duplicates,"a",@progbits
-	.type	module25_managed_to_java_duplicates, @object
-	.p2align	2
-module25_managed_to_java_duplicates:
-	.word	33554495
-	.word	358
-	.word	33554499
-	.word	359
-	.word	33554501
-	.word	360
-	.word	33554503
-	.word	361
-	.word	33554506
-	.word	356
-	.word	33554509
-	.word	363
-	.word	33554511
-	.word	364
-	.word	33554514
-	.word	372
-	.word	33554517
-	.word	371
-	.word	33554523
-	.word	400
-	.word	33554535
-	.word	393
-	.word	33554542
-	.word	378
-	.word	33554543
-	.word	377
-	.word	33554546
-	.word	380
-	.word	33554548
-	.word	383
-	.word	33554550
-	.word	382
-	.word	33554552
-	.word	385
-	.word	33554554
-	.word	384
-	.size	module25_managed_to_java_duplicates, 144
-
-	.section	.rodata.module26_managed_to_java,"a",@progbits
-	.type	module26_managed_to_java, @object
-	.p2align	2
-module26_managed_to_java:
-	.word	33554448
-	.word	1206
-	.size	module26_managed_to_java, 8
-
-	.section	.rodata.module27_managed_to_java,"a",@progbits
-	.type	module27_managed_to_java, @object
-	.p2align	2
-module27_managed_to_java:
-	.word	33554440
-	.word	375
-	.word	33554441
-	.word	374
-	.size	module27_managed_to_java, 16
-
-	.section	.rodata.module28_managed_to_java,"a",@progbits
-	.type	module28_managed_to_java, @object
-	.p2align	2
-module28_managed_to_java:
-	.word	33554444
-	.word	939
-	.word	33554446
-	.word	940
-	.size	module28_managed_to_java, 16
-
-	.section	.rodata.module29_managed_to_java,"a",@progbits
-	.type	module29_managed_to_java, @object
-	.p2align	2
-module29_managed_to_java:
-	.word	33554456
-	.word	561
-	.word	33554457
-	.word	562
-	.word	33554459
-	.word	563
-	.word	33554461
-	.word	1851
-	.size	module29_managed_to_java, 32
-
-	.section	.rodata.module29_managed_to_java_duplicates,"a",@progbits
-	.type	module29_managed_to_java_duplicates, @object
-	.p2align	2
-module29_managed_to_java_duplicates:
-	.word	33554458
-	.word	562
-	.word	33554460
-	.word	563
-	.size	module29_managed_to_java_duplicates, 16
-
-	.section	.rodata.module30_managed_to_java,"a",@progbits
-	.type	module30_managed_to_java, @object
-	.p2align	2
-module30_managed_to_java:
-	.word	33554455
-	.word	1210
-	.word	33554457
-	.word	1208
-	.word	33554458
-	.word	1218
-	.word	33554460
-	.word	1211
-	.word	33554461
-	.word	1212
-	.word	33554462
-	.word	1213
-	.word	33554464
-	.word	1214
-	.word	33554466
-	.word	1216
-	.word	33554469
-	.word	1207
-	.word	33554470
-	.word	1215
-	.word	33554471
-	.word	1217
-	.word	33554472
-	.word	1219
-	.word	33554473
-	.word	1209
-	.word	33554474
-	.word	1223
-	.word	33554475
-	.word	1224
-	.word	33554478
-	.word	959
-	.word	33554480
-	.word	961
-	.word	33554481
-	.word	962
-	.word	33554482
-	.word	960
-	.word	33554484
-	.word	963
-	.word	33554487
-	.word	1175
-	.word	33554489
-	.word	1177
-	.word	33554491
-	.word	1176
-	.size	module30_managed_to_java, 184
-
-	.section	.rodata.module31_managed_to_java,"a",@progbits
-	.type	module31_managed_to_java, @object
-	.p2align	2
-module31_managed_to_java:
-	.word	33554436
-	.word	502
-	.word	33554437
-	.word	503
-	.word	33554438
-	.word	504
-	.word	33554440
-	.word	505
-	.size	module31_managed_to_java, 32
-
-	.section	.rodata.module31_managed_to_java_duplicates,"a",@progbits
-	.type	module31_managed_to_java_duplicates, @object
-	.p2align	2
-module31_managed_to_java_duplicates:
-	.word	33554439
-	.word	504
-	.word	33554441
-	.word	505
-	.word	33554442
-	.word	502
-	.size	module31_managed_to_java_duplicates, 24
-
-	.section	.rodata.module32_managed_to_java,"a",@progbits
-	.type	module32_managed_to_java, @object
-	.p2align	2
-module32_managed_to_java:
-	.word	33554434
-	.word	1251
-	.word	33554443
-	.word	1253
-	.word	33554445
-	.word	1252
-	.size	module32_managed_to_java, 24
-
-	.section	.rodata.module33_managed_to_java,"a",@progbits
-	.type	module33_managed_to_java, @object
-	.p2align	2
-module33_managed_to_java:
-	.word	33554458
-	.word	980
-	.word	33554460
-	.word	983
-	.word	33554464
-	.word	999
-	.word	33554465
-	.word	1000
-	.word	33554466
-	.word	1001
-	.word	33554467
-	.word	1028
-	.word	33554468
-	.word	1029
-	.word	33554472
-	.word	1035
-	.word	33554476
-	.word	1057
-	.word	33554478
-	.word	1086
-	.word	33554480
-	.word	1087
-	.word	33554481
-	.word	1103
-	.word	33554488
-	.word	996
-	.word	33554490
-	.word	984
-	.word	33554494
-	.word	997
-	.word	33554496
-	.word	1023
-	.word	33554498
-	.word	1024
-	.word	33554501
-	.word	1151
-	.word	33554503
-	.word	1157
-	.word	33554505
-	.word	1161
-	.word	33554506
-	.word	1163
-	.word	33554507
-	.word	1162
-	.word	33554510
-	.word	992
-	.word	33554511
-	.word	993
-	.word	33554512
-	.word	994
-	.word	33554513
-	.word	995
-	.word	33554516
-	.word	998
-	.word	33554517
-	.word	1003
-	.word	33554518
-	.word	1008
-	.word	33554519
-	.word	1013
-	.word	33554521
-	.word	1019
-	.word	33554523
-	.word	1020
-	.word	33554524
-	.word	1021
-	.word	33554525
-	.word	1053
-	.word	33554526
-	.word	1054
-	.word	33554527
-	.word	1055
-	.word	33554532
-	.word	1061
-	.word	33554533
-	.word	1064
-	.word	33554535
-	.word	1065
-	.word	33554537
-	.word	1066
-	.word	33554540
-	.word	1080
-	.word	33554541
-	.word	1081
-	.word	33554546
-	.word	1100
-	.word	33554548
-	.word	1108
-	.word	33554550
-	.word	1113
-	.word	33554551
-	.word	1114
-	.word	33554552
-	.word	1115
-	.word	33554553
-	.word	1139
-	.word	33554554
-	.word	1140
-	.word	33554555
-	.word	1141
-	.word	33554557
-	.word	1143
-	.word	33554558
-	.word	1144
-	.word	33554559
-	.word	1145
-	.word	33554560
-	.word	1148
-	.word	33554561
-	.word	1149
-	.word	33554562
-	.word	1156
-	.word	33554563
-	.word	1158
-	.word	33554570
-	.word	1011
-	.word	33554571
-	.word	1012
-	.word	33554580
-	.word	1022
-	.word	33554604
-	.word	1036
-	.word	33554607
-	.word	1048
-	.word	33554608
-	.word	1049
-	.word	33554610
-	.word	1050
-	.word	33554612
-	.word	1051
-	.word	33554616
-	.word	1052
-	.word	33554623
-	.word	1058
-	.word	33554624
-	.word	1059
-	.word	33554628
-	.word	1062
-	.word	33554629
-	.word	1063
-	.word	33554644
-	.word	1078
-	.word	33554651
-	.word	1092
-	.word	33554654
-	.word	1095
-	.word	33554666
-	.word	1094
-	.word	33554677
-	.word	1101
-	.word	33554680
-	.word	981
-	.word	33554681
-	.word	982
-	.word	33554682
-	.word	979
-	.word	33554686
-	.word	1034
-	.word	33554694
-	.word	985
-	.word	33554701
-	.word	986
-	.word	33554702
-	.word	987
-	.word	33554703
-	.word	988
-	.word	33554705
-	.word	989
-	.word	33554707
-	.word	990
-	.word	33554708
-	.word	991
-	.word	33554709
-	.word	1002
-	.word	33554710
-	.word	1004
-	.word	33554711
-	.word	1005
-	.word	33554712
-	.word	1006
-	.word	33554713
-	.word	1007
-	.word	33554714
-	.word	1010
-	.word	33554716
-	.word	1009
-	.word	33554718
-	.word	1015
-	.word	33554719
-	.word	1016
-	.word	33554721
-	.word	1026
-	.word	33554722
-	.word	1027
-	.word	33554725
-	.word	1030
-	.word	33554729
-	.word	1031
-	.word	33554730
-	.word	1033
-	.word	33554731
-	.word	1032
-	.word	33554732
-	.word	1037
-	.word	33554733
-	.word	1038
-	.word	33554736
-	.word	1025
-	.word	33554737
-	.word	1014
-	.word	33554738
-	.word	1039
-	.word	33554739
-	.word	1040
-	.word	33554740
-	.word	1041
-	.word	33554741
-	.word	1042
-	.word	33554744
-	.word	1043
-	.word	33554746
-	.word	1044
-	.word	33554747
-	.word	1045
-	.word	33554748
-	.word	1046
-	.word	33554749
-	.word	1047
-	.word	33554750
-	.word	1056
-	.word	33554762
-	.word	1060
-	.word	33554781
-	.word	1067
-	.word	33554782
-	.word	1070
-	.word	33554784
-	.word	1071
-	.word	33554785
-	.word	1072
-	.word	33554786
-	.word	1074
-	.word	33554787
-	.word	1073
-	.word	33554790
-	.word	1075
-	.word	33554791
-	.word	1076
-	.word	33554792
-	.word	1077
-	.word	33554795
-	.word	1079
-	.word	33554798
-	.word	1082
-	.word	33554799
-	.word	1083
-	.word	33554800
-	.word	1084
-	.word	33554801
-	.word	1085
-	.word	33554802
-	.word	1088
-	.word	33554804
-	.word	1091
-	.word	33554805
-	.word	1093
-	.word	33554807
-	.word	1102
-	.word	33554808
-	.word	1107
-	.word	33554809
-	.word	1110
-	.word	33554810
-	.word	1111
-	.word	33554814
-	.word	1112
-	.word	33554817
-	.word	1118
-	.word	33554818
-	.word	1119
-	.word	33554819
-	.word	1120
-	.word	33554820
-	.word	1122
-	.word	33554822
-	.word	1121
-	.word	33554823
-	.word	1123
-	.word	33554824
-	.word	1124
-	.word	33554825
-	.word	1125
-	.word	33554827
-	.word	1106
-	.word	33554828
-	.word	1109
-	.word	33554829
-	.word	1126
-	.word	33554830
-	.word	1127
-	.word	33554835
-	.word	1128
-	.word	33554837
-	.word	1129
-	.word	33554839
-	.word	1130
-	.word	33554841
-	.word	1131
-	.word	33554842
-	.word	1135
-	.word	33554845
-	.word	1132
-	.word	33554846
-	.word	1133
-	.word	33554847
-	.word	1134
-	.word	33554848
-	.word	1136
-	.word	33554852
-	.word	1137
-	.word	33554853
-	.word	1138
-	.word	33554859
-	.word	1142
-	.word	33554860
-	.word	1146
-	.word	33554863
-	.word	1150
-	.word	33554866
-	.word	1152
-	.word	33554867
-	.word	1153
-	.word	33554868
-	.word	1154
-	.word	33554869
-	.word	1155
-	.word	33554870
-	.word	1160
-	.word	33554871
-	.word	1159
-	.word	33554875
-	.word	1168
-	.word	33554876
-	.word	1169
-	.word	33554887
-	.word	1017
-	.word	33554888
-	.word	1018
-	.word	33554889
-	.word	1068
-	.word	33554890
-	.word	1069
-	.word	33554891
-	.word	1089
-	.word	33554892
-	.word	1090
-	.word	33554893
-	.word	1096
-	.word	33554894
-	.word	1097
-	.word	33554895
-	.word	1098
-	.word	33554896
-	.word	1099
-	.word	33554897
-	.word	1105
-	.word	33554898
-	.word	1104
-	.word	33554899
-	.word	1116
-	.word	33554900
-	.word	1117
-	.word	33554902
-	.word	1147
-	.word	33554912
-	.word	1164
-	.word	33554913
-	.word	1165
-	.word	33554917
-	.word	1166
-	.word	33554920
-	.word	1167
-	.word	33554939
-	.word	1247
-	.word	33554942
-	.word	1248
-	.word	33554948
-	.word	1249
-	.word	33554949
-	.word	1250
-	.word	33554952
-	.word	957
-	.word	33554953
-	.word	958
-	.word	33554954
-	.word	1178
-	.word	33554955
-	.word	1179
-	.word	33554956
-	.word	1184
-	.word	33554957
-	.word	1180
-	.word	33554958
-	.word	1181
-	.word	33554959
-	.word	1182
-	.word	33554960
-	.word	1183
-	.word	33554962
-	.word	1185
-	.word	33554963
-	.word	1186
-	.word	33554964
-	.word	1187
-	.word	33554965
-	.word	1188
-	.word	33554971
-	.word	1190
-	.word	33554974
-	.word	1189
-	.word	33554976
-	.word	1191
-	.word	33554981
-	.word	1192
-	.word	33554982
-	.word	1193
-	.word	33554983
-	.word	1194
-	.word	33554986
-	.word	1195
-	.size	module33_managed_to_java, 1720
-
-	.section	.rodata.module34_managed_to_java,"a",@progbits
-	.type	module34_managed_to_java, @object
-	.p2align	2
-module34_managed_to_java:
-	.word	33554436
-	.word	483
-	.size	module34_managed_to_java, 8
-
-	.section	.rodata.module34_managed_to_java_duplicates,"a",@progbits
-	.type	module34_managed_to_java_duplicates, @object
-	.p2align	2
-module34_managed_to_java_duplicates:
-	.word	33554437
-	.word	483
-	.size	module34_managed_to_java_duplicates, 8
-
-	.section	.rodata.module35_managed_to_java,"a",@progbits
-	.type	module35_managed_to_java, @object
-	.p2align	2
-module35_managed_to_java:
-	.word	33554441
-	.word	913
-	.size	module35_managed_to_java, 8
-
-	.section	.rodata.module35_managed_to_java_duplicates,"a",@progbits
-	.type	module35_managed_to_java_duplicates, @object
-	.p2align	2
-module35_managed_to_java_duplicates:
-	.word	33554442
-	.word	913
-	.size	module35_managed_to_java_duplicates, 8
-
-	.section	.rodata.module36_managed_to_java,"a",@progbits
-	.type	module36_managed_to_java, @object
-	.p2align	2
-module36_managed_to_java:
-	.word	33554451
-	.word	854
-	.word	33554452
-	.word	855
-	.word	33554455
-	.word	1878
-	.word	33554458
-	.word	856
-	.word	33554459
-	.word	857
-	.word	33554462
-	.word	1879
-	.word	33554463
-	.word	858
-	.word	33554466
-	.word	1880
-	.word	33554471
-	.word	869
-	.word	33554472
-	.word	870
-	.word	33554489
-	.word	871
-	.word	33554490
-	.word	872
-	.word	33554492
-	.word	873
-	.word	33554493
-	.word	874
-	.word	33554495
-	.word	875
-	.word	33554496
-	.word	876
-	.word	33554498
-	.word	1883
-	.word	33554501
-	.word	877
-	.word	33554502
-	.word	878
-	.word	33554503
-	.word	879
-	.word	33554504
-	.word	880
-	.word	33554510
-	.word	1884
-	.word	33554511
-	.word	881
-	.word	33554512
-	.word	866
-	.word	33554514
-	.word	865
-	.word	33554516
-	.word	867
-	.word	33554517
-	.word	868
-	.word	33554521
-	.word	1882
-	.word	33554538
-	.word	861
-	.word	33554541
-	.word	863
-	.word	33554543
-	.word	1881
-	.word	33554544
-	.word	862
-	.word	33554546
-	.word	864
-	.word	33554547
-	.word	859
-	.word	33554548
-	.word	860
-	.size	module36_managed_to_java, 280
-
-	.section	.rodata.module36_managed_to_java_duplicates,"a",@progbits
-	.type	module36_managed_to_java_duplicates, @object
-	.p2align	2
-module36_managed_to_java_duplicates:
-	.word	33554453
-	.word	855
-	.word	33554460
-	.word	857
-	.word	33554464
-	.word	858
-	.word	33554491
-	.word	872
-	.word	33554494
-	.word	874
-	.word	33554497
-	.word	876
-	.word	33554505
-	.word	880
-	.word	33554513
-	.word	866
-	.word	33554515
-	.word	865
-	.word	33554518
-	.word	868
-	.word	33554542
-	.word	863
-	.word	33554545
-	.word	862
-	.size	module36_managed_to_java_duplicates, 96
-
-	.section	.rodata.module37_managed_to_java,"a",@progbits
-	.type	module37_managed_to_java, @object
-	.p2align	2
-module37_managed_to_java:
-	.word	33554702
-	.word	1174
-	.size	module37_managed_to_java, 8
-
-	.section	.rodata.module38_managed_to_java,"a",@progbits
-	.type	module38_managed_to_java, @object
-	.p2align	2
-module38_managed_to_java:
-	.word	33554442
-	.word	343
-	.word	33554445
-	.word	346
-	.word	33554447
-	.word	344
-	.word	33554449
-	.word	345
-	.word	33554450
-	.word	347
-	.word	33554452
-	.word	348
-	.word	33554455
-	.word	1838
-	.word	33554456
-	.word	351
-	.word	33554458
-	.word	352
-	.word	33554460
-	.word	349
-	.word	33554462
-	.word	350
-	.word	33554464
-	.word	353
-	.word	33554467
-	.word	354
-	.word	33554468
-	.word	355
-	.size	module38_managed_to_java, 112
-
-	.section	.rodata.module38_managed_to_java_duplicates,"a",@progbits
-	.type	module38_managed_to_java_duplicates, @object
-	.p2align	2
-module38_managed_to_java_duplicates:
-	.word	33554446
-	.word	346
-	.word	33554448
-	.word	344
-	.word	33554451
-	.word	347
-	.word	33554453
-	.word	348
-	.word	33554457
-	.word	351
-	.word	33554459
-	.word	352
-	.word	33554461
-	.word	349
-	.word	33554463
-	.word	350
-	.word	33554465
-	.word	353
-	.word	33554469
-	.word	354
-	.size	module38_managed_to_java_duplicates, 80
 
+	.section	.rodata.module0_managed_to_java, "a", @progbits
+
+	.type	.L.module0_managed_to_java, @object
+	.p2align	2
+.L.module0_managed_to_java:
+	.word	0x200001b	// type_token_id
+	.word	0x234	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x235	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x236	// java_map_index
+
+	.word	0x2000021	// type_token_id
+	.word	0x73c	// java_map_index
+
+	.word	0x2000022	// type_token_id
+	.word	0x237	// java_map_index
+
+	.word	0x2000027	// type_token_id
+	.word	0x73d	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x238	// java_map_index
+
+	.size	.L.module0_managed_to_java, 56
+
+	.section	.rodata.module0_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module0_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module0_managed_to_java_duplicates:
+	.word	0x200001c	// type_token_id
+	.word	0x234	// java_map_index
+
+	.word	0x200001f	// type_token_id
+	.word	0x236	// java_map_index
+
+	.word	0x2000023	// type_token_id
+	.word	0x237	// java_map_index
+
+	.word	0x2000029	// type_token_id
+	.word	0x238	// java_map_index
+
+	.size	.L.module0_managed_to_java_duplicates, 32
+
+	.section	.rodata.module1_managed_to_java, "a", @progbits
+
+	.type	.L.module1_managed_to_java, @object
+	.p2align	2
+.L.module1_managed_to_java:
+	.word	0x200001f	// type_token_id
+	.word	0x296	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x297	// java_map_index
+
+	.word	0x2000021	// type_token_id
+	.word	0x298	// java_map_index
+
+	.word	0x2000022	// type_token_id
+	.word	0x290	// java_map_index
+
+	.word	0x2000023	// type_token_id
+	.word	0x299	// java_map_index
+
+	.word	0x2000024	// type_token_id
+	.word	0x29a	// java_map_index
+
+	.word	0x2000025	// type_token_id
+	.word	0x29b	// java_map_index
+
+	.word	0x2000026	// type_token_id
+	.word	0x29c	// java_map_index
+
+	.word	0x2000027	// type_token_id
+	.word	0x2ac	// java_map_index
+
+	.word	0x2000029	// type_token_id
+	.word	0x2ad	// java_map_index
+
+	.word	0x200002b	// type_token_id
+	.word	0x2ae	// java_map_index
+
+	.word	0x200002d	// type_token_id
+	.word	0x2af	// java_map_index
+
+	.word	0x200002f	// type_token_id
+	.word	0x2b0	// java_map_index
+
+	.word	0x2000031	// type_token_id
+	.word	0x2b1	// java_map_index
+
+	.word	0x2000033	// type_token_id
+	.word	0x2b2	// java_map_index
+
+	.word	0x2000035	// type_token_id
+	.word	0x2b3	// java_map_index
+
+	.word	0x2000037	// type_token_id
+	.word	0x2b4	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x2b6	// java_map_index
+
+	.word	0x200003b	// type_token_id
+	.word	0x2b7	// java_map_index
+
+	.word	0x200003d	// type_token_id
+	.word	0x2b8	// java_map_index
+
+	.word	0x200003f	// type_token_id
+	.word	0x2ba	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x2bb	// java_map_index
+
+	.word	0x2000043	// type_token_id
+	.word	0x2bc	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x29d	// java_map_index
+
+	.word	0x2000046	// type_token_id
+	.word	0x2b5	// java_map_index
+
+	.word	0x2000048	// type_token_id
+	.word	0x29e	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x29f	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x2b9	// java_map_index
+
+	.word	0x200004b	// type_token_id
+	.word	0x2a0	// java_map_index
+
+	.word	0x200004c	// type_token_id
+	.word	0x2a1	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x2a2	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x2a3	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x2a4	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x2a6	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x2a5	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x2a7	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x2a8	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x2a9	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x2aa	// java_map_index
+
+	.word	0x2000058	// type_token_id
+	.word	0x2ab	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x294	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x295	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x291	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x292	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x293	// java_map_index
+
+	.size	.L.module1_managed_to_java, 360
+
+	.section	.rodata.module1_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module1_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module1_managed_to_java_duplicates:
+	.word	0x2000028	// type_token_id
+	.word	0x2ac	// java_map_index
+
+	.word	0x200002a	// type_token_id
+	.word	0x2ad	// java_map_index
+
+	.word	0x200002c	// type_token_id
+	.word	0x2ae	// java_map_index
+
+	.word	0x200002e	// type_token_id
+	.word	0x2af	// java_map_index
+
+	.word	0x2000030	// type_token_id
+	.word	0x2b0	// java_map_index
+
+	.word	0x2000032	// type_token_id
+	.word	0x2b1	// java_map_index
+
+	.word	0x2000034	// type_token_id
+	.word	0x2b2	// java_map_index
+
+	.word	0x2000036	// type_token_id
+	.word	0x2b3	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x2b4	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x2b6	// java_map_index
+
+	.word	0x200003c	// type_token_id
+	.word	0x2b7	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x2b8	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x2ba	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x2bb	// java_map_index
+
+	.word	0x2000044	// type_token_id
+	.word	0x2bc	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x2b5	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x2a6	// java_map_index
+
+	.word	0x2000053	// type_token_id
+	.word	0x2a5	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x2ab	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x291	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x292	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x293	// java_map_index
+
+	.size	.L.module1_managed_to_java_duplicates, 176
+
+	.section	.rodata.module2_managed_to_java, "a", @progbits
+
+	.type	.L.module2_managed_to_java, @object
+	.p2align	2
+.L.module2_managed_to_java:
+	.word	0x2000013	// type_token_id
+	.word	0x356	// java_map_index
+
+	.word	0x2000014	// type_token_id
+	.word	0x357	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x756	// java_map_index
+
+	.word	0x200001a	// type_token_id
+	.word	0x358	// java_map_index
+
+	.word	0x200001b	// type_token_id
+	.word	0x359	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x757	// java_map_index
+
+	.word	0x200001f	// type_token_id
+	.word	0x35a	// java_map_index
+
+	.word	0x2000022	// type_token_id
+	.word	0x758	// java_map_index
+
+	.word	0x2000027	// type_token_id
+	.word	0x365	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x366	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x367	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x368	// java_map_index
+
+	.word	0x200003c	// type_token_id
+	.word	0x369	// java_map_index
+
+	.word	0x200003d	// type_token_id
+	.word	0x36a	// java_map_index
+
+	.word	0x200003f	// type_token_id
+	.word	0x36b	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x36c	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x75b	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x36d	// java_map_index
+
+	.word	0x2000046	// type_token_id
+	.word	0x36e	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x36f	// java_map_index
+
+	.word	0x2000048	// type_token_id
+	.word	0x370	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x75c	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x371	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x362	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x361	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x363	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x364	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x75a	// java_map_index
+
+	.word	0x200006a	// type_token_id
+	.word	0x35d	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x35f	// java_map_index
+
+	.word	0x200006f	// type_token_id
+	.word	0x759	// java_map_index
+
+	.word	0x2000070	// type_token_id
+	.word	0x35e	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x360	// java_map_index
+
+	.word	0x2000073	// type_token_id
+	.word	0x35b	// java_map_index
+
+	.word	0x2000074	// type_token_id
+	.word	0x35c	// java_map_index
+
+	.size	.L.module2_managed_to_java, 280
+
+	.section	.rodata.module2_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module2_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module2_managed_to_java_duplicates:
+	.word	0x2000015	// type_token_id
+	.word	0x357	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x359	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x35a	// java_map_index
+
+	.word	0x200003b	// type_token_id
+	.word	0x368	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x36a	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x36c	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x370	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x362	// java_map_index
+
+	.word	0x2000053	// type_token_id
+	.word	0x361	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x364	// java_map_index
+
+	.word	0x200006e	// type_token_id
+	.word	0x35f	// java_map_index
+
+	.word	0x2000071	// type_token_id
+	.word	0x35e	// java_map_index
+
+	.size	.L.module2_managed_to_java_duplicates, 96
+
+	.section	.rodata.module3_managed_to_java, "a", @progbits
+
+	.type	.L.module3_managed_to_java, @object
+	.p2align	2
+.L.module3_managed_to_java:
+	.word	0x200003e	// type_token_id
+	.word	0x57f	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x581	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x582	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x583	// java_map_index
+
+	.word	0x2000043	// type_token_id
+	.word	0x584	// java_map_index
+
+	.word	0x2000044	// type_token_id
+	.word	0x585	// java_map_index
+
+	.word	0x2000048	// type_token_id
+	.word	0x588	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x58a	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x592	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x580	// java_map_index
+
+	.word	0x2000053	// type_token_id
+	.word	0x586	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x587	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x589	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x58c	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x58b	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x58d	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x58e	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x58f	// java_map_index
+
+	.word	0x2000062	// type_token_id
+	.word	0x590	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x591	// java_map_index
+
+	.word	0x2000066	// type_token_id
+	.word	0x596	// java_map_index
+
+	.word	0x2000068	// type_token_id
+	.word	0x59a	// java_map_index
+
+	.word	0x200006a	// type_token_id
+	.word	0x59e	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x59f	// java_map_index
+
+	.word	0x200006e	// type_token_id
+	.word	0x5a0	// java_map_index
+
+	.word	0x2000070	// type_token_id
+	.word	0x5a2	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x5a5	// java_map_index
+
+	.word	0x2000074	// type_token_id
+	.word	0x5a6	// java_map_index
+
+	.word	0x2000076	// type_token_id
+	.word	0x5a8	// java_map_index
+
+	.word	0x2000077	// type_token_id
+	.word	0x5a7	// java_map_index
+
+	.word	0x2000079	// type_token_id
+	.word	0x5ab	// java_map_index
+
+	.word	0x200007b	// type_token_id
+	.word	0x5ad	// java_map_index
+
+	.word	0x200007d	// type_token_id
+	.word	0x5c7	// java_map_index
+
+	.word	0x200007f	// type_token_id
+	.word	0x5c9	// java_map_index
+
+	.word	0x2000081	// type_token_id
+	.word	0x593	// java_map_index
+
+	.word	0x2000082	// type_token_id
+	.word	0x594	// java_map_index
+
+	.word	0x2000083	// type_token_id
+	.word	0x595	// java_map_index
+
+	.word	0x2000084	// type_token_id
+	.word	0x597	// java_map_index
+
+	.word	0x2000085	// type_token_id
+	.word	0x599	// java_map_index
+
+	.word	0x2000087	// type_token_id
+	.word	0x59c	// java_map_index
+
+	.word	0x2000088	// type_token_id
+	.word	0x59b	// java_map_index
+
+	.word	0x2000089	// type_token_id
+	.word	0x59d	// java_map_index
+
+	.word	0x200008d	// type_token_id
+	.word	0x5a1	// java_map_index
+
+	.word	0x200008f	// type_token_id
+	.word	0x5a3	// java_map_index
+
+	.word	0x2000090	// type_token_id
+	.word	0x5a4	// java_map_index
+
+	.word	0x2000094	// type_token_id
+	.word	0x5a9	// java_map_index
+
+	.word	0x2000095	// type_token_id
+	.word	0x5aa	// java_map_index
+
+	.word	0x2000097	// type_token_id
+	.word	0x5ac	// java_map_index
+
+	.word	0x2000099	// type_token_id
+	.word	0x5ae	// java_map_index
+
+	.word	0x200009a	// type_token_id
+	.word	0x5af	// java_map_index
+
+	.word	0x200009b	// type_token_id
+	.word	0x5b0	// java_map_index
+
+	.word	0x200009c	// type_token_id
+	.word	0x5b1	// java_map_index
+
+	.word	0x200009d	// type_token_id
+	.word	0x5b2	// java_map_index
+
+	.word	0x200009e	// type_token_id
+	.word	0x5b3	// java_map_index
+
+	.word	0x200009f	// type_token_id
+	.word	0x5b4	// java_map_index
+
+	.word	0x20000a0	// type_token_id
+	.word	0x5b5	// java_map_index
+
+	.word	0x20000a1	// type_token_id
+	.word	0x5b6	// java_map_index
+
+	.word	0x20000a2	// type_token_id
+	.word	0x5b7	// java_map_index
+
+	.word	0x20000a3	// type_token_id
+	.word	0x5b8	// java_map_index
+
+	.word	0x20000a4	// type_token_id
+	.word	0x5b9	// java_map_index
+
+	.word	0x20000a5	// type_token_id
+	.word	0x5ba	// java_map_index
+
+	.word	0x20000a6	// type_token_id
+	.word	0x5bb	// java_map_index
+
+	.word	0x20000a7	// type_token_id
+	.word	0x5bc	// java_map_index
+
+	.word	0x20000a8	// type_token_id
+	.word	0x5bd	// java_map_index
+
+	.word	0x20000a9	// type_token_id
+	.word	0x5be	// java_map_index
+
+	.word	0x20000aa	// type_token_id
+	.word	0x5bf	// java_map_index
+
+	.word	0x20000ab	// type_token_id
+	.word	0x5c5	// java_map_index
+
+	.word	0x20000ac	// type_token_id
+	.word	0x5c6	// java_map_index
+
+	.word	0x20000ae	// type_token_id
+	.word	0x5c8	// java_map_index
+
+	.word	0x20000af	// type_token_id
+	.word	0x5c0	// java_map_index
+
+	.word	0x20000b1	// type_token_id
+	.word	0x5c1	// java_map_index
+
+	.word	0x20000b2	// type_token_id
+	.word	0x5c2	// java_map_index
+
+	.word	0x20000b3	// type_token_id
+	.word	0x5c3	// java_map_index
+
+	.word	0x20000b4	// type_token_id
+	.word	0x5c4	// java_map_index
+
+	.word	0x20000b5	// type_token_id
+	.word	0x70c	// java_map_index
+
+	.word	0x20000b7	// type_token_id
+	.word	0x70d	// java_map_index
+
+	.word	0x20000b9	// type_token_id
+	.word	0x70e	// java_map_index
+
+	.word	0x20000ba	// type_token_id
+	.word	0x710	// java_map_index
+
+	.word	0x20000bb	// type_token_id
+	.word	0x711	// java_map_index
+
+	.word	0x20000bd	// type_token_id
+	.word	0x714	// java_map_index
+
+	.word	0x20000be	// type_token_id
+	.word	0x713	// java_map_index
+
+	.word	0x20000c0	// type_token_id
+	.word	0x719	// java_map_index
+
+	.word	0x20000c1	// type_token_id
+	.word	0x718	// java_map_index
+
+	.word	0x20000c3	// type_token_id
+	.word	0x715	// java_map_index
+
+	.word	0x20000c4	// type_token_id
+	.word	0x716	// java_map_index
+
+	.word	0x20000c5	// type_token_id
+	.word	0x71b	// java_map_index
+
+	.word	0x20000c6	// type_token_id
+	.word	0x717	// java_map_index
+
+	.word	0x20000c8	// type_token_id
+	.word	0x71a	// java_map_index
+
+	.word	0x20000c9	// type_token_id
+	.word	0x6f6	// java_map_index
+
+	.word	0x20000ca	// type_token_id
+	.word	0x6f8	// java_map_index
+
+	.word	0x20000cb	// type_token_id
+	.word	0x6fb	// java_map_index
+
+	.word	0x20000cc	// type_token_id
+	.word	0x6fc	// java_map_index
+
+	.word	0x20000cd	// type_token_id
+	.word	0x6fa	// java_map_index
+
+	.word	0x20000ce	// type_token_id
+	.word	0x6fe	// java_map_index
+
+	.word	0x20000d0	// type_token_id
+	.word	0x6ff	// java_map_index
+
+	.word	0x20000d2	// type_token_id
+	.word	0x701	// java_map_index
+
+	.word	0x20000d3	// type_token_id
+	.word	0x702	// java_map_index
+
+	.word	0x20000d4	// type_token_id
+	.word	0x700	// java_map_index
+
+	.word	0x20000d6	// type_token_id
+	.word	0x6fd	// java_map_index
+
+	.word	0x20000d7	// type_token_id
+	.word	0x703	// java_map_index
+
+	.word	0x20000d8	// type_token_id
+	.word	0x705	// java_map_index
+
+	.word	0x20000d9	// type_token_id
+	.word	0x706	// java_map_index
+
+	.word	0x20000da	// type_token_id
+	.word	0x707	// java_map_index
+
+	.word	0x20000db	// type_token_id
+	.word	0x708	// java_map_index
+
+	.word	0x20000dc	// type_token_id
+	.word	0x709	// java_map_index
+
+	.word	0x20000dd	// type_token_id
+	.word	0x70a	// java_map_index
+
+	.word	0x20000de	// type_token_id
+	.word	0x70b	// java_map_index
+
+	.word	0x20000df	// type_token_id
+	.word	0x6f4	// java_map_index
+
+	.word	0x20000e0	// type_token_id
+	.word	0x6f5	// java_map_index
+
+	.word	0x20000e1	// type_token_id
+	.word	0x6f0	// java_map_index
+
+	.word	0x20000e3	// type_token_id
+	.word	0x6f1	// java_map_index
+
+	.word	0x20000e5	// type_token_id
+	.word	0x6f2	// java_map_index
+
+	.word	0x20000e6	// type_token_id
+	.word	0x6f3	// java_map_index
+
+	.word	0x20000e7	// type_token_id
+	.word	0x6c5	// java_map_index
+
+	.word	0x20000e9	// type_token_id
+	.word	0x6c7	// java_map_index
+
+	.word	0x20000ea	// type_token_id
+	.word	0x6c6	// java_map_index
+
+	.word	0x20000ec	// type_token_id
+	.word	0x6c9	// java_map_index
+
+	.word	0x20000ed	// type_token_id
+	.word	0x6c8	// java_map_index
+
+	.word	0x20000ef	// type_token_id
+	.word	0x6cc	// java_map_index
+
+	.word	0x20000f1	// type_token_id
+	.word	0x6cd	// java_map_index
+
+	.word	0x20000f3	// type_token_id
+	.word	0x6cf	// java_map_index
+
+	.word	0x20000f4	// type_token_id
+	.word	0x6ce	// java_map_index
+
+	.word	0x20000f6	// type_token_id
+	.word	0x6d1	// java_map_index
+
+	.word	0x20000f8	// type_token_id
+	.word	0x6d0	// java_map_index
+
+	.word	0x20000fa	// type_token_id
+	.word	0x6d3	// java_map_index
+
+	.word	0x20000fc	// type_token_id
+	.word	0x6d2	// java_map_index
+
+	.word	0x20000fe	// type_token_id
+	.word	0x6d5	// java_map_index
+
+	.word	0x2000100	// type_token_id
+	.word	0x6d4	// java_map_index
+
+	.word	0x2000102	// type_token_id
+	.word	0x6d7	// java_map_index
+
+	.word	0x2000104	// type_token_id
+	.word	0x6d6	// java_map_index
+
+	.word	0x2000106	// type_token_id
+	.word	0x6d9	// java_map_index
+
+	.word	0x2000107	// type_token_id
+	.word	0x6da	// java_map_index
+
+	.word	0x2000108	// type_token_id
+	.word	0x6d8	// java_map_index
+
+	.word	0x200010a	// type_token_id
+	.word	0x6dc	// java_map_index
+
+	.word	0x200010c	// type_token_id
+	.word	0x6dd	// java_map_index
+
+	.word	0x200010d	// type_token_id
+	.word	0x6de	// java_map_index
+
+	.word	0x200010f	// type_token_id
+	.word	0x6db	// java_map_index
+
+	.word	0x2000111	// type_token_id
+	.word	0x6e0	// java_map_index
+
+	.word	0x2000113	// type_token_id
+	.word	0x6df	// java_map_index
+
+	.word	0x2000115	// type_token_id
+	.word	0x6e2	// java_map_index
+
+	.word	0x2000117	// type_token_id
+	.word	0x6e1	// java_map_index
+
+	.word	0x2000119	// type_token_id
+	.word	0x6e4	// java_map_index
+
+	.word	0x200011b	// type_token_id
+	.word	0x6e3	// java_map_index
+
+	.word	0x200011d	// type_token_id
+	.word	0x6e6	// java_map_index
+
+	.word	0x200011e	// type_token_id
+	.word	0x6e5	// java_map_index
+
+	.word	0x2000120	// type_token_id
+	.word	0x6e7	// java_map_index
+
+	.word	0x2000122	// type_token_id
+	.word	0x6ca	// java_map_index
+
+	.word	0x2000123	// type_token_id
+	.word	0x6cb	// java_map_index
+
+	.word	0x2000124	// type_token_id
+	.word	0x6e8	// java_map_index
+
+	.word	0x2000125	// type_token_id
+	.word	0x6eb	// java_map_index
+
+	.word	0x2000126	// type_token_id
+	.word	0x6ec	// java_map_index
+
+	.word	0x2000127	// type_token_id
+	.word	0x6ed	// java_map_index
+
+	.word	0x2000128	// type_token_id
+	.word	0x6ee	// java_map_index
+
+	.word	0x2000129	// type_token_id
+	.word	0x6a6	// java_map_index
+
+	.word	0x200012a	// type_token_id
+	.word	0x6a7	// java_map_index
+
+	.word	0x200012c	// type_token_id
+	.word	0x6a9	// java_map_index
+
+	.word	0x200012d	// type_token_id
+	.word	0x6aa	// java_map_index
+
+	.word	0x200012e	// type_token_id
+	.word	0x6a1	// java_map_index
+
+	.word	0x200012f	// type_token_id
+	.word	0x6a3	// java_map_index
+
+	.word	0x2000131	// type_token_id
+	.word	0x6a4	// java_map_index
+
+	.word	0x2000133	// type_token_id
+	.word	0x6a5	// java_map_index
+
+	.word	0x2000135	// type_token_id
+	.word	0x6a2	// java_map_index
+
+	.word	0x2000137	// type_token_id
+	.word	0x69f	// java_map_index
+
+	.word	0x2000138	// type_token_id
+	.word	0x6a0	// java_map_index
+
+	.word	0x2000139	// type_token_id
+	.word	0x630	// java_map_index
+
+	.word	0x200013b	// type_token_id
+	.word	0x631	// java_map_index
+
+	.word	0x200013d	// type_token_id
+	.word	0x632	// java_map_index
+
+	.word	0x200013f	// type_token_id
+	.word	0x633	// java_map_index
+
+	.word	0x2000141	// type_token_id
+	.word	0x634	// java_map_index
+
+	.word	0x2000143	// type_token_id
+	.word	0x635	// java_map_index
+
+	.word	0x2000145	// type_token_id
+	.word	0x636	// java_map_index
+
+	.word	0x2000147	// type_token_id
+	.word	0x637	// java_map_index
+
+	.word	0x2000149	// type_token_id
+	.word	0x638	// java_map_index
+
+	.word	0x200014b	// type_token_id
+	.word	0x639	// java_map_index
+
+	.word	0x200014d	// type_token_id
+	.word	0x63a	// java_map_index
+
+	.word	0x200014f	// type_token_id
+	.word	0x63b	// java_map_index
+
+	.word	0x2000151	// type_token_id
+	.word	0x63d	// java_map_index
+
+	.word	0x2000153	// type_token_id
+	.word	0x63e	// java_map_index
+
+	.word	0x2000155	// type_token_id
+	.word	0x63f	// java_map_index
+
+	.word	0x2000157	// type_token_id
+	.word	0x640	// java_map_index
+
+	.word	0x2000159	// type_token_id
+	.word	0x641	// java_map_index
+
+	.word	0x200015b	// type_token_id
+	.word	0x642	// java_map_index
+
+	.word	0x200015d	// type_token_id
+	.word	0x62f	// java_map_index
+
+	.word	0x200016a	// type_token_id
+	.word	0x63c	// java_map_index
+
+	.word	0x2000171	// type_token_id
+	.word	0x65b	// java_map_index
+
+	.word	0x2000172	// type_token_id
+	.word	0x65c	// java_map_index
+
+	.word	0x2000173	// type_token_id
+	.word	0x65d	// java_map_index
+
+	.word	0x2000174	// type_token_id
+	.word	0x65e	// java_map_index
+
+	.word	0x2000175	// type_token_id
+	.word	0x65f	// java_map_index
+
+	.word	0x2000176	// type_token_id
+	.word	0x660	// java_map_index
+
+	.word	0x2000178	// type_token_id
+	.word	0x661	// java_map_index
+
+	.word	0x2000179	// type_token_id
+	.word	0x663	// java_map_index
+
+	.word	0x200017a	// type_token_id
+	.word	0x665	// java_map_index
+
+	.word	0x200017b	// type_token_id
+	.word	0x666	// java_map_index
+
+	.word	0x200017c	// type_token_id
+	.word	0x667	// java_map_index
+
+	.word	0x200017d	// type_token_id
+	.word	0x668	// java_map_index
+
+	.word	0x200017e	// type_token_id
+	.word	0x66b	// java_map_index
+
+	.word	0x200017f	// type_token_id
+	.word	0x662	// java_map_index
+
+	.word	0x2000181	// type_token_id
+	.word	0x669	// java_map_index
+
+	.word	0x2000183	// type_token_id
+	.word	0x66a	// java_map_index
+
+	.word	0x2000185	// type_token_id
+	.word	0x670	// java_map_index
+
+	.word	0x2000187	// type_token_id
+	.word	0x66c	// java_map_index
+
+	.word	0x2000188	// type_token_id
+	.word	0x66e	// java_map_index
+
+	.word	0x2000189	// type_token_id
+	.word	0x66d	// java_map_index
+
+	.word	0x200018a	// type_token_id
+	.word	0x671	// java_map_index
+
+	.word	0x200018c	// type_token_id
+	.word	0x672	// java_map_index
+
+	.word	0x200018d	// type_token_id
+	.word	0x673	// java_map_index
+
+	.word	0x200018e	// type_token_id
+	.word	0x674	// java_map_index
+
+	.word	0x200018f	// type_token_id
+	.word	0x675	// java_map_index
+
+	.word	0x2000190	// type_token_id
+	.word	0x676	// java_map_index
+
+	.word	0x2000191	// type_token_id
+	.word	0x677	// java_map_index
+
+	.word	0x2000193	// type_token_id
+	.word	0x678	// java_map_index
+
+	.word	0x2000195	// type_token_id
+	.word	0x679	// java_map_index
+
+	.word	0x2000197	// type_token_id
+	.word	0x67a	// java_map_index
+
+	.word	0x2000199	// type_token_id
+	.word	0x67b	// java_map_index
+
+	.word	0x200019a	// type_token_id
+	.word	0x67c	// java_map_index
+
+	.word	0x200019c	// type_token_id
+	.word	0x67d	// java_map_index
+
+	.word	0x200019e	// type_token_id
+	.word	0x67e	// java_map_index
+
+	.word	0x20001a0	// type_token_id
+	.word	0x67f	// java_map_index
+
+	.word	0x20001a2	// type_token_id
+	.word	0x680	// java_map_index
+
+	.word	0x20001a4	// type_token_id
+	.word	0x681	// java_map_index
+
+	.word	0x20001a5	// type_token_id
+	.word	0x68b	// java_map_index
+
+	.word	0x20001a6	// type_token_id
+	.word	0x68c	// java_map_index
+
+	.word	0x20001a7	// type_token_id
+	.word	0x68d	// java_map_index
+
+	.word	0x20001a8	// type_token_id
+	.word	0x68e	// java_map_index
+
+	.word	0x20001a9	// type_token_id
+	.word	0x68f	// java_map_index
+
+	.word	0x20001aa	// type_token_id
+	.word	0x690	// java_map_index
+
+	.word	0x20001ab	// type_token_id
+	.word	0x693	// java_map_index
+
+	.word	0x20001ac	// type_token_id
+	.word	0x69e	// java_map_index
+
+	.word	0x20001ad	// type_token_id
+	.word	0x695	// java_map_index
+
+	.word	0x20001af	// type_token_id
+	.word	0x696	// java_map_index
+
+	.word	0x20001b1	// type_token_id
+	.word	0x697	// java_map_index
+
+	.word	0x20001b3	// type_token_id
+	.word	0x698	// java_map_index
+
+	.word	0x20001b5	// type_token_id
+	.word	0x699	// java_map_index
+
+	.word	0x20001b7	// type_token_id
+	.word	0x69a	// java_map_index
+
+	.word	0x20001b9	// type_token_id
+	.word	0x69c	// java_map_index
+
+	.word	0x20001bb	// type_token_id
+	.word	0x69b	// java_map_index
+
+	.word	0x20001bd	// type_token_id
+	.word	0x69d	// java_map_index
+
+	.word	0x20001bf	// type_token_id
+	.word	0x643	// java_map_index
+
+	.word	0x20001c1	// type_token_id
+	.word	0x644	// java_map_index
+
+	.word	0x20001c3	// type_token_id
+	.word	0x645	// java_map_index
+
+	.word	0x20001c5	// type_token_id
+	.word	0x646	// java_map_index
+
+	.word	0x20001c7	// type_token_id
+	.word	0x647	// java_map_index
+
+	.word	0x20001c9	// type_token_id
+	.word	0x648	// java_map_index
+
+	.word	0x20001cb	// type_token_id
+	.word	0x649	// java_map_index
+
+	.word	0x20001cd	// type_token_id
+	.word	0x64a	// java_map_index
+
+	.word	0x20001cf	// type_token_id
+	.word	0x64b	// java_map_index
+
+	.word	0x20001d1	// type_token_id
+	.word	0x64c	// java_map_index
+
+	.word	0x20001d3	// type_token_id
+	.word	0x64d	// java_map_index
+
+	.word	0x20001d5	// type_token_id
+	.word	0x64e	// java_map_index
+
+	.word	0x20001d7	// type_token_id
+	.word	0x64f	// java_map_index
+
+	.word	0x20001d9	// type_token_id
+	.word	0x650	// java_map_index
+
+	.word	0x20001db	// type_token_id
+	.word	0x651	// java_map_index
+
+	.word	0x20001dd	// type_token_id
+	.word	0x652	// java_map_index
+
+	.word	0x20001df	// type_token_id
+	.word	0x653	// java_map_index
+
+	.word	0x20001e1	// type_token_id
+	.word	0x654	// java_map_index
+
+	.word	0x20001e3	// type_token_id
+	.word	0x655	// java_map_index
+
+	.word	0x20001e5	// type_token_id
+	.word	0x656	// java_map_index
+
+	.word	0x20001e7	// type_token_id
+	.word	0x657	// java_map_index
+
+	.word	0x20001e9	// type_token_id
+	.word	0x658	// java_map_index
+
+	.word	0x20001eb	// type_token_id
+	.word	0x659	// java_map_index
+
+	.word	0x20001ed	// type_token_id
+	.word	0x65a	// java_map_index
+
+	.word	0x20001f0	// type_token_id
+	.word	0x62e	// java_map_index
+
+	.word	0x20001f2	// type_token_id
+	.word	0x61f	// java_map_index
+
+	.word	0x20001f3	// type_token_id
+	.word	0x620	// java_map_index
+
+	.word	0x20001f4	// type_token_id
+	.word	0x621	// java_map_index
+
+	.word	0x20001f5	// type_token_id
+	.word	0x622	// java_map_index
+
+	.word	0x20001f6	// type_token_id
+	.word	0x623	// java_map_index
+
+	.word	0x20001f7	// type_token_id
+	.word	0x624	// java_map_index
+
+	.word	0x20001f8	// type_token_id
+	.word	0x625	// java_map_index
+
+	.word	0x20001f9	// type_token_id
+	.word	0x629	// java_map_index
+
+	.word	0x20001fa	// type_token_id
+	.word	0x626	// java_map_index
+
+	.word	0x20001fb	// type_token_id
+	.word	0x627	// java_map_index
+
+	.word	0x20001fc	// type_token_id
+	.word	0x628	// java_map_index
+
+	.word	0x20001fd	// type_token_id
+	.word	0x62a	// java_map_index
+
+	.word	0x20001fe	// type_token_id
+	.word	0x62b	// java_map_index
+
+	.word	0x20001ff	// type_token_id
+	.word	0x62c	// java_map_index
+
+	.word	0x2000200	// type_token_id
+	.word	0x62d	// java_map_index
+
+	.word	0x2000201	// type_token_id
+	.word	0x61c	// java_map_index
+
+	.word	0x2000202	// type_token_id
+	.word	0x61d	// java_map_index
+
+	.word	0x2000203	// type_token_id
+	.word	0x61e	// java_map_index
+
+	.word	0x2000204	// type_token_id
+	.word	0x61a	// java_map_index
+
+	.word	0x2000206	// type_token_id
+	.word	0x61b	// java_map_index
+
+	.word	0x2000208	// type_token_id
+	.word	0x605	// java_map_index
+
+	.word	0x200020a	// type_token_id
+	.word	0x60a	// java_map_index
+
+	.word	0x200020b	// type_token_id
+	.word	0x610	// java_map_index
+
+	.word	0x200020c	// type_token_id
+	.word	0x611	// java_map_index
+
+	.word	0x200020d	// type_token_id
+	.word	0x606	// java_map_index
+
+	.word	0x200020f	// type_token_id
+	.word	0x608	// java_map_index
+
+	.word	0x2000210	// type_token_id
+	.word	0x609	// java_map_index
+
+	.word	0x2000211	// type_token_id
+	.word	0x607	// java_map_index
+
+	.word	0x2000215	// type_token_id
+	.word	0x60c	// java_map_index
+
+	.word	0x2000216	// type_token_id
+	.word	0x60e	// java_map_index
+
+	.word	0x2000217	// type_token_id
+	.word	0x60d	// java_map_index
+
+	.word	0x2000219	// type_token_id
+	.word	0x60f	// java_map_index
+
+	.word	0x200021b	// type_token_id
+	.word	0x60b	// java_map_index
+
+	.word	0x200021d	// type_token_id
+	.word	0x612	// java_map_index
+
+	.word	0x2000220	// type_token_id
+	.word	0x615	// java_map_index
+
+	.word	0x2000221	// type_token_id
+	.word	0x617	// java_map_index
+
+	.word	0x2000222	// type_token_id
+	.word	0x618	// java_map_index
+
+	.word	0x2000223	// type_token_id
+	.word	0x616	// java_map_index
+
+	.word	0x2000225	// type_token_id
+	.word	0x619	// java_map_index
+
+	.word	0x2000226	// type_token_id
+	.word	0x614	// java_map_index
+
+	.word	0x2000227	// type_token_id
+	.word	0x613	// java_map_index
+
+	.word	0x2000228	// type_token_id
+	.word	0x5fe	// java_map_index
+
+	.word	0x200022a	// type_token_id
+	.word	0x5fa	// java_map_index
+
+	.word	0x200022c	// type_token_id
+	.word	0x5fb	// java_map_index
+
+	.word	0x200022e	// type_token_id
+	.word	0x5fd	// java_map_index
+
+	.word	0x200022f	// type_token_id
+	.word	0x5fc	// java_map_index
+
+	.word	0x2000231	// type_token_id
+	.word	0x5ff	// java_map_index
+
+	.word	0x2000233	// type_token_id
+	.word	0x600	// java_map_index
+
+	.word	0x2000235	// type_token_id
+	.word	0x601	// java_map_index
+
+	.word	0x2000236	// type_token_id
+	.word	0x602	// java_map_index
+
+	.word	0x2000238	// type_token_id
+	.word	0x603	// java_map_index
+
+	.word	0x200023a	// type_token_id
+	.word	0x604	// java_map_index
+
+	.word	0x200023c	// type_token_id
+	.word	0x5f7	// java_map_index
+
+	.word	0x200023d	// type_token_id
+	.word	0x5f8	// java_map_index
+
+	.word	0x200023e	// type_token_id
+	.word	0x5f9	// java_map_index
+
+	.word	0x200023f	// type_token_id
+	.word	0x5f5	// java_map_index
+
+	.word	0x2000240	// type_token_id
+	.word	0x5f6	// java_map_index
+
+	.word	0x2000241	// type_token_id
+	.word	0x5ca	// java_map_index
+
+	.word	0x2000242	// type_token_id
+	.word	0x5cb	// java_map_index
+
+	.word	0x2000243	// type_token_id
+	.word	0x5cc	// java_map_index
+
+	.word	0x2000245	// type_token_id
+	.word	0x5cd	// java_map_index
+
+	.word	0x2000247	// type_token_id
+	.word	0x5ce	// java_map_index
+
+	.word	0x2000249	// type_token_id
+	.word	0x5cf	// java_map_index
+
+	.word	0x200024f	// type_token_id
+	.word	0x6c2	// java_map_index
+
+	.word	0x2000250	// type_token_id
+	.word	0x6be	// java_map_index
+
+	.word	0x2000251	// type_token_id
+	.word	0x6ab	// java_map_index
+
+	.word	0x2000252	// type_token_id
+	.word	0x6ad	// java_map_index
+
+	.word	0x2000253	// type_token_id
+	.word	0x6b0	// java_map_index
+
+	.word	0x2000254	// type_token_id
+	.word	0x6af	// java_map_index
+
+	.word	0x2000256	// type_token_id
+	.word	0x6b2	// java_map_index
+
+	.word	0x2000257	// type_token_id
+	.word	0x6b1	// java_map_index
+
+	.word	0x2000259	// type_token_id
+	.word	0x6b3	// java_map_index
+
+	.word	0x200025a	// type_token_id
+	.word	0x6b5	// java_map_index
+
+	.word	0x200025b	// type_token_id
+	.word	0x6b7	// java_map_index
+
+	.word	0x200025c	// type_token_id
+	.word	0x6b9	// java_map_index
+
+	.word	0x200025d	// type_token_id
+	.word	0x6bb	// java_map_index
+
+	.word	0x200025e	// type_token_id
+	.word	0x6bc	// java_map_index
+
+	.word	0x200025f	// type_token_id
+	.word	0x6c0	// java_map_index
+
+	.word	0x2000260	// type_token_id
+	.word	0x6c4	// java_map_index
+
+	.word	0x2000261	// type_token_id
+	.word	0x5d9	// java_map_index
+
+	.word	0x2000262	// type_token_id
+	.word	0x5d3	// java_map_index
+
+	.word	0x2000263	// type_token_id
+	.word	0x5d0	// java_map_index
+
+	.word	0x2000265	// type_token_id
+	.word	0x5d1	// java_map_index
+
+	.word	0x2000268	// type_token_id
+	.word	0x5d4	// java_map_index
+
+	.word	0x200026a	// type_token_id
+	.word	0x5d5	// java_map_index
+
+	.word	0x200026c	// type_token_id
+	.word	0x5d6	// java_map_index
+
+	.word	0x200026e	// type_token_id
+	.word	0x5d7	// java_map_index
+
+	.word	0x2000270	// type_token_id
+	.word	0x5d8	// java_map_index
+
+	.word	0x2000273	// type_token_id
+	.word	0x5da	// java_map_index
+
+	.word	0x2000274	// type_token_id
+	.word	0x5db	// java_map_index
+
+	.word	0x2000275	// type_token_id
+	.word	0x5dc	// java_map_index
+
+	.word	0x2000277	// type_token_id
+	.word	0x5dd	// java_map_index
+
+	.word	0x2000279	// type_token_id
+	.word	0x5de	// java_map_index
+
+	.word	0x200027b	// type_token_id
+	.word	0x5df	// java_map_index
+
+	.word	0x200027c	// type_token_id
+	.word	0x5e0	// java_map_index
+
+	.word	0x200027e	// type_token_id
+	.word	0x5e1	// java_map_index
+
+	.word	0x2000280	// type_token_id
+	.word	0x5e3	// java_map_index
+
+	.word	0x2000281	// type_token_id
+	.word	0x5e2	// java_map_index
+
+	.word	0x2000283	// type_token_id
+	.word	0x5e4	// java_map_index
+
+	.word	0x2000284	// type_token_id
+	.word	0x5e5	// java_map_index
+
+	.word	0x2000286	// type_token_id
+	.word	0x5e6	// java_map_index
+
+	.word	0x2000288	// type_token_id
+	.word	0x5e7	// java_map_index
+
+	.word	0x2000289	// type_token_id
+	.word	0x5e8	// java_map_index
+
+	.word	0x200028a	// type_token_id
+	.word	0x5e9	// java_map_index
+
+	.word	0x200028b	// type_token_id
+	.word	0x5ea	// java_map_index
+
+	.word	0x200028d	// type_token_id
+	.word	0x5eb	// java_map_index
+
+	.word	0x200028e	// type_token_id
+	.word	0x5ec	// java_map_index
+
+	.word	0x200028f	// type_token_id
+	.word	0x5ed	// java_map_index
+
+	.word	0x2000290	// type_token_id
+	.word	0x5ee	// java_map_index
+
+	.word	0x2000292	// type_token_id
+	.word	0x5ef	// java_map_index
+
+	.word	0x2000293	// type_token_id
+	.word	0x5f0	// java_map_index
+
+	.word	0x2000295	// type_token_id
+	.word	0x5f1	// java_map_index
+
+	.word	0x2000297	// type_token_id
+	.word	0x5f2	// java_map_index
+
+	.word	0x2000299	// type_token_id
+	.word	0x5f4	// java_map_index
+
+	.word	0x200029a	// type_token_id
+	.word	0x5f3	// java_map_index
+
+	.word	0x200029b	// type_token_id
+	.word	0x598	// java_map_index
+
+	.word	0x200029c	// type_token_id
+	.word	0x70f	// java_map_index
+
+	.word	0x200029d	// type_token_id
+	.word	0x712	// java_map_index
+
+	.word	0x200029e	// type_token_id
+	.word	0x6f7	// java_map_index
+
+	.word	0x200029f	// type_token_id
+	.word	0x6f9	// java_map_index
+
+	.word	0x20002a0	// type_token_id
+	.word	0x704	// java_map_index
+
+	.word	0x20002a1	// type_token_id
+	.word	0x6e9	// java_map_index
+
+	.word	0x20002a2	// type_token_id
+	.word	0x6ea	// java_map_index
+
+	.word	0x20002a3	// type_token_id
+	.word	0x6ef	// java_map_index
+
+	.word	0x20002a4	// type_token_id
+	.word	0x6a8	// java_map_index
+
+	.word	0x20002a5	// type_token_id
+	.word	0x664	// java_map_index
+
+	.word	0x20002a6	// type_token_id
+	.word	0x66f	// java_map_index
+
+	.word	0x20002a7	// type_token_id
+	.word	0x682	// java_map_index
+
+	.word	0x20002a8	// type_token_id
+	.word	0x683	// java_map_index
+
+	.word	0x20002a9	// type_token_id
+	.word	0x684	// java_map_index
+
+	.word	0x20002aa	// type_token_id
+	.word	0x685	// java_map_index
+
+	.word	0x20002ab	// type_token_id
+	.word	0x686	// java_map_index
+
+	.word	0x20002ac	// type_token_id
+	.word	0x687	// java_map_index
+
+	.word	0x20002ad	// type_token_id
+	.word	0x688	// java_map_index
+
+	.word	0x20002ae	// type_token_id
+	.word	0x689	// java_map_index
+
+	.word	0x20002af	// type_token_id
+	.word	0x68a	// java_map_index
+
+	.word	0x20002b0	// type_token_id
+	.word	0x691	// java_map_index
+
+	.word	0x20002b1	// type_token_id
+	.word	0x694	// java_map_index
+
+	.word	0x20002b2	// type_token_id
+	.word	0x6c3	// java_map_index
+
+	.word	0x20002b3	// type_token_id
+	.word	0x6bf	// java_map_index
+
+	.word	0x20002b4	// type_token_id
+	.word	0x6ac	// java_map_index
+
+	.word	0x20002b5	// type_token_id
+	.word	0x6ae	// java_map_index
+
+	.word	0x20002b6	// type_token_id
+	.word	0x6b4	// java_map_index
+
+	.word	0x20002b7	// type_token_id
+	.word	0x6b6	// java_map_index
+
+	.word	0x20002b8	// type_token_id
+	.word	0x6b8	// java_map_index
+
+	.word	0x20002b9	// type_token_id
+	.word	0x6ba	// java_map_index
+
+	.word	0x20002ba	// type_token_id
+	.word	0x6bd	// java_map_index
+
+	.word	0x20002bb	// type_token_id
+	.word	0x6c1	// java_map_index
+
+	.word	0x20002bc	// type_token_id
+	.word	0x5d2	// java_map_index
+
+	.word	0x20002bd	// type_token_id
+	.word	0x692	// java_map_index
+
+	.size	.L.module3_managed_to_java, 3304
+
+	.section	.rodata.module3_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module3_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module3_managed_to_java_duplicates:
+	.word	0x2000045	// type_token_id
+	.word	0x585	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x580	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x586	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x587	// java_map_index
+
+	.word	0x2000058	// type_token_id
+	.word	0x589	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x58b	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x58d	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x58e	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x58f	// java_map_index
+
+	.word	0x2000063	// type_token_id
+	.word	0x590	// java_map_index
+
+	.word	0x2000065	// type_token_id
+	.word	0x591	// java_map_index
+
+	.word	0x2000067	// type_token_id
+	.word	0x596	// java_map_index
+
+	.word	0x2000069	// type_token_id
+	.word	0x59a	// java_map_index
+
+	.word	0x200006b	// type_token_id
+	.word	0x59e	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x59f	// java_map_index
+
+	.word	0x200006f	// type_token_id
+	.word	0x5a0	// java_map_index
+
+	.word	0x2000071	// type_token_id
+	.word	0x5a2	// java_map_index
+
+	.word	0x2000073	// type_token_id
+	.word	0x5a5	// java_map_index
+
+	.word	0x2000075	// type_token_id
+	.word	0x5a6	// java_map_index
+
+	.word	0x2000078	// type_token_id
+	.word	0x5a7	// java_map_index
+
+	.word	0x200007a	// type_token_id
+	.word	0x5ab	// java_map_index
+
+	.word	0x200007c	// type_token_id
+	.word	0x5ad	// java_map_index
+
+	.word	0x200007e	// type_token_id
+	.word	0x5c7	// java_map_index
+
+	.word	0x2000080	// type_token_id
+	.word	0x5c9	// java_map_index
+
+	.word	0x20000b6	// type_token_id
+	.word	0x70c	// java_map_index
+
+	.word	0x20000b8	// type_token_id
+	.word	0x70d	// java_map_index
+
+	.word	0x20000bf	// type_token_id
+	.word	0x713	// java_map_index
+
+	.word	0x20000c2	// type_token_id
+	.word	0x718	// java_map_index
+
+	.word	0x20000c7	// type_token_id
+	.word	0x717	// java_map_index
+
+	.word	0x20000cf	// type_token_id
+	.word	0x6fe	// java_map_index
+
+	.word	0x20000d1	// type_token_id
+	.word	0x6ff	// java_map_index
+
+	.word	0x20000d5	// type_token_id
+	.word	0x700	// java_map_index
+
+	.word	0x20000e2	// type_token_id
+	.word	0x6f0	// java_map_index
+
+	.word	0x20000e4	// type_token_id
+	.word	0x6f1	// java_map_index
+
+	.word	0x20000e8	// type_token_id
+	.word	0x6c5	// java_map_index
+
+	.word	0x20000eb	// type_token_id
+	.word	0x6c6	// java_map_index
+
+	.word	0x20000ee	// type_token_id
+	.word	0x6c8	// java_map_index
+
+	.word	0x20000f0	// type_token_id
+	.word	0x6cc	// java_map_index
+
+	.word	0x20000f2	// type_token_id
+	.word	0x6cd	// java_map_index
+
+	.word	0x20000f5	// type_token_id
+	.word	0x6ce	// java_map_index
+
+	.word	0x20000f7	// type_token_id
+	.word	0x6d1	// java_map_index
+
+	.word	0x20000f9	// type_token_id
+	.word	0x6d0	// java_map_index
+
+	.word	0x20000fb	// type_token_id
+	.word	0x6d3	// java_map_index
+
+	.word	0x20000fd	// type_token_id
+	.word	0x6d2	// java_map_index
+
+	.word	0x20000ff	// type_token_id
+	.word	0x6d5	// java_map_index
+
+	.word	0x2000101	// type_token_id
+	.word	0x6d4	// java_map_index
+
+	.word	0x2000103	// type_token_id
+	.word	0x6d7	// java_map_index
+
+	.word	0x2000105	// type_token_id
+	.word	0x6d6	// java_map_index
+
+	.word	0x2000109	// type_token_id
+	.word	0x6d8	// java_map_index
+
+	.word	0x200010b	// type_token_id
+	.word	0x6dc	// java_map_index
+
+	.word	0x200010e	// type_token_id
+	.word	0x6de	// java_map_index
+
+	.word	0x2000110	// type_token_id
+	.word	0x6db	// java_map_index
+
+	.word	0x2000112	// type_token_id
+	.word	0x6e0	// java_map_index
+
+	.word	0x2000114	// type_token_id
+	.word	0x6df	// java_map_index
+
+	.word	0x2000116	// type_token_id
+	.word	0x6e2	// java_map_index
+
+	.word	0x2000118	// type_token_id
+	.word	0x6e1	// java_map_index
+
+	.word	0x200011a	// type_token_id
+	.word	0x6e4	// java_map_index
+
+	.word	0x200011c	// type_token_id
+	.word	0x6e3	// java_map_index
+
+	.word	0x200011f	// type_token_id
+	.word	0x6e5	// java_map_index
+
+	.word	0x2000121	// type_token_id
+	.word	0x6e7	// java_map_index
+
+	.word	0x200012b	// type_token_id
+	.word	0x6a7	// java_map_index
+
+	.word	0x2000130	// type_token_id
+	.word	0x6a3	// java_map_index
+
+	.word	0x2000132	// type_token_id
+	.word	0x6a4	// java_map_index
+
+	.word	0x2000134	// type_token_id
+	.word	0x6a5	// java_map_index
+
+	.word	0x2000136	// type_token_id
+	.word	0x6a2	// java_map_index
+
+	.word	0x200013a	// type_token_id
+	.word	0x630	// java_map_index
+
+	.word	0x200013c	// type_token_id
+	.word	0x631	// java_map_index
+
+	.word	0x200013e	// type_token_id
+	.word	0x632	// java_map_index
+
+	.word	0x2000140	// type_token_id
+	.word	0x633	// java_map_index
+
+	.word	0x2000142	// type_token_id
+	.word	0x634	// java_map_index
+
+	.word	0x2000144	// type_token_id
+	.word	0x635	// java_map_index
+
+	.word	0x2000146	// type_token_id
+	.word	0x636	// java_map_index
+
+	.word	0x2000148	// type_token_id
+	.word	0x637	// java_map_index
+
+	.word	0x200014a	// type_token_id
+	.word	0x638	// java_map_index
+
+	.word	0x200014c	// type_token_id
+	.word	0x639	// java_map_index
+
+	.word	0x200014e	// type_token_id
+	.word	0x63a	// java_map_index
+
+	.word	0x2000150	// type_token_id
+	.word	0x63b	// java_map_index
+
+	.word	0x2000152	// type_token_id
+	.word	0x63d	// java_map_index
+
+	.word	0x2000154	// type_token_id
+	.word	0x63e	// java_map_index
+
+	.word	0x2000156	// type_token_id
+	.word	0x63f	// java_map_index
+
+	.word	0x2000158	// type_token_id
+	.word	0x640	// java_map_index
+
+	.word	0x200015a	// type_token_id
+	.word	0x641	// java_map_index
+
+	.word	0x200015c	// type_token_id
+	.word	0x642	// java_map_index
+
+	.word	0x2000177	// type_token_id
+	.word	0x660	// java_map_index
+
+	.word	0x2000180	// type_token_id
+	.word	0x662	// java_map_index
+
+	.word	0x2000182	// type_token_id
+	.word	0x669	// java_map_index
+
+	.word	0x2000184	// type_token_id
+	.word	0x66a	// java_map_index
+
+	.word	0x2000186	// type_token_id
+	.word	0x670	// java_map_index
+
+	.word	0x200018b	// type_token_id
+	.word	0x671	// java_map_index
+
+	.word	0x2000192	// type_token_id
+	.word	0x677	// java_map_index
+
+	.word	0x2000194	// type_token_id
+	.word	0x678	// java_map_index
+
+	.word	0x2000196	// type_token_id
+	.word	0x679	// java_map_index
+
+	.word	0x2000198	// type_token_id
+	.word	0x67a	// java_map_index
+
+	.word	0x200019b	// type_token_id
+	.word	0x67c	// java_map_index
+
+	.word	0x200019d	// type_token_id
+	.word	0x67d	// java_map_index
+
+	.word	0x200019f	// type_token_id
+	.word	0x67e	// java_map_index
+
+	.word	0x20001a1	// type_token_id
+	.word	0x67f	// java_map_index
+
+	.word	0x20001a3	// type_token_id
+	.word	0x680	// java_map_index
+
+	.word	0x20001ae	// type_token_id
+	.word	0x695	// java_map_index
+
+	.word	0x20001b0	// type_token_id
+	.word	0x696	// java_map_index
+
+	.word	0x20001b2	// type_token_id
+	.word	0x697	// java_map_index
+
+	.word	0x20001b4	// type_token_id
+	.word	0x698	// java_map_index
+
+	.word	0x20001b6	// type_token_id
+	.word	0x699	// java_map_index
+
+	.word	0x20001b8	// type_token_id
+	.word	0x69a	// java_map_index
+
+	.word	0x20001ba	// type_token_id
+	.word	0x69c	// java_map_index
+
+	.word	0x20001bc	// type_token_id
+	.word	0x69b	// java_map_index
+
+	.word	0x20001be	// type_token_id
+	.word	0x69d	// java_map_index
+
+	.word	0x20001c0	// type_token_id
+	.word	0x643	// java_map_index
+
+	.word	0x20001c2	// type_token_id
+	.word	0x644	// java_map_index
+
+	.word	0x20001c4	// type_token_id
+	.word	0x645	// java_map_index
+
+	.word	0x20001c6	// type_token_id
+	.word	0x646	// java_map_index
+
+	.word	0x20001c8	// type_token_id
+	.word	0x647	// java_map_index
+
+	.word	0x20001ca	// type_token_id
+	.word	0x648	// java_map_index
+
+	.word	0x20001cc	// type_token_id
+	.word	0x649	// java_map_index
+
+	.word	0x20001ce	// type_token_id
+	.word	0x64a	// java_map_index
+
+	.word	0x20001d0	// type_token_id
+	.word	0x64b	// java_map_index
+
+	.word	0x20001d2	// type_token_id
+	.word	0x64c	// java_map_index
+
+	.word	0x20001d4	// type_token_id
+	.word	0x64d	// java_map_index
+
+	.word	0x20001d6	// type_token_id
+	.word	0x64e	// java_map_index
+
+	.word	0x20001d8	// type_token_id
+	.word	0x64f	// java_map_index
+
+	.word	0x20001da	// type_token_id
+	.word	0x650	// java_map_index
+
+	.word	0x20001dc	// type_token_id
+	.word	0x651	// java_map_index
+
+	.word	0x20001de	// type_token_id
+	.word	0x652	// java_map_index
+
+	.word	0x20001e0	// type_token_id
+	.word	0x653	// java_map_index
+
+	.word	0x20001e2	// type_token_id
+	.word	0x654	// java_map_index
+
+	.word	0x20001e4	// type_token_id
+	.word	0x655	// java_map_index
+
+	.word	0x20001e6	// type_token_id
+	.word	0x656	// java_map_index
+
+	.word	0x20001e8	// type_token_id
+	.word	0x657	// java_map_index
+
+	.word	0x20001ea	// type_token_id
+	.word	0x658	// java_map_index
+
+	.word	0x20001ec	// type_token_id
+	.word	0x659	// java_map_index
+
+	.word	0x20001ee	// type_token_id
+	.word	0x65a	// java_map_index
+
+	.word	0x20001f1	// type_token_id
+	.word	0x62e	// java_map_index
+
+	.word	0x2000207	// type_token_id
+	.word	0x61b	// java_map_index
+
+	.word	0x2000209	// type_token_id
+	.word	0x605	// java_map_index
+
+	.word	0x200020e	// type_token_id
+	.word	0x606	// java_map_index
+
+	.word	0x2000212	// type_token_id
+	.word	0x607	// java_map_index
+
+	.word	0x2000213	// type_token_id
+	.word	0x607	// java_map_index
+
+	.word	0x2000214	// type_token_id
+	.word	0x607	// java_map_index
+
+	.word	0x2000218	// type_token_id
+	.word	0x60d	// java_map_index
+
+	.word	0x200021a	// type_token_id
+	.word	0x60f	// java_map_index
+
+	.word	0x200021c	// type_token_id
+	.word	0x60b	// java_map_index
+
+	.word	0x200021e	// type_token_id
+	.word	0x612	// java_map_index
+
+	.word	0x2000224	// type_token_id
+	.word	0x616	// java_map_index
+
+	.word	0x200022b	// type_token_id
+	.word	0x5fa	// java_map_index
+
+	.word	0x200022d	// type_token_id
+	.word	0x5fb	// java_map_index
+
+	.word	0x2000230	// type_token_id
+	.word	0x5fc	// java_map_index
+
+	.word	0x2000232	// type_token_id
+	.word	0x5ff	// java_map_index
+
+	.word	0x2000234	// type_token_id
+	.word	0x600	// java_map_index
+
+	.word	0x2000237	// type_token_id
+	.word	0x602	// java_map_index
+
+	.word	0x2000239	// type_token_id
+	.word	0x603	// java_map_index
+
+	.word	0x200023b	// type_token_id
+	.word	0x604	// java_map_index
+
+	.word	0x2000244	// type_token_id
+	.word	0x5cc	// java_map_index
+
+	.word	0x2000246	// type_token_id
+	.word	0x5cd	// java_map_index
+
+	.word	0x2000248	// type_token_id
+	.word	0x5ce	// java_map_index
+
+	.word	0x200024a	// type_token_id
+	.word	0x5cf	// java_map_index
+
+	.word	0x2000255	// type_token_id
+	.word	0x6af	// java_map_index
+
+	.word	0x2000258	// type_token_id
+	.word	0x6b1	// java_map_index
+
+	.word	0x2000264	// type_token_id
+	.word	0x5d0	// java_map_index
+
+	.word	0x2000266	// type_token_id
+	.word	0x5d1	// java_map_index
+
+	.word	0x2000267	// type_token_id
+	.word	0x5d3	// java_map_index
+
+	.word	0x2000269	// type_token_id
+	.word	0x5d4	// java_map_index
+
+	.word	0x200026b	// type_token_id
+	.word	0x5d5	// java_map_index
+
+	.word	0x200026d	// type_token_id
+	.word	0x5d6	// java_map_index
+
+	.word	0x200026f	// type_token_id
+	.word	0x5d7	// java_map_index
+
+	.word	0x2000271	// type_token_id
+	.word	0x5d8	// java_map_index
+
+	.word	0x2000272	// type_token_id
+	.word	0x5d9	// java_map_index
+
+	.word	0x2000276	// type_token_id
+	.word	0x5dc	// java_map_index
+
+	.word	0x2000278	// type_token_id
+	.word	0x5dd	// java_map_index
+
+	.word	0x200027a	// type_token_id
+	.word	0x5de	// java_map_index
+
+	.word	0x200027d	// type_token_id
+	.word	0x5e0	// java_map_index
+
+	.word	0x200027f	// type_token_id
+	.word	0x5e1	// java_map_index
+
+	.word	0x2000282	// type_token_id
+	.word	0x5e2	// java_map_index
+
+	.word	0x2000285	// type_token_id
+	.word	0x5e5	// java_map_index
+
+	.word	0x2000287	// type_token_id
+	.word	0x5e6	// java_map_index
+
+	.word	0x200028c	// type_token_id
+	.word	0x5ea	// java_map_index
+
+	.word	0x2000291	// type_token_id
+	.word	0x5ee	// java_map_index
+
+	.word	0x2000294	// type_token_id
+	.word	0x5f0	// java_map_index
+
+	.word	0x2000296	// type_token_id
+	.word	0x5f1	// java_map_index
+
+	.word	0x2000298	// type_token_id
+	.word	0x5f2	// java_map_index
+
+	.size	.L.module3_managed_to_java_duplicates, 1432
+
+	.section	.rodata.module4_managed_to_java, "a", @progbits
+
+	.type	.L.module4_managed_to_java, @object
+	.p2align	2
+.L.module4_managed_to_java:
+	.word	0x200002c	// type_token_id
+	.word	0x2bd	// java_map_index
+
+	.word	0x200002d	// type_token_id
+	.word	0x2be	// java_map_index
+
+	.word	0x200002e	// type_token_id
+	.word	0x2bf	// java_map_index
+
+	.word	0x200002f	// type_token_id
+	.word	0x2c1	// java_map_index
+
+	.word	0x2000030	// type_token_id
+	.word	0x2c2	// java_map_index
+
+	.word	0x2000031	// type_token_id
+	.word	0x2c3	// java_map_index
+
+	.word	0x2000034	// type_token_id
+	.word	0x2c0	// java_map_index
+
+	.word	0x2000035	// type_token_id
+	.word	0x2c4	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x2c7	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x73e	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x2c8	// java_map_index
+
+	.word	0x2000043	// type_token_id
+	.word	0x2c5	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x2c6	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x2c9	// java_map_index
+
+	.word	0x2000048	// type_token_id
+	.word	0x2ca	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x2cb	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x302	// java_map_index
+
+	.word	0x200004b	// type_token_id
+	.word	0x303	// java_map_index
+
+	.word	0x200004c	// type_token_id
+	.word	0x2ee	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x2ef	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x2f0	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x2f1	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x2f4	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x2f2	// java_map_index
+
+	.word	0x2000053	// type_token_id
+	.word	0x2f3	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x2f5	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x2f7	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x741	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x2fe	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x742	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x2f6	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x2f8	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x2f9	// java_map_index
+
+	.word	0x2000062	// type_token_id
+	.word	0x2fa	// java_map_index
+
+	.word	0x2000063	// type_token_id
+	.word	0x2fb	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x2fc	// java_map_index
+
+	.word	0x2000066	// type_token_id
+	.word	0x2fd	// java_map_index
+
+	.word	0x2000067	// type_token_id
+	.word	0x300	// java_map_index
+
+	.word	0x200006a	// type_token_id
+	.word	0x2ff	// java_map_index
+
+	.word	0x200006b	// type_token_id
+	.word	0x301	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x2e2	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x2e3	// java_map_index
+
+	.word	0x2000071	// type_token_id
+	.word	0x2e4	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x2e5	// java_map_index
+
+	.word	0x2000073	// type_token_id
+	.word	0x2e6	// java_map_index
+
+	.word	0x2000074	// type_token_id
+	.word	0x2e7	// java_map_index
+
+	.word	0x2000075	// type_token_id
+	.word	0x2e8	// java_map_index
+
+	.word	0x2000076	// type_token_id
+	.word	0x2e9	// java_map_index
+
+	.word	0x2000077	// type_token_id
+	.word	0x2ea	// java_map_index
+
+	.word	0x2000078	// type_token_id
+	.word	0x2eb	// java_map_index
+
+	.word	0x2000079	// type_token_id
+	.word	0x2ec	// java_map_index
+
+	.word	0x200007a	// type_token_id
+	.word	0x2ed	// java_map_index
+
+	.word	0x200007b	// type_token_id
+	.word	0x2e1	// java_map_index
+
+	.word	0x200007c	// type_token_id
+	.word	0x2cc	// java_map_index
+
+	.word	0x200007d	// type_token_id
+	.word	0x2d6	// java_map_index
+
+	.word	0x200007e	// type_token_id
+	.word	0x2d7	// java_map_index
+
+	.word	0x200008f	// type_token_id
+	.word	0x2ce	// java_map_index
+
+	.word	0x2000090	// type_token_id
+	.word	0x2cf	// java_map_index
+
+	.word	0x2000091	// type_token_id
+	.word	0x2d0	// java_map_index
+
+	.word	0x2000094	// type_token_id
+	.word	0x2d3	// java_map_index
+
+	.word	0x2000095	// type_token_id
+	.word	0x2d4	// java_map_index
+
+	.word	0x2000096	// type_token_id
+	.word	0x2d5	// java_map_index
+
+	.word	0x2000097	// type_token_id
+	.word	0x2d9	// java_map_index
+
+	.word	0x2000098	// type_token_id
+	.word	0x2cd	// java_map_index
+
+	.word	0x200009a	// type_token_id
+	.word	0x2d1	// java_map_index
+
+	.word	0x200009c	// type_token_id
+	.word	0x2d2	// java_map_index
+
+	.word	0x200009e	// type_token_id
+	.word	0x2d8	// java_map_index
+
+	.word	0x20000a5	// type_token_id
+	.word	0x73f	// java_map_index
+
+	.word	0x20000a6	// type_token_id
+	.word	0x2da	// java_map_index
+
+	.word	0x20000a9	// type_token_id
+	.word	0x740	// java_map_index
+
+	.word	0x20000aa	// type_token_id
+	.word	0x2dc	// java_map_index
+
+	.word	0x20000ac	// type_token_id
+	.word	0x2dd	// java_map_index
+
+	.word	0x20000ae	// type_token_id
+	.word	0x2db	// java_map_index
+
+	.word	0x20000af	// type_token_id
+	.word	0x2de	// java_map_index
+
+	.word	0x20000b0	// type_token_id
+	.word	0x2df	// java_map_index
+
+	.word	0x20000b1	// type_token_id
+	.word	0x2e0	// java_map_index
+
+	.size	.L.module4_managed_to_java, 608
+
+	.section	.rodata.module4_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module4_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module4_managed_to_java_duplicates:
+	.word	0x2000039	// type_token_id
+	.word	0x2c7	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x2c8	// java_map_index
+
+	.word	0x2000044	// type_token_id
+	.word	0x2c5	// java_map_index
+
+	.word	0x2000046	// type_token_id
+	.word	0x2c6	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x2f2	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x2f3	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x2f5	// java_map_index
+
+	.word	0x2000058	// type_token_id
+	.word	0x2f7	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x2fe	// java_map_index
+
+	.word	0x2000065	// type_token_id
+	.word	0x2fb	// java_map_index
+
+	.word	0x2000070	// type_token_id
+	.word	0x2e3	// java_map_index
+
+	.word	0x2000099	// type_token_id
+	.word	0x2cd	// java_map_index
+
+	.word	0x200009b	// type_token_id
+	.word	0x2d1	// java_map_index
+
+	.word	0x200009d	// type_token_id
+	.word	0x2d2	// java_map_index
+
+	.word	0x200009f	// type_token_id
+	.word	0x2d8	// java_map_index
+
+	.word	0x20000a7	// type_token_id
+	.word	0x2da	// java_map_index
+
+	.word	0x20000ab	// type_token_id
+	.word	0x2dc	// java_map_index
+
+	.word	0x20000ad	// type_token_id
+	.word	0x2dd	// java_map_index
+
+	.size	.L.module4_managed_to_java_duplicates, 144
+
+	.section	.rodata.module5_managed_to_java, "a", @progbits
+
+	.type	.L.module5_managed_to_java, @object
+	.p2align	2
+.L.module5_managed_to_java:
+	.word	0x2000008	// type_token_id
+	.word	0x4b4	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x4b5	// java_map_index
+
+	.word	0x2000013	// type_token_id
+	.word	0x4c5	// java_map_index
+
+	.word	0x2000014	// type_token_id
+	.word	0x4c4	// java_map_index
+
+	.word	0x2000016	// type_token_id
+	.word	0x494	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x493	// java_map_index
+
+	.word	0x2000018	// type_token_id
+	.word	0x495	// java_map_index
+
+	.size	.L.module5_managed_to_java, 56
+
+	.section	.rodata.module6_managed_to_java, "a", @progbits
+
+	.type	.L.module6_managed_to_java, @object
+	.p2align	2
+.L.module6_managed_to_java:
+	.word	0x2000008	// type_token_id
+	.word	0x177	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x176	// java_map_index
+
+	.size	.L.module6_managed_to_java, 16
+
+	.section	.rodata.module7_managed_to_java, "a", @progbits
+
+	.type	.L.module7_managed_to_java, @object
+	.p2align	2
+.L.module7_managed_to_java:
+	.word	0x2000003	// type_token_id
+	.word	0x393	// java_map_index
+
+	.word	0x2000004	// type_token_id
+	.word	0x394	// java_map_index
+
+	.word	0x2000007	// type_token_id
+	.word	0x392	// java_map_index
+
+	.word	0x2000008	// type_token_id
+	.word	0x395	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x396	// java_map_index
+
+	.word	0x200000a	// type_token_id
+	.word	0x397	// java_map_index
+
+	.word	0x200000c	// type_token_id
+	.word	0x398	// java_map_index
+
+	.word	0x200000e	// type_token_id
+	.word	0x399	// java_map_index
+
+	.word	0x200000f	// type_token_id
+	.word	0x39a	// java_map_index
+
+	.word	0x2000010	// type_token_id
+	.word	0x39b	// java_map_index
+
+	.word	0x2000011	// type_token_id
+	.word	0x39d	// java_map_index
+
+	.word	0x2000013	// type_token_id
+	.word	0x39e	// java_map_index
+
+	.word	0x2000015	// type_token_id
+	.word	0x39f	// java_map_index
+
+	.word	0x2000016	// type_token_id
+	.word	0x3a0	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x39c	// java_map_index
+
+	.word	0x2000018	// type_token_id
+	.word	0x3a1	// java_map_index
+
+	.word	0x2000019	// type_token_id
+	.word	0x3a2	// java_map_index
+
+	.word	0x200001a	// type_token_id
+	.word	0x3a3	// java_map_index
+
+	.word	0x200001b	// type_token_id
+	.word	0x3a4	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x3a5	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x3a6	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x3a7	// java_map_index
+
+	.word	0x200001f	// type_token_id
+	.word	0x3a8	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x3a9	// java_map_index
+
+	.word	0x2000021	// type_token_id
+	.word	0x3aa	// java_map_index
+
+	.size	.L.module7_managed_to_java, 200
+
+	.section	.rodata.module7_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module7_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module7_managed_to_java_duplicates:
+	.word	0x2000005	// type_token_id
+	.word	0x393	// java_map_index
+
+	.size	.L.module7_managed_to_java_duplicates, 8
+
+	.section	.rodata.module8_managed_to_java, "a", @progbits
+
+	.type	.L.module8_managed_to_java, @object
+	.p2align	2
+.L.module8_managed_to_java:
+	.word	0x2000009	// type_token_id
+	.word	0x1f4	// java_map_index
+
+	.size	.L.module8_managed_to_java, 8
+
+	.section	.rodata.module9_managed_to_java, "a", @progbits
+
+	.type	.L.module9_managed_to_java, @object
+	.p2align	2
+.L.module9_managed_to_java:
+	.word	0x2000016	// type_token_id
+	.word	0x1e4	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x1e5	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x735	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x1e6	// java_map_index
+
+	.size	.L.module9_managed_to_java, 32
+
+	.section	.rodata.module9_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module9_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module9_managed_to_java_duplicates:
+	.word	0x2000018	// type_token_id
+	.word	0x1e5	// java_map_index
+
+	.size	.L.module9_managed_to_java_duplicates, 8
+
+	.section	.rodata.module10_managed_to_java, "a", @progbits
+
+	.type	.L.module10_managed_to_java, @object
+	.p2align	2
+.L.module10_managed_to_java:
+	.word	0x2000018	// type_token_id
+	.word	0x231	// java_map_index
+
+	.word	0x2000019	// type_token_id
+	.word	0x232	// java_map_index
+
+	.word	0x200001b	// type_token_id
+	.word	0x233	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x73b	// java_map_index
+
+	.size	.L.module10_managed_to_java, 32
+
+	.section	.rodata.module10_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module10_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module10_managed_to_java_duplicates:
+	.word	0x200001a	// type_token_id
+	.word	0x232	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x233	// java_map_index
+
+	.size	.L.module10_managed_to_java_duplicates, 16
+
+	.section	.rodata.module11_managed_to_java, "a", @progbits
+
+	.type	.L.module11_managed_to_java, @object
+	.p2align	2
+.L.module11_managed_to_java:
+	.word	0x2000045	// type_token_id
+	.word	0x1ac	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x1ab	// java_map_index
+
+	.word	0x2000048	// type_token_id
+	.word	0x1a7	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x1a8	// java_map_index
+
+	.word	0x200004c	// type_token_id
+	.word	0x1a5	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x1a6	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x1a2	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x1a3	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x1a4	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x197	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x198	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x199	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x19a	// java_map_index
+
+	.word	0x2000058	// type_token_id
+	.word	0x19b	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x19c	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x19d	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x19e	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x19f	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x1a0	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x1a1	// java_map_index
+
+	.word	0x2000062	// type_token_id
+	.word	0x1dd	// java_map_index
+
+	.word	0x2000063	// type_token_id
+	.word	0x1de	// java_map_index
+
+	.word	0x2000066	// type_token_id
+	.word	0x734	// java_map_index
+
+	.word	0x2000069	// type_token_id
+	.word	0x1dc	// java_map_index
+
+	.word	0x200006a	// type_token_id
+	.word	0x1db	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x1e0	// java_map_index
+
+	.word	0x200006e	// type_token_id
+	.word	0x1e1	// java_map_index
+
+	.word	0x2000070	// type_token_id
+	.word	0x1e2	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x1df	// java_map_index
+
+	.word	0x2000073	// type_token_id
+	.word	0x1bc	// java_map_index
+
+	.word	0x2000074	// type_token_id
+	.word	0x1ad	// java_map_index
+
+	.word	0x2000075	// type_token_id
+	.word	0x1ae	// java_map_index
+
+	.word	0x2000076	// type_token_id
+	.word	0x1af	// java_map_index
+
+	.word	0x2000079	// type_token_id
+	.word	0x731	// java_map_index
+
+	.word	0x200007a	// type_token_id
+	.word	0x1b0	// java_map_index
+
+	.word	0x200007d	// type_token_id
+	.word	0x732	// java_map_index
+
+	.word	0x2000083	// type_token_id
+	.word	0x1b1	// java_map_index
+
+	.word	0x2000084	// type_token_id
+	.word	0x1b2	// java_map_index
+
+	.word	0x2000085	// type_token_id
+	.word	0x1b3	// java_map_index
+
+	.word	0x2000086	// type_token_id
+	.word	0x1b8	// java_map_index
+
+	.word	0x2000088	// type_token_id
+	.word	0x1b9	// java_map_index
+
+	.word	0x200008a	// type_token_id
+	.word	0x1ba	// java_map_index
+
+	.word	0x200008c	// type_token_id
+	.word	0x1bb	// java_map_index
+
+	.word	0x200008f	// type_token_id
+	.word	0x1bd	// java_map_index
+
+	.word	0x2000091	// type_token_id
+	.word	0x1be	// java_map_index
+
+	.word	0x2000093	// type_token_id
+	.word	0x1bf	// java_map_index
+
+	.word	0x2000095	// type_token_id
+	.word	0x1c2	// java_map_index
+
+	.word	0x2000097	// type_token_id
+	.word	0x1c3	// java_map_index
+
+	.word	0x2000099	// type_token_id
+	.word	0x1c7	// java_map_index
+
+	.word	0x200009b	// type_token_id
+	.word	0x1c8	// java_map_index
+
+	.word	0x200009d	// type_token_id
+	.word	0x1cc	// java_map_index
+
+	.word	0x200009f	// type_token_id
+	.word	0x1b4	// java_map_index
+
+	.word	0x20000a0	// type_token_id
+	.word	0x1b5	// java_map_index
+
+	.word	0x20000a2	// type_token_id
+	.word	0x1b6	// java_map_index
+
+	.word	0x20000a3	// type_token_id
+	.word	0x1b7	// java_map_index
+
+	.word	0x20000a5	// type_token_id
+	.word	0x1c0	// java_map_index
+
+	.word	0x20000a6	// type_token_id
+	.word	0x1c1	// java_map_index
+
+	.word	0x20000a7	// type_token_id
+	.word	0x1c4	// java_map_index
+
+	.word	0x20000a8	// type_token_id
+	.word	0x1c5	// java_map_index
+
+	.word	0x20000aa	// type_token_id
+	.word	0x1c6	// java_map_index
+
+	.word	0x20000ab	// type_token_id
+	.word	0x1c9	// java_map_index
+
+	.word	0x20000ac	// type_token_id
+	.word	0x1ca	// java_map_index
+
+	.word	0x20000ad	// type_token_id
+	.word	0x1cb	// java_map_index
+
+	.word	0x20000af	// type_token_id
+	.word	0x1cd	// java_map_index
+
+	.word	0x20000b0	// type_token_id
+	.word	0x1ce	// java_map_index
+
+	.word	0x20000b1	// type_token_id
+	.word	0x1cf	// java_map_index
+
+	.word	0x20000b2	// type_token_id
+	.word	0x1d0	// java_map_index
+
+	.word	0x20000b5	// type_token_id
+	.word	0x733	// java_map_index
+
+	.word	0x20000b8	// type_token_id
+	.word	0x1d1	// java_map_index
+
+	.word	0x20000b9	// type_token_id
+	.word	0x1d2	// java_map_index
+
+	.word	0x20000ba	// type_token_id
+	.word	0x1d3	// java_map_index
+
+	.word	0x20000bb	// type_token_id
+	.word	0x1d4	// java_map_index
+
+	.word	0x20000bc	// type_token_id
+	.word	0x1d5	// java_map_index
+
+	.word	0x20000bd	// type_token_id
+	.word	0x1d6	// java_map_index
+
+	.word	0x20000be	// type_token_id
+	.word	0x1d7	// java_map_index
+
+	.word	0x20000bf	// type_token_id
+	.word	0x1da	// java_map_index
+
+	.word	0x20000c0	// type_token_id
+	.word	0x1d9	// java_map_index
+
+	.word	0x20000c2	// type_token_id
+	.word	0x1d8	// java_map_index
+
+	.word	0x20000c4	// type_token_id
+	.word	0x1a9	// java_map_index
+
+	.word	0x20000c5	// type_token_id
+	.word	0x1aa	// java_map_index
+
+	.size	.L.module11_managed_to_java, 640
+
+	.section	.rodata.module11_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module11_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module11_managed_to_java_duplicates:
+	.word	0x2000046	// type_token_id
+	.word	0x1ac	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x1a7	// java_map_index
+
+	.word	0x200004b	// type_token_id
+	.word	0x1a8	// java_map_index
+
+	.word	0x2000053	// type_token_id
+	.word	0x198	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x199	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x19a	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x19f	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x19e	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x1a1	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x1de	// java_map_index
+
+	.word	0x200006b	// type_token_id
+	.word	0x1db	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x1e0	// java_map_index
+
+	.word	0x200006f	// type_token_id
+	.word	0x1e1	// java_map_index
+
+	.word	0x2000071	// type_token_id
+	.word	0x1e2	// java_map_index
+
+	.word	0x2000077	// type_token_id
+	.word	0x1af	// java_map_index
+
+	.word	0x200007b	// type_token_id
+	.word	0x1b0	// java_map_index
+
+	.word	0x2000082	// type_token_id
+	.word	0x1ae	// java_map_index
+
+	.word	0x2000087	// type_token_id
+	.word	0x1b8	// java_map_index
+
+	.word	0x2000089	// type_token_id
+	.word	0x1b9	// java_map_index
+
+	.word	0x200008b	// type_token_id
+	.word	0x1ba	// java_map_index
+
+	.word	0x200008d	// type_token_id
+	.word	0x1bb	// java_map_index
+
+	.word	0x200008e	// type_token_id
+	.word	0x1bc	// java_map_index
+
+	.word	0x2000090	// type_token_id
+	.word	0x1bd	// java_map_index
+
+	.word	0x2000092	// type_token_id
+	.word	0x1be	// java_map_index
+
+	.word	0x2000094	// type_token_id
+	.word	0x1bf	// java_map_index
+
+	.word	0x2000096	// type_token_id
+	.word	0x1c2	// java_map_index
+
+	.word	0x2000098	// type_token_id
+	.word	0x1c3	// java_map_index
+
+	.word	0x200009a	// type_token_id
+	.word	0x1c7	// java_map_index
+
+	.word	0x200009c	// type_token_id
+	.word	0x1c8	// java_map_index
+
+	.word	0x200009e	// type_token_id
+	.word	0x1cc	// java_map_index
+
+	.word	0x20000a1	// type_token_id
+	.word	0x1b5	// java_map_index
+
+	.word	0x20000a4	// type_token_id
+	.word	0x1b7	// java_map_index
+
+	.word	0x20000a9	// type_token_id
+	.word	0x1c5	// java_map_index
+
+	.word	0x20000ae	// type_token_id
+	.word	0x1cb	// java_map_index
+
+	.word	0x20000b3	// type_token_id
+	.word	0x1d0	// java_map_index
+
+	.word	0x20000c1	// type_token_id
+	.word	0x1d9	// java_map_index
+
+	.word	0x20000c3	// type_token_id
+	.word	0x1d8	// java_map_index
+
+	.size	.L.module11_managed_to_java_duplicates, 296
+
+	.section	.rodata.module12_managed_to_java, "a", @progbits
+
+	.type	.L.module12_managed_to_java, @object
+	.p2align	2
+.L.module12_managed_to_java:
+	.word	0x200000a	// type_token_id
+	.word	0x157	// java_map_index
+
+	.word	0x200000d	// type_token_id
+	.word	0x15a	// java_map_index
+
+	.word	0x200000f	// type_token_id
+	.word	0x158	// java_map_index
+
+	.word	0x2000011	// type_token_id
+	.word	0x159	// java_map_index
+
+	.word	0x2000012	// type_token_id
+	.word	0x15b	// java_map_index
+
+	.word	0x2000014	// type_token_id
+	.word	0x15c	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x72e	// java_map_index
+
+	.word	0x2000018	// type_token_id
+	.word	0x15f	// java_map_index
+
+	.word	0x200001a	// type_token_id
+	.word	0x160	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x15d	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x15e	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x161	// java_map_index
+
+	.word	0x2000023	// type_token_id
+	.word	0x162	// java_map_index
+
+	.word	0x2000024	// type_token_id
+	.word	0x163	// java_map_index
+
+	.size	.L.module12_managed_to_java, 112
+
+	.section	.rodata.module12_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module12_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module12_managed_to_java_duplicates:
+	.word	0x200000e	// type_token_id
+	.word	0x15a	// java_map_index
+
+	.word	0x2000010	// type_token_id
+	.word	0x158	// java_map_index
+
+	.word	0x2000013	// type_token_id
+	.word	0x15b	// java_map_index
+
+	.word	0x2000015	// type_token_id
+	.word	0x15c	// java_map_index
+
+	.word	0x2000019	// type_token_id
+	.word	0x15f	// java_map_index
+
+	.word	0x200001b	// type_token_id
+	.word	0x160	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x15d	// java_map_index
+
+	.word	0x200001f	// type_token_id
+	.word	0x15e	// java_map_index
+
+	.word	0x2000021	// type_token_id
+	.word	0x161	// java_map_index
+
+	.word	0x2000025	// type_token_id
+	.word	0x162	// java_map_index
+
+	.size	.L.module12_managed_to_java_duplicates, 80
+
+	.section	.rodata.module13_managed_to_java, "a", @progbits
+
+	.type	.L.module13_managed_to_java, @object
+	.p2align	2
+.L.module13_managed_to_java:
+	.word	0x2000003	// type_token_id
+	.word	0x230	// java_map_index
+
+	.word	0x2000005	// type_token_id
+	.word	0x22e	// java_map_index
+
+	.word	0x2000006	// type_token_id
+	.word	0x22f	// java_map_index
+
+	.size	.L.module13_managed_to_java, 24
+
+	.section	.rodata.module13_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module13_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module13_managed_to_java_duplicates:
+	.word	0x2000004	// type_token_id
+	.word	0x230	// java_map_index
+
+	.word	0x2000007	// type_token_id
+	.word	0x22f	// java_map_index
+
+	.size	.L.module13_managed_to_java_duplicates, 16
+
+	.section	.rodata.module14_managed_to_java, "a", @progbits
+
+	.type	.L.module14_managed_to_java, @object
+	.p2align	2
+.L.module14_managed_to_java:
+	.word	0x2000008	// type_token_id
+	.word	0x77d	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x784	// java_map_index
+
+	.word	0x200000c	// type_token_id
+	.word	0x789	// java_map_index
+
+	.word	0x200000d	// type_token_id
+	.word	0x787	// java_map_index
+
+	.word	0x200000f	// type_token_id
+	.word	0x788	// java_map_index
+
+	.word	0x2000011	// type_token_id
+	.word	0x78b	// java_map_index
+
+	.word	0x2000013	// type_token_id
+	.word	0x78d	// java_map_index
+
+	.word	0x2000014	// type_token_id
+	.word	0x78c	// java_map_index
+
+	.word	0x2000016	// type_token_id
+	.word	0x78e	// java_map_index
+
+	.word	0x2000018	// type_token_id
+	.word	0x78f	// java_map_index
+
+	.word	0x200001a	// type_token_id
+	.word	0x790	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x791	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x792	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x793	// java_map_index
+
+	.word	0x2000022	// type_token_id
+	.word	0x794	// java_map_index
+
+	.word	0x2000024	// type_token_id
+	.word	0x795	// java_map_index
+
+	.word	0x2000026	// type_token_id
+	.word	0x796	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x797	// java_map_index
+
+	.word	0x200002a	// type_token_id
+	.word	0x798	// java_map_index
+
+	.word	0x200003c	// type_token_id
+	.word	0x763	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x764	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x777	// java_map_index
+
+	.word	0x2000044	// type_token_id
+	.word	0x778	// java_map_index
+
+	.word	0x2000046	// type_token_id
+	.word	0x779	// java_map_index
+
+	.word	0x2000048	// type_token_id
+	.word	0x77a	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x77b	// java_map_index
+
+	.word	0x200004c	// type_token_id
+	.word	0x77c	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x765	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x77e	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x77f	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x780	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x781	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x782	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x783	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x785	// java_map_index
+
+	.word	0x2000063	// type_token_id
+	.word	0x786	// java_map_index
+
+	.word	0x2000065	// type_token_id
+	.word	0x78a	// java_map_index
+
+	.word	0x2000067	// type_token_id
+	.word	0x766	// java_map_index
+
+	.word	0x2000069	// type_token_id
+	.word	0x767	// java_map_index
+
+	.word	0x200006b	// type_token_id
+	.word	0x768	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x769	// java_map_index
+
+	.word	0x200006f	// type_token_id
+	.word	0x76a	// java_map_index
+
+	.word	0x2000071	// type_token_id
+	.word	0x76b	// java_map_index
+
+	.word	0x2000073	// type_token_id
+	.word	0x76c	// java_map_index
+
+	.word	0x2000075	// type_token_id
+	.word	0x76d	// java_map_index
+
+	.word	0x2000077	// type_token_id
+	.word	0x76e	// java_map_index
+
+	.word	0x2000079	// type_token_id
+	.word	0x76f	// java_map_index
+
+	.word	0x200007b	// type_token_id
+	.word	0x770	// java_map_index
+
+	.word	0x200007d	// type_token_id
+	.word	0x771	// java_map_index
+
+	.word	0x200007f	// type_token_id
+	.word	0x772	// java_map_index
+
+	.word	0x2000081	// type_token_id
+	.word	0x773	// java_map_index
+
+	.word	0x2000083	// type_token_id
+	.word	0x774	// java_map_index
+
+	.word	0x2000085	// type_token_id
+	.word	0x775	// java_map_index
+
+	.word	0x2000087	// type_token_id
+	.word	0x776	// java_map_index
+
+	.size	.L.module14_managed_to_java, 432
+
+	.section	.rodata.module14_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module14_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module14_managed_to_java_duplicates:
+	.word	0x200000e	// type_token_id
+	.word	0x787	// java_map_index
+
+	.word	0x2000010	// type_token_id
+	.word	0x788	// java_map_index
+
+	.word	0x2000012	// type_token_id
+	.word	0x78b	// java_map_index
+
+	.word	0x2000015	// type_token_id
+	.word	0x78c	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x78e	// java_map_index
+
+	.word	0x2000019	// type_token_id
+	.word	0x78f	// java_map_index
+
+	.word	0x200001b	// type_token_id
+	.word	0x790	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x791	// java_map_index
+
+	.word	0x200001f	// type_token_id
+	.word	0x792	// java_map_index
+
+	.word	0x2000021	// type_token_id
+	.word	0x793	// java_map_index
+
+	.word	0x2000023	// type_token_id
+	.word	0x794	// java_map_index
+
+	.word	0x2000025	// type_token_id
+	.word	0x795	// java_map_index
+
+	.word	0x2000027	// type_token_id
+	.word	0x796	// java_map_index
+
+	.word	0x2000029	// type_token_id
+	.word	0x797	// java_map_index
+
+	.word	0x200002b	// type_token_id
+	.word	0x798	// java_map_index
+
+	.word	0x200003d	// type_token_id
+	.word	0x763	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x763	// java_map_index
+
+	.word	0x200003f	// type_token_id
+	.word	0x763	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x764	// java_map_index
+
+	.word	0x2000043	// type_token_id
+	.word	0x777	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x778	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x779	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x77a	// java_map_index
+
+	.word	0x200004b	// type_token_id
+	.word	0x77b	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x77c	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x77e	// java_map_index
+
+	.word	0x2000058	// type_token_id
+	.word	0x77f	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x780	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x781	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x782	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x783	// java_map_index
+
+	.word	0x2000062	// type_token_id
+	.word	0x785	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x786	// java_map_index
+
+	.word	0x2000066	// type_token_id
+	.word	0x78a	// java_map_index
+
+	.word	0x2000068	// type_token_id
+	.word	0x766	// java_map_index
+
+	.word	0x200006a	// type_token_id
+	.word	0x767	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x768	// java_map_index
+
+	.word	0x200006e	// type_token_id
+	.word	0x769	// java_map_index
+
+	.word	0x2000070	// type_token_id
+	.word	0x76a	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x76b	// java_map_index
+
+	.word	0x2000074	// type_token_id
+	.word	0x76c	// java_map_index
+
+	.word	0x2000076	// type_token_id
+	.word	0x76d	// java_map_index
+
+	.word	0x2000078	// type_token_id
+	.word	0x76e	// java_map_index
+
+	.word	0x200007a	// type_token_id
+	.word	0x76f	// java_map_index
+
+	.word	0x200007c	// type_token_id
+	.word	0x770	// java_map_index
+
+	.word	0x200007e	// type_token_id
+	.word	0x771	// java_map_index
+
+	.word	0x2000080	// type_token_id
+	.word	0x772	// java_map_index
+
+	.word	0x2000082	// type_token_id
+	.word	0x773	// java_map_index
+
+	.word	0x2000084	// type_token_id
+	.word	0x774	// java_map_index
+
+	.word	0x2000086	// type_token_id
+	.word	0x775	// java_map_index
+
+	.word	0x2000088	// type_token_id
+	.word	0x776	// java_map_index
+
+	.size	.L.module14_managed_to_java_duplicates, 408
+
+	.section	.rodata.module15_managed_to_java, "a", @progbits
+
+	.type	.L.module15_managed_to_java, @object
+	.p2align	2
+.L.module15_managed_to_java:
+	.word	0x2000010	// type_token_id
+	.word	0x4b6	// java_map_index
+
+	.size	.L.module15_managed_to_java, 8
+
+	.section	.rodata.module16_managed_to_java, "a", @progbits
+
+	.type	.L.module16_managed_to_java, @object
+	.p2align	2
+.L.module16_managed_to_java:
+	.word	0x2000003	// type_token_id
+	.word	0x239	// java_map_index
+
+	.word	0x2000005	// type_token_id
+	.word	0x23a	// java_map_index
+
+	.word	0x2000006	// type_token_id
+	.word	0x23b	// java_map_index
+
+	.word	0x2000007	// type_token_id
+	.word	0x23c	// java_map_index
+
+	.word	0x2000008	// type_token_id
+	.word	0x23d	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x23e	// java_map_index
+
+	.word	0x200000a	// type_token_id
+	.word	0x23f	// java_map_index
+
+	.word	0x200000b	// type_token_id
+	.word	0x240	// java_map_index
+
+	.word	0x200000c	// type_token_id
+	.word	0x241	// java_map_index
+
+	.word	0x200000d	// type_token_id
+	.word	0x242	// java_map_index
+
+	.word	0x200000e	// type_token_id
+	.word	0x243	// java_map_index
+
+	.word	0x200000f	// type_token_id
+	.word	0x244	// java_map_index
+
+	.word	0x2000010	// type_token_id
+	.word	0x245	// java_map_index
+
+	.word	0x2000011	// type_token_id
+	.word	0x246	// java_map_index
+
+	.word	0x2000012	// type_token_id
+	.word	0x247	// java_map_index
+
+	.word	0x2000013	// type_token_id
+	.word	0x248	// java_map_index
+
+	.word	0x2000014	// type_token_id
+	.word	0x249	// java_map_index
+
+	.word	0x2000015	// type_token_id
+	.word	0x24a	// java_map_index
+
+	.word	0x2000016	// type_token_id
+	.word	0x24b	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x24c	// java_map_index
+
+	.word	0x2000018	// type_token_id
+	.word	0x24d	// java_map_index
+
+	.word	0x2000019	// type_token_id
+	.word	0x24e	// java_map_index
+
+	.word	0x200001a	// type_token_id
+	.word	0x24f	// java_map_index
+
+	.word	0x200001b	// type_token_id
+	.word	0x250	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x251	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x252	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x253	// java_map_index
+
+	.word	0x200001f	// type_token_id
+	.word	0x254	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x255	// java_map_index
+
+	.word	0x2000021	// type_token_id
+	.word	0x256	// java_map_index
+
+	.word	0x2000022	// type_token_id
+	.word	0x257	// java_map_index
+
+	.word	0x2000023	// type_token_id
+	.word	0x258	// java_map_index
+
+	.word	0x2000024	// type_token_id
+	.word	0x259	// java_map_index
+
+	.word	0x2000025	// type_token_id
+	.word	0x25a	// java_map_index
+
+	.word	0x2000026	// type_token_id
+	.word	0x25b	// java_map_index
+
+	.word	0x2000027	// type_token_id
+	.word	0x289	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x28a	// java_map_index
+
+	.word	0x2000029	// type_token_id
+	.word	0x28b	// java_map_index
+
+	.word	0x200002a	// type_token_id
+	.word	0x28c	// java_map_index
+
+	.word	0x200002b	// type_token_id
+	.word	0x28d	// java_map_index
+
+	.word	0x200002c	// type_token_id
+	.word	0x28e	// java_map_index
+
+	.word	0x200002d	// type_token_id
+	.word	0x28f	// java_map_index
+
+	.word	0x200002e	// type_token_id
+	.word	0x284	// java_map_index
+
+	.word	0x200002f	// type_token_id
+	.word	0x285	// java_map_index
+
+	.word	0x2000030	// type_token_id
+	.word	0x286	// java_map_index
+
+	.word	0x2000031	// type_token_id
+	.word	0x287	// java_map_index
+
+	.word	0x2000032	// type_token_id
+	.word	0x288	// java_map_index
+
+	.word	0x2000033	// type_token_id
+	.word	0x281	// java_map_index
+
+	.word	0x2000034	// type_token_id
+	.word	0x282	// java_map_index
+
+	.word	0x2000035	// type_token_id
+	.word	0x283	// java_map_index
+
+	.word	0x2000036	// type_token_id
+	.word	0x27f	// java_map_index
+
+	.word	0x2000037	// type_token_id
+	.word	0x280	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x276	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x277	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x278	// java_map_index
+
+	.word	0x200003b	// type_token_id
+	.word	0x279	// java_map_index
+
+	.word	0x200003c	// type_token_id
+	.word	0x27a	// java_map_index
+
+	.word	0x200003d	// type_token_id
+	.word	0x27b	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x27c	// java_map_index
+
+	.word	0x200003f	// type_token_id
+	.word	0x27d	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x27e	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x268	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x26a	// java_map_index
+
+	.word	0x2000043	// type_token_id
+	.word	0x26c	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x269	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x26b	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x26d	// java_map_index
+
+	.word	0x200004b	// type_token_id
+	.word	0x26e	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x273	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x275	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x26f	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x270	// java_map_index
+
+	.word	0x2000053	// type_token_id
+	.word	0x271	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x272	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x274	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x261	// java_map_index
+
+	.word	0x2000058	// type_token_id
+	.word	0x262	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x263	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x264	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x265	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x266	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x267	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x25c	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x25d	// java_map_index
+
+	.word	0x2000062	// type_token_id
+	.word	0x25e	// java_map_index
+
+	.word	0x2000063	// type_token_id
+	.word	0x25f	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x260	// java_map_index
+
+	.size	.L.module16_managed_to_java, 696
+
+	.section	.rodata.module16_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module16_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module16_managed_to_java_duplicates:
+	.word	0x2000004	// type_token_id
+	.word	0x239	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x26f	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x270	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x264	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x265	// java_map_index
+
+	.size	.L.module16_managed_to_java_duplicates, 40
+
+	.section	.rodata.module17_managed_to_java, "a", @progbits
+
+	.type	.L.module17_managed_to_java, @object
+	.p2align	2
+.L.module17_managed_to_java:
+	.word	0x200000f	// type_token_id
+	.word	0x202	// java_map_index
+
+	.word	0x2000010	// type_token_id
+	.word	0x203	// java_map_index
+
+	.word	0x2000012	// type_token_id
+	.word	0x204	// java_map_index
+
+	.word	0x2000014	// type_token_id
+	.word	0x200	// java_map_index
+
+	.word	0x2000015	// type_token_id
+	.word	0x201	// java_map_index
+
+	.size	.L.module17_managed_to_java, 40
+
+	.section	.rodata.module17_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module17_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module17_managed_to_java_duplicates:
+	.word	0x2000011	// type_token_id
+	.word	0x203	// java_map_index
+
+	.word	0x2000013	// type_token_id
+	.word	0x204	// java_map_index
+
+	.word	0x2000016	// type_token_id
+	.word	0x201	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x200	// java_map_index
+
+	.size	.L.module17_managed_to_java_duplicates, 32
+
+	.section	.rodata.module18_managed_to_java, "a", @progbits
+
+	.type	.L.module18_managed_to_java, @object
+	.p2align	2
+.L.module18_managed_to_java:
+	.word	0x2000002	// type_token_id
+	.word	0x4ad	// java_map_index
+
+	.word	0x2000005	// type_token_id
+	.word	0x4ae	// java_map_index
+
+	.word	0x2000006	// type_token_id
+	.word	0x4b0	// java_map_index
+
+	.word	0x2000008	// type_token_id
+	.word	0x4ac	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x4af	// java_map_index
+
+	.size	.L.module18_managed_to_java, 40
+
+	.section	.rodata.module19_managed_to_java, "a", @progbits
+
+	.type	.L.module19_managed_to_java, @object
+	.p2align	2
+.L.module19_managed_to_java:
+	.word	0x200000b	// type_token_id
+	.word	0x192	// java_map_index
+
+	.size	.L.module19_managed_to_java, 8
+
+	.section	.rodata.module20_managed_to_java, "a", @progbits
+
+	.type	.L.module20_managed_to_java, @object
+	.p2align	2
+.L.module20_managed_to_java:
+	.word	0x2000007	// type_token_id
+	.word	0x1fb	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x1fa	// java_map_index
+
+	.size	.L.module20_managed_to_java, 16
+
+	.section	.rodata.module20_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module20_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module20_managed_to_java_duplicates:
+	.word	0x2000008	// type_token_id
+	.word	0x1fb	// java_map_index
+
+	.word	0x200000a	// type_token_id
+	.word	0x1fa	// java_map_index
+
+	.size	.L.module20_managed_to_java_duplicates, 16
+
+	.section	.rodata.module21_managed_to_java, "a", @progbits
+
+	.type	.L.module21_managed_to_java, @object
+	.p2align	2
+.L.module21_managed_to_java:
+	.word	0x2000017	// type_token_id
+	.word	0x4ba	// java_map_index
+
+	.word	0x2000019	// type_token_id
+	.word	0x4b8	// java_map_index
+
+	.word	0x200001a	// type_token_id
+	.word	0x4c2	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x4bb	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x4bc	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x4bd	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x4be	// java_map_index
+
+	.word	0x2000022	// type_token_id
+	.word	0x4c0	// java_map_index
+
+	.word	0x2000025	// type_token_id
+	.word	0x4b7	// java_map_index
+
+	.word	0x2000026	// type_token_id
+	.word	0x4bf	// java_map_index
+
+	.word	0x2000027	// type_token_id
+	.word	0x4c1	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x4c3	// java_map_index
+
+	.word	0x2000029	// type_token_id
+	.word	0x4b9	// java_map_index
+
+	.word	0x200002a	// type_token_id
+	.word	0x4c7	// java_map_index
+
+	.word	0x200002b	// type_token_id
+	.word	0x4c8	// java_map_index
+
+	.word	0x200002e	// type_token_id
+	.word	0x3bf	// java_map_index
+
+	.word	0x2000030	// type_token_id
+	.word	0x3c1	// java_map_index
+
+	.word	0x2000031	// type_token_id
+	.word	0x3c2	// java_map_index
+
+	.word	0x2000032	// type_token_id
+	.word	0x3c0	// java_map_index
+
+	.word	0x2000034	// type_token_id
+	.word	0x3c3	// java_map_index
+
+	.word	0x2000037	// type_token_id
+	.word	0x497	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x499	// java_map_index
+
+	.word	0x200003b	// type_token_id
+	.word	0x498	// java_map_index
+
+	.size	.L.module21_managed_to_java, 184
+
+	.section	.rodata.module22_managed_to_java, "a", @progbits
+
+	.type	.L.module22_managed_to_java, @object
+	.p2align	2
+.L.module22_managed_to_java:
+	.word	0x200004b	// type_token_id
+	.word	0x205	// java_map_index
+
+	.word	0x200004c	// type_token_id
+	.word	0x206	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x207	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x20b	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x208	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x209	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x20a	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x20c	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x20d	// java_map_index
+
+	.word	0x2000058	// type_token_id
+	.word	0x20e	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x20f	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x210	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x211	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x212	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x213	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x214	// java_map_index
+
+	.word	0x2000062	// type_token_id
+	.word	0x215	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x216	// java_map_index
+
+	.word	0x2000065	// type_token_id
+	.word	0x217	// java_map_index
+
+	.word	0x2000066	// type_token_id
+	.word	0x218	// java_map_index
+
+	.word	0x2000068	// type_token_id
+	.word	0x219	// java_map_index
+
+	.word	0x200006a	// type_token_id
+	.word	0x21a	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x21b	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x21c	// java_map_index
+
+	.word	0x200006f	// type_token_id
+	.word	0x21d	// java_map_index
+
+	.word	0x2000071	// type_token_id
+	.word	0x21e	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x21f	// java_map_index
+
+	.word	0x2000076	// type_token_id
+	.word	0x738	// java_map_index
+
+	.word	0x2000077	// type_token_id
+	.word	0x220	// java_map_index
+
+	.word	0x2000079	// type_token_id
+	.word	0x221	// java_map_index
+
+	.word	0x200007e	// type_token_id
+	.word	0x739	// java_map_index
+
+	.word	0x200007f	// type_token_id
+	.word	0x222	// java_map_index
+
+	.word	0x2000081	// type_token_id
+	.word	0x223	// java_map_index
+
+	.word	0x2000082	// type_token_id
+	.word	0x224	// java_map_index
+
+	.word	0x2000083	// type_token_id
+	.word	0x225	// java_map_index
+
+	.word	0x2000086	// type_token_id
+	.word	0x73a	// java_map_index
+
+	.word	0x2000087	// type_token_id
+	.word	0x226	// java_map_index
+
+	.word	0x2000088	// type_token_id
+	.word	0x227	// java_map_index
+
+	.word	0x2000089	// type_token_id
+	.word	0x228	// java_map_index
+
+	.word	0x200008c	// type_token_id
+	.word	0x229	// java_map_index
+
+	.word	0x200008d	// type_token_id
+	.word	0x22a	// java_map_index
+
+	.word	0x200008f	// type_token_id
+	.word	0x22b	// java_map_index
+
+	.word	0x200009d	// type_token_id
+	.word	0x22c	// java_map_index
+
+	.word	0x200009e	// type_token_id
+	.word	0x22d	// java_map_index
+
+	.size	.L.module22_managed_to_java, 352
+
+	.section	.rodata.module22_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module22_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module22_managed_to_java_duplicates:
+	.word	0x200004e	// type_token_id
+	.word	0x207	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x20b	// java_map_index
+
+	.word	0x2000053	// type_token_id
+	.word	0x209	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x20a	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x20f	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x212	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x214	// java_map_index
+
+	.word	0x2000063	// type_token_id
+	.word	0x215	// java_map_index
+
+	.word	0x2000067	// type_token_id
+	.word	0x218	// java_map_index
+
+	.word	0x2000069	// type_token_id
+	.word	0x217	// java_map_index
+
+	.word	0x200006b	// type_token_id
+	.word	0x21a	// java_map_index
+
+	.word	0x200006e	// type_token_id
+	.word	0x21c	// java_map_index
+
+	.word	0x2000070	// type_token_id
+	.word	0x21b	// java_map_index
+
+	.word	0x2000073	// type_token_id
+	.word	0x21f	// java_map_index
+
+	.word	0x2000078	// type_token_id
+	.word	0x220	// java_map_index
+
+	.word	0x200007a	// type_token_id
+	.word	0x221	// java_map_index
+
+	.word	0x2000080	// type_token_id
+	.word	0x222	// java_map_index
+
+	.word	0x2000084	// type_token_id
+	.word	0x225	// java_map_index
+
+	.word	0x200008a	// type_token_id
+	.word	0x228	// java_map_index
+
+	.word	0x200008b	// type_token_id
+	.word	0x226	// java_map_index
+
+	.word	0x200008e	// type_token_id
+	.word	0x22a	// java_map_index
+
+	.word	0x2000090	// type_token_id
+	.word	0x22b	// java_map_index
+
+	.word	0x200009f	// type_token_id
+	.word	0x22d	// java_map_index
+
+	.size	.L.module22_managed_to_java_duplicates, 184
+
+	.section	.rodata.module23_managed_to_java, "a", @progbits
+
+	.type	.L.module23_managed_to_java, @object
+	.p2align	2
+.L.module23_managed_to_java:
+	.word	0x2000024	// type_token_id
+	.word	0x1e9	// java_map_index
+
+	.word	0x2000025	// type_token_id
+	.word	0x1e7	// java_map_index
+
+	.word	0x2000026	// type_token_id
+	.word	0x1e8	// java_map_index
+
+	.word	0x2000027	// type_token_id
+	.word	0x1ea	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x1eb	// java_map_index
+
+	.word	0x2000029	// type_token_id
+	.word	0x1ec	// java_map_index
+
+	.word	0x200002b	// type_token_id
+	.word	0x1ed	// java_map_index
+
+	.word	0x200002d	// type_token_id
+	.word	0x1ee	// java_map_index
+
+	.word	0x200002f	// type_token_id
+	.word	0x736	// java_map_index
+
+	.word	0x2000035	// type_token_id
+	.word	0x1f0	// java_map_index
+
+	.word	0x2000037	// type_token_id
+	.word	0x1f3	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x1ef	// java_map_index
+
+	.word	0x200003c	// type_token_id
+	.word	0x737	// java_map_index
+
+	.word	0x200003d	// type_token_id
+	.word	0x1f1	// java_map_index
+
+	.word	0x200003f	// type_token_id
+	.word	0x1f2	// java_map_index
+
+	.size	.L.module23_managed_to_java, 120
+
+	.section	.rodata.module23_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module23_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module23_managed_to_java_duplicates:
+	.word	0x200002a	// type_token_id
+	.word	0x1ec	// java_map_index
+
+	.word	0x200002c	// type_token_id
+	.word	0x1ed	// java_map_index
+
+	.word	0x200002e	// type_token_id
+	.word	0x1ee	// java_map_index
+
+	.word	0x2000034	// type_token_id
+	.word	0x1eb	// java_map_index
+
+	.word	0x2000036	// type_token_id
+	.word	0x1f0	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x1f3	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x1ef	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x1f1	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x1f2	// java_map_index
+
+	.size	.L.module23_managed_to_java_duplicates, 72
+
+	.section	.rodata.module24_managed_to_java, "a", @progbits
+
+	.type	.L.module24_managed_to_java, @object
+	.p2align	2
+.L.module24_managed_to_java:
+	.word	0x2000005	// type_token_id
+	.word	0x1f5	// java_map_index
+
+	.word	0x2000007	// type_token_id
+	.word	0x1ff	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x1fc	// java_map_index
+
+	.word	0x200000a	// type_token_id
+	.word	0x1fd	// java_map_index
+
+	.word	0x200000c	// type_token_id
+	.word	0x1fe	// java_map_index
+
+	.size	.L.module24_managed_to_java, 40
+
+	.section	.rodata.module24_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module24_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module24_managed_to_java_duplicates:
+	.word	0x2000006	// type_token_id
+	.word	0x1f5	// java_map_index
+
+	.word	0x2000008	// type_token_id
+	.word	0x1ff	// java_map_index
+
+	.word	0x200000b	// type_token_id
+	.word	0x1fd	// java_map_index
+
+	.size	.L.module24_managed_to_java_duplicates, 24
+
+	.section	.rodata.module25_managed_to_java, "a", @progbits
+
+	.type	.L.module25_managed_to_java, @object
+	.p2align	2
+.L.module25_managed_to_java:
+	.word	0x200002a	// type_token_id
+	.word	0x38a	// java_map_index
+
+	.word	0x200002b	// type_token_id
+	.word	0x38b	// java_map_index
+
+	.word	0x200002d	// type_token_id
+	.word	0x37f	// java_map_index
+
+	.word	0x200002e	// type_token_id
+	.word	0x380	// java_map_index
+
+	.word	0x2000030	// type_token_id
+	.word	0x381	// java_map_index
+
+	.word	0x2000031	// type_token_id
+	.word	0x378	// java_map_index
+
+	.word	0x2000032	// type_token_id
+	.word	0x379	// java_map_index
+
+	.word	0x2000033	// type_token_id
+	.word	0x387	// java_map_index
+
+	.word	0x2000036	// type_token_id
+	.word	0x388	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x75e	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x389	// java_map_index
+
+	.word	0x200003b	// type_token_id
+	.word	0x75f	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x384	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x385	// java_map_index
+
+	.word	0x2000044	// type_token_id
+	.word	0x386	// java_map_index
+
+	.word	0x2000046	// type_token_id
+	.word	0x38c	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x390	// java_map_index
+
+	.word	0x2000048	// type_token_id
+	.word	0x38d	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x760	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x38e	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x38f	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x382	// java_map_index
+
+	.word	0x2000058	// type_token_id
+	.word	0x383	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x37a	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x37b	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x37c	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x37d	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x37e	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x372	// java_map_index
+
+	.word	0x2000062	// type_token_id
+	.word	0x373	// java_map_index
+
+	.word	0x2000063	// type_token_id
+	.word	0x374	// java_map_index
+
+	.word	0x2000066	// type_token_id
+	.word	0x75d	// java_map_index
+
+	.word	0x2000067	// type_token_id
+	.word	0x375	// java_map_index
+
+	.word	0x200006a	// type_token_id
+	.word	0x376	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x377	// java_map_index
+
+	.size	.L.module25_managed_to_java, 280
+
+	.section	.rodata.module25_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module25_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module25_managed_to_java_duplicates:
+	.word	0x200002c	// type_token_id
+	.word	0x38b	// java_map_index
+
+	.word	0x200002f	// type_token_id
+	.word	0x380	// java_map_index
+
+	.word	0x2000037	// type_token_id
+	.word	0x388	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x389	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x384	// java_map_index
+
+	.word	0x2000043	// type_token_id
+	.word	0x385	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x387	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x38d	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x38e	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x383	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x37d	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x37e	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x374	// java_map_index
+
+	.word	0x200006b	// type_token_id
+	.word	0x376	// java_map_index
+
+	.size	.L.module25_managed_to_java_duplicates, 112
+
+	.section	.rodata.module26_managed_to_java, "a", @progbits
+
+	.type	.L.module26_managed_to_java, @object
+	.p2align	2
+.L.module26_managed_to_java:
+	.word	0x2000002	// type_token_id
+	.word	0x4c6	// java_map_index
+
+	.word	0x2000005	// type_token_id
+	.word	0x4cb	// java_map_index
+
+	.word	0x2000006	// type_token_id
+	.word	0x4d2	// java_map_index
+
+	.word	0x2000007	// type_token_id
+	.word	0x4d1	// java_map_index
+
+	.word	0x2000008	// type_token_id
+	.word	0x4de	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x4d3	// java_map_index
+
+	.word	0x2000012	// type_token_id
+	.word	0x4da	// java_map_index
+
+	.word	0x2000013	// type_token_id
+	.word	0x4d6	// java_map_index
+
+	.word	0x2000014	// type_token_id
+	.word	0x4d8	// java_map_index
+
+	.word	0x2000015	// type_token_id
+	.word	0x4dc	// java_map_index
+
+	.word	0x2000016	// type_token_id
+	.word	0x4ce	// java_map_index
+
+	.word	0x2000017	// type_token_id
+	.word	0x4db	// java_map_index
+
+	.word	0x2000018	// type_token_id
+	.word	0x4c9	// java_map_index
+
+	.word	0x2000019	// type_token_id
+	.word	0x4d0	// java_map_index
+
+	.word	0x200001a	// type_token_id
+	.word	0x4dd	// java_map_index
+
+	.word	0x200001b	// type_token_id
+	.word	0x4cc	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x4cd	// java_map_index
+
+	.word	0x200001d	// type_token_id
+	.word	0x4d9	// java_map_index
+
+	.word	0x200001e	// type_token_id
+	.word	0x4d7	// java_map_index
+
+	.word	0x200001f	// type_token_id
+	.word	0x4cf	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x4d4	// java_map_index
+
+	.word	0x2000022	// type_token_id
+	.word	0x4ca	// java_map_index
+
+	.word	0x2000023	// type_token_id
+	.word	0x4d5	// java_map_index
+
+	.word	0x2000024	// type_token_id
+	.word	0x4b2	// java_map_index
+
+	.word	0x2000025	// type_token_id
+	.word	0x4b1	// java_map_index
+
+	.word	0x2000029	// type_token_id
+	.word	0x4b3	// java_map_index
+
+	.word	0x2000030	// type_token_id
+	.word	0x3d1	// java_map_index
+
+	.word	0x2000031	// type_token_id
+	.word	0x3cb	// java_map_index
+
+	.word	0x2000032	// type_token_id
+	.word	0x3cd	// java_map_index
+
+	.word	0x2000033	// type_token_id
+	.word	0x3d2	// java_map_index
+
+	.word	0x2000034	// type_token_id
+	.word	0x3c9	// java_map_index
+
+	.word	0x2000035	// type_token_id
+	.word	0x3cf	// java_map_index
+
+	.word	0x2000036	// type_token_id
+	.word	0x3d0	// java_map_index
+
+	.word	0x2000037	// type_token_id
+	.word	0x3ce	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x3cc	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x3ca	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x3c7	// java_map_index
+
+	.word	0x200003b	// type_token_id
+	.word	0x3c8	// java_map_index
+
+	.word	0x200003c	// type_token_id
+	.word	0x3c4	// java_map_index
+
+	.word	0x200003d	// type_token_id
+	.word	0x3c6	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x3c5	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x3b0	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x3af	// java_map_index
+
+	.word	0x200004c	// type_token_id
+	.word	0x3b1	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x3b8	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x3ba	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x3bb	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x3b6	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x3b4	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x3b5	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x3ae	// java_map_index
+
+	.word	0x2000065	// type_token_id
+	.word	0x3b7	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x3b3	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x3ad	// java_map_index
+
+	.word	0x200006e	// type_token_id
+	.word	0x3b2	// java_map_index
+
+	.word	0x200006f	// type_token_id
+	.word	0x3b9	// java_map_index
+
+	.word	0x2000077	// type_token_id
+	.word	0x3bc	// java_map_index
+
+	.size	.L.module26_managed_to_java, 456
+
+	.section	.rodata.module27_managed_to_java, "a", @progbits
+
+	.type	.L.module27_managed_to_java, @object
+	.p2align	2
+.L.module27_managed_to_java:
+	.word	0x2000004	// type_token_id
+	.word	0x1f6	// java_map_index
+
+	.word	0x2000005	// type_token_id
+	.word	0x1f7	// java_map_index
+
+	.word	0x2000006	// type_token_id
+	.word	0x1f8	// java_map_index
+
+	.word	0x2000008	// type_token_id
+	.word	0x1f9	// java_map_index
+
+	.size	.L.module27_managed_to_java, 32
+
+	.section	.rodata.module27_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module27_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module27_managed_to_java_duplicates:
+	.word	0x2000007	// type_token_id
+	.word	0x1f8	// java_map_index
+
+	.word	0x2000009	// type_token_id
+	.word	0x1f9	// java_map_index
+
+	.word	0x200000a	// type_token_id
+	.word	0x1f6	// java_map_index
+
+	.size	.L.module27_managed_to_java_duplicates, 24
+
+	.section	.rodata.module28_managed_to_java, "a", @progbits
+
+	.type	.L.module28_managed_to_java, @object
+	.p2align	2
+.L.module28_managed_to_java:
+	.word	0x2000017	// type_token_id
+	.word	0x492	// java_map_index
+
+	.size	.L.module28_managed_to_java, 8
+
+	.section	.rodata.module29_managed_to_java, "a", @progbits
+
+	.type	.L.module29_managed_to_java, @object
+	.p2align	2
+.L.module29_managed_to_java:
+	.word	0x2000022	// type_token_id
+	.word	0x354	// java_map_index
+
+	.word	0x2000023	// type_token_id
+	.word	0x353	// java_map_index
+
+	.word	0x2000025	// type_token_id
+	.word	0x351	// java_map_index
+
+	.word	0x2000027	// type_token_id
+	.word	0x352	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x333	// java_map_index
+
+	.word	0x2000029	// type_token_id
+	.word	0x334	// java_map_index
+
+	.word	0x200002a	// type_token_id
+	.word	0x336	// java_map_index
+
+	.word	0x200002b	// type_token_id
+	.word	0x337	// java_map_index
+
+	.word	0x200002c	// type_token_id
+	.word	0x335	// java_map_index
+
+	.word	0x200002e	// type_token_id
+	.word	0x33c	// java_map_index
+
+	.word	0x2000030	// type_token_id
+	.word	0x33d	// java_map_index
+
+	.word	0x2000031	// type_token_id
+	.word	0x343	// java_map_index
+
+	.word	0x2000032	// type_token_id
+	.word	0x342	// java_map_index
+
+	.word	0x2000033	// type_token_id
+	.word	0x338	// java_map_index
+
+	.word	0x2000035	// type_token_id
+	.word	0x339	// java_map_index
+
+	.word	0x2000036	// type_token_id
+	.word	0x33a	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x33b	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x344	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x345	// java_map_index
+
+	.word	0x200003b	// type_token_id
+	.word	0x346	// java_map_index
+
+	.word	0x200003c	// type_token_id
+	.word	0x33e	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x33f	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x340	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x341	// java_map_index
+
+	.word	0x2000044	// type_token_id
+	.word	0x347	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x355	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x348	// java_map_index
+
+	.word	0x2000048	// type_token_id
+	.word	0x349	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x753	// java_map_index
+
+	.word	0x200004b	// type_token_id
+	.word	0x34a	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x754	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x34b	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x755	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x34c	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x34d	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x34e	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x34f	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x350	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x304	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x305	// java_map_index
+
+	.word	0x2000070	// type_token_id
+	.word	0x743	// java_map_index
+
+	.word	0x2000071	// type_token_id
+	.word	0x306	// java_map_index
+
+	.word	0x2000074	// type_token_id
+	.word	0x744	// java_map_index
+
+	.word	0x2000075	// type_token_id
+	.word	0x307	// java_map_index
+
+	.word	0x2000078	// type_token_id
+	.word	0x745	// java_map_index
+
+	.word	0x2000081	// type_token_id
+	.word	0x309	// java_map_index
+
+	.word	0x2000082	// type_token_id
+	.word	0x30a	// java_map_index
+
+	.word	0x2000085	// type_token_id
+	.word	0x746	// java_map_index
+
+	.word	0x2000086	// type_token_id
+	.word	0x30b	// java_map_index
+
+	.word	0x2000087	// type_token_id
+	.word	0x30e	// java_map_index
+
+	.word	0x2000088	// type_token_id
+	.word	0x311	// java_map_index
+
+	.word	0x2000089	// type_token_id
+	.word	0x312	// java_map_index
+
+	.word	0x200008b	// type_token_id
+	.word	0x313	// java_map_index
+
+	.word	0x200008e	// type_token_id
+	.word	0x747	// java_map_index
+
+	.word	0x200008f	// type_token_id
+	.word	0x314	// java_map_index
+
+	.word	0x2000092	// type_token_id
+	.word	0x748	// java_map_index
+
+	.word	0x2000099	// type_token_id
+	.word	0x315	// java_map_index
+
+	.word	0x200009a	// type_token_id
+	.word	0x318	// java_map_index
+
+	.word	0x200009f	// type_token_id
+	.word	0x319	// java_map_index
+
+	.word	0x20000a0	// type_token_id
+	.word	0x31a	// java_map_index
+
+	.word	0x20000a5	// type_token_id
+	.word	0x749	// java_map_index
+
+	.word	0x20000ae	// type_token_id
+	.word	0x316	// java_map_index
+
+	.word	0x20000af	// type_token_id
+	.word	0x317	// java_map_index
+
+	.word	0x20000b0	// type_token_id
+	.word	0x31f	// java_map_index
+
+	.word	0x20000b4	// type_token_id
+	.word	0x322	// java_map_index
+
+	.word	0x20000b5	// type_token_id
+	.word	0x308	// java_map_index
+
+	.word	0x20000b7	// type_token_id
+	.word	0x30c	// java_map_index
+
+	.word	0x20000b9	// type_token_id
+	.word	0x30d	// java_map_index
+
+	.word	0x20000bb	// type_token_id
+	.word	0x30f	// java_map_index
+
+	.word	0x20000bd	// type_token_id
+	.word	0x310	// java_map_index
+
+	.word	0x20000bf	// type_token_id
+	.word	0x31b	// java_map_index
+
+	.word	0x20000c1	// type_token_id
+	.word	0x31c	// java_map_index
+
+	.word	0x20000c4	// type_token_id
+	.word	0x74a	// java_map_index
+
+	.word	0x20000c5	// type_token_id
+	.word	0x31d	// java_map_index
+
+	.word	0x20000c7	// type_token_id
+	.word	0x31e	// java_map_index
+
+	.word	0x20000ca	// type_token_id
+	.word	0x74b	// java_map_index
+
+	.word	0x20000cb	// type_token_id
+	.word	0x320	// java_map_index
+
+	.word	0x20000cd	// type_token_id
+	.word	0x321	// java_map_index
+
+	.word	0x20000d1	// type_token_id
+	.word	0x74c	// java_map_index
+
+	.word	0x20000d2	// type_token_id
+	.word	0x328	// java_map_index
+
+	.word	0x20000d6	// type_token_id
+	.word	0x74e	// java_map_index
+
+	.word	0x20000d7	// type_token_id
+	.word	0x329	// java_map_index
+
+	.word	0x20000da	// type_token_id
+	.word	0x74f	// java_map_index
+
+	.word	0x20000db	// type_token_id
+	.word	0x32a	// java_map_index
+
+	.word	0x20000de	// type_token_id
+	.word	0x750	// java_map_index
+
+	.word	0x20000df	// type_token_id
+	.word	0x32c	// java_map_index
+
+	.word	0x20000e2	// type_token_id
+	.word	0x751	// java_map_index
+
+	.word	0x20000e3	// type_token_id
+	.word	0x323	// java_map_index
+
+	.word	0x20000e5	// type_token_id
+	.word	0x332	// java_map_index
+
+	.word	0x20000e7	// type_token_id
+	.word	0x324	// java_map_index
+
+	.word	0x20000e8	// type_token_id
+	.word	0x325	// java_map_index
+
+	.word	0x20000e9	// type_token_id
+	.word	0x326	// java_map_index
+
+	.word	0x20000eb	// type_token_id
+	.word	0x74d	// java_map_index
+
+	.word	0x20000f2	// type_token_id
+	.word	0x327	// java_map_index
+
+	.word	0x20000f4	// type_token_id
+	.word	0x32b	// java_map_index
+
+	.word	0x20000f5	// type_token_id
+	.word	0x32d	// java_map_index
+
+	.word	0x20000f6	// type_token_id
+	.word	0x32e	// java_map_index
+
+	.word	0x20000f7	// type_token_id
+	.word	0x32f	// java_map_index
+
+	.word	0x20000fd	// type_token_id
+	.word	0x330	// java_map_index
+
+	.word	0x20000fe	// type_token_id
+	.word	0x331	// java_map_index
+
+	.word	0x2000101	// type_token_id
+	.word	0x752	// java_map_index
+
+	.size	.L.module29_managed_to_java, 808
+
+	.section	.rodata.module29_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module29_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module29_managed_to_java_duplicates:
+	.word	0x2000024	// type_token_id
+	.word	0x353	// java_map_index
+
+	.word	0x2000026	// type_token_id
+	.word	0x351	// java_map_index
+
+	.word	0x200002d	// type_token_id
+	.word	0x335	// java_map_index
+
+	.word	0x200002f	// type_token_id
+	.word	0x33c	// java_map_index
+
+	.word	0x2000034	// type_token_id
+	.word	0x338	// java_map_index
+
+	.word	0x2000037	// type_token_id
+	.word	0x33a	// java_map_index
+
+	.word	0x200003d	// type_token_id
+	.word	0x33e	// java_map_index
+
+	.word	0x200003f	// type_token_id
+	.word	0x33f	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x340	// java_map_index
+
+	.word	0x2000043	// type_token_id
+	.word	0x341	// java_map_index
+
+	.word	0x2000046	// type_token_id
+	.word	0x355	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x349	// java_map_index
+
+	.word	0x200004c	// type_token_id
+	.word	0x34a	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x34b	// java_map_index
+
+	.word	0x200006e	// type_token_id
+	.word	0x305	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x306	// java_map_index
+
+	.word	0x2000076	// type_token_id
+	.word	0x307	// java_map_index
+
+	.word	0x2000083	// type_token_id
+	.word	0x30a	// java_map_index
+
+	.word	0x200008a	// type_token_id
+	.word	0x312	// java_map_index
+
+	.word	0x200008c	// type_token_id
+	.word	0x313	// java_map_index
+
+	.word	0x2000090	// type_token_id
+	.word	0x314	// java_map_index
+
+	.word	0x20000a1	// type_token_id
+	.word	0x31a	// java_map_index
+
+	.word	0x20000b3	// type_token_id
+	.word	0x31f	// java_map_index
+
+	.word	0x20000b6	// type_token_id
+	.word	0x308	// java_map_index
+
+	.word	0x20000b8	// type_token_id
+	.word	0x30c	// java_map_index
+
+	.word	0x20000ba	// type_token_id
+	.word	0x30d	// java_map_index
+
+	.word	0x20000bc	// type_token_id
+	.word	0x30f	// java_map_index
+
+	.word	0x20000be	// type_token_id
+	.word	0x310	// java_map_index
+
+	.word	0x20000c0	// type_token_id
+	.word	0x31b	// java_map_index
+
+	.word	0x20000c2	// type_token_id
+	.word	0x31c	// java_map_index
+
+	.word	0x20000c6	// type_token_id
+	.word	0x31d	// java_map_index
+
+	.word	0x20000c8	// type_token_id
+	.word	0x31e	// java_map_index
+
+	.word	0x20000cc	// type_token_id
+	.word	0x320	// java_map_index
+
+	.word	0x20000ce	// type_token_id
+	.word	0x321	// java_map_index
+
+	.word	0x20000d3	// type_token_id
+	.word	0x328	// java_map_index
+
+	.word	0x20000d8	// type_token_id
+	.word	0x329	// java_map_index
+
+	.word	0x20000dc	// type_token_id
+	.word	0x32a	// java_map_index
+
+	.word	0x20000e0	// type_token_id
+	.word	0x32c	// java_map_index
+
+	.word	0x20000e4	// type_token_id
+	.word	0x323	// java_map_index
+
+	.word	0x20000e6	// type_token_id
+	.word	0x332	// java_map_index
+
+	.word	0x20000ea	// type_token_id
+	.word	0x326	// java_map_index
+
+	.word	0x20000f3	// type_token_id
+	.word	0x327	// java_map_index
+
+	.word	0x20000fc	// type_token_id
+	.word	0x32f	// java_map_index
+
+	.word	0x20000ff	// type_token_id
+	.word	0x331	// java_map_index
+
+	.size	.L.module29_managed_to_java_duplicates, 352
+
+	.section	.rodata.module30_managed_to_java, "a", @progbits
+
+	.type	.L.module30_managed_to_java, @object
+	.p2align	2
+.L.module30_managed_to_java:
+	.word	0x200009f	// type_token_id
+	.word	0x799	// java_map_index
+
+	.word	0x20000a1	// type_token_id
+	.word	0x79a	// java_map_index
+
+	.word	0x20000a3	// type_token_id
+	.word	0x57c	// java_map_index
+
+	.word	0x20000a5	// type_token_id
+	.word	0x57e	// java_map_index
+
+	.word	0x20000a7	// type_token_id
+	.word	0x57d	// java_map_index
+
+	.word	0x20000a8	// type_token_id
+	.word	0x57a	// java_map_index
+
+	.word	0x20000aa	// type_token_id
+	.word	0x57b	// java_map_index
+
+	.word	0x20000ac	// type_token_id
+	.word	0x579	// java_map_index
+
+	.word	0x20000b7	// type_token_id
+	.word	0x116	// java_map_index
+
+	.word	0x20000b9	// type_token_id
+	.word	0x117	// java_map_index
+
+	.word	0x20000bb	// type_token_id
+	.word	0x11b	// java_map_index
+
+	.word	0x20000be	// type_token_id
+	.word	0x118	// java_map_index
+
+	.word	0x20000bf	// type_token_id
+	.word	0x119	// java_map_index
+
+	.word	0x20000c1	// type_token_id
+	.word	0x11a	// java_map_index
+
+	.word	0x20000c3	// type_token_id
+	.word	0x11c	// java_map_index
+
+	.word	0x20000c5	// type_token_id
+	.word	0x11d	// java_map_index
+
+	.word	0x20000c6	// type_token_id
+	.word	0x11e	// java_map_index
+
+	.word	0x20000c7	// type_token_id
+	.word	0x93	// java_map_index
+
+	.word	0x20000c8	// type_token_id
+	.word	0x94	// java_map_index
+
+	.word	0x20000c9	// type_token_id
+	.word	0x95	// java_map_index
+
+	.word	0x20000ca	// type_token_id
+	.word	0x96	// java_map_index
+
+	.word	0x20000cb	// type_token_id
+	.word	0x3b	// java_map_index
+
+	.word	0x20000cc	// type_token_id
+	.word	0x3c	// java_map_index
+
+	.word	0x20000ce	// type_token_id
+	.word	0x3e	// java_map_index
+
+	.word	0x20000d1	// type_token_id
+	.word	0x3d	// java_map_index
+
+	.word	0x20000d3	// type_token_id
+	.word	0x11f	// java_map_index
+
+	.word	0x20000d4	// type_token_id
+	.word	0x120	// java_map_index
+
+	.word	0x20000d7	// type_token_id
+	.word	0x125	// java_map_index
+
+	.word	0x20000d8	// type_token_id
+	.word	0x126	// java_map_index
+
+	.word	0x20000db	// type_token_id
+	.word	0x72d	// java_map_index
+
+	.word	0x20000dc	// type_token_id
+	.word	0x127	// java_map_index
+
+	.word	0x20000de	// type_token_id
+	.word	0x128	// java_map_index
+
+	.word	0x20000e1	// type_token_id
+	.word	0x129	// java_map_index
+
+	.word	0x20000e4	// type_token_id
+	.word	0x12a	// java_map_index
+
+	.word	0x20000e5	// type_token_id
+	.word	0x130	// java_map_index
+
+	.word	0x20000e6	// type_token_id
+	.word	0x131	// java_map_index
+
+	.word	0x20000e8	// type_token_id
+	.word	0x142	// java_map_index
+
+	.word	0x20000e9	// type_token_id
+	.word	0x143	// java_map_index
+
+	.word	0x20000eb	// type_token_id
+	.word	0x151	// java_map_index
+
+	.word	0x20000ec	// type_token_id
+	.word	0x152	// java_map_index
+
+	.word	0x20000ed	// type_token_id
+	.word	0x153	// java_map_index
+
+	.word	0x20000ef	// type_token_id
+	.word	0x122	// java_map_index
+
+	.word	0x20000f0	// type_token_id
+	.word	0x123	// java_map_index
+
+	.word	0x20000f1	// type_token_id
+	.word	0x121	// java_map_index
+
+	.word	0x20000f7	// type_token_id
+	.word	0x12b	// java_map_index
+
+	.word	0x20000f8	// type_token_id
+	.word	0x12c	// java_map_index
+
+	.word	0x20000fa	// type_token_id
+	.word	0x12e	// java_map_index
+
+	.word	0x20000fb	// type_token_id
+	.word	0x12f	// java_map_index
+
+	.word	0x20000fe	// type_token_id
+	.word	0x132	// java_map_index
+
+	.word	0x20000ff	// type_token_id
+	.word	0x133	// java_map_index
+
+	.word	0x2000100	// type_token_id
+	.word	0x134	// java_map_index
+
+	.word	0x2000101	// type_token_id
+	.word	0x135	// java_map_index
+
+	.word	0x2000103	// type_token_id
+	.word	0x136	// java_map_index
+
+	.word	0x2000105	// type_token_id
+	.word	0x138	// java_map_index
+
+	.word	0x2000106	// type_token_id
+	.word	0x139	// java_map_index
+
+	.word	0x2000107	// type_token_id
+	.word	0x13a	// java_map_index
+
+	.word	0x2000108	// type_token_id
+	.word	0x124	// java_map_index
+
+	.word	0x200010a	// type_token_id
+	.word	0x12d	// java_map_index
+
+	.word	0x200010c	// type_token_id
+	.word	0x137	// java_map_index
+
+	.word	0x200010e	// type_token_id
+	.word	0x140	// java_map_index
+
+	.word	0x2000110	// type_token_id
+	.word	0x13b	// java_map_index
+
+	.word	0x2000111	// type_token_id
+	.word	0x13c	// java_map_index
+
+	.word	0x2000112	// type_token_id
+	.word	0x13d	// java_map_index
+
+	.word	0x2000113	// type_token_id
+	.word	0x14c	// java_map_index
+
+	.word	0x2000115	// type_token_id
+	.word	0x14f	// java_map_index
+
+	.word	0x2000118	// type_token_id
+	.word	0x13e	// java_map_index
+
+	.word	0x2000119	// type_token_id
+	.word	0x13f	// java_map_index
+
+	.word	0x200011a	// type_token_id
+	.word	0x141	// java_map_index
+
+	.word	0x200011b	// type_token_id
+	.word	0x144	// java_map_index
+
+	.word	0x200011d	// type_token_id
+	.word	0x145	// java_map_index
+
+	.word	0x200011e	// type_token_id
+	.word	0x146	// java_map_index
+
+	.word	0x200011f	// type_token_id
+	.word	0x147	// java_map_index
+
+	.word	0x2000120	// type_token_id
+	.word	0x148	// java_map_index
+
+	.word	0x2000122	// type_token_id
+	.word	0x149	// java_map_index
+
+	.word	0x2000123	// type_token_id
+	.word	0x14a	// java_map_index
+
+	.word	0x2000124	// type_token_id
+	.word	0x14b	// java_map_index
+
+	.word	0x2000126	// type_token_id
+	.word	0x14d	// java_map_index
+
+	.word	0x2000127	// type_token_id
+	.word	0x14e	// java_map_index
+
+	.word	0x2000129	// type_token_id
+	.word	0x150	// java_map_index
+
+	.word	0x200012a	// type_token_id
+	.word	0x154	// java_map_index
+
+	.word	0x200012b	// type_token_id
+	.word	0x155	// java_map_index
+
+	.word	0x200012d	// type_token_id
+	.word	0x156	// java_map_index
+
+	.word	0x200012e	// type_token_id
+	.word	0xe9	// java_map_index
+
+	.word	0x200012f	// type_token_id
+	.word	0xea	// java_map_index
+
+	.word	0x2000130	// type_token_id
+	.word	0xeb	// java_map_index
+
+	.word	0x2000131	// type_token_id
+	.word	0xec	// java_map_index
+
+	.word	0x2000132	// type_token_id
+	.word	0xed	// java_map_index
+
+	.word	0x2000136	// type_token_id
+	.word	0x728	// java_map_index
+
+	.word	0x2000137	// type_token_id
+	.word	0xee	// java_map_index
+
+	.word	0x2000139	// type_token_id
+	.word	0x729	// java_map_index
+
+	.word	0x200013a	// type_token_id
+	.word	0xef	// java_map_index
+
+	.word	0x200013c	// type_token_id
+	.word	0xf0	// java_map_index
+
+	.word	0x200013e	// type_token_id
+	.word	0xf1	// java_map_index
+
+	.word	0x2000140	// type_token_id
+	.word	0xf2	// java_map_index
+
+	.word	0x2000143	// type_token_id
+	.word	0x72a	// java_map_index
+
+	.word	0x2000144	// type_token_id
+	.word	0xf3	// java_map_index
+
+	.word	0x2000147	// type_token_id
+	.word	0x72b	// java_map_index
+
+	.word	0x2000148	// type_token_id
+	.word	0xf4	// java_map_index
+
+	.word	0x200014b	// type_token_id
+	.word	0x72c	// java_map_index
+
+	.word	0x2000156	// type_token_id
+	.word	0xd4	// java_map_index
+
+	.word	0x2000157	// type_token_id
+	.word	0xd5	// java_map_index
+
+	.word	0x2000159	// type_token_id
+	.word	0xd6	// java_map_index
+
+	.word	0x200015a	// type_token_id
+	.word	0xd7	// java_map_index
+
+	.word	0x200015c	// type_token_id
+	.word	0xd8	// java_map_index
+
+	.word	0x200015e	// type_token_id
+	.word	0xde	// java_map_index
+
+	.word	0x200015f	// type_token_id
+	.word	0xfd	// java_map_index
+
+	.word	0x2000160	// type_token_id
+	.word	0xfe	// java_map_index
+
+	.word	0x2000162	// type_token_id
+	.word	0xff	// java_map_index
+
+	.word	0x2000164	// type_token_id
+	.word	0x100	// java_map_index
+
+	.word	0x2000166	// type_token_id
+	.word	0x101	// java_map_index
+
+	.word	0x2000168	// type_token_id
+	.word	0x102	// java_map_index
+
+	.word	0x2000169	// type_token_id
+	.word	0x103	// java_map_index
+
+	.word	0x200016b	// type_token_id
+	.word	0xc4	// java_map_index
+
+	.word	0x200016c	// type_token_id
+	.word	0xc5	// java_map_index
+
+	.word	0x2000170	// type_token_id
+	.word	0xc6	// java_map_index
+
+	.word	0x2000173	// type_token_id
+	.word	0xca	// java_map_index
+
+	.word	0x2000175	// type_token_id
+	.word	0xcb	// java_map_index
+
+	.word	0x2000177	// type_token_id
+	.word	0xcc	// java_map_index
+
+	.word	0x2000179	// type_token_id
+	.word	0xcd	// java_map_index
+
+	.word	0x200017b	// type_token_id
+	.word	0xce	// java_map_index
+
+	.word	0x200017c	// type_token_id
+	.word	0xcf	// java_map_index
+
+	.word	0x200017e	// type_token_id
+	.word	0xd0	// java_map_index
+
+	.word	0x2000180	// type_token_id
+	.word	0xd1	// java_map_index
+
+	.word	0x2000182	// type_token_id
+	.word	0xc7	// java_map_index
+
+	.word	0x2000184	// type_token_id
+	.word	0xc9	// java_map_index
+
+	.word	0x2000186	// type_token_id
+	.word	0xc8	// java_map_index
+
+	.word	0x2000188	// type_token_id
+	.word	0xd9	// java_map_index
+
+	.word	0x200018b	// type_token_id
+	.word	0xdc	// java_map_index
+
+	.word	0x200018d	// type_token_id
+	.word	0xdd	// java_map_index
+
+	.word	0x200018f	// type_token_id
+	.word	0xdb	// java_map_index
+
+	.word	0x2000194	// type_token_id
+	.word	0xd2	// java_map_index
+
+	.word	0x2000195	// type_token_id
+	.word	0xd3	// java_map_index
+
+	.word	0x2000197	// type_token_id
+	.word	0xe3	// java_map_index
+
+	.word	0x2000199	// type_token_id
+	.word	0xe6	// java_map_index
+
+	.word	0x200019b	// type_token_id
+	.word	0xe7	// java_map_index
+
+	.word	0x200019d	// type_token_id
+	.word	0xe5	// java_map_index
+
+	.word	0x200019f	// type_token_id
+	.word	0xfa	// java_map_index
+
+	.word	0x20001a1	// type_token_id
+	.word	0xfb	// java_map_index
+
+	.word	0x20001a3	// type_token_id
+	.word	0x106	// java_map_index
+
+	.word	0x20001a4	// type_token_id
+	.word	0x105	// java_map_index
+
+	.word	0x20001ad	// type_token_id
+	.word	0xda	// java_map_index
+
+	.word	0x20001b2	// type_token_id
+	.word	0xdf	// java_map_index
+
+	.word	0x20001b3	// type_token_id
+	.word	0xe0	// java_map_index
+
+	.word	0x20001b5	// type_token_id
+	.word	0xe1	// java_map_index
+
+	.word	0x20001b7	// type_token_id
+	.word	0xe2	// java_map_index
+
+	.word	0x20001ba	// type_token_id
+	.word	0xe4	// java_map_index
+
+	.word	0x20001bc	// type_token_id
+	.word	0xe8	// java_map_index
+
+	.word	0x20001bf	// type_token_id
+	.word	0xf5	// java_map_index
+
+	.word	0x20001c0	// type_token_id
+	.word	0xf6	// java_map_index
+
+	.word	0x20001c1	// type_token_id
+	.word	0xf7	// java_map_index
+
+	.word	0x20001c2	// type_token_id
+	.word	0xf8	// java_map_index
+
+	.word	0x20001c3	// type_token_id
+	.word	0xf9	// java_map_index
+
+	.word	0x20001c6	// type_token_id
+	.word	0xfc	// java_map_index
+
+	.word	0x20001ca	// type_token_id
+	.word	0x104	// java_map_index
+
+	.word	0x20001cc	// type_token_id
+	.word	0x10c	// java_map_index
+
+	.word	0x20001cd	// type_token_id
+	.word	0x10d	// java_map_index
+
+	.word	0x20001ce	// type_token_id
+	.word	0x10e	// java_map_index
+
+	.word	0x20001d1	// type_token_id
+	.word	0x10f	// java_map_index
+
+	.word	0x20001d2	// type_token_id
+	.word	0x110	// java_map_index
+
+	.word	0x20001d3	// type_token_id
+	.word	0x111	// java_map_index
+
+	.word	0x20001d5	// type_token_id
+	.word	0x112	// java_map_index
+
+	.word	0x20001d6	// type_token_id
+	.word	0x113	// java_map_index
+
+	.word	0x20001d8	// type_token_id
+	.word	0x114	// java_map_index
+
+	.word	0x20001d9	// type_token_id
+	.word	0x115	// java_map_index
+
+	.word	0x20001dd	// type_token_id
+	.word	0x107	// java_map_index
+
+	.word	0x20001de	// type_token_id
+	.word	0x109	// java_map_index
+
+	.word	0x20001df	// type_token_id
+	.word	0x10a	// java_map_index
+
+	.word	0x20001e0	// type_token_id
+	.word	0x10b	// java_map_index
+
+	.word	0x20001e4	// type_token_id
+	.word	0x108	// java_map_index
+
+	.word	0x20001e6	// type_token_id
+	.word	0xbe	// java_map_index
+
+	.word	0x20001e8	// type_token_id
+	.word	0xbd	// java_map_index
+
+	.word	0x20001e9	// type_token_id
+	.word	0xbc	// java_map_index
+
+	.word	0x20001eb	// type_token_id
+	.word	0xbf	// java_map_index
+
+	.word	0x20001ec	// type_token_id
+	.word	0xc0	// java_map_index
+
+	.word	0x20001ed	// type_token_id
+	.word	0xc1	// java_map_index
+
+	.word	0x20001ee	// type_token_id
+	.word	0xc2	// java_map_index
+
+	.word	0x20001ef	// type_token_id
+	.word	0xc3	// java_map_index
+
+	.word	0x20001f1	// type_token_id
+	.word	0x9b	// java_map_index
+
+	.word	0x20001f2	// type_token_id
+	.word	0x99	// java_map_index
+
+	.word	0x20001f5	// type_token_id
+	.word	0x9a	// java_map_index
+
+	.word	0x20001f8	// type_token_id
+	.word	0x9d	// java_map_index
+
+	.word	0x20001f9	// type_token_id
+	.word	0x9c	// java_map_index
+
+	.word	0x20001fb	// type_token_id
+	.word	0x9f	// java_map_index
+
+	.word	0x20001fe	// type_token_id
+	.word	0xa0	// java_map_index
+
+	.word	0x2000200	// type_token_id
+	.word	0xa1	// java_map_index
+
+	.word	0x2000203	// type_token_id
+	.word	0xa5	// java_map_index
+
+	.word	0x2000206	// type_token_id
+	.word	0xa6	// java_map_index
+
+	.word	0x2000208	// type_token_id
+	.word	0xaa	// java_map_index
+
+	.word	0x200020a	// type_token_id
+	.word	0x9e	// java_map_index
+
+	.word	0x200020c	// type_token_id
+	.word	0xa2	// java_map_index
+
+	.word	0x200020e	// type_token_id
+	.word	0xa3	// java_map_index
+
+	.word	0x2000210	// type_token_id
+	.word	0xa4	// java_map_index
+
+	.word	0x2000213	// type_token_id
+	.word	0xa7	// java_map_index
+
+	.word	0x2000214	// type_token_id
+	.word	0xa8	// java_map_index
+
+	.word	0x2000215	// type_token_id
+	.word	0xa9	// java_map_index
+
+	.word	0x2000216	// type_token_id
+	.word	0xb2	// java_map_index
+
+	.word	0x2000217	// type_token_id
+	.word	0xb3	// java_map_index
+
+	.word	0x2000219	// type_token_id
+	.word	0xb4	// java_map_index
+
+	.word	0x200021b	// type_token_id
+	.word	0xb5	// java_map_index
+
+	.word	0x200021c	// type_token_id
+	.word	0xb6	// java_map_index
+
+	.word	0x200021e	// type_token_id
+	.word	0xb8	// java_map_index
+
+	.word	0x2000220	// type_token_id
+	.word	0xb9	// java_map_index
+
+	.word	0x2000222	// type_token_id
+	.word	0xba	// java_map_index
+
+	.word	0x2000224	// type_token_id
+	.word	0xbb	// java_map_index
+
+	.word	0x2000226	// type_token_id
+	.word	0xb7	// java_map_index
+
+	.word	0x2000228	// type_token_id
+	.word	0xac	// java_map_index
+
+	.word	0x200022a	// type_token_id
+	.word	0xad	// java_map_index
+
+	.word	0x200022b	// type_token_id
+	.word	0xae	// java_map_index
+
+	.word	0x200022d	// type_token_id
+	.word	0xb1	// java_map_index
+
+	.word	0x200022f	// type_token_id
+	.word	0xaf	// java_map_index
+
+	.word	0x2000231	// type_token_id
+	.word	0xb0	// java_map_index
+
+	.word	0x2000233	// type_token_id
+	.word	0xab	// java_map_index
+
+	.word	0x2000234	// type_token_id
+	.word	0x92	// java_map_index
+
+	.word	0x2000235	// type_token_id
+	.word	0x7e	// java_map_index
+
+	.word	0x2000236	// type_token_id
+	.word	0x7f	// java_map_index
+
+	.word	0x2000239	// type_token_id
+	.word	0x87	// java_map_index
+
+	.word	0x200023a	// type_token_id
+	.word	0x8d	// java_map_index
+
+	.word	0x200023b	// type_token_id
+	.word	0x91	// java_map_index
+
+	.word	0x200023c	// type_token_id
+	.word	0x80	// java_map_index
+
+	.word	0x200023d	// type_token_id
+	.word	0x81	// java_map_index
+
+	.word	0x200023e	// type_token_id
+	.word	0x82	// java_map_index
+
+	.word	0x200023f	// type_token_id
+	.word	0x83	// java_map_index
+
+	.word	0x2000241	// type_token_id
+	.word	0x84	// java_map_index
+
+	.word	0x2000242	// type_token_id
+	.word	0x85	// java_map_index
+
+	.word	0x2000243	// type_token_id
+	.word	0x86	// java_map_index
+
+	.word	0x2000244	// type_token_id
+	.word	0x89	// java_map_index
+
+	.word	0x2000246	// type_token_id
+	.word	0x88	// java_map_index
+
+	.word	0x2000248	// type_token_id
+	.word	0x8a	// java_map_index
+
+	.word	0x200024a	// type_token_id
+	.word	0x90	// java_map_index
+
+	.word	0x200024c	// type_token_id
+	.word	0x8f	// java_map_index
+
+	.word	0x200024e	// type_token_id
+	.word	0x8b	// java_map_index
+
+	.word	0x200024f	// type_token_id
+	.word	0x8c	// java_map_index
+
+	.word	0x2000250	// type_token_id
+	.word	0x8e	// java_map_index
+
+	.word	0x2000253	// type_token_id
+	.word	0x7d	// java_map_index
+
+	.word	0x2000255	// type_token_id
+	.word	0x7c	// java_map_index
+
+	.word	0x2000257	// type_token_id
+	.word	0x7a	// java_map_index
+
+	.word	0x2000258	// type_token_id
+	.word	0x7b	// java_map_index
+
+	.word	0x200025a	// type_token_id
+	.word	0x3f	// java_map_index
+
+	.word	0x200025b	// type_token_id
+	.word	0x40	// java_map_index
+
+	.word	0x200025c	// type_token_id
+	.word	0x45	// java_map_index
+
+	.word	0x200025f	// type_token_id
+	.word	0x41	// java_map_index
+
+	.word	0x2000260	// type_token_id
+	.word	0x42	// java_map_index
+
+	.word	0x2000266	// type_token_id
+	.word	0x43	// java_map_index
+
+	.word	0x2000267	// type_token_id
+	.word	0x44	// java_map_index
+
+	.word	0x2000268	// type_token_id
+	.word	0x46	// java_map_index
+
+	.word	0x2000269	// type_token_id
+	.word	0x47	// java_map_index
+
+	.word	0x200026b	// type_token_id
+	.word	0x48	// java_map_index
+
+	.word	0x200026c	// type_token_id
+	.word	0x49	// java_map_index
+
+	.word	0x200026d	// type_token_id
+	.word	0x4a	// java_map_index
+
+	.word	0x200026e	// type_token_id
+	.word	0x4b	// java_map_index
+
+	.word	0x200026f	// type_token_id
+	.word	0x4c	// java_map_index
+
+	.word	0x2000270	// type_token_id
+	.word	0x4d	// java_map_index
+
+	.word	0x2000271	// type_token_id
+	.word	0x4e	// java_map_index
+
+	.word	0x2000272	// type_token_id
+	.word	0x4f	// java_map_index
+
+	.word	0x2000273	// type_token_id
+	.word	0x50	// java_map_index
+
+	.word	0x2000275	// type_token_id
+	.word	0x51	// java_map_index
+
+	.word	0x2000276	// type_token_id
+	.word	0x52	// java_map_index
+
+	.word	0x2000277	// type_token_id
+	.word	0x53	// java_map_index
+
+	.word	0x2000278	// type_token_id
+	.word	0x54	// java_map_index
+
+	.word	0x2000279	// type_token_id
+	.word	0x55	// java_map_index
+
+	.word	0x200027a	// type_token_id
+	.word	0x56	// java_map_index
+
+	.word	0x200027b	// type_token_id
+	.word	0x57	// java_map_index
+
+	.word	0x200027c	// type_token_id
+	.word	0x58	// java_map_index
+
+	.word	0x200027d	// type_token_id
+	.word	0x59	// java_map_index
+
+	.word	0x200027e	// type_token_id
+	.word	0x5a	// java_map_index
+
+	.word	0x200027f	// type_token_id
+	.word	0x5b	// java_map_index
+
+	.word	0x2000280	// type_token_id
+	.word	0x5c	// java_map_index
+
+	.word	0x2000281	// type_token_id
+	.word	0x5d	// java_map_index
+
+	.word	0x2000282	// type_token_id
+	.word	0x5e	// java_map_index
+
+	.word	0x2000283	// type_token_id
+	.word	0x5f	// java_map_index
+
+	.word	0x2000284	// type_token_id
+	.word	0x60	// java_map_index
+
+	.word	0x2000285	// type_token_id
+	.word	0x61	// java_map_index
+
+	.word	0x2000287	// type_token_id
+	.word	0x62	// java_map_index
+
+	.word	0x2000288	// type_token_id
+	.word	0x6a	// java_map_index
+
+	.word	0x2000289	// type_token_id
+	.word	0x6b	// java_map_index
+
+	.word	0x200028b	// type_token_id
+	.word	0x6c	// java_map_index
+
+	.word	0x200028d	// type_token_id
+	.word	0x6d	// java_map_index
+
+	.word	0x200028e	// type_token_id
+	.word	0x70	// java_map_index
+
+	.word	0x200028f	// type_token_id
+	.word	0x66	// java_map_index
+
+	.word	0x2000290	// type_token_id
+	.word	0x67	// java_map_index
+
+	.word	0x2000291	// type_token_id
+	.word	0x68	// java_map_index
+
+	.word	0x2000292	// type_token_id
+	.word	0x69	// java_map_index
+
+	.word	0x2000294	// type_token_id
+	.word	0x6e	// java_map_index
+
+	.word	0x2000295	// type_token_id
+	.word	0x6f	// java_map_index
+
+	.word	0x2000297	// type_token_id
+	.word	0x63	// java_map_index
+
+	.word	0x2000299	// type_token_id
+	.word	0x65	// java_map_index
+
+	.word	0x200029b	// type_token_id
+	.word	0x64	// java_map_index
+
+	.word	0x200029d	// type_token_id
+	.word	0x71	// java_map_index
+
+	.word	0x200029e	// type_token_id
+	.word	0x72	// java_map_index
+
+	.word	0x200029f	// type_token_id
+	.word	0x73	// java_map_index
+
+	.word	0x20002a0	// type_token_id
+	.word	0x74	// java_map_index
+
+	.word	0x20002a3	// type_token_id
+	.word	0x75	// java_map_index
+
+	.word	0x20002a4	// type_token_id
+	.word	0x76	// java_map_index
+
+	.word	0x20002a5	// type_token_id
+	.word	0x77	// java_map_index
+
+	.word	0x20002a6	// type_token_id
+	.word	0x78	// java_map_index
+
+	.word	0x20002a7	// type_token_id
+	.word	0x79	// java_map_index
+
+	.word	0x20002a9	// type_token_id
+	.word	0x18	// java_map_index
+
+	.word	0x20002aa	// type_token_id
+	.word	0x0	// java_map_index
+
+	.word	0x20002ab	// type_token_id
+	.word	0x1	// java_map_index
+
+	.word	0x20002ad	// type_token_id
+	.word	0x2	// java_map_index
+
+	.word	0x20002af	// type_token_id
+	.word	0x71d	// java_map_index
+
+	.word	0x20002b0	// type_token_id
+	.word	0x4	// java_map_index
+
+	.word	0x20002b1	// type_token_id
+	.word	0x6	// java_map_index
+
+	.word	0x20002b2	// type_token_id
+	.word	0x7	// java_map_index
+
+	.word	0x20002b5	// type_token_id
+	.word	0x71e	// java_map_index
+
+	.word	0x20002b9	// type_token_id
+	.word	0x3	// java_map_index
+
+	.word	0x20002bb	// type_token_id
+	.word	0x5	// java_map_index
+
+	.word	0x20002be	// type_token_id
+	.word	0x8	// java_map_index
+
+	.word	0x20002c0	// type_token_id
+	.word	0x9	// java_map_index
+
+	.word	0x20002c2	// type_token_id
+	.word	0xa	// java_map_index
+
+	.word	0x20002c4	// type_token_id
+	.word	0x720	// java_map_index
+
+	.word	0x20002c5	// type_token_id
+	.word	0xb	// java_map_index
+
+	.word	0x20002c6	// type_token_id
+	.word	0xc	// java_map_index
+
+	.word	0x20002c7	// type_token_id
+	.word	0xd	// java_map_index
+
+	.word	0x20002c8	// type_token_id
+	.word	0xe	// java_map_index
+
+	.word	0x20002c9	// type_token_id
+	.word	0xf	// java_map_index
+
+	.word	0x20002cb	// type_token_id
+	.word	0x10	// java_map_index
+
+	.word	0x20002cd	// type_token_id
+	.word	0x11	// java_map_index
+
+	.word	0x20002cf	// type_token_id
+	.word	0x71f	// java_map_index
+
+	.word	0x20002d0	// type_token_id
+	.word	0x12	// java_map_index
+
+	.word	0x20002d8	// type_token_id
+	.word	0x15	// java_map_index
+
+	.word	0x20002d9	// type_token_id
+	.word	0x16	// java_map_index
+
+	.word	0x20002db	// type_token_id
+	.word	0x17	// java_map_index
+
+	.word	0x20002e0	// type_token_id
+	.word	0x13	// java_map_index
+
+	.word	0x20002e2	// type_token_id
+	.word	0x14	// java_map_index
+
+	.word	0x20002e5	// type_token_id
+	.word	0x21	// java_map_index
+
+	.word	0x20002e6	// type_token_id
+	.word	0x29	// java_map_index
+
+	.word	0x20002e8	// type_token_id
+	.word	0x19	// java_map_index
+
+	.word	0x20002ea	// type_token_id
+	.word	0x1a	// java_map_index
+
+	.word	0x20002eb	// type_token_id
+	.word	0x1b	// java_map_index
+
+	.word	0x20002ec	// type_token_id
+	.word	0x1c	// java_map_index
+
+	.word	0x20002ed	// type_token_id
+	.word	0x1f	// java_map_index
+
+	.word	0x20002ee	// type_token_id
+	.word	0x20	// java_map_index
+
+	.word	0x20002f1	// type_token_id
+	.word	0x22	// java_map_index
+
+	.word	0x20002f3	// type_token_id
+	.word	0x1d	// java_map_index
+
+	.word	0x20002f5	// type_token_id
+	.word	0x1e	// java_map_index
+
+	.word	0x20002f7	// type_token_id
+	.word	0x24	// java_map_index
+
+	.word	0x20002f9	// type_token_id
+	.word	0x721	// java_map_index
+
+	.word	0x20002fa	// type_token_id
+	.word	0x25	// java_map_index
+
+	.word	0x20002fd	// type_token_id
+	.word	0x722	// java_map_index
+
+	.word	0x20002fe	// type_token_id
+	.word	0x26	// java_map_index
+
+	.word	0x2000300	// type_token_id
+	.word	0x723	// java_map_index
+
+	.word	0x2000301	// type_token_id
+	.word	0x27	// java_map_index
+
+	.word	0x2000303	// type_token_id
+	.word	0x28	// java_map_index
+
+	.word	0x2000306	// type_token_id
+	.word	0x23	// java_map_index
+
+	.word	0x2000308	// type_token_id
+	.word	0x2a	// java_map_index
+
+	.word	0x2000309	// type_token_id
+	.word	0x2b	// java_map_index
+
+	.word	0x200030a	// type_token_id
+	.word	0x2d	// java_map_index
+
+	.word	0x200030c	// type_token_id
+	.word	0x2e	// java_map_index
+
+	.word	0x200030e	// type_token_id
+	.word	0x2c	// java_map_index
+
+	.word	0x2000311	// type_token_id
+	.word	0x2f	// java_map_index
+
+	.word	0x2000314	// type_token_id
+	.word	0x30	// java_map_index
+
+	.word	0x2000316	// type_token_id
+	.word	0x31	// java_map_index
+
+	.word	0x2000317	// type_token_id
+	.word	0x32	// java_map_index
+
+	.word	0x200031b	// type_token_id
+	.word	0x33	// java_map_index
+
+	.word	0x200031c	// type_token_id
+	.word	0x3a	// java_map_index
+
+	.word	0x200031d	// type_token_id
+	.word	0x34	// java_map_index
+
+	.word	0x200031e	// type_token_id
+	.word	0x35	// java_map_index
+
+	.word	0x200031f	// type_token_id
+	.word	0x36	// java_map_index
+
+	.word	0x2000322	// type_token_id
+	.word	0x37	// java_map_index
+
+	.word	0x2000323	// type_token_id
+	.word	0x38	// java_map_index
+
+	.word	0x2000325	// type_token_id
+	.word	0x39	// java_map_index
+
+	.word	0x200033c	// type_token_id
+	.word	0x724	// java_map_index
+
+	.word	0x200033e	// type_token_id
+	.word	0x725	// java_map_index
+
+	.word	0x2000340	// type_token_id
+	.word	0x555	// java_map_index
+
+	.word	0x2000342	// type_token_id
+	.word	0x55b	// java_map_index
+
+	.word	0x200034b	// type_token_id
+	.word	0x554	// java_map_index
+
+	.word	0x200034d	// type_token_id
+	.word	0x726	// java_map_index
+
+	.word	0x200034f	// type_token_id
+	.word	0x97	// java_map_index
+
+	.word	0x2000350	// type_token_id
+	.word	0x55c	// java_map_index
+
+	.word	0x200035f	// type_token_id
+	.word	0x727	// java_map_index
+
+	.word	0x200036b	// type_token_id
+	.word	0x98	// java_map_index
+
+	.word	0x200036c	// type_token_id
+	.word	0x54b	// java_map_index
+
+	.word	0x200036d	// type_token_id
+	.word	0x54c	// java_map_index
+
+	.word	0x200036e	// type_token_id
+	.word	0x54e	// java_map_index
+
+	.word	0x2000370	// type_token_id
+	.word	0x54d	// java_map_index
+
+	.word	0x2000372	// type_token_id
+	.word	0x52e	// java_map_index
+
+	.word	0x2000373	// type_token_id
+	.word	0x52f	// java_map_index
+
+	.word	0x2000374	// type_token_id
+	.word	0x530	// java_map_index
+
+	.word	0x2000376	// type_token_id
+	.word	0x531	// java_map_index
+
+	.word	0x2000378	// type_token_id
+	.word	0x532	// java_map_index
+
+	.word	0x2000379	// type_token_id
+	.word	0x533	// java_map_index
+
+	.word	0x200037a	// type_token_id
+	.word	0x52b	// java_map_index
+
+	.word	0x200037b	// type_token_id
+	.word	0x52c	// java_map_index
+
+	.word	0x200037c	// type_token_id
+	.word	0x52d	// java_map_index
+
+	.word	0x200037d	// type_token_id
+	.word	0x54f	// java_map_index
+
+	.word	0x200037f	// type_token_id
+	.word	0x550	// java_map_index
+
+	.word	0x2000381	// type_token_id
+	.word	0x551	// java_map_index
+
+	.word	0x2000383	// type_token_id
+	.word	0x552	// java_map_index
+
+	.word	0x2000385	// type_token_id
+	.word	0x553	// java_map_index
+
+	.word	0x2000387	// type_token_id
+	.word	0x557	// java_map_index
+
+	.word	0x2000388	// type_token_id
+	.word	0x55a	// java_map_index
+
+	.word	0x200038d	// type_token_id
+	.word	0x556	// java_map_index
+
+	.word	0x200038f	// type_token_id
+	.word	0x558	// java_map_index
+
+	.word	0x2000391	// type_token_id
+	.word	0x559	// java_map_index
+
+	.word	0x2000393	// type_token_id
+	.word	0x55d	// java_map_index
+
+	.word	0x2000395	// type_token_id
+	.word	0x560	// java_map_index
+
+	.word	0x2000397	// type_token_id
+	.word	0x561	// java_map_index
+
+	.word	0x2000399	// type_token_id
+	.word	0x564	// java_map_index
+
+	.word	0x200039b	// type_token_id
+	.word	0x563	// java_map_index
+
+	.word	0x200039d	// type_token_id
+	.word	0x565	// java_map_index
+
+	.word	0x200039f	// type_token_id
+	.word	0x566	// java_map_index
+
+	.word	0x20003a1	// type_token_id
+	.word	0x568	// java_map_index
+
+	.word	0x20003a3	// type_token_id
+	.word	0x569	// java_map_index
+
+	.word	0x20003a5	// type_token_id
+	.word	0x56a	// java_map_index
+
+	.word	0x20003a7	// type_token_id
+	.word	0x55e	// java_map_index
+
+	.word	0x20003a8	// type_token_id
+	.word	0x55f	// java_map_index
+
+	.word	0x20003a9	// type_token_id
+	.word	0x562	// java_map_index
+
+	.word	0x20003aa	// type_token_id
+	.word	0x567	// java_map_index
+
+	.word	0x20003ab	// type_token_id
+	.word	0x56b	// java_map_index
+
+	.word	0x20003ad	// type_token_id
+	.word	0x56c	// java_map_index
+
+	.word	0x20003ae	// type_token_id
+	.word	0x56d	// java_map_index
+
+	.word	0x20003af	// type_token_id
+	.word	0x578	// java_map_index
+
+	.word	0x20003b0	// type_token_id
+	.word	0x56e	// java_map_index
+
+	.word	0x20003b2	// type_token_id
+	.word	0x56f	// java_map_index
+
+	.word	0x20003b4	// type_token_id
+	.word	0x570	// java_map_index
+
+	.word	0x20003b6	// type_token_id
+	.word	0x571	// java_map_index
+
+	.word	0x20003b8	// type_token_id
+	.word	0x572	// java_map_index
+
+	.word	0x20003ba	// type_token_id
+	.word	0x573	// java_map_index
+
+	.word	0x20003bc	// type_token_id
+	.word	0x574	// java_map_index
+
+	.word	0x20003be	// type_token_id
+	.word	0x575	// java_map_index
+
+	.word	0x20003bf	// type_token_id
+	.word	0x576	// java_map_index
+
+	.word	0x20003c0	// type_token_id
+	.word	0x577	// java_map_index
+
+	.word	0x20003c1	// type_token_id
+	.word	0x544	// java_map_index
+
+	.word	0x20003c2	// type_token_id
+	.word	0x545	// java_map_index
+
+	.word	0x20003c4	// type_token_id
+	.word	0x546	// java_map_index
+
+	.word	0x20003c6	// type_token_id
+	.word	0x547	// java_map_index
+
+	.word	0x20003c8	// type_token_id
+	.word	0x548	// java_map_index
+
+	.word	0x20003c9	// type_token_id
+	.word	0x54a	// java_map_index
+
+	.word	0x20003cb	// type_token_id
+	.word	0x549	// java_map_index
+
+	.word	0x20003cd	// type_token_id
+	.word	0x534	// java_map_index
+
+	.word	0x20003ce	// type_token_id
+	.word	0x536	// java_map_index
+
+	.word	0x20003d1	// type_token_id
+	.word	0x535	// java_map_index
+
+	.word	0x20003d4	// type_token_id
+	.word	0x537	// java_map_index
+
+	.word	0x20003d6	// type_token_id
+	.word	0x538	// java_map_index
+
+	.word	0x20003d8	// type_token_id
+	.word	0x543	// java_map_index
+
+	.word	0x20003da	// type_token_id
+	.word	0x53b	// java_map_index
+
+	.word	0x20003dc	// type_token_id
+	.word	0x539	// java_map_index
+
+	.word	0x20003de	// type_token_id
+	.word	0x53a	// java_map_index
+
+	.word	0x20003e0	// type_token_id
+	.word	0x53c	// java_map_index
+
+	.word	0x20003e2	// type_token_id
+	.word	0x53d	// java_map_index
+
+	.word	0x20003e4	// type_token_id
+	.word	0x53e	// java_map_index
+
+	.word	0x20003e6	// type_token_id
+	.word	0x53f	// java_map_index
+
+	.word	0x20003e8	// type_token_id
+	.word	0x540	// java_map_index
+
+	.word	0x20003ea	// type_token_id
+	.word	0x541	// java_map_index
+
+	.word	0x20003ec	// type_token_id
+	.word	0x542	// java_map_index
+
+	.word	0x20003ee	// type_token_id
+	.word	0x4fa	// java_map_index
+
+	.word	0x20003ef	// type_token_id
+	.word	0x4fb	// java_map_index
+
+	.word	0x20003f0	// type_token_id
+	.word	0x4fd	// java_map_index
+
+	.word	0x20003f1	// type_token_id
+	.word	0x4fe	// java_map_index
+
+	.word	0x20003f2	// type_token_id
+	.word	0x501	// java_map_index
+
+	.word	0x20003f3	// type_token_id
+	.word	0x504	// java_map_index
+
+	.word	0x20003f4	// type_token_id
+	.word	0x507	// java_map_index
+
+	.word	0x20003f5	// type_token_id
+	.word	0x508	// java_map_index
+
+	.word	0x20003f6	// type_token_id
+	.word	0x4fc	// java_map_index
+
+	.word	0x20003f7	// type_token_id
+	.word	0x50d	// java_map_index
+
+	.word	0x20003f8	// type_token_id
+	.word	0x510	// java_map_index
+
+	.word	0x20003f9	// type_token_id
+	.word	0x514	// java_map_index
+
+	.word	0x20003fa	// type_token_id
+	.word	0x761	// java_map_index
+
+	.word	0x20003fb	// type_token_id
+	.word	0x519	// java_map_index
+
+	.word	0x20003fc	// type_token_id
+	.word	0x51a	// java_map_index
+
+	.word	0x20003fd	// type_token_id
+	.word	0x51c	// java_map_index
+
+	.word	0x20003ff	// type_token_id
+	.word	0x51d	// java_map_index
+
+	.word	0x2000401	// type_token_id
+	.word	0x51e	// java_map_index
+
+	.word	0x2000402	// type_token_id
+	.word	0x762	// java_map_index
+
+	.word	0x2000403	// type_token_id
+	.word	0x51f	// java_map_index
+
+	.word	0x2000404	// type_token_id
+	.word	0x4f6	// java_map_index
+
+	.word	0x2000405	// type_token_id
+	.word	0x4f7	// java_map_index
+
+	.word	0x2000408	// type_token_id
+	.word	0x4ff	// java_map_index
+
+	.word	0x2000409	// type_token_id
+	.word	0x500	// java_map_index
+
+	.word	0x200040b	// type_token_id
+	.word	0x505	// java_map_index
+
+	.word	0x200040d	// type_token_id
+	.word	0x506	// java_map_index
+
+	.word	0x200040e	// type_token_id
+	.word	0x4f8	// java_map_index
+
+	.word	0x2000410	// type_token_id
+	.word	0x4f9	// java_map_index
+
+	.word	0x2000414	// type_token_id
+	.word	0x502	// java_map_index
+
+	.word	0x2000416	// type_token_id
+	.word	0x503	// java_map_index
+
+	.word	0x2000418	// type_token_id
+	.word	0x50e	// java_map_index
+
+	.word	0x200041a	// type_token_id
+	.word	0x509	// java_map_index
+
+	.word	0x200041b	// type_token_id
+	.word	0x50a	// java_map_index
+
+	.word	0x200041c	// type_token_id
+	.word	0x50b	// java_map_index
+
+	.word	0x200041d	// type_token_id
+	.word	0x50c	// java_map_index
+
+	.word	0x200041e	// type_token_id
+	.word	0x515	// java_map_index
+
+	.word	0x2000420	// type_token_id
+	.word	0x517	// java_map_index
+
+	.word	0x2000422	// type_token_id
+	.word	0x50f	// java_map_index
+
+	.word	0x2000423	// type_token_id
+	.word	0x511	// java_map_index
+
+	.word	0x2000424	// type_token_id
+	.word	0x512	// java_map_index
+
+	.word	0x2000425	// type_token_id
+	.word	0x513	// java_map_index
+
+	.word	0x2000427	// type_token_id
+	.word	0x516	// java_map_index
+
+	.word	0x2000428	// type_token_id
+	.word	0x518	// java_map_index
+
+	.word	0x2000429	// type_token_id
+	.word	0x51b	// java_map_index
+
+	.word	0x200042a	// type_token_id
+	.word	0x520	// java_map_index
+
+	.word	0x200042b	// type_token_id
+	.word	0x521	// java_map_index
+
+	.word	0x200042c	// type_token_id
+	.word	0x522	// java_map_index
+
+	.word	0x200042e	// type_token_id
+	.word	0x523	// java_map_index
+
+	.word	0x200042f	// type_token_id
+	.word	0x525	// java_map_index
+
+	.word	0x2000431	// type_token_id
+	.word	0x524	// java_map_index
+
+	.word	0x2000433	// type_token_id
+	.word	0x526	// java_map_index
+
+	.word	0x2000435	// type_token_id
+	.word	0x527	// java_map_index
+
+	.word	0x2000437	// type_token_id
+	.word	0x529	// java_map_index
+
+	.word	0x2000439	// type_token_id
+	.word	0x52a	// java_map_index
+
+	.word	0x200043b	// type_token_id
+	.word	0x528	// java_map_index
+
+	.word	0x200043c	// type_token_id
+	.word	0x4e6	// java_map_index
+
+	.word	0x200043d	// type_token_id
+	.word	0x4e7	// java_map_index
+
+	.word	0x200043e	// type_token_id
+	.word	0x4e9	// java_map_index
+
+	.word	0x200043f	// type_token_id
+	.word	0x4ea	// java_map_index
+
+	.word	0x2000440	// type_token_id
+	.word	0x4eb	// java_map_index
+
+	.word	0x2000441	// type_token_id
+	.word	0x4ec	// java_map_index
+
+	.word	0x2000442	// type_token_id
+	.word	0x4e8	// java_map_index
+
+	.word	0x2000444	// type_token_id
+	.word	0x4ed	// java_map_index
+
+	.word	0x2000446	// type_token_id
+	.word	0x4ef	// java_map_index
+
+	.word	0x2000448	// type_token_id
+	.word	0x4ee	// java_map_index
+
+	.word	0x2000449	// type_token_id
+	.word	0x4f3	// java_map_index
+
+	.word	0x200044b	// type_token_id
+	.word	0x4f0	// java_map_index
+
+	.word	0x200044d	// type_token_id
+	.word	0x4f1	// java_map_index
+
+	.word	0x200044e	// type_token_id
+	.word	0x4f2	// java_map_index
+
+	.word	0x2000450	// type_token_id
+	.word	0x4f4	// java_map_index
+
+	.word	0x2000451	// type_token_id
+	.word	0x4f5	// java_map_index
+
+	.word	0x2000468	// type_token_id
+	.word	0x71c	// java_map_index
+
+	.size	.L.module30_managed_to_java, 4144
+
+	.section	.rodata.module30_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module30_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module30_managed_to_java_duplicates:
+	.word	0x20000a0	// type_token_id
+	.word	0x799	// java_map_index
+
+	.word	0x20000a4	// type_token_id
+	.word	0x57c	// java_map_index
+
+	.word	0x20000a6	// type_token_id
+	.word	0x57e	// java_map_index
+
+	.word	0x20000a9	// type_token_id
+	.word	0x57a	// java_map_index
+
+	.word	0x20000ab	// type_token_id
+	.word	0x57b	// java_map_index
+
+	.word	0x20000ad	// type_token_id
+	.word	0x579	// java_map_index
+
+	.word	0x20000b8	// type_token_id
+	.word	0x116	// java_map_index
+
+	.word	0x20000ba	// type_token_id
+	.word	0x117	// java_map_index
+
+	.word	0x20000bc	// type_token_id
+	.word	0x11b	// java_map_index
+
+	.word	0x20000c0	// type_token_id
+	.word	0x119	// java_map_index
+
+	.word	0x20000c2	// type_token_id
+	.word	0x11a	// java_map_index
+
+	.word	0x20000c4	// type_token_id
+	.word	0x11c	// java_map_index
+
+	.word	0x20000cd	// type_token_id
+	.word	0x3c	// java_map_index
+
+	.word	0x20000cf	// type_token_id
+	.word	0x3e	// java_map_index
+
+	.word	0x20000d2	// type_token_id
+	.word	0x3d	// java_map_index
+
+	.word	0x20000d5	// type_token_id
+	.word	0x120	// java_map_index
+
+	.word	0x20000d6	// type_token_id
+	.word	0x11f	// java_map_index
+
+	.word	0x20000d9	// type_token_id
+	.word	0x126	// java_map_index
+
+	.word	0x20000dd	// type_token_id
+	.word	0x127	// java_map_index
+
+	.word	0x20000df	// type_token_id
+	.word	0x128	// java_map_index
+
+	.word	0x20000e0	// type_token_id
+	.word	0x125	// java_map_index
+
+	.word	0x20000e7	// type_token_id
+	.word	0x131	// java_map_index
+
+	.word	0x20000ea	// type_token_id
+	.word	0x143	// java_map_index
+
+	.word	0x20000ee	// type_token_id
+	.word	0x153	// java_map_index
+
+	.word	0x20000f2	// type_token_id
+	.word	0x121	// java_map_index
+
+	.word	0x20000f3	// type_token_id
+	.word	0x125	// java_map_index
+
+	.word	0x20000f5	// type_token_id
+	.word	0x12a	// java_map_index
+
+	.word	0x20000f6	// type_token_id
+	.word	0x12a	// java_map_index
+
+	.word	0x20000fc	// type_token_id
+	.word	0x12f	// java_map_index
+
+	.word	0x20000fd	// type_token_id
+	.word	0x12e	// java_map_index
+
+	.word	0x2000102	// type_token_id
+	.word	0x135	// java_map_index
+
+	.word	0x2000104	// type_token_id
+	.word	0x134	// java_map_index
+
+	.word	0x2000109	// type_token_id
+	.word	0x124	// java_map_index
+
+	.word	0x200010b	// type_token_id
+	.word	0x12d	// java_map_index
+
+	.word	0x200010d	// type_token_id
+	.word	0x137	// java_map_index
+
+	.word	0x200010f	// type_token_id
+	.word	0x140	// java_map_index
+
+	.word	0x2000114	// type_token_id
+	.word	0x14c	// java_map_index
+
+	.word	0x2000116	// type_token_id
+	.word	0x14f	// java_map_index
+
+	.word	0x2000125	// type_token_id
+	.word	0x14b	// java_map_index
+
+	.word	0x2000128	// type_token_id
+	.word	0x14e	// java_map_index
+
+	.word	0x200012c	// type_token_id
+	.word	0x155	// java_map_index
+
+	.word	0x2000133	// type_token_id
+	.word	0xed	// java_map_index
+
+	.word	0x2000138	// type_token_id
+	.word	0xee	// java_map_index
+
+	.word	0x200013b	// type_token_id
+	.word	0xef	// java_map_index
+
+	.word	0x200013d	// type_token_id
+	.word	0xf0	// java_map_index
+
+	.word	0x200013f	// type_token_id
+	.word	0xf1	// java_map_index
+
+	.word	0x2000141	// type_token_id
+	.word	0xf2	// java_map_index
+
+	.word	0x2000145	// type_token_id
+	.word	0xf3	// java_map_index
+
+	.word	0x2000149	// type_token_id
+	.word	0xf4	// java_map_index
+
+	.word	0x2000158	// type_token_id
+	.word	0xd5	// java_map_index
+
+	.word	0x200015b	// type_token_id
+	.word	0xd7	// java_map_index
+
+	.word	0x200015d	// type_token_id
+	.word	0xd8	// java_map_index
+
+	.word	0x2000161	// type_token_id
+	.word	0xfe	// java_map_index
+
+	.word	0x2000163	// type_token_id
+	.word	0xff	// java_map_index
+
+	.word	0x2000165	// type_token_id
+	.word	0x100	// java_map_index
+
+	.word	0x2000167	// type_token_id
+	.word	0x101	// java_map_index
+
+	.word	0x200016a	// type_token_id
+	.word	0x103	// java_map_index
+
+	.word	0x200016d	// type_token_id
+	.word	0xc5	// java_map_index
+
+	.word	0x200016e	// type_token_id
+	.word	0xc4	// java_map_index
+
+	.word	0x2000171	// type_token_id
+	.word	0xc6	// java_map_index
+
+	.word	0x200017d	// type_token_id
+	.word	0xcf	// java_map_index
+
+	.word	0x200017f	// type_token_id
+	.word	0xd0	// java_map_index
+
+	.word	0x2000183	// type_token_id
+	.word	0xc7	// java_map_index
+
+	.word	0x2000185	// type_token_id
+	.word	0xc9	// java_map_index
+
+	.word	0x2000187	// type_token_id
+	.word	0xc8	// java_map_index
+
+	.word	0x200018a	// type_token_id
+	.word	0xd9	// java_map_index
+
+	.word	0x200018c	// type_token_id
+	.word	0xdc	// java_map_index
+
+	.word	0x200018e	// type_token_id
+	.word	0xdd	// java_map_index
+
+	.word	0x2000191	// type_token_id
+	.word	0xdb	// java_map_index
+
+	.word	0x2000196	// type_token_id
+	.word	0xd3	// java_map_index
+
+	.word	0x2000198	// type_token_id
+	.word	0xe3	// java_map_index
+
+	.word	0x200019a	// type_token_id
+	.word	0xe6	// java_map_index
+
+	.word	0x200019c	// type_token_id
+	.word	0xe7	// java_map_index
+
+	.word	0x200019e	// type_token_id
+	.word	0xe5	// java_map_index
+
+	.word	0x20001a0	// type_token_id
+	.word	0xfa	// java_map_index
+
+	.word	0x20001a2	// type_token_id
+	.word	0xfb	// java_map_index
+
+	.word	0x20001a5	// type_token_id
+	.word	0x105	// java_map_index
+
+	.word	0x20001aa	// type_token_id
+	.word	0xd6	// java_map_index
+
+	.word	0x20001b4	// type_token_id
+	.word	0xe0	// java_map_index
+
+	.word	0x20001c4	// type_token_id
+	.word	0xf9	// java_map_index
+
+	.word	0x20001c5	// type_token_id
+	.word	0xf6	// java_map_index
+
+	.word	0x20001c8	// type_token_id
+	.word	0x102	// java_map_index
+
+	.word	0x20001cf	// type_token_id
+	.word	0x10e	// java_map_index
+
+	.word	0x20001d0	// type_token_id
+	.word	0x10d	// java_map_index
+
+	.word	0x20001d4	// type_token_id
+	.word	0x111	// java_map_index
+
+	.word	0x20001d7	// type_token_id
+	.word	0x113	// java_map_index
+
+	.word	0x20001e5	// type_token_id
+	.word	0x108	// java_map_index
+
+	.word	0x20001ea	// type_token_id
+	.word	0xbc	// java_map_index
+
+	.word	0x20001f3	// type_token_id
+	.word	0x99	// java_map_index
+
+	.word	0x20001f6	// type_token_id
+	.word	0x9a	// java_map_index
+
+	.word	0x20001fa	// type_token_id
+	.word	0x9c	// java_map_index
+
+	.word	0x20001fc	// type_token_id
+	.word	0x9f	// java_map_index
+
+	.word	0x20001ff	// type_token_id
+	.word	0xa0	// java_map_index
+
+	.word	0x2000201	// type_token_id
+	.word	0xa1	// java_map_index
+
+	.word	0x2000204	// type_token_id
+	.word	0xa5	// java_map_index
+
+	.word	0x2000207	// type_token_id
+	.word	0xa6	// java_map_index
+
+	.word	0x2000209	// type_token_id
+	.word	0xaa	// java_map_index
+
+	.word	0x200020b	// type_token_id
+	.word	0x9e	// java_map_index
+
+	.word	0x2000211	// type_token_id
+	.word	0xa4	// java_map_index
+
+	.word	0x2000218	// type_token_id
+	.word	0xb3	// java_map_index
+
+	.word	0x200021a	// type_token_id
+	.word	0xb4	// java_map_index
+
+	.word	0x200021d	// type_token_id
+	.word	0xb6	// java_map_index
+
+	.word	0x200021f	// type_token_id
+	.word	0xb8	// java_map_index
+
+	.word	0x2000221	// type_token_id
+	.word	0xb9	// java_map_index
+
+	.word	0x2000223	// type_token_id
+	.word	0xba	// java_map_index
+
+	.word	0x2000225	// type_token_id
+	.word	0xbb	// java_map_index
+
+	.word	0x2000227	// type_token_id
+	.word	0xb7	// java_map_index
+
+	.word	0x2000229	// type_token_id
+	.word	0xac	// java_map_index
+
+	.word	0x200022c	// type_token_id
+	.word	0xae	// java_map_index
+
+	.word	0x200022e	// type_token_id
+	.word	0xb1	// java_map_index
+
+	.word	0x2000230	// type_token_id
+	.word	0xaf	// java_map_index
+
+	.word	0x2000232	// type_token_id
+	.word	0xb0	// java_map_index
+
+	.word	0x2000237	// type_token_id
+	.word	0x7f	// java_map_index
+
+	.word	0x2000245	// type_token_id
+	.word	0x89	// java_map_index
+
+	.word	0x2000247	// type_token_id
+	.word	0x88	// java_map_index
+
+	.word	0x2000249	// type_token_id
+	.word	0x8a	// java_map_index
+
+	.word	0x200024b	// type_token_id
+	.word	0x90	// java_map_index
+
+	.word	0x200024d	// type_token_id
+	.word	0x8f	// java_map_index
+
+	.word	0x2000254	// type_token_id
+	.word	0x7d	// java_map_index
+
+	.word	0x200028a	// type_token_id
+	.word	0x6b	// java_map_index
+
+	.word	0x200028c	// type_token_id
+	.word	0x6c	// java_map_index
+
+	.word	0x2000293	// type_token_id
+	.word	0x6a	// java_map_index
+
+	.word	0x2000298	// type_token_id
+	.word	0x63	// java_map_index
+
+	.word	0x200029a	// type_token_id
+	.word	0x65	// java_map_index
+
+	.word	0x200029c	// type_token_id
+	.word	0x64	// java_map_index
+
+	.word	0x20002a1	// type_token_id
+	.word	0x74	// java_map_index
+
+	.word	0x20002a8	// type_token_id
+	.word	0x79	// java_map_index
+
+	.word	0x20002ac	// type_token_id
+	.word	0x1	// java_map_index
+
+	.word	0x20002ae	// type_token_id
+	.word	0x2	// java_map_index
+
+	.word	0x20002b3	// type_token_id
+	.word	0x7	// java_map_index
+
+	.word	0x20002b8	// type_token_id
+	.word	0x0	// java_map_index
+
+	.word	0x20002ba	// type_token_id
+	.word	0x3	// java_map_index
+
+	.word	0x20002bc	// type_token_id
+	.word	0x5	// java_map_index
+
+	.word	0x20002c1	// type_token_id
+	.word	0x9	// java_map_index
+
+	.word	0x20002c3	// type_token_id
+	.word	0xa	// java_map_index
+
+	.word	0x20002ca	// type_token_id
+	.word	0xf	// java_map_index
+
+	.word	0x20002ce	// type_token_id
+	.word	0x11	// java_map_index
+
+	.word	0x20002da	// type_token_id
+	.word	0x16	// java_map_index
+
+	.word	0x20002dd	// type_token_id
+	.word	0x8	// java_map_index
+
+	.word	0x20002e1	// type_token_id
+	.word	0x13	// java_map_index
+
+	.word	0x20002e9	// type_token_id
+	.word	0x19	// java_map_index
+
+	.word	0x20002ef	// type_token_id
+	.word	0x20	// java_map_index
+
+	.word	0x20002f0	// type_token_id
+	.word	0x21	// java_map_index
+
+	.word	0x20002f4	// type_token_id
+	.word	0x1d	// java_map_index
+
+	.word	0x20002f6	// type_token_id
+	.word	0x1e	// java_map_index
+
+	.word	0x20002f8	// type_token_id
+	.word	0x24	// java_map_index
+
+	.word	0x20002fb	// type_token_id
+	.word	0x25	// java_map_index
+
+	.word	0x20002ff	// type_token_id
+	.word	0x26	// java_map_index
+
+	.word	0x2000302	// type_token_id
+	.word	0x27	// java_map_index
+
+	.word	0x2000304	// type_token_id
+	.word	0x28	// java_map_index
+
+	.word	0x2000307	// type_token_id
+	.word	0x23	// java_map_index
+
+	.word	0x200030b	// type_token_id
+	.word	0x2d	// java_map_index
+
+	.word	0x200030d	// type_token_id
+	.word	0x2e	// java_map_index
+
+	.word	0x200030f	// type_token_id
+	.word	0x2c	// java_map_index
+
+	.word	0x2000318	// type_token_id
+	.word	0x32	// java_map_index
+
+	.word	0x2000320	// type_token_id
+	.word	0x3a	// java_map_index
+
+	.word	0x2000341	// type_token_id
+	.word	0x555	// java_map_index
+
+	.word	0x2000347	// type_token_id
+	.word	0x55b	// java_map_index
+
+	.word	0x200034c	// type_token_id
+	.word	0x554	// java_map_index
+
+	.word	0x2000351	// type_token_id
+	.word	0x55c	// java_map_index
+
+	.word	0x200036f	// type_token_id
+	.word	0x54e	// java_map_index
+
+	.word	0x2000371	// type_token_id
+	.word	0x54d	// java_map_index
+
+	.word	0x2000375	// type_token_id
+	.word	0x530	// java_map_index
+
+	.word	0x2000377	// type_token_id
+	.word	0x531	// java_map_index
+
+	.word	0x200037e	// type_token_id
+	.word	0x54f	// java_map_index
+
+	.word	0x2000380	// type_token_id
+	.word	0x550	// java_map_index
+
+	.word	0x2000382	// type_token_id
+	.word	0x551	// java_map_index
+
+	.word	0x2000384	// type_token_id
+	.word	0x552	// java_map_index
+
+	.word	0x2000386	// type_token_id
+	.word	0x553	// java_map_index
+
+	.word	0x2000389	// type_token_id
+	.word	0x55b	// java_map_index
+
+	.word	0x200038a	// type_token_id
+	.word	0x55c	// java_map_index
+
+	.word	0x200038b	// type_token_id
+	.word	0x555	// java_map_index
+
+	.word	0x200038c	// type_token_id
+	.word	0x555	// java_map_index
+
+	.word	0x200038e	// type_token_id
+	.word	0x556	// java_map_index
+
+	.word	0x2000390	// type_token_id
+	.word	0x558	// java_map_index
+
+	.word	0x2000392	// type_token_id
+	.word	0x559	// java_map_index
+
+	.word	0x2000394	// type_token_id
+	.word	0x55d	// java_map_index
+
+	.word	0x2000396	// type_token_id
+	.word	0x560	// java_map_index
+
+	.word	0x2000398	// type_token_id
+	.word	0x561	// java_map_index
+
+	.word	0x200039a	// type_token_id
+	.word	0x564	// java_map_index
+
+	.word	0x200039c	// type_token_id
+	.word	0x563	// java_map_index
+
+	.word	0x200039e	// type_token_id
+	.word	0x565	// java_map_index
+
+	.word	0x20003a0	// type_token_id
+	.word	0x566	// java_map_index
+
+	.word	0x20003a2	// type_token_id
+	.word	0x568	// java_map_index
+
+	.word	0x20003a4	// type_token_id
+	.word	0x569	// java_map_index
+
+	.word	0x20003a6	// type_token_id
+	.word	0x56a	// java_map_index
+
+	.word	0x20003ac	// type_token_id
+	.word	0x56b	// java_map_index
+
+	.word	0x20003b1	// type_token_id
+	.word	0x56e	// java_map_index
+
+	.word	0x20003b3	// type_token_id
+	.word	0x56f	// java_map_index
+
+	.word	0x20003b5	// type_token_id
+	.word	0x570	// java_map_index
+
+	.word	0x20003b7	// type_token_id
+	.word	0x571	// java_map_index
+
+	.word	0x20003b9	// type_token_id
+	.word	0x572	// java_map_index
+
+	.word	0x20003bb	// type_token_id
+	.word	0x573	// java_map_index
+
+	.word	0x20003bd	// type_token_id
+	.word	0x574	// java_map_index
+
+	.word	0x20003c3	// type_token_id
+	.word	0x545	// java_map_index
+
+	.word	0x20003c5	// type_token_id
+	.word	0x546	// java_map_index
+
+	.word	0x20003c7	// type_token_id
+	.word	0x547	// java_map_index
+
+	.word	0x20003ca	// type_token_id
+	.word	0x54a	// java_map_index
+
+	.word	0x20003cc	// type_token_id
+	.word	0x549	// java_map_index
+
+	.word	0x20003d0	// type_token_id
+	.word	0x534	// java_map_index
+
+	.word	0x20003d2	// type_token_id
+	.word	0x535	// java_map_index
+
+	.word	0x20003d3	// type_token_id
+	.word	0x536	// java_map_index
+
+	.word	0x20003d5	// type_token_id
+	.word	0x537	// java_map_index
+
+	.word	0x20003d7	// type_token_id
+	.word	0x538	// java_map_index
+
+	.word	0x20003d9	// type_token_id
+	.word	0x543	// java_map_index
+
+	.word	0x20003db	// type_token_id
+	.word	0x53b	// java_map_index
+
+	.word	0x20003dd	// type_token_id
+	.word	0x539	// java_map_index
+
+	.word	0x20003df	// type_token_id
+	.word	0x53a	// java_map_index
+
+	.word	0x20003e1	// type_token_id
+	.word	0x53c	// java_map_index
+
+	.word	0x20003e3	// type_token_id
+	.word	0x53d	// java_map_index
+
+	.word	0x20003e5	// type_token_id
+	.word	0x53e	// java_map_index
+
+	.word	0x20003e7	// type_token_id
+	.word	0x53f	// java_map_index
+
+	.word	0x20003e9	// type_token_id
+	.word	0x540	// java_map_index
+
+	.word	0x20003eb	// type_token_id
+	.word	0x541	// java_map_index
+
+	.word	0x20003ed	// type_token_id
+	.word	0x542	// java_map_index
+
+	.word	0x2000407	// type_token_id
+	.word	0x4f7	// java_map_index
+
+	.word	0x200040a	// type_token_id
+	.word	0x500	// java_map_index
+
+	.word	0x200040c	// type_token_id
+	.word	0x505	// java_map_index
+
+	.word	0x200040f	// type_token_id
+	.word	0x4f8	// java_map_index
+
+	.word	0x2000411	// type_token_id
+	.word	0x4f9	// java_map_index
+
+	.word	0x2000412	// type_token_id
+	.word	0x4fc	// java_map_index
+
+	.word	0x2000415	// type_token_id
+	.word	0x502	// java_map_index
+
+	.word	0x2000417	// type_token_id
+	.word	0x503	// java_map_index
+
+	.word	0x2000419	// type_token_id
+	.word	0x50e	// java_map_index
+
+	.word	0x200041f	// type_token_id
+	.word	0x515	// java_map_index
+
+	.word	0x2000421	// type_token_id
+	.word	0x517	// java_map_index
+
+	.word	0x2000426	// type_token_id
+	.word	0x513	// java_map_index
+
+	.word	0x200042d	// type_token_id
+	.word	0x522	// java_map_index
+
+	.word	0x2000430	// type_token_id
+	.word	0x525	// java_map_index
+
+	.word	0x2000432	// type_token_id
+	.word	0x524	// java_map_index
+
+	.word	0x2000434	// type_token_id
+	.word	0x526	// java_map_index
+
+	.word	0x2000436	// type_token_id
+	.word	0x527	// java_map_index
+
+	.word	0x2000438	// type_token_id
+	.word	0x529	// java_map_index
+
+	.word	0x200043a	// type_token_id
+	.word	0x52a	// java_map_index
+
+	.word	0x2000443	// type_token_id
+	.word	0x4e8	// java_map_index
+
+	.word	0x2000445	// type_token_id
+	.word	0x4ed	// java_map_index
+
+	.word	0x2000447	// type_token_id
+	.word	0x4ef	// java_map_index
+
+	.word	0x200044a	// type_token_id
+	.word	0x4f3	// java_map_index
+
+	.word	0x200044c	// type_token_id
+	.word	0x4f0	// java_map_index
+
+	.word	0x200044f	// type_token_id
+	.word	0x4f2	// java_map_index
+
+	.word	0x2000452	// type_token_id
+	.word	0x4f5	// java_map_index
+
+	.size	.L.module30_managed_to_java_duplicates, 1928
+
+	.section	.rodata.module31_managed_to_java, "a", @progbits
+
+	.type	.L.module31_managed_to_java, @object
+	.p2align	2
+.L.module31_managed_to_java:
+	.word	0x200000c	// type_token_id
+	.word	0x3ab	// java_map_index
+
+	.word	0x200000e	// type_token_id
+	.word	0x3ac	// java_map_index
+
+	.size	.L.module31_managed_to_java, 16
+
+	.section	.rodata.module32_managed_to_java, "a", @progbits
+
+	.type	.L.module32_managed_to_java, @object
+	.p2align	2
+.L.module32_managed_to_java:
+	.word	0x2000112	// type_token_id
+	.word	0x496	// java_map_index
+
+	.size	.L.module32_managed_to_java, 8
+
+	.section	.rodata.module33_managed_to_java, "a", @progbits
+
+	.type	.L.module33_managed_to_java, @object
+	.p2align	2
+.L.module33_managed_to_java:
+	.word	0x2000004	// type_token_id
+	.word	0x1e3	// java_map_index
+
+	.size	.L.module33_managed_to_java, 8
+
+	.section	.rodata.module33_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module33_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module33_managed_to_java_duplicates:
+	.word	0x2000005	// type_token_id
+	.word	0x1e3	// java_map_index
+
+	.size	.L.module33_managed_to_java_duplicates, 8
+
+	.section	.rodata.module34_managed_to_java, "a", @progbits
+
+	.type	.L.module34_managed_to_java, @object
+	.p2align	2
+.L.module34_managed_to_java:
+	.word	0x2000002	// type_token_id
+	.word	0x4e3	// java_map_index
+
+	.word	0x200000b	// type_token_id
+	.word	0x4e5	// java_map_index
+
+	.word	0x200000d	// type_token_id
+	.word	0x4e4	// java_map_index
+
+	.size	.L.module34_managed_to_java, 24
+
+	.section	.rodata.module35_managed_to_java, "a", @progbits
+
+	.type	.L.module35_managed_to_java, @object
+	.p2align	2
+.L.module35_managed_to_java:
+	.word	0x200001a	// type_token_id
+	.word	0x3d4	// java_map_index
+
+	.word	0x200001c	// type_token_id
+	.word	0x3d7	// java_map_index
+
+	.word	0x2000020	// type_token_id
+	.word	0x3e7	// java_map_index
+
+	.word	0x2000021	// type_token_id
+	.word	0x3e8	// java_map_index
+
+	.word	0x2000022	// type_token_id
+	.word	0x3e9	// java_map_index
+
+	.word	0x2000023	// type_token_id
+	.word	0x404	// java_map_index
+
+	.word	0x2000024	// type_token_id
+	.word	0x405	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x40b	// java_map_index
+
+	.word	0x200002c	// type_token_id
+	.word	0x421	// java_map_index
+
+	.word	0x200002e	// type_token_id
+	.word	0x43e	// java_map_index
+
+	.word	0x2000030	// type_token_id
+	.word	0x43f	// java_map_index
+
+	.word	0x2000031	// type_token_id
+	.word	0x44f	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x3e4	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x3d8	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x3e5	// java_map_index
+
+	.word	0x2000040	// type_token_id
+	.word	0x3ff	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x400	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x47f	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x485	// java_map_index
+
+	.word	0x2000049	// type_token_id
+	.word	0x489	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x48b	// java_map_index
+
+	.word	0x200004b	// type_token_id
+	.word	0x48a	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x3e0	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x3e1	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x3e2	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x3e3	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x3e6	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x3eb	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x3f0	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x3f5	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x3fb	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x3fc	// java_map_index
+
+	.word	0x200005c	// type_token_id
+	.word	0x3fd	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x41d	// java_map_index
+
+	.word	0x200005e	// type_token_id
+	.word	0x41e	// java_map_index
+
+	.word	0x200005f	// type_token_id
+	.word	0x41f	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x425	// java_map_index
+
+	.word	0x2000065	// type_token_id
+	.word	0x428	// java_map_index
+
+	.word	0x2000067	// type_token_id
+	.word	0x429	// java_map_index
+
+	.word	0x2000069	// type_token_id
+	.word	0x42a	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x438	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x439	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x44c	// java_map_index
+
+	.word	0x2000074	// type_token_id
+	.word	0x454	// java_map_index
+
+	.word	0x2000076	// type_token_id
+	.word	0x459	// java_map_index
+
+	.word	0x2000077	// type_token_id
+	.word	0x45a	// java_map_index
+
+	.word	0x2000078	// type_token_id
+	.word	0x45b	// java_map_index
+
+	.word	0x2000079	// type_token_id
+	.word	0x473	// java_map_index
+
+	.word	0x200007a	// type_token_id
+	.word	0x474	// java_map_index
+
+	.word	0x200007b	// type_token_id
+	.word	0x475	// java_map_index
+
+	.word	0x200007d	// type_token_id
+	.word	0x477	// java_map_index
+
+	.word	0x200007e	// type_token_id
+	.word	0x478	// java_map_index
+
+	.word	0x200007f	// type_token_id
+	.word	0x479	// java_map_index
+
+	.word	0x2000080	// type_token_id
+	.word	0x47c	// java_map_index
+
+	.word	0x2000081	// type_token_id
+	.word	0x47d	// java_map_index
+
+	.word	0x2000082	// type_token_id
+	.word	0x484	// java_map_index
+
+	.word	0x2000083	// type_token_id
+	.word	0x486	// java_map_index
+
+	.word	0x200008a	// type_token_id
+	.word	0x3f3	// java_map_index
+
+	.word	0x200008b	// type_token_id
+	.word	0x3f4	// java_map_index
+
+	.word	0x2000094	// type_token_id
+	.word	0x3fe	// java_map_index
+
+	.word	0x20000ac	// type_token_id
+	.word	0x40c	// java_map_index
+
+	.word	0x20000af	// type_token_id
+	.word	0x418	// java_map_index
+
+	.word	0x20000b0	// type_token_id
+	.word	0x419	// java_map_index
+
+	.word	0x20000b2	// type_token_id
+	.word	0x41a	// java_map_index
+
+	.word	0x20000b4	// type_token_id
+	.word	0x41b	// java_map_index
+
+	.word	0x20000b8	// type_token_id
+	.word	0x41c	// java_map_index
+
+	.word	0x20000bf	// type_token_id
+	.word	0x422	// java_map_index
+
+	.word	0x20000c0	// type_token_id
+	.word	0x423	// java_map_index
+
+	.word	0x20000c4	// type_token_id
+	.word	0x426	// java_map_index
+
+	.word	0x20000c5	// type_token_id
+	.word	0x427	// java_map_index
+
+	.word	0x20000d4	// type_token_id
+	.word	0x436	// java_map_index
+
+	.word	0x20000db	// type_token_id
+	.word	0x444	// java_map_index
+
+	.word	0x20000de	// type_token_id
+	.word	0x447	// java_map_index
+
+	.word	0x20000ea	// type_token_id
+	.word	0x446	// java_map_index
+
+	.word	0x20000f5	// type_token_id
+	.word	0x44d	// java_map_index
+
+	.word	0x20000f8	// type_token_id
+	.word	0x3d5	// java_map_index
+
+	.word	0x20000f9	// type_token_id
+	.word	0x3d6	// java_map_index
+
+	.word	0x20000fa	// type_token_id
+	.word	0x3d3	// java_map_index
+
+	.word	0x20000fe	// type_token_id
+	.word	0x40a	// java_map_index
+
+	.word	0x2000106	// type_token_id
+	.word	0x3d9	// java_map_index
+
+	.word	0x200010d	// type_token_id
+	.word	0x3da	// java_map_index
+
+	.word	0x200010e	// type_token_id
+	.word	0x3db	// java_map_index
+
+	.word	0x200010f	// type_token_id
+	.word	0x3dc	// java_map_index
+
+	.word	0x2000111	// type_token_id
+	.word	0x3dd	// java_map_index
+
+	.word	0x2000113	// type_token_id
+	.word	0x3de	// java_map_index
+
+	.word	0x2000114	// type_token_id
+	.word	0x3df	// java_map_index
+
+	.word	0x2000115	// type_token_id
+	.word	0x3ea	// java_map_index
+
+	.word	0x2000116	// type_token_id
+	.word	0x3ec	// java_map_index
+
+	.word	0x2000117	// type_token_id
+	.word	0x3ed	// java_map_index
+
+	.word	0x2000118	// type_token_id
+	.word	0x3ee	// java_map_index
+
+	.word	0x2000119	// type_token_id
+	.word	0x3ef	// java_map_index
+
+	.word	0x200011a	// type_token_id
+	.word	0x3f2	// java_map_index
+
+	.word	0x200011c	// type_token_id
+	.word	0x3f1	// java_map_index
+
+	.word	0x200011e	// type_token_id
+	.word	0x3f7	// java_map_index
+
+	.word	0x200011f	// type_token_id
+	.word	0x3f8	// java_map_index
+
+	.word	0x2000121	// type_token_id
+	.word	0x402	// java_map_index
+
+	.word	0x2000122	// type_token_id
+	.word	0x403	// java_map_index
+
+	.word	0x2000125	// type_token_id
+	.word	0x406	// java_map_index
+
+	.word	0x2000129	// type_token_id
+	.word	0x407	// java_map_index
+
+	.word	0x200012a	// type_token_id
+	.word	0x409	// java_map_index
+
+	.word	0x200012b	// type_token_id
+	.word	0x408	// java_map_index
+
+	.word	0x200012c	// type_token_id
+	.word	0x40d	// java_map_index
+
+	.word	0x200012d	// type_token_id
+	.word	0x40e	// java_map_index
+
+	.word	0x2000130	// type_token_id
+	.word	0x401	// java_map_index
+
+	.word	0x2000131	// type_token_id
+	.word	0x3f6	// java_map_index
+
+	.word	0x2000132	// type_token_id
+	.word	0x40f	// java_map_index
+
+	.word	0x2000133	// type_token_id
+	.word	0x410	// java_map_index
+
+	.word	0x2000134	// type_token_id
+	.word	0x411	// java_map_index
+
+	.word	0x2000135	// type_token_id
+	.word	0x412	// java_map_index
+
+	.word	0x2000138	// type_token_id
+	.word	0x413	// java_map_index
+
+	.word	0x200013a	// type_token_id
+	.word	0x414	// java_map_index
+
+	.word	0x200013b	// type_token_id
+	.word	0x415	// java_map_index
+
+	.word	0x200013c	// type_token_id
+	.word	0x416	// java_map_index
+
+	.word	0x200013d	// type_token_id
+	.word	0x417	// java_map_index
+
+	.word	0x200013e	// type_token_id
+	.word	0x420	// java_map_index
+
+	.word	0x200014a	// type_token_id
+	.word	0x424	// java_map_index
+
+	.word	0x200015d	// type_token_id
+	.word	0x42b	// java_map_index
+
+	.word	0x200015e	// type_token_id
+	.word	0x42e	// java_map_index
+
+	.word	0x2000160	// type_token_id
+	.word	0x42f	// java_map_index
+
+	.word	0x2000161	// type_token_id
+	.word	0x430	// java_map_index
+
+	.word	0x2000162	// type_token_id
+	.word	0x432	// java_map_index
+
+	.word	0x2000163	// type_token_id
+	.word	0x431	// java_map_index
+
+	.word	0x2000166	// type_token_id
+	.word	0x433	// java_map_index
+
+	.word	0x2000167	// type_token_id
+	.word	0x434	// java_map_index
+
+	.word	0x2000168	// type_token_id
+	.word	0x435	// java_map_index
+
+	.word	0x200016b	// type_token_id
+	.word	0x437	// java_map_index
+
+	.word	0x200016e	// type_token_id
+	.word	0x43a	// java_map_index
+
+	.word	0x200016f	// type_token_id
+	.word	0x43b	// java_map_index
+
+	.word	0x2000170	// type_token_id
+	.word	0x43c	// java_map_index
+
+	.word	0x2000171	// type_token_id
+	.word	0x43d	// java_map_index
+
+	.word	0x2000172	// type_token_id
+	.word	0x440	// java_map_index
+
+	.word	0x2000174	// type_token_id
+	.word	0x443	// java_map_index
+
+	.word	0x2000175	// type_token_id
+	.word	0x445	// java_map_index
+
+	.word	0x2000177	// type_token_id
+	.word	0x44e	// java_map_index
+
+	.word	0x2000178	// type_token_id
+	.word	0x453	// java_map_index
+
+	.word	0x2000179	// type_token_id
+	.word	0x456	// java_map_index
+
+	.word	0x200017a	// type_token_id
+	.word	0x457	// java_map_index
+
+	.word	0x200017e	// type_token_id
+	.word	0x458	// java_map_index
+
+	.word	0x2000181	// type_token_id
+	.word	0x45e	// java_map_index
+
+	.word	0x2000182	// type_token_id
+	.word	0x45f	// java_map_index
+
+	.word	0x2000183	// type_token_id
+	.word	0x460	// java_map_index
+
+	.word	0x2000184	// type_token_id
+	.word	0x462	// java_map_index
+
+	.word	0x2000186	// type_token_id
+	.word	0x461	// java_map_index
+
+	.word	0x2000187	// type_token_id
+	.word	0x463	// java_map_index
+
+	.word	0x2000188	// type_token_id
+	.word	0x464	// java_map_index
+
+	.word	0x2000189	// type_token_id
+	.word	0x465	// java_map_index
+
+	.word	0x200018b	// type_token_id
+	.word	0x452	// java_map_index
+
+	.word	0x200018c	// type_token_id
+	.word	0x455	// java_map_index
+
+	.word	0x200018d	// type_token_id
+	.word	0x466	// java_map_index
+
+	.word	0x200018e	// type_token_id
+	.word	0x467	// java_map_index
+
+	.word	0x2000193	// type_token_id
+	.word	0x468	// java_map_index
+
+	.word	0x2000195	// type_token_id
+	.word	0x469	// java_map_index
+
+	.word	0x2000197	// type_token_id
+	.word	0x46a	// java_map_index
+
+	.word	0x2000199	// type_token_id
+	.word	0x46b	// java_map_index
+
+	.word	0x200019a	// type_token_id
+	.word	0x46f	// java_map_index
+
+	.word	0x200019d	// type_token_id
+	.word	0x46c	// java_map_index
+
+	.word	0x200019e	// type_token_id
+	.word	0x46d	// java_map_index
+
+	.word	0x200019f	// type_token_id
+	.word	0x46e	// java_map_index
+
+	.word	0x20001a0	// type_token_id
+	.word	0x470	// java_map_index
+
+	.word	0x20001a4	// type_token_id
+	.word	0x471	// java_map_index
+
+	.word	0x20001a5	// type_token_id
+	.word	0x472	// java_map_index
+
+	.word	0x20001ab	// type_token_id
+	.word	0x476	// java_map_index
+
+	.word	0x20001ac	// type_token_id
+	.word	0x47a	// java_map_index
+
+	.word	0x20001af	// type_token_id
+	.word	0x47e	// java_map_index
+
+	.word	0x20001b2	// type_token_id
+	.word	0x480	// java_map_index
+
+	.word	0x20001b3	// type_token_id
+	.word	0x481	// java_map_index
+
+	.word	0x20001b4	// type_token_id
+	.word	0x482	// java_map_index
+
+	.word	0x20001b5	// type_token_id
+	.word	0x483	// java_map_index
+
+	.word	0x20001b6	// type_token_id
+	.word	0x488	// java_map_index
+
+	.word	0x20001b7	// type_token_id
+	.word	0x487	// java_map_index
+
+	.word	0x20001bb	// type_token_id
+	.word	0x490	// java_map_index
+
+	.word	0x20001bc	// type_token_id
+	.word	0x491	// java_map_index
+
+	.word	0x20001c7	// type_token_id
+	.word	0x3f9	// java_map_index
+
+	.word	0x20001c8	// type_token_id
+	.word	0x3fa	// java_map_index
+
+	.word	0x20001c9	// type_token_id
+	.word	0x42c	// java_map_index
+
+	.word	0x20001ca	// type_token_id
+	.word	0x42d	// java_map_index
+
+	.word	0x20001cb	// type_token_id
+	.word	0x441	// java_map_index
+
+	.word	0x20001cc	// type_token_id
+	.word	0x442	// java_map_index
+
+	.word	0x20001cd	// type_token_id
+	.word	0x448	// java_map_index
+
+	.word	0x20001ce	// type_token_id
+	.word	0x449	// java_map_index
+
+	.word	0x20001cf	// type_token_id
+	.word	0x44a	// java_map_index
+
+	.word	0x20001d0	// type_token_id
+	.word	0x44b	// java_map_index
+
+	.word	0x20001d1	// type_token_id
+	.word	0x451	// java_map_index
+
+	.word	0x20001d2	// type_token_id
+	.word	0x450	// java_map_index
+
+	.word	0x20001d3	// type_token_id
+	.word	0x45c	// java_map_index
+
+	.word	0x20001d4	// type_token_id
+	.word	0x45d	// java_map_index
+
+	.word	0x20001d6	// type_token_id
+	.word	0x47b	// java_map_index
+
+	.word	0x20001e0	// type_token_id
+	.word	0x48c	// java_map_index
+
+	.word	0x20001e1	// type_token_id
+	.word	0x48d	// java_map_index
+
+	.word	0x20001e5	// type_token_id
+	.word	0x48e	// java_map_index
+
+	.word	0x20001e8	// type_token_id
+	.word	0x48f	// java_map_index
+
+	.word	0x20001fb	// type_token_id
+	.word	0x4df	// java_map_index
+
+	.word	0x20001fe	// type_token_id
+	.word	0x4e0	// java_map_index
+
+	.word	0x2000204	// type_token_id
+	.word	0x4e1	// java_map_index
+
+	.word	0x2000205	// type_token_id
+	.word	0x4e2	// java_map_index
+
+	.word	0x2000208	// type_token_id
+	.word	0x3bd	// java_map_index
+
+	.word	0x2000209	// type_token_id
+	.word	0x3be	// java_map_index
+
+	.word	0x200020a	// type_token_id
+	.word	0x49a	// java_map_index
+
+	.word	0x200020b	// type_token_id
+	.word	0x49b	// java_map_index
+
+	.word	0x200020c	// type_token_id
+	.word	0x4a0	// java_map_index
+
+	.word	0x200020d	// type_token_id
+	.word	0x49c	// java_map_index
+
+	.word	0x200020e	// type_token_id
+	.word	0x49d	// java_map_index
+
+	.word	0x200020f	// type_token_id
+	.word	0x49e	// java_map_index
+
+	.word	0x2000210	// type_token_id
+	.word	0x49f	// java_map_index
+
+	.word	0x2000212	// type_token_id
+	.word	0x4a1	// java_map_index
+
+	.word	0x2000213	// type_token_id
+	.word	0x4a2	// java_map_index
+
+	.word	0x2000214	// type_token_id
+	.word	0x4a3	// java_map_index
+
+	.word	0x2000215	// type_token_id
+	.word	0x4a4	// java_map_index
+
+	.word	0x200021b	// type_token_id
+	.word	0x4a6	// java_map_index
+
+	.word	0x200021e	// type_token_id
+	.word	0x4a5	// java_map_index
+
+	.word	0x2000220	// type_token_id
+	.word	0x4a7	// java_map_index
+
+	.word	0x2000225	// type_token_id
+	.word	0x4a8	// java_map_index
+
+	.word	0x2000226	// type_token_id
+	.word	0x4a9	// java_map_index
+
+	.word	0x2000227	// type_token_id
+	.word	0x4aa	// java_map_index
+
+	.word	0x200022a	// type_token_id
+	.word	0x4ab	// java_map_index
+
+	.size	.L.module35_managed_to_java, 1720
+
+	.section	.rodata.module36_managed_to_java, "a", @progbits
+
+	.type	.L.module36_managed_to_java, @object
+	.p2align	2
+.L.module36_managed_to_java:
+	.word	0x2000036	// type_token_id
+	.word	0x178	// java_map_index
+
+	.word	0x2000037	// type_token_id
+	.word	0x16d	// java_map_index
+
+	.word	0x2000038	// type_token_id
+	.word	0x16e	// java_map_index
+
+	.word	0x2000039	// type_token_id
+	.word	0x170	// java_map_index
+
+	.word	0x200003a	// type_token_id
+	.word	0x16f	// java_map_index
+
+	.word	0x200003b	// type_token_id
+	.word	0x171	// java_map_index
+
+	.word	0x200003c	// type_token_id
+	.word	0x164	// java_map_index
+
+	.word	0x200003d	// type_token_id
+	.word	0x165	// java_map_index
+
+	.word	0x200003e	// type_token_id
+	.word	0x166	// java_map_index
+
+	.word	0x2000041	// type_token_id
+	.word	0x72f	// java_map_index
+
+	.word	0x2000042	// type_token_id
+	.word	0x167	// java_map_index
+
+	.word	0x2000044	// type_token_id
+	.word	0x168	// java_map_index
+
+	.word	0x2000046	// type_token_id
+	.word	0x169	// java_map_index
+
+	.word	0x200004b	// type_token_id
+	.word	0x16a	// java_map_index
+
+	.word	0x200004c	// type_token_id
+	.word	0x16b	// java_map_index
+
+	.word	0x200004e	// type_token_id
+	.word	0x16c	// java_map_index
+
+	.word	0x2000050	// type_token_id
+	.word	0x172	// java_map_index
+
+	.word	0x2000051	// type_token_id
+	.word	0x174	// java_map_index
+
+	.word	0x2000053	// type_token_id
+	.word	0x175	// java_map_index
+
+	.word	0x2000054	// type_token_id
+	.word	0x173	// java_map_index
+
+	.word	0x2000056	// type_token_id
+	.word	0x18e	// java_map_index
+
+	.word	0x2000057	// type_token_id
+	.word	0x191	// java_map_index
+
+	.word	0x2000059	// type_token_id
+	.word	0x18f	// java_map_index
+
+	.word	0x200005a	// type_token_id
+	.word	0x190	// java_map_index
+
+	.word	0x200005d	// type_token_id
+	.word	0x730	// java_map_index
+
+	.word	0x2000060	// type_token_id
+	.word	0x183	// java_map_index
+
+	.word	0x2000061	// type_token_id
+	.word	0x184	// java_map_index
+
+	.word	0x2000062	// type_token_id
+	.word	0x185	// java_map_index
+
+	.word	0x2000063	// type_token_id
+	.word	0x186	// java_map_index
+
+	.word	0x2000064	// type_token_id
+	.word	0x187	// java_map_index
+
+	.word	0x2000065	// type_token_id
+	.word	0x188	// java_map_index
+
+	.word	0x2000066	// type_token_id
+	.word	0x189	// java_map_index
+
+	.word	0x2000068	// type_token_id
+	.word	0x18a	// java_map_index
+
+	.word	0x2000069	// type_token_id
+	.word	0x18b	// java_map_index
+
+	.word	0x200006a	// type_token_id
+	.word	0x18c	// java_map_index
+
+	.word	0x200006b	// type_token_id
+	.word	0x18d	// java_map_index
+
+	.word	0x200006c	// type_token_id
+	.word	0x179	// java_map_index
+
+	.word	0x200006d	// type_token_id
+	.word	0x17a	// java_map_index
+
+	.word	0x2000070	// type_token_id
+	.word	0x17b	// java_map_index
+
+	.word	0x2000071	// type_token_id
+	.word	0x17c	// java_map_index
+
+	.word	0x2000073	// type_token_id
+	.word	0x17f	// java_map_index
+
+	.word	0x2000075	// type_token_id
+	.word	0x17e	// java_map_index
+
+	.word	0x2000077	// type_token_id
+	.word	0x181	// java_map_index
+
+	.word	0x2000079	// type_token_id
+	.word	0x180	// java_map_index
+
+	.word	0x200007b	// type_token_id
+	.word	0x17d	// java_map_index
+
+	.word	0x200007c	// type_token_id
+	.word	0x182	// java_map_index
+
+	.size	.L.module36_managed_to_java, 368
+
+	.section	.rodata.module36_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module36_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module36_managed_to_java_duplicates:
+	.word	0x200003f	// type_token_id
+	.word	0x166	// java_map_index
+
+	.word	0x2000043	// type_token_id
+	.word	0x167	// java_map_index
+
+	.word	0x2000045	// type_token_id
+	.word	0x168	// java_map_index
+
+	.word	0x2000047	// type_token_id
+	.word	0x169	// java_map_index
+
+	.word	0x200004a	// type_token_id
+	.word	0x164	// java_map_index
+
+	.word	0x200004d	// type_token_id
+	.word	0x16b	// java_map_index
+
+	.word	0x200004f	// type_token_id
+	.word	0x16c	// java_map_index
+
+	.word	0x2000052	// type_token_id
+	.word	0x174	// java_map_index
+
+	.word	0x2000055	// type_token_id
+	.word	0x173	// java_map_index
+
+	.word	0x200005b	// type_token_id
+	.word	0x190	// java_map_index
+
+	.word	0x2000067	// type_token_id
+	.word	0x189	// java_map_index
+
+	.word	0x200006e	// type_token_id
+	.word	0x17a	// java_map_index
+
+	.word	0x200006f	// type_token_id
+	.word	0x179	// java_map_index
+
+	.word	0x2000072	// type_token_id
+	.word	0x17c	// java_map_index
+
+	.word	0x2000074	// type_token_id
+	.word	0x17f	// java_map_index
+
+	.word	0x2000076	// type_token_id
+	.word	0x17e	// java_map_index
+
+	.word	0x2000078	// type_token_id
+	.word	0x181	// java_map_index
+
+	.word	0x200007a	// type_token_id
+	.word	0x180	// java_map_index
+
+	.size	.L.module36_managed_to_java_duplicates, 144
+
+	.section	.rodata.module37_managed_to_java, "a", @progbits
+
+	.type	.L.module37_managed_to_java, @object
+	.p2align	2
+.L.module37_managed_to_java:
+	.word	0x2000009	// type_token_id
+	.word	0x391	// java_map_index
+
+	.size	.L.module37_managed_to_java, 8
+
+	.section	.rodata.module37_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module37_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module37_managed_to_java_duplicates:
+	.word	0x200000a	// type_token_id
+	.word	0x391	// java_map_index
+
+	.size	.L.module37_managed_to_java_duplicates, 8
+
+	.section	.rodata.module38_managed_to_java, "a", @progbits
+
+	.type	.L.module38_managed_to_java, @object
+	.p2align	2
+.L.module38_managed_to_java:
+	.word	0x2000027	// type_token_id
+	.word	0x193	// java_map_index
+
+	.word	0x2000028	// type_token_id
+	.word	0x194	// java_map_index
+
+	.word	0x200002a	// type_token_id
+	.word	0x195	// java_map_index
+
+	.word	0x200002c	// type_token_id
+	.word	0x196	// java_map_index
+
+	.size	.L.module38_managed_to_java, 32
+
+	.section	.rodata.module38_managed_to_java_duplicates, "a", @progbits
+
+	.type	.L.module38_managed_to_java_duplicates, @object
+	.p2align	2
+.L.module38_managed_to_java_duplicates:
+	.word	0x2000029	// type_token_id
+	.word	0x194	// java_map_index
+
+	.word	0x200002b	// type_token_id
+	.word	0x195	// java_map_index
+
+	.size	.L.module38_managed_to_java_duplicates, 16
