@@ -11,7 +11,7 @@
         "projectName": "Entities",
         "projectPath": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\timur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timur\\AppData\\Roaming\\NuGet\\NuGet.Config",

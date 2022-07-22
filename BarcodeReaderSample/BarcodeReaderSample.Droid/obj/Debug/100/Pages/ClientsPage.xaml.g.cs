@@ -13,7 +13,7 @@
 namespace BarcodeReaderSample.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\BarcodeReaderSample\\BarcodeReader" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\BarcodeReaderSample\\BarcodeReader" +
         "Sample\\Pages\\ClientsPage.xaml")]
     public partial class ClientsPage : global::Xamarin.Forms.ContentPage {
         
