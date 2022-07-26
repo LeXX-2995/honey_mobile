@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TppgYB+0OEkt59wMLhzwkGrhiJ5dfnRD0DnNMqAvT7pnPOa6VBPOE7vxvsmM5ZrP0qUjGZ5onrd7NYE20CIYwQ==",
+  "dgSpecHash": "+8bwxt17McU3KCGafeEubDCWlwNB9FUPpgJNYHt2KGoecGlojchEUi7vouzv+grcaYS8kBK8CwIfHbPLPFl3pw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj",
+  "projectFilePath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\MIgrationCreator\\MIgrationCreator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timur\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\timur\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
