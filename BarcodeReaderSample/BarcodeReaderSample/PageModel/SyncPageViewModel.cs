@@ -267,7 +267,7 @@ namespace BarcodeReaderSample.PageModel
                                                 $"Загружено кодов {count} из {getCodesMapping.Value.Count}";
                                         }, null);
 
-                                        var addCodeMapping = DbService.AddCodeMappings(new List<CodesMapping> { codesMapping })
+                                        var addCodeMapping = DbService.AddCodeMappings(new List<CodesMapping> { codesMapping });
                                         if (addCodeMapping.Result != OperationStatus.Success)
                                         {
                                             _mUiContext.Post(async o =>
