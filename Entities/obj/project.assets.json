@@ -1060,6 +1060,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/C5ky6efKUbFgRxZEAtfBwat4M6DS4nyZ9A8za2lET6KemdP4yN/api": {},
         "https://nuget.devexpress.com/nFHalUlsklwd7fa998HnCgwG3MKWB8BTu8IWkpxf6hls5uz8Rc/api": {}
       },
       "frameworks": {

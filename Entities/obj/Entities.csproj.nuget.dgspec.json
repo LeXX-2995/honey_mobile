@@ -11,7 +11,7 @@
         "projectName": "Entities",
         "projectPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\timur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timur\\source\\repos\\BarcodeReaderSample\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -23,6 +23,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/C5ky6efKUbFgRxZEAtfBwat4M6DS4nyZ9A8za2lET6KemdP4yN/api": {},
           "https://nuget.devexpress.com/nFHalUlsklwd7fa998HnCgwG3MKWB8BTu8IWkpxf6hls5uz8Rc/api": {}
         },
         "frameworks": {
