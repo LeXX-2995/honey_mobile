@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0ZxpGOMae8ufNzQ9FlS95bky0jy6HlAbePHJjT0UmRx9YPDJrV+532BjRVTxYw7PYADqbpWlMCUZvVniAyhdvw==",
+  "dgSpecHash": "FqTOLZUvbRaSEGcEO6wfCyCbQNTJ7kfgzKN0JKbr9g6TpzJKEmol3Ltkz417xvfIv04jTVHgeWpUJ1F3gizAeA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\timur\\Source\\Repos\\Sanjar1177\\BarcodeReaderSample\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timur\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\timur\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

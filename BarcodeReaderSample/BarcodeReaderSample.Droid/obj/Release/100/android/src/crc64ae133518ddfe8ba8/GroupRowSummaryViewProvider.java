@@ -18,8 +18,9 @@ public class GroupRowSummaryViewProvider
 	public GroupRowSummaryViewProvider ()
 	{
 		super ();
-		if (getClass () == GroupRowSummaryViewProvider.class)
+		if (getClass () == GroupRowSummaryViewProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.GroupRowSummaryViewProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

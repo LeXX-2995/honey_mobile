@@ -29,8 +29,9 @@ public class TabViewDataProvider
 	public TabViewDataProvider ()
 	{
 		super ();
-		if (getClass () == TabViewDataProvider.class)
+		if (getClass () == TabViewDataProvider.class) {
 			mono.android.TypeManager.Activate ("Navigation.XF.Droid.TabViewDataProvider, DevExpress.XamarinForms.Navigation.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

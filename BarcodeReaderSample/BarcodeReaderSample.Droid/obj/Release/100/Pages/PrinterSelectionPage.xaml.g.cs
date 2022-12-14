@@ -13,8 +13,8 @@
 namespace BarcodeReaderSample.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\timur\\Source\\Repos\\BarcodeReaderSample\\BarcodeReaderSample\\BarcodeReader" +
-        "Sample\\Pages\\PrinterSelectionPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\timur\\Source\\Repos\\Sanjar1177\\BarcodeReaderSample\\BarcodeReaderSample\\Ba" +
+        "rcodeReaderSample\\Pages\\PrinterSelectionPage.xaml")]
     public partial class PrinterSelectionPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

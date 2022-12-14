@@ -27,8 +27,9 @@ public class XamarinEditViewProvider
 	public XamarinEditViewProvider ()
 	{
 		super ();
-		if (getClass () == XamarinEditViewProvider.class)
+		if (getClass () == XamarinEditViewProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.EditViewProviders.XamarinEditViewProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

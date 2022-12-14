@@ -23,8 +23,9 @@ public abstract class GroupRowValueViewProviderBase
 	public GroupRowValueViewProviderBase ()
 	{
 		super ();
-		if (getClass () == GroupRowValueViewProviderBase.class)
+		if (getClass () == GroupRowValueViewProviderBase.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.GroupRowValueViewProviderBase, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

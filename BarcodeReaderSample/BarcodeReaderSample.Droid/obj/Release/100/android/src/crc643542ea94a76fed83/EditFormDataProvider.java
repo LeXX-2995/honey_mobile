@@ -28,8 +28,9 @@ public class EditFormDataProvider
 	public EditFormDataProvider ()
 	{
 		super ();
-		if (getClass () == EditFormDataProvider.class)
+		if (getClass () == EditFormDataProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.NativeBridge.EditFormDataProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

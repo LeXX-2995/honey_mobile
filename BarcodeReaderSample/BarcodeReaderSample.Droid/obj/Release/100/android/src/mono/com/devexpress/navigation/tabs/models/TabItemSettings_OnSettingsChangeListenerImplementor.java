@@ -23,8 +23,9 @@ public class TabItemSettings_OnSettingsChangeListenerImplementor
 	public TabItemSettings_OnSettingsChangeListenerImplementor ()
 	{
 		super ();
-		if (getClass () == TabItemSettings_OnSettingsChangeListenerImplementor.class)
+		if (getClass () == TabItemSettings_OnSettingsChangeListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Com.Devexpress.Navigation.Tabs.Models.TabItemSettings+IOnSettingsChangeListenerImplementor, DevExpress.Xamarin.Android.Navigation", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

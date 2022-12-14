@@ -28,8 +28,9 @@ public class DataProvider
 	public DataProvider ()
 	{
 		super ();
-		if (getClass () == DataProvider.class)
+		if (getClass () == DataProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.NativeBridge.DataProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

@@ -20,8 +20,9 @@ public class SwipeItemViewProvider
 	public SwipeItemViewProvider ()
 	{
 		super ();
-		if (getClass () == SwipeItemViewProvider.class)
+		if (getClass () == SwipeItemViewProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.SwipeItemViewProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

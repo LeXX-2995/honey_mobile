@@ -18,24 +18,27 @@ public class DrawerViewRenderer
 	public DrawerViewRenderer (android.content.Context p0)
 	{
 		super (p0);
-		if (getClass () == DrawerViewRenderer.class)
+		if (getClass () == DrawerViewRenderer.class) {
 			mono.android.TypeManager.Activate ("Navigation.XF.Droid.DrawerView.DrawerViewRenderer, DevExpress.XamarinForms.Navigation.Android", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 
 	public DrawerViewRenderer (android.content.Context p0, android.util.AttributeSet p1)
 	{
 		super (p0, p1);
-		if (getClass () == DrawerViewRenderer.class)
+		if (getClass () == DrawerViewRenderer.class) {
 			mono.android.TypeManager.Activate ("Navigation.XF.Droid.DrawerView.DrawerViewRenderer, DevExpress.XamarinForms.Navigation.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+		}
 	}
 
 
 	public DrawerViewRenderer (android.content.Context p0, android.util.AttributeSet p1, int p2)
 	{
 		super (p0, p1, p2);
-		if (getClass () == DrawerViewRenderer.class)
+		if (getClass () == DrawerViewRenderer.class) {
 			mono.android.TypeManager.Activate ("Navigation.XF.Droid.DrawerView.DrawerViewRenderer, DevExpress.XamarinForms.Navigation.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2 });
+		}
 	}
 
 	private java.util.ArrayList refList;

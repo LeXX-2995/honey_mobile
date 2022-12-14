@@ -18,8 +18,9 @@ public class ViewProviderBase
 	public ViewProviderBase ()
 	{
 		super ();
-		if (getClass () == ViewProviderBase.class)
+		if (getClass () == ViewProviderBase.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.ViewProviderBase, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

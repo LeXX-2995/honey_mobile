@@ -27,8 +27,9 @@ public class TabControlAppearance_OnAppearancePropertyChangeListenerImplementor
 	public TabControlAppearance_OnAppearancePropertyChangeListenerImplementor ()
 	{
 		super ();
-		if (getClass () == TabControlAppearance_OnAppearancePropertyChangeListenerImplementor.class)
+		if (getClass () == TabControlAppearance_OnAppearancePropertyChangeListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Com.Devexpress.Navigation.Tabcontrol.TabControlAppearance+IOnAppearancePropertyChangeListenerImplementor, DevExpress.Xamarin.Android.Navigation", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

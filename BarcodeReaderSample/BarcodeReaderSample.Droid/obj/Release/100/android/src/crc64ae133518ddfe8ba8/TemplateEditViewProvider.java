@@ -27,8 +27,9 @@ public class TemplateEditViewProvider
 	public TemplateEditViewProvider ()
 	{
 		super ();
-		if (getClass () == TemplateEditViewProvider.class)
+		if (getClass () == TemplateEditViewProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.TemplateEditViewProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

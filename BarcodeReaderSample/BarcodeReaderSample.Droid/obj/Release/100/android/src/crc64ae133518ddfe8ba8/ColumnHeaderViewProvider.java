@@ -20,8 +20,9 @@ public class ColumnHeaderViewProvider
 	public ColumnHeaderViewProvider ()
 	{
 		super ();
-		if (getClass () == ColumnHeaderViewProvider.class)
+		if (getClass () == ColumnHeaderViewProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.ColumnHeaderViewProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

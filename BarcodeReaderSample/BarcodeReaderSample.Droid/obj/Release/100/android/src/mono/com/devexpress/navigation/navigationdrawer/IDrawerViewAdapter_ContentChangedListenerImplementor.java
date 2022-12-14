@@ -20,8 +20,9 @@ public class IDrawerViewAdapter_ContentChangedListenerImplementor
 	public IDrawerViewAdapter_ContentChangedListenerImplementor ()
 	{
 		super ();
-		if (getClass () == IDrawerViewAdapter_ContentChangedListenerImplementor.class)
+		if (getClass () == IDrawerViewAdapter_ContentChangedListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Com.Devexpress.Navigation.Navigationdrawer.IDrawerViewAdapterContentChangedListenerImplementor, DevExpress.Xamarin.Android.Navigation", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

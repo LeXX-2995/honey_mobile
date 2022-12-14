@@ -20,8 +20,9 @@ public class CustomAppearanceProvider
 	public CustomAppearanceProvider ()
 	{
 		super ();
-		if (getClass () == CustomAppearanceProvider.class)
+		if (getClass () == CustomAppearanceProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.EditViewProviders.CustomAppearanceProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

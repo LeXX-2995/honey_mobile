@@ -20,8 +20,9 @@ public class TabControl_OnTabItemSelectedListenerImplementor
 	public TabControl_OnTabItemSelectedListenerImplementor ()
 	{
 		super ();
-		if (getClass () == TabControl_OnTabItemSelectedListenerImplementor.class)
+		if (getClass () == TabControl_OnTabItemSelectedListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Com.Devexpress.Navigation.TabControl+IOnTabItemSelectedListenerImplementor, DevExpress.Xamarin.Android.Navigation", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

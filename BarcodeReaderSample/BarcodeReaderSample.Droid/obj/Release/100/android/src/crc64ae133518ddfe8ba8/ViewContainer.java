@@ -20,24 +20,27 @@ public class ViewContainer
 	public ViewContainer (android.content.Context p0)
 	{
 		super (p0);
-		if (getClass () == ViewContainer.class)
+		if (getClass () == ViewContainer.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.ViewContainer, DevExpress.XamarinForms.Grid.Android", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 
 	public ViewContainer (android.content.Context p0, android.util.AttributeSet p1)
 	{
 		super (p0, p1);
-		if (getClass () == ViewContainer.class)
+		if (getClass () == ViewContainer.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.ViewContainer, DevExpress.XamarinForms.Grid.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+		}
 	}
 
 
 	public ViewContainer (android.content.Context p0, android.util.AttributeSet p1, int p2)
 	{
 		super (p0, p1, p2);
-		if (getClass () == ViewContainer.class)
+		if (getClass () == ViewContainer.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.ViewContainer, DevExpress.XamarinForms.Grid.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2 });
+		}
 	}
 
 

@@ -20,8 +20,9 @@ public class TabControl_OnTabItemTappedListenerImplementor
 	public TabControl_OnTabItemTappedListenerImplementor ()
 	{
 		super ();
-		if (getClass () == TabControl_OnTabItemTappedListenerImplementor.class)
+		if (getClass () == TabControl_OnTabItemTappedListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Com.Devexpress.Navigation.TabControl+IOnTabItemTappedListenerImplementor, DevExpress.Xamarin.Android.Navigation", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

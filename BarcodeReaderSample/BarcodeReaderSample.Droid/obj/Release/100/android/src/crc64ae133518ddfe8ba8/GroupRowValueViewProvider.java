@@ -18,8 +18,9 @@ public class GroupRowValueViewProvider
 	public GroupRowValueViewProvider ()
 	{
 		super ();
-		if (getClass () == GroupRowValueViewProvider.class)
+		if (getClass () == GroupRowValueViewProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.GroupRowValueViewProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

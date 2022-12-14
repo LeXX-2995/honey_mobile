@@ -20,8 +20,9 @@ public class DrawerView_OnDrawerStateChangedListenerImplementor
 	public DrawerView_OnDrawerStateChangedListenerImplementor ()
 	{
 		super ();
-		if (getClass () == DrawerView_OnDrawerStateChangedListenerImplementor.class)
+		if (getClass () == DrawerView_OnDrawerStateChangedListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Com.Devexpress.Navigation.DrawerView+IOnDrawerStateChangedListenerImplementor, DevExpress.Xamarin.Android.Navigation", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

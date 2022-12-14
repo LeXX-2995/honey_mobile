@@ -20,8 +20,9 @@ public class Padding_OnPaddingChangeListenerImplementor
 	public Padding_OnPaddingChangeListenerImplementor ()
 	{
 		super ();
-		if (getClass () == Padding_OnPaddingChangeListenerImplementor.class)
+		if (getClass () == Padding_OnPaddingChangeListenerImplementor.class) {
 			mono.android.TypeManager.Activate ("Com.Devexpress.Navigation.Tabs.Models.Padding+IOnPaddingChangeListenerImplementor, DevExpress.Xamarin.Android.Navigation", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

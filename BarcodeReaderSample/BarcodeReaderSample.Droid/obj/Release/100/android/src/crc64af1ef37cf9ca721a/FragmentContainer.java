@@ -21,16 +21,18 @@ public class FragmentContainer
 	public FragmentContainer ()
 	{
 		super ();
-		if (getClass () == FragmentContainer.class)
+		if (getClass () == FragmentContainer.class) {
 			mono.android.TypeManager.Activate ("Navigation.XF.Droid.FragmentContainer, DevExpress.XamarinForms.Navigation.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 
 	public FragmentContainer (int p0)
 	{
 		super (p0);
-		if (getClass () == FragmentContainer.class)
+		if (getClass () == FragmentContainer.class) {
 			mono.android.TypeManager.Activate ("Navigation.XF.Droid.FragmentContainer, DevExpress.XamarinForms.Navigation.Android", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 

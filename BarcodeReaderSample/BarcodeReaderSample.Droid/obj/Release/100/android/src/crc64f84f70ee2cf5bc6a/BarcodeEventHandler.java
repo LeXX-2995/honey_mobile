@@ -22,8 +22,9 @@ public class BarcodeEventHandler
 	public BarcodeEventHandler ()
 	{
 		super ();
-		if (getClass () == BarcodeEventHandler.class)
+		if (getClass () == BarcodeEventHandler.class) {
 			mono.android.TypeManager.Activate ("Honeywell.AIDC.CrossPlatform.BarcodeEventHandler, Honeywell.AIDC.CrossPlatform.BarcodeReader", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

@@ -20,15 +20,17 @@ public class BarcodeReaderManager
 	public BarcodeReaderManager ()
 	{
 		super ();
-		if (getClass () == BarcodeReaderManager.class)
+		if (getClass () == BarcodeReaderManager.class) {
 			mono.android.TypeManager.Activate ("Honeywell.AIDC.CrossPlatform.BarcodeReaderManager, Honeywell.AIDC.CrossPlatform.BarcodeReader", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	public BarcodeReaderManager (android.content.Context p0)
 	{
 		super ();
-		if (getClass () == BarcodeReaderManager.class)
+		if (getClass () == BarcodeReaderManager.class) {
 			mono.android.TypeManager.Activate ("Honeywell.AIDC.CrossPlatform.BarcodeReaderManager, Honeywell.AIDC.CrossPlatform.BarcodeReader", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 

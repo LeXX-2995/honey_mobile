@@ -20,8 +20,9 @@ public class SwipeButtonAction
 	public SwipeButtonAction ()
 	{
 		super ();
-		if (getClass () == SwipeButtonAction.class)
+		if (getClass () == SwipeButtonAction.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.NativeBridge.SwipeButtonAction, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

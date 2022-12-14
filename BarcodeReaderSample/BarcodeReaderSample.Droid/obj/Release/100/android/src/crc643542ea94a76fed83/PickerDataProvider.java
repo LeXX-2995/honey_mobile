@@ -23,8 +23,9 @@ public class PickerDataProvider
 	public PickerDataProvider ()
 	{
 		super ();
-		if (getClass () == PickerDataProvider.class)
+		if (getClass () == PickerDataProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.NativeBridge.PickerDataProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

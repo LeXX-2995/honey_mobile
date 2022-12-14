@@ -33,8 +33,9 @@ public class GridAction
 	public GridAction ()
 	{
 		super ();
-		if (getClass () == GridAction.class)
+		if (getClass () == GridAction.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.NativeBridge.GridAction, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

@@ -20,8 +20,9 @@ public class DragPreviewTemplateProvider
 	public DragPreviewTemplateProvider ()
 	{
 		super ();
-		if (getClass () == DragPreviewTemplateProvider.class)
+		if (getClass () == DragPreviewTemplateProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.DragPreviewTemplateProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

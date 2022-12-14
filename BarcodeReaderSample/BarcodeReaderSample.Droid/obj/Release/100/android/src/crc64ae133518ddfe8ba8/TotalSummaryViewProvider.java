@@ -22,8 +22,9 @@ public class TotalSummaryViewProvider
 	public TotalSummaryViewProvider ()
 	{
 		super ();
-		if (getClass () == TotalSummaryViewProvider.class)
+		if (getClass () == TotalSummaryViewProvider.class) {
 			mono.android.TypeManager.Activate ("DevExpress.XamarinForms.DataGrid.Android.TotalSummaryViewProvider, DevExpress.XamarinForms.Grid.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 
